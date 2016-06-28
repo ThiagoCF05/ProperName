@@ -59,6 +59,9 @@ def clean(mentions=[], sentences=[]):
 def classify(mentions = [], dbpedia = {}, sentences = []):
     def _classify_nominals(name):
         tokens = sentences[name['sentNum']-1]['tokens'][name['startIndex']-1:name['endIndex']-1]
+        if name['startIndex'] > 1:
+            prev_token = sentences[name['sentNum']-1]['tokens'][name['startIndex']-2]
+            tokens.insert(0, prev_token)
 
         # Check title
         if re.match("M(r.*|s.*|rs.*)\s", name['text']) != None:
