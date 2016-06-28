@@ -209,8 +209,9 @@ def run(fname, dbpedia):
     r = json.load(open(fname))
 
     variations = nv.get_variations_db(dbpedia_names=dbpedia)
-    mentions = clean(find_mentions(r['corefs'], variations, r['sentences']), r['sentences'])
+    mentions = find_mentions(r['corefs'], variations, r['sentences'])
     mentions = classify(mentions, dbpedia, r['sentences'])
+    mentions = clean(mentions, r['sentences'])
     mentions = extract_syntax(mentions, r['sentences'])
     mentions = extract_status(mentions, len(r['sentences']))
 
