@@ -15,7 +15,15 @@ def update(dbpedia):
     dbpedia['middle_names'] = []
     dbpedia['last_names'] = []
 
-    for givenName in dbpedia['givenNames']:
+    # select the given names in the citation format (Einstein, Albert)
+    givenNames = filter(lambda given: ',' not in given, dbpedia['givenNames'])
+
+    # select the shortest given name
+    sizes = map(lambda given: len(given.split()), givenNames)
+    if len(sizes) > 0:
+        min_size = min(sizes)
+        givenName = filter(lambda given: len(given.split()) == min_size, givenNames)[0]
+
         names = givenName.split()
 
         if len(names[0]) > 2:
@@ -56,42 +64,40 @@ def update(dbpedia):
     return dbpedia
 
 if __name__ == '__main__':
-    # root_dir = '/roaming/tcastrof/names'
-    # parsed_dir = "/roaming/tcastrof/names/parsed"
-    # mentions_dir = "/roaming/tcastrof/names/mentions"
-    #
-    # root_dir = 'data/test'
-    #
-    # urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
-    #
-    # nfiles = 0
-    # notfound = 0
-    # for entity in urls.keys():
-    #     dbpedia = update(entities[entity])
-    #
-    #     for url in urls[entity]:
-    #         nfiles += 1
-    #         if nfiles % 100 == 0:
-    #             print nfiles, "processed / ", notfound, 'not found'
-    #
-    #         try:
-    #             mentions = get_mentions.run(os.path.join(parsed_dir, url[0]), dbpedia)
-    #             json.dump(mentions, open(os.path.join(mentions_dir, url[0]), 'w'), separators=(',',':'))
-    #         except ValueError:
-    #             nfiles -= 1
-    #             notfound += 1
-    #         except IOError:
-    #             nfiles -= 1
-    #             notfound += 1
-    #         except:
-    #             exc_type, exc_value, exc_traceback = sys.exc_info()
-    #             traceback.print_exception(exc_type, exc_value, exc_traceback, limit=2, file=sys.stdout)
+    root_dir = '/roaming/tcastrof/names'
+    parsed_dir = "/roaming/tcastrof/names/parsed"
+    mentions_dir = "/roaming/tcastrof/names/mentions"
 
-    root_dir = 'data/test'
     urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
-    dbpedia = update(entities['http://en.wikipedia.org/wiki/Francisco_Franco'])
 
-    try:
-        mentions = get_mentions.run(os.path.join(root_dir, '5072656.json'), dbpedia)
-    except:
-        pass
+    nfiles = 0
+    notfound = 0
+    for entity in urls.keys():
+        dbpedia = update(entities[entity])
+
+        for url in urls[entity]:
+            nfiles += 1
+            if nfiles % 100 == 0:
+                print nfiles, "processed / ", notfound, 'not found'
+
+            try:
+                mentions = get_mentions.run(os.path.join(parsed_dir, url[0]), dbpedia)
+                json.dump(mentions, open(os.path.join(mentions_dir, url[0]), 'w'), separators=(',',':'))
+            except ValueError:
+                nfiles -= 1
+                notfound += 1
+            except IOError:
+                nfiles -= 1
+                notfound += 1
+            except:
+                exc_type, exc_value, exc_traceback = sys.exc_info()
+                traceback.print_exception(exc_type, exc_value, exc_traceback, limit=2, file=sys.stdout)
+
+    # root_dir = 'data/test'
+    # urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
+    # dbpedia = update(entities['http://en.wikipedia.org/wiki/Francisco_Franco'])
+    #
+    # try:
+    #     mentions = get_mentions.run(os.path.join(root_dir, '5072656.json'), dbpedia)
+    # except:
+    #     pass

@@ -4,7 +4,8 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 19/05/2016
 Description:
-    This script aims to extract information about the top 1000 people from Wikilinks corpus at dbpedia.
+    This script aims to extract the size of the proper names in the first 100 sentences in the texts.
+    A linear regression is also computed.
 """
 
 import json

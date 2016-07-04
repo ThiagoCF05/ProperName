@@ -4,7 +4,9 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 12/04/2016
 Description:
-    Main script from the code. It aims to find to find mentions in the texts from the corpus
+    Main script from the code. It aims to find mentions in the texts from the corpus.
+    It only the mentions described in the Wikilinks corpus. In case you want all the references in the text,
+    check get_all_mentions.py
 """
 
 import json
