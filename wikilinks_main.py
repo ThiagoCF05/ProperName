@@ -70,9 +70,9 @@ def update(dbpedia):
     return dbpedia
 
 if __name__ == '__main__':
-    root_dir = '/roaming/tcastrof/names'
-    parsed_dir = "/roaming/tcastrof/names/parsed"
-    mentions_dir = "/roaming/tcastrof/names/mentions"
+    root_dir = '/roaming/tcastrof/names/regnames'
+    parsed_dir = "/roaming/tcastrof/names/regnames/parsed"
+    mentions_dir = "/roaming/tcastrof/names/regnames/mentions"
 
     urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
 
@@ -88,7 +88,13 @@ if __name__ == '__main__':
 
             try:
                 mentions = get_mentions.run(os.path.join(parsed_dir, url[0]), dbpedia)
-                json.dump(mentions, open(os.path.join(mentions_dir, url[0]), 'w'), separators=(',',':'))
+
+                if os.path.isfile(os.path.join(parsed_dir, url[0])):
+                    j = json.load(open(os.path.join(mentions_dir, url[0])))
+                    j[entity] = mentions
+                else:
+                    j = { entity:mentions }
+                json.dump(j, open(os.path.join(mentions_dir, url[0]), 'w'), separators=(',',':'))
             except ValueError:
                 nfiles -= 1
                 notfound += 1
