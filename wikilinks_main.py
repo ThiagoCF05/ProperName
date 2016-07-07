@@ -70,6 +70,7 @@ def update(dbpedia):
     return dbpedia
 
 if __name__ == '__main__':
+    print 'passei'
     root_dir = '/roaming/tcastrof/names/regnames'
     parsed_dir = "/roaming/tcastrof/names/regnames/parsed"
     mentions_dir = "/roaming/tcastrof/names/regnames/mentions"
