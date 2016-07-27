@@ -14,7 +14,7 @@ import numpy as np
 from sklearn import linear_model
 
 if __name__ == '__main__':
-    r = json.load(open('report.json'))
+    r = json.load(open('../data/report.json'))
 
     sizes = []
 
@@ -38,6 +38,8 @@ if __name__ == '__main__':
     plot1 = map(lambda x: str(x[0]) + ' ' + str(x[1]), data)
     plot2 = map(lambda x: str(x[0]) + ' ' + str(x[1]), regression)
 
+    print 'Data'
     print '\\\\'.join(plot1)
     print '\n\n'
+    print 'Regression'
     print '\\\\'.join(plot2)

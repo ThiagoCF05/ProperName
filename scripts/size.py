@@ -18,8 +18,22 @@ def display(header, data):
     print tabulate(data, headers=header)
     print '\n'
 
+def parse():
+    result = {'subj':[], 'obj':[], 'dnew':[], 'dold':[], 'snew':[], 'sold':[]}
+    r = json.load(open('../data/report.json'))
+
+    result['subj'] = r['freq_syntax']['np-subj']['name_size']
+    result['obj'] = r['freq_syntax']['np-obj']['name_size']
+
+    result['dnew'] = r['freq_status']['new']['name_size']
+    result['dold'] = r['freq_status']['old']['name_size']
+
+    result['snew'] = r['freq_sent_status']['new']['name_size']
+    result['sold'] = r['freq_sent_status']['old']['name_size']
+    return result
+
 if __name__ == '__main__':
-    j = json.load(open('../data/result.json'))
+    j = parse()
 
     # syntax
     header = ['SYNCAT', 'AVG.', 'STD', 'CONFIDENCE INTERVALS', '']

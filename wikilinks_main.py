@@ -1,5 +1,12 @@
 __author__ = 'thiagocastroferreira'
 
+"""
+Author: Thiago Castro Ferreira
+Date: 05/2016
+Description:
+    This script aims to extract the mentions from the selected texts from Wikilinks
+"""
+
 import os
 import sys
 import traceback
@@ -70,10 +77,9 @@ def update(dbpedia):
     return dbpedia
 
 if __name__ == '__main__':
-    print 'passei'
-    root_dir = '/roaming/tcastrof/names/regnames'
-    parsed_dir = "/roaming/tcastrof/names/regnames/parsed"
-    mentions_dir = "/roaming/tcastrof/names/regnames/mentions"
+    root_dir = '/roaming/tcastrof/names'
+    parsed_dir = "/roaming/tcastrof/names/parsed"
+    mentions_dir = "/roaming/tcastrof/names/mentions"
 
     urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
 
@@ -90,7 +96,7 @@ if __name__ == '__main__':
             try:
                 mentions = get_mentions.run(os.path.join(parsed_dir, url[0]), dbpedia)
 
-                if os.path.isfile(os.path.join(parsed_dir, url[0])):
+                if os.path.isfile(os.path.join(mentions_dir, url[0])):
                     j = json.load(open(os.path.join(mentions_dir, url[0])))
                     j[entity] = mentions
                 else:
@@ -109,8 +115,13 @@ if __name__ == '__main__':
     # root_dir = 'data/test'
     # urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
     # dbpedia = update(entities['http://en.wikipedia.org/wiki/Francisco_Franco'])
-    #
     # try:
     #     mentions = get_mentions.run(os.path.join(root_dir, '5072656.json'), dbpedia)
-    # except:
-    #     pass
+    #     if os.path.isfile(os.path.join(root_dir, '5072656.json')):
+    #         j = json.load(open('5072656.json'))
+    #         j['aaa'] = mentions
+    #     else:
+    #         j = { 'aaa':mentions }
+    #         json.dump(j, open('5072656.json', 'w'), separators=(',',':'))
+    # except Exception,e:
+    #     print str(e)

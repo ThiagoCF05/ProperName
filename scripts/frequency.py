@@ -14,8 +14,8 @@ import os
 import json
 
 if __name__ == '__main__':
-    fname = '/roaming/tcastrof/names/report.json'
-    d = "/roaming/tcastrof/names/mentions"
+    fname = '/roaming/tcastrof/names/regnames/report.json'
+    d = "/roaming/tcastrof/names/regnames/mentions"
 
     freq_files = 0
     # corrupted files
@@ -51,302 +51,304 @@ if __name__ == '__main__':
         print f, '\r',
         freq_files += 1
         try:
-            pickle = json.load(open(os.path.join(d, f)))
-            names = filter(lambda x: x['type'] == 'PROPER', pickle)
+            entities = json.load(open(os.path.join(d, f)))
+            for e in entities:
+                pickle = entities[e]
+                names = filter(lambda x: x['type'] == 'PROPER', pickle)
 
-            if len(names) == 0:
-                freq_corrupted += 1
-                corrupted.append(f)
-            for name in names:
-                if name['sentNum'] not in freq_sent:
-                    freq_sent[name['sentNum']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
-                                                  'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
-                                                  't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
-                                                  't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
-                                                  't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
-                                                  't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
-                if name['syntax'] not in freq_syntax:
-                    freq_syntax[name['syntax']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
-                                                   'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
-                                                   't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
-                                                   't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
-                                                   't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
-                                                   't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
-                if name['givenness'] not in freq_status:
-                    freq_status[name['givenness']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
+                if len(names) == 0:
+                    freq_corrupted += 1
+                    corrupted.append(f)
+                for name in names:
+                    if name['sentNum'] not in freq_sent:
+                        freq_sent[name['sentNum']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
                                                       'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
                                                       't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
-                                                   't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
-                                                   't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
-                                                   't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
-                if name['sentence-givenness'] not in freq_sent_status:
-                    freq_sent_status[name['sentence-givenness']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
-                                                                    'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
-                                                                    't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
                                                       't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
                                                       't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
                                                       't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
+                    if name['syntax'] not in freq_syntax:
+                        freq_syntax[name['syntax']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
+                                                       'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
+                                                       't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
+                                                       't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
+                                                       't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
+                                                       't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
+                    if name['givenness'] not in freq_status:
+                        freq_status[name['givenness']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
+                                                          'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
+                                                          't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
+                                                       't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
+                                                       't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
+                                                       't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
+                    if name['sentence-givenness'] not in freq_sent_status:
+                        freq_sent_status[name['sentence-givenness']] = {'freq_mentions': 0, 'freq_title': 0, 'freq_first': 0, 'freq_middle': 0, 'freq_last': 0, 'freq_appos': 0, \
+                                                                        'freq_given': 0, 'freq_surnames': 0, 'freq_birthname': 0, 'freq_no_class': 0, 'name_size':[], \
+                                                                        't': 0, 'f': 0, 'm': 0, 'l': 0, 'a': 0, \
+                                                          't_f': 0, 't_m': 0, 't_l': 0, 't_a': 0, 'f_m': 0, 'f_l': 0, 'f_a': 0, 'm_l': 0, 'm_a': 0, 'l_a': 0, \
+                                                          't_f_m': 0, 't_f_l': 0, 't_f_a': 0, 't_m_l': 0, 't_m_a': 0, 't_l_a': 0, 'f_m_l': 0, 'f_m_a': 0, 'f_l_a': 0, 'm_l_a': 0, \
+                                                          't_f_m_l': 0, 't_f_m_a': 0, 't_f_l_a': 0, 't_m_l_a': 0, 'f_m_l_a': 0, 't_f_m_l_a': 0}
 
-                freq_mentions += 1
-                freq_syntax[name['syntax']]['freq_mentions'] += 1
-                freq_sent[name['sentNum']]['freq_mentions'] += 1
-                freq_status[name['givenness']]['freq_mentions'] += 1
-                freq_sent_status[name['sentence-givenness']]['freq_mentions'] += 1
+                    freq_mentions += 1
+                    freq_syntax[name['syntax']]['freq_mentions'] += 1
+                    freq_sent[name['sentNum']]['freq_mentions'] += 1
+                    freq_status[name['givenness']]['freq_mentions'] += 1
+                    freq_sent_status[name['sentence-givenness']]['freq_mentions'] += 1
 
-                aux = len(name['text'].split())
-                name_size.append(aux)
-                freq_syntax[name['syntax']]['name_size'].append(aux)
-                freq_sent[name['sentNum']]['name_size'].append(aux)
-                freq_status[name['givenness']]['name_size'].append(aux)
-                freq_sent_status[name['sentence-givenness']]['name_size'].append(aux)
+                    aux = len(name['text'].split())
+                    name_size.append(aux)
+                    freq_syntax[name['syntax']]['name_size'].append(aux)
+                    freq_sent[name['sentNum']]['name_size'].append(aux)
+                    freq_status[name['givenness']]['name_size'].append(aux)
+                    freq_sent_status[name['sentence-givenness']]['name_size'].append(aux)
 
-                if name['has_title']:
-                    freq_title += 1
-                    freq_sent[name['sentNum']]['freq_title'] += 1
-                    freq_syntax[name['syntax']]['freq_title'] += 1
-                    freq_status[name['givenness']]['freq_title'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_title'] += 1
-                if name['has_firstName']:
-                    freq_first += 1
-                    freq_sent[name['sentNum']]['freq_first'] += 1
-                    freq_syntax[name['syntax']]['freq_first'] += 1
-                    freq_status[name['givenness']]['freq_first'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_first'] += 1
-                if name['has_middleName']:
-                    freq_middle += 1
-                    freq_sent[name['sentNum']]['freq_middle'] += 1
-                    freq_syntax[name['syntax']]['freq_middle'] += 1
-                    freq_status[name['givenness']]['freq_middle'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_middle'] += 1
-                if name['has_lastName']:
-                    freq_last += 1
-                    freq_sent[name['sentNum']]['freq_last'] += 1
-                    freq_syntax[name['syntax']]['freq_last'] += 1
-                    freq_status[name['givenness']]['freq_last'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_last'] += 1
-                if name['has_appositive']:
-                    freq_appos += 1
-                    freq_sent[name['sentNum']]['freq_appos'] += 1
-                    freq_syntax[name['syntax']]['freq_appos'] += 1
-                    freq_status[name['givenness']]['freq_appos'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_appos'] += 1
+                    if name['has_title']:
+                        freq_title += 1
+                        freq_sent[name['sentNum']]['freq_title'] += 1
+                        freq_syntax[name['syntax']]['freq_title'] += 1
+                        freq_status[name['givenness']]['freq_title'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_title'] += 1
+                    if name['has_firstName']:
+                        freq_first += 1
+                        freq_sent[name['sentNum']]['freq_first'] += 1
+                        freq_syntax[name['syntax']]['freq_first'] += 1
+                        freq_status[name['givenness']]['freq_first'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_first'] += 1
+                    if name['has_middleName']:
+                        freq_middle += 1
+                        freq_sent[name['sentNum']]['freq_middle'] += 1
+                        freq_syntax[name['syntax']]['freq_middle'] += 1
+                        freq_status[name['givenness']]['freq_middle'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_middle'] += 1
+                    if name['has_lastName']:
+                        freq_last += 1
+                        freq_sent[name['sentNum']]['freq_last'] += 1
+                        freq_syntax[name['syntax']]['freq_last'] += 1
+                        freq_status[name['givenness']]['freq_last'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_last'] += 1
+                    if name['has_appositive']:
+                        freq_appos += 1
+                        freq_sent[name['sentNum']]['freq_appos'] += 1
+                        freq_syntax[name['syntax']]['freq_appos'] += 1
+                        freq_status[name['givenness']]['freq_appos'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_appos'] += 1
 
-                if not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    freq_no_class += 1
-                    freq_sent[name['sentNum']]['freq_no_class'] += 1
-                    freq_syntax[name['syntax']]['freq_no_class'] += 1
-                    freq_status[name['givenness']]['freq_no_class'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_no_class'] += 1
+                    if not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        freq_no_class += 1
+                        freq_sent[name['sentNum']]['freq_no_class'] += 1
+                        freq_syntax[name['syntax']]['freq_no_class'] += 1
+                        freq_status[name['givenness']]['freq_no_class'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_no_class'] += 1
 
-                elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    t += 1
-                    freq_sent[name['sentNum']]['t'] += 1
-                    freq_syntax[name['syntax']]['t'] += 1
-                    freq_status[name['givenness']]['t'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t'] += 1
-                elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    first += 1
-                    freq_sent[name['sentNum']]['f'] += 1
-                    freq_syntax[name['syntax']]['f'] += 1
-                    freq_status[name['givenness']]['f'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    m += 1
-                    freq_sent[name['sentNum']]['m'] += 1
-                    freq_syntax[name['syntax']]['m'] += 1
-                    freq_status[name['givenness']]['m'] += 1
-                    freq_sent_status[name['sentence-givenness']]['m'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    l += 1
-                    freq_sent[name['sentNum']]['l'] += 1
-                    freq_syntax[name['syntax']]['l'] += 1
-                    freq_status[name['givenness']]['l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['l'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    a += 1
-                    freq_sent[name['sentNum']]['a'] += 1
-                    freq_syntax[name['syntax']]['a'] += 1
-                    freq_status[name['givenness']]['a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['a'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        t += 1
+                        freq_sent[name['sentNum']]['t'] += 1
+                        freq_syntax[name['syntax']]['t'] += 1
+                        freq_status[name['givenness']]['t'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        first += 1
+                        freq_sent[name['sentNum']]['f'] += 1
+                        freq_syntax[name['syntax']]['f'] += 1
+                        freq_status[name['givenness']]['f'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        m += 1
+                        freq_sent[name['sentNum']]['m'] += 1
+                        freq_syntax[name['syntax']]['m'] += 1
+                        freq_status[name['givenness']]['m'] += 1
+                        freq_sent_status[name['sentence-givenness']]['m'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        l += 1
+                        freq_sent[name['sentNum']]['l'] += 1
+                        freq_syntax[name['syntax']]['l'] += 1
+                        freq_status[name['givenness']]['l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['l'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        a += 1
+                        freq_sent[name['sentNum']]['a'] += 1
+                        freq_syntax[name['syntax']]['a'] += 1
+                        freq_status[name['givenness']]['a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['a'] += 1
 
-                elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    t_f += 1
-                    freq_sent[name['sentNum']]['t_f'] += 1
-                    freq_syntax[name['syntax']]['t_f'] += 1
-                    freq_status[name['givenness']]['t_f'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f'] += 1
-                elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    t_m += 1
-                    freq_sent[name['sentNum']]['t_m'] += 1
-                    freq_syntax[name['syntax']]['t_m'] += 1
-                    freq_status[name['givenness']]['t_m'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_m'] += 1
-                elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    t_l += 1
-                    freq_sent[name['sentNum']]['t_l'] += 1
-                    freq_syntax[name['syntax']]['t_l'] += 1
-                    freq_status[name['givenness']]['t_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_l'] += 1
-                elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    t_a += 1
-                    freq_sent[name['sentNum']]['t_a'] += 1
-                    freq_syntax[name['syntax']]['t_a'] += 1
-                    freq_status[name['givenness']]['t_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_a'] += 1
-                elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    f_m += 1
-                    freq_sent[name['sentNum']]['f_m'] += 1
-                    freq_syntax[name['syntax']]['f_m'] += 1
-                    freq_status[name['givenness']]['f_m'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_m'] += 1
-                elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    f_l += 1
-                    freq_sent[name['sentNum']]['f_l'] += 1
-                    freq_syntax[name['syntax']]['f_l'] += 1
-                    freq_status[name['givenness']]['f_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_l'] += 1
-                elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    f_a += 1
-                    freq_sent[name['sentNum']]['f_a'] += 1
-                    freq_syntax[name['syntax']]['f_a'] += 1
-                    freq_status[name['givenness']]['f_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_a'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    m_l += 1
-                    freq_sent[name['sentNum']]['m_l'] += 1
-                    freq_syntax[name['syntax']]['m_l'] += 1
-                    freq_status[name['givenness']]['m_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['m_l'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    m_a += 1
-                    freq_sent[name['sentNum']]['m_a'] += 1
-                    freq_syntax[name['syntax']]['m_a'] += 1
-                    freq_status[name['givenness']]['m_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['m_a'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    l_a += 1
-                    freq_sent[name['sentNum']]['l_a'] += 1
-                    freq_syntax[name['syntax']]['l_a'] += 1
-                    freq_status[name['givenness']]['l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['l_a'] += 1
+                    elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        t_f += 1
+                        freq_sent[name['sentNum']]['t_f'] += 1
+                        freq_syntax[name['syntax']]['t_f'] += 1
+                        freq_status[name['givenness']]['t_f'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        t_m += 1
+                        freq_sent[name['sentNum']]['t_m'] += 1
+                        freq_syntax[name['syntax']]['t_m'] += 1
+                        freq_status[name['givenness']]['t_m'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_m'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        t_l += 1
+                        freq_sent[name['sentNum']]['t_l'] += 1
+                        freq_syntax[name['syntax']]['t_l'] += 1
+                        freq_status[name['givenness']]['t_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_l'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        t_a += 1
+                        freq_sent[name['sentNum']]['t_a'] += 1
+                        freq_syntax[name['syntax']]['t_a'] += 1
+                        freq_status[name['givenness']]['t_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_a'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        f_m += 1
+                        freq_sent[name['sentNum']]['f_m'] += 1
+                        freq_syntax[name['syntax']]['f_m'] += 1
+                        freq_status[name['givenness']]['f_m'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_m'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        f_l += 1
+                        freq_sent[name['sentNum']]['f_l'] += 1
+                        freq_syntax[name['syntax']]['f_l'] += 1
+                        freq_status[name['givenness']]['f_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_l'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        f_a += 1
+                        freq_sent[name['sentNum']]['f_a'] += 1
+                        freq_syntax[name['syntax']]['f_a'] += 1
+                        freq_status[name['givenness']]['f_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_a'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        m_l += 1
+                        freq_sent[name['sentNum']]['m_l'] += 1
+                        freq_syntax[name['syntax']]['m_l'] += 1
+                        freq_status[name['givenness']]['m_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['m_l'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        m_a += 1
+                        freq_sent[name['sentNum']]['m_a'] += 1
+                        freq_syntax[name['syntax']]['m_a'] += 1
+                        freq_status[name['givenness']]['m_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['m_a'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        l_a += 1
+                        freq_sent[name['sentNum']]['l_a'] += 1
+                        freq_syntax[name['syntax']]['l_a'] += 1
+                        freq_status[name['givenness']]['l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['l_a'] += 1
 
-                elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
-                    t_f_m += 1
-                    freq_sent[name['sentNum']]['t_f_m'] += 1
-                    freq_syntax[name['syntax']]['t_f_m'] += 1
-                    freq_status[name['givenness']]['t_f_m'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_m'] += 1
-                elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    t_f_l += 1
-                    freq_sent[name['sentNum']]['t_f_l'] += 1
-                    freq_syntax[name['syntax']]['t_f_l'] += 1
-                    freq_status[name['givenness']]['t_f_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_l'] += 1
-                elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    t_f_a += 1
-                    freq_sent[name['sentNum']]['t_f_a'] += 1
-                    freq_syntax[name['syntax']]['t_f_a'] += 1
-                    freq_status[name['givenness']]['t_f_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_a'] += 1
-                elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    t_m_l += 1
-                    freq_sent[name['sentNum']]['t_m_l'] += 1
-                    freq_syntax[name['syntax']]['t_m_l'] += 1
-                    freq_status[name['givenness']]['t_m_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_m_l'] += 1
-                elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    t_m_a += 1
-                    freq_sent[name['sentNum']]['t_m_a'] += 1
-                    freq_syntax[name['syntax']]['t_m_a'] += 1
-                    freq_status[name['givenness']]['t_m_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_m_a'] += 1
-                elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    t_l_a += 1
-                    freq_sent[name['sentNum']]['t_l_a'] += 1
-                    freq_syntax[name['syntax']]['t_l_a'] += 1
-                    freq_status[name['givenness']]['t_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_l_a'] += 1
-                elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    f_m_l += 1
-                    freq_sent[name['sentNum']]['f_m_l'] += 1
-                    freq_syntax[name['syntax']]['f_m_l'] += 1
-                    freq_status[name['givenness']]['f_m_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_m_l'] += 1
-                elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    f_m_a += 1
-                    freq_sent[name['sentNum']]['f_m_a'] += 1
-                    freq_syntax[name['syntax']]['f_m_a'] += 1
-                    freq_status[name['givenness']]['f_m_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_m_a'] += 1
-                elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    f_l_a += 1
-                    freq_sent[name['sentNum']]['f_l_a'] += 1
-                    freq_syntax[name['syntax']]['f_l_a'] += 1
-                    freq_status[name['givenness']]['f_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_l_a'] += 1
-                elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    m_l_a += 1
-                    freq_sent[name['sentNum']]['m_l_a'] += 1
-                    freq_syntax[name['syntax']]['m_l_a'] += 1
-                    freq_status[name['givenness']]['m_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['m_l_a'] += 1
+                    elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and not name['has_appositive']:
+                        t_f_m += 1
+                        freq_sent[name['sentNum']]['t_f_m'] += 1
+                        freq_syntax[name['syntax']]['t_f_m'] += 1
+                        freq_status[name['givenness']]['t_f_m'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_m'] += 1
+                    elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        t_f_l += 1
+                        freq_sent[name['sentNum']]['t_f_l'] += 1
+                        freq_syntax[name['syntax']]['t_f_l'] += 1
+                        freq_status[name['givenness']]['t_f_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_l'] += 1
+                    elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        t_f_a += 1
+                        freq_sent[name['sentNum']]['t_f_a'] += 1
+                        freq_syntax[name['syntax']]['t_f_a'] += 1
+                        freq_status[name['givenness']]['t_f_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_a'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        t_m_l += 1
+                        freq_sent[name['sentNum']]['t_m_l'] += 1
+                        freq_syntax[name['syntax']]['t_m_l'] += 1
+                        freq_status[name['givenness']]['t_m_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_m_l'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        t_m_a += 1
+                        freq_sent[name['sentNum']]['t_m_a'] += 1
+                        freq_syntax[name['syntax']]['t_m_a'] += 1
+                        freq_status[name['givenness']]['t_m_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_m_a'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        t_l_a += 1
+                        freq_sent[name['sentNum']]['t_l_a'] += 1
+                        freq_syntax[name['syntax']]['t_l_a'] += 1
+                        freq_status[name['givenness']]['t_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_l_a'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        f_m_l += 1
+                        freq_sent[name['sentNum']]['f_m_l'] += 1
+                        freq_syntax[name['syntax']]['f_m_l'] += 1
+                        freq_status[name['givenness']]['f_m_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_m_l'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        f_m_a += 1
+                        freq_sent[name['sentNum']]['f_m_a'] += 1
+                        freq_syntax[name['syntax']]['f_m_a'] += 1
+                        freq_status[name['givenness']]['f_m_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_m_a'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        f_l_a += 1
+                        freq_sent[name['sentNum']]['f_l_a'] += 1
+                        freq_syntax[name['syntax']]['f_l_a'] += 1
+                        freq_status[name['givenness']]['f_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_l_a'] += 1
+                    elif not name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        m_l_a += 1
+                        freq_sent[name['sentNum']]['m_l_a'] += 1
+                        freq_syntax[name['syntax']]['m_l_a'] += 1
+                        freq_status[name['givenness']]['m_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['m_l_a'] += 1
 
-                elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
-                    t_f_m_l += 1
-                    freq_sent[name['sentNum']]['t_f_m_l'] += 1
-                    freq_syntax[name['syntax']]['t_f_m_l'] += 1
-                    freq_status[name['givenness']]['t_f_m_l'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_m_l'] += 1
-                elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
-                    t_f_m_a += 1
-                    freq_sent[name['sentNum']]['t_f_m_a'] += 1
-                    freq_syntax[name['syntax']]['t_f_m_a'] += 1
-                    freq_status[name['givenness']]['t_f_m_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_m_a'] += 1
-                elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    t_f_l_a += 1
-                    freq_sent[name['sentNum']]['t_f_l_a'] += 1
-                    freq_syntax[name['syntax']]['t_f_l_a'] += 1
-                    freq_status[name['givenness']]['t_f_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_l_a'] += 1
-                elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    t_m_l_a += 1
-                    freq_sent[name['sentNum']]['t_m_l_a'] += 1
-                    freq_syntax[name['syntax']]['t_m_l_a'] += 1
-                    freq_status[name['givenness']]['t_m_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_m_l_a'] += 1
-                elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    f_m_l_a += 1
-                    freq_sent[name['sentNum']]['f_m_l_a'] += 1
-                    freq_syntax[name['syntax']]['f_m_l_a'] += 1
-                    freq_status[name['givenness']]['f_m_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['f_m_l_a'] += 1
+                    elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and not name['has_appositive']:
+                        t_f_m_l += 1
+                        freq_sent[name['sentNum']]['t_f_m_l'] += 1
+                        freq_syntax[name['syntax']]['t_f_m_l'] += 1
+                        freq_status[name['givenness']]['t_f_m_l'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_m_l'] += 1
+                    elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and not name['has_lastName'] and name['has_appositive']:
+                        t_f_m_a += 1
+                        freq_sent[name['sentNum']]['t_f_m_a'] += 1
+                        freq_syntax[name['syntax']]['t_f_m_a'] += 1
+                        freq_status[name['givenness']]['t_f_m_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_m_a'] += 1
+                    elif name['has_title'] and name['has_firstName'] and not name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        t_f_l_a += 1
+                        freq_sent[name['sentNum']]['t_f_l_a'] += 1
+                        freq_syntax[name['syntax']]['t_f_l_a'] += 1
+                        freq_status[name['givenness']]['t_f_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_l_a'] += 1
+                    elif name['has_title'] and not name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        t_m_l_a += 1
+                        freq_sent[name['sentNum']]['t_m_l_a'] += 1
+                        freq_syntax[name['syntax']]['t_m_l_a'] += 1
+                        freq_status[name['givenness']]['t_m_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_m_l_a'] += 1
+                    elif not name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        f_m_l_a += 1
+                        freq_sent[name['sentNum']]['f_m_l_a'] += 1
+                        freq_syntax[name['syntax']]['f_m_l_a'] += 1
+                        freq_status[name['givenness']]['f_m_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['f_m_l_a'] += 1
 
-                elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
-                    t_f_m_l_a += 1
-                    freq_sent[name['sentNum']]['t_f_m_l_a'] += 1
-                    freq_syntax[name['syntax']]['t_f_m_l_a'] += 1
-                    freq_status[name['givenness']]['t_f_m_l_a'] += 1
-                    freq_sent_status[name['sentence-givenness']]['t_f_m_l_a'] += 1
+                    elif name['has_title'] and name['has_firstName'] and name['has_middleName'] and name['has_lastName'] and name['has_appositive']:
+                        t_f_m_l_a += 1
+                        freq_sent[name['sentNum']]['t_f_m_l_a'] += 1
+                        freq_syntax[name['syntax']]['t_f_m_l_a'] += 1
+                        freq_status[name['givenness']]['t_f_m_l_a'] += 1
+                        freq_sent_status[name['sentence-givenness']]['t_f_m_l_a'] += 1
 
-                if 'givenNames' in name['name_type']:
-                    freq_given += 1
-                    freq_sent[name['sentNum']]['freq_given'] += 1
-                    freq_syntax[name['syntax']]['freq_given'] += 1
-                    freq_status[name['givenness']]['freq_given'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_given'] += 1
-                if 'surnames' in name['name_type']:
-                    freq_surnames += 1
-                    freq_sent[name['sentNum']]['freq_surnames'] += 1
-                    freq_syntax[name['syntax']]['freq_surnames'] += 1
-                    freq_status[name['givenness']]['freq_surnames'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_surnames'] += 1
-                if 'birthNames' in name['name_type']:
-                    freq_birthname += 1
-                    freq_sent[name['sentNum']]['freq_birthname'] += 1
-                    freq_syntax[name['syntax']]['freq_birthname'] += 1
-                    freq_status[name['givenness']]['freq_birthname'] += 1
-                    freq_sent_status[name['sentence-givenness']]['freq_birthname'] += 1
+                    if 'givenNames' in name['name_type']:
+                        freq_given += 1
+                        freq_sent[name['sentNum']]['freq_given'] += 1
+                        freq_syntax[name['syntax']]['freq_given'] += 1
+                        freq_status[name['givenness']]['freq_given'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_given'] += 1
+                    if 'surnames' in name['name_type']:
+                        freq_surnames += 1
+                        freq_sent[name['sentNum']]['freq_surnames'] += 1
+                        freq_syntax[name['syntax']]['freq_surnames'] += 1
+                        freq_status[name['givenness']]['freq_surnames'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_surnames'] += 1
+                    if 'birthNames' in name['name_type']:
+                        freq_birthname += 1
+                        freq_sent[name['sentNum']]['freq_birthname'] += 1
+                        freq_syntax[name['syntax']]['freq_birthname'] += 1
+                        freq_status[name['givenness']]['freq_birthname'] += 1
+                        freq_sent_status[name['sentence-givenness']]['freq_birthname'] += 1
         except:
             freq_corrupted += 1
             corrupted.append(f)

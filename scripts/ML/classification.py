@@ -7,12 +7,12 @@ from sklearn import cross_validation, svm, tree
 # from sklearn.metrics import classification_report
 
 if __name__ == '__main__':
-    fname = '/roaming/tcastrof/names/ML.json'
+    fname = 'features/feat.json'
 
     j = json.load(open(fname))
 
-    # X = map(lambda features: [features[1], features[2], features[3]], j['features'])
-    X = j['features']
+    X = map(lambda features: [features[1], features[2], features[3]], j['features'])
+    # X = j['features']
     y = np.array(j['classes'])
 
     print 20 * '*'
