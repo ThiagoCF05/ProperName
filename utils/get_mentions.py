@@ -61,20 +61,30 @@ def clean(mentions=[], sentences=[]):
 def classify(mentions = [], dbpedia = {}, sentences = []):
     def _classify_nominals(name):
         tokens = sentences[name['sentNum']-1]['tokens'][name['startIndex']-1:name['endIndex']-1]
+
+        # get previous tokens to check for titles
+        title_check = []
         if name['startIndex'] > 1:
             prev_token = sentences[name['sentNum']-1]['tokens'][name['startIndex']-2]
-            tokens.insert(0, prev_token)
+            title_check.insert(0, prev_token)
+
+            if name['startIndex'] > 2:
+                prev_token = sentences[name['sentNum']-1]['tokens'][name['startIndex']-3]
+                title_check.insert(0, prev_token)
 
         # Check title
-        if re.match("M(r.*|s.*|rs.*)\s", name['text']) != None:
+        m = re.match("M(r.*|s.*|rs.*)\s", name['text'])
+        if m != None:
             name['has_title'] = True
+            name['titles'] = [m.group(0)]
             aux = re.sub("M(r.*|s.*|rs.*)\s", "", name['text'])
         else:
-            titles = filter(lambda x: x['ner'] == 'TITLE', tokens)
-            name['has_title'] = len(titles) > 0
+            title_check.extend(tokens)
+            name['titles'] = filter(lambda x: x['ner'] == 'TITLE', title_check)
+            name['has_title'] = len(name['titles']) > 0
 
             aux = name['text']
-            for title in titles:
+            for title in name['titles']:
                 aux = aux.replace(title['originalText'], '')
 
         # Check first name
