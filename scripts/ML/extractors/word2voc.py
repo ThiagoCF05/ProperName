@@ -42,7 +42,7 @@ def process_tokens(mention, parsed, entity, filtered = False):
     for token in tokens:
         t = {
             'word': token['word'],
-            'bigram': (prev, token['word']),
+            'bigram': (token['word'], prev),
             'entity': entity,
             'givenness': mention['givenness'],
             'sentence-givenness': mention['sentence-givenness'],
@@ -55,7 +55,7 @@ def process_tokens(mention, parsed, entity, filtered = False):
 
     t = {
         'word': 'END',
-        'bigram': (prev, 'END'),
+        'bigram': ('END', prev),
         'entity': entity,
         'givenness': mention['givenness'],
         'sentence-givenness': mention['sentence-givenness'],
@@ -84,8 +84,8 @@ def run():
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):
                 data.extend(process_tokens(mention, parsed, entity, False))
                 fdata.extend(process_tokens(mention, parsed, entity, True))
-    json.dump(data, open('/roaming/tcastrof/names/stats/word2voc.json', 'w'), separators=(',',':'))
-    json.dump(data, open('/roaming/tcastrof/names/stats/fword2voc.json', 'w'), separators=(',',':'))
+    json.dump(data, open('/roaming/tcastrof/names/regnames/stats/word2voc.json', 'w'), separators=(',',':'))
+    json.dump(data, open('/roaming/tcastrof/names/regnames/stats/fword2voc.json', 'w'), separators=(',',':'))
 
 if __name__ == '__main__':
     run()

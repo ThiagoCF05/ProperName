@@ -27,6 +27,7 @@ if __name__ == '__main__':
 
     voc = []
     for entity in references:
+        print entity, '\r',
         mentions = []
         for url in references[entity]:
             for mention in filter(lambda mention: mention['type'] == 'PROPER', references[entity][url]):
@@ -36,7 +37,7 @@ if __name__ == '__main__':
                     if mention[c]:
                         empty = False
                         t = {
-                            'class': c,
+                            'word': c,
                             'bigram': (c, prev),
                             'entity': entity,
                             'givenness': mention['givenness'],
@@ -47,8 +48,8 @@ if __name__ == '__main__':
                         prev = copy.copy(c)
                 if not empty:
                     t = {
-                        'class': 'END',
-                        'bigram': ('END', c),
+                        'word': 'END',
+                        'bigram': ('END', prev),
                         'entity': entity,
                         'givenness': mention['givenness'],
                         'sentence-givenness': mention['sentence-givenness'],

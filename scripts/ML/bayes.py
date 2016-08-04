@@ -1,32 +1,63 @@
 __author__ = 'thiagocastroferreira'
 
 import json
-import extractors.count_words as count
+import extractors.count as count
 import operator
 import copy
+
+def unigram(n_t, n_tm1, counts, features, laplace, entity):
+    f = filter(lambda x: x[0] == n_tm1 and x[2] == entity, counts['wt_wtm1'])
+    dem = sum(map(lambda x: counts['wt_wtm1'][x], f))
+
+    f = filter(lambda x: x[1] == n_t, f)
+    num = sum(map(lambda x: counts['wt_wtm1'][x], f))
+
+    posteriori = float(num+1) / (dem+laplace['wt_wtm1'])
+
+    for feature in filter(lambda x: x != 'wt_wtm1', features.keys()):
+        f = filter(lambda x: x[1] == n_t and x[2] == entity, counts[feature])
+        dem = sum(map(lambda x: counts[feature][x], f))
+
+        f = filter(lambda x: x[0] == features[feature], f)
+        num = sum(map(lambda x: counts[feature][x], f))
+
+        posteriori = posteriori * (float(num+1) / (dem+laplace[feature]))
+    return posteriori
+
+def bigram(g_t, counts, features, laplace, entity):
+    f = filter(lambda x: x[0] == g_t[1] and x[2] == entity, counts['wt_wtm1'])
+    dem = sum(map(lambda x: counts['wt_wtm1'][x], f))
+
+    f = filter(lambda x: x[1] == g_t[0], f)
+    num = sum(map(lambda x: counts['wt_wtm1'][x], f))
+
+    posteriori = float(num+1) / (dem+laplace['wt_wtm1'])
+
+    for feature in filter(lambda x: x != 'wt_wtm1', features.keys()):
+        f = filter(lambda x: x[1] == g_t and x[2] == entity, counts[feature])
+        dem = sum(map(lambda x: counts[feature][x], f))
+
+        f = filter(lambda x: x[0] == features[feature], f)
+        num = sum(map(lambda x: counts[feature][x], f))
+
+        posteriori = posteriori * (float(num+1) / (dem+laplace[feature]))
+    return posteriori
 
 def beam(names, counts, features, laplace, words, entity):
     candidates = {}
     for name, prob in names.iteritems():
-        prev = name[-1]
-        if prev == 'END':
+        w_tm1 = name[-1]
+        if w_tm1 == 'END':
             candidates[name] = prob
         else:
-            for word in filter(lambda x: x not in name, words):
+            for w_t in filter(lambda x: x not in name, words):
                 _name = copy.copy(list(name))
-                _name.append(word)
+                _name.append(w_t)
                 _name = tuple(_name)
 
-                dem = filter(lambda x: x[0] == prev and x[2] == entity, counts['wt_wtm1'])
-                num = len(filter(lambda x: x[1] == word and x[2] == entity, dem))
-                posteriori = float(num+1) / (len(dem)+laplace['wt_wtm1'])
+                posteriori = bigram((w_t, w_tm1), counts, features, laplace, entity)
 
-                for feature in filter(lambda x: x != 'wt_wtm1', features.keys()):
-                    dem = filter(lambda x: x[1] == word and x[2] == entity, counts[feature])
-                    num = filter(lambda x: x[0] == features[feature] and x[2] == entity, dem)
-                    posteriori = posteriori * (float(len(num)+1) / (len(dem)+laplace[feature]))
-
-                if prev == '*' and prob == 0:
+                if w_tm1 == '*' and prob == 0:
                     candidates[_name] = posteriori
                 else:
                     candidates[_name] = prob * posteriori
@@ -34,7 +65,8 @@ def beam(names, counts, features, laplace, words, entity):
     # prunning the tree
     result = sorted(candidates.items(), key=operator.itemgetter(1))
     result.reverse()
-    result = dict(result[:10])
+    result = dict(result[:1])
+
     # normalization
     norm = sum(result.values())
     for k in result:
@@ -47,48 +79,66 @@ def beam(names, counts, features, laplace, words, entity):
         return beam(result, counts, features, laplace, words, entity)
 
 def run():
-    vocabulary = json.load(open('stats/vocabulary.json'))
+    vocabulary = json.load(open('stats/word2voc.json'))
     entities = set(map(lambda x: x['entity'], vocabulary))
 
-    # list(entities)[:50]
-    vocabulary = filter(lambda x: x['entity'] in list(entities)[50:70], vocabulary)
+    test = ['http://en.wikipedia.org/wiki/Arthur_Conan_Doyle', 'http://en.wikipedia.org/wiki/Napoleon']
 
-    counts = count.run(vocabulary, entities)
-    words = set(map(lambda x: x['word'], vocabulary))
+    vocabulary = filter(lambda x: x['entity'] in test, vocabulary)
 
-    for entity in list(entities)[50:70]:
+    counts = count.run(vocabulary, entities, True)
+    # words = set(map(lambda x: x['word'], vocabulary))
+
+    for entity in test:
         print entity
+        # print '\n'
+        # for k in filter(lambda x: x[2] == entity, counts['dg_w'].keys()):
+        #     print k, counts['dg_w'][k]
+        # print '\n'
+        # for k in filter(lambda x: x[2] == entity, counts['sg_w'].keys()):
+        #     print k, counts['sg_w'][k]
+        # print '\n'
+        # for k in filter(lambda x: x[2] == entity, counts['s_w'].keys()):
+        #     print k, counts['s_w'][k]
+        # print '\n'
+        # for k in filter(lambda x: x[2] == entity, counts['wt_wtm1'].keys()):
+        #     print k, counts['wt_wtm1'][k]
+        # print 10 * '-'
         for givenness in ['new', 'old']:
             for sgivenness in ['new', 'old']:
-                # for syntax in ['np-subj', 'np-obj', 'subj-det']:
-                features = {
-                    'wt_wtm1': '*',
-                    'dg_w': givenness,
-                    'sg_w': sgivenness,
-                    # 'e_w': entity,
-                    # 's_w': syntax
-                }
+                for syntax in ['np-subj', 'np-obj', 'subj-det']:
+                    # select as vocabulary words if frequency higher than 10 for the entity references
+                    fwords = [k[1] for k, v in counts['e_w'].iteritems() if k[0] == entity and v > 2]
 
-                laplace = {
-                    'wt_wtm1': len(words),
-                    'dg_w': 2,
-                    'sg_w': 2,
-                    # 's_w': 3
-                }
+                    features = {
+                        'wt_wtm1': '*',
+                        'dg_w': givenness,
+                        'sg_w': sgivenness,
+                        # 'e_w': entity,
+                        's_w': syntax
+                    }
 
-                names = {('*', ):0}
-                # select as vocabulary words if frequency higher than 10 for the entity references
-                fwords = [k[1] for k, v in counts['e_w'].iteritems() if k[0] == entity and v > 5]
-                try:
-                    results = beam(names, counts, features, laplace, fwords, entity)
-                    results = sorted(results.items(), key=operator.itemgetter(1))
-                    results.reverse()
-                    print givenness, sgivenness
-                    for k, v in results:
-                        print k, v
-                    print 10 * '-'
-                except:
-                    pass
+                    laplace = {
+                        'wt_wtm1': len(fwords),
+                        'dg_w': 2,
+                        'sg_w': 2,
+                        's_w': 3
+                    }
+
+                    names = {('*', ):0}
+                    try:
+                        results = beam(names, counts, features, laplace, fwords, entity)
+                        results = sorted(results.items(), key=operator.itemgetter(1))
+                        results.reverse()
+                        if givenness == 'new' and sgivenness == 'old':
+                            pass
+                        else:
+                            print givenness, sgivenness, syntax
+                            for k, v in results:
+                                print k, v
+                            print 10 * '-'
+                    except:
+                        pass
         print '\n'
 
 if __name__ == '__main__':
