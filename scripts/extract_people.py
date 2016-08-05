@@ -151,24 +151,26 @@ def save(people, fwrite):
     json.dump(people, open(fwrite, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
 
 def run():
-    entities_dir = "/roaming/thiago/wikilinks/wikilinks/entities.txt"
-    write_dir = "/roaming/thiago/wikilinks/wikilinks/dbpedia.txt"
+    entities_dir = "../data/entities.txt"
+    write_dir = "../data/dbpedia.json"
 
     people = {}
 
-    entities = []
     with open(entities_dir) as f:
         entities = f.readlines()
     entities = map(lambda x: x.split('\t')[0], entities)
 
     for entity in entities:
+        print entity
         name = entity.split('/')[-1]
         uri = os.path.join('http://dbpedia.org/resource/', name)
         aliases, foaf_names, givenNames, surnames, dbp_names, birthPlaces, birthNames, birthDates, deathDates = get_entity(uri)
 
-        people[entity] = {'aliases':aliases, 'foaf_names':foaf_names, 'givenNames':givenNames, 'surnames':surnames, \
-                          'dbp_names':dbp_names, 'birthPlaces':birthPlaces, 'birthNames':birthNames, 'birthDates':birthDates, 'deathDates': deathDates}
-    save_names(people, write_dir)
+        people[entity] = {'aliases':list(aliases), 'foaf_names':list(foaf_names), 'givenNames':list(givenNames), 'surnames':list(surnames), \
+                          'dbp_names':list(dbp_names), 'birthPlaces':list(birthPlaces), 'birthNames':list(birthNames), \
+                          'birthDates':list(birthDates), 'deathDates': list(deathDates)}
+        # print people[entity]
+    # save_names(people, write_dir)
     save(people, write_dir)
 
 if __name__ == '__main__':

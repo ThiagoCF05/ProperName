@@ -13,7 +13,6 @@ import traceback
 import json
 
 import utils.get_mentions as get_mentions
-import utils.loader as loader
 
 def update(dbpedia):
     def is_added(name):
@@ -77,11 +76,13 @@ def update(dbpedia):
     return dbpedia
 
 if __name__ == '__main__':
-    root_dir = '/roaming/tcastrof/names'
+    root_dir = '/roaming/tcastrof/names/eacl'
     parsed_dir = "/roaming/tcastrof/names/parsed"
-    mentions_dir = "/roaming/tcastrof/names/mentions"
+    mentions_dir = "/roaming/tcastrof/names/eacl/mentions"
 
-    urls, entities = loader.run(os.path.join(root_dir, 'urls-top50-new.txt'), os.path.join(root_dir, 'dbpedia.txt'))
+    # urls, entities = loader.run(os.path.join(root_dir, 'furls.json'), os.path.join(root_dir, 'fdbpedia.json'))
+    urls = json.load(open(os.path.join(root_dir, 'furls.json')))
+    entities = json.load(open(os.path.join(root_dir, 'fdpedia.json')))
 
     nfiles = 0
     notfound = 0
@@ -94,14 +95,14 @@ if __name__ == '__main__':
                 print nfiles, "processed / ", notfound, 'not found'
 
             try:
-                mentions = get_mentions.run(os.path.join(parsed_dir, url[0]), dbpedia)
+                mentions = get_mentions.run(os.path.join(parsed_dir, url['id']), dbpedia)
 
-                if os.path.isfile(os.path.join(mentions_dir, url[0])):
-                    j = json.load(open(os.path.join(mentions_dir, url[0])))
+                if os.path.isfile(os.path.join(mentions_dir, url['id'])):
+                    j = json.load(open(os.path.join(mentions_dir, url['id'])))
                     j[entity] = mentions
                 else:
                     j = { entity:mentions }
-                json.dump(j, open(os.path.join(mentions_dir, url[0]), 'w'), separators=(',',':'))
+                json.dump(j, open(os.path.join(mentions_dir, url['id']), 'w'), separators=(',',':'))
             except ValueError:
                 nfiles -= 1
                 notfound += 1
