@@ -8,6 +8,7 @@ Description:
 """
 
 from rdflib import Graph, URIRef
+import json
 import os
 
 def get_names():
@@ -146,6 +147,9 @@ def save_names(people, file_name):
         f.write('\n\n')
     f.close()
 
+def save(people, fwrite):
+    json.dump(people, open(fwrite, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+
 def run():
     entities_dir = "/roaming/thiago/wikilinks/wikilinks/entities.txt"
     write_dir = "/roaming/thiago/wikilinks/wikilinks/dbpedia.txt"
@@ -165,6 +169,7 @@ def run():
         people[entity] = {'aliases':aliases, 'foaf_names':foaf_names, 'givenNames':givenNames, 'surnames':surnames, \
                           'dbp_names':dbp_names, 'birthPlaces':birthPlaces, 'birthNames':birthNames, 'birthDates':birthDates, 'deathDates': deathDates}
     save_names(people, write_dir)
+    save(people, write_dir)
 
 if __name__ == '__main__':
     run()
