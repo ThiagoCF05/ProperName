@@ -81,7 +81,7 @@ def classify(mentions = [], dbpedia = {}, sentences = []):
             name['titles'] = [m.group(0)]
             aux = re.sub("M(r.*|s.*|rs.*)\s", "", name['text'])
         else:
-            name['titles'] = map(lambda x: x['word'], filter(lambda x: x['ner'] == 'TITLE', title_check))
+            name['titles'] = filter(lambda x: x['ner'] == 'TITLE', title_check)
             name['has_title'] = len(name['titles']) > 0
 
             aux = name['text']
