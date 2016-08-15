@@ -81,12 +81,12 @@ def classify(mentions = [], dbpedia = {}, sentences = []):
             name['titles'] = [m.group(0)]
             aux = re.sub("M(r.*|s.*|rs.*)\s", "", name['text'])
         else:
-            name['titles'] = map(lambda x: x['word'], filter(lambda x: x['ner'] == 'TITLE', title_check))
+            name['titles'] = map(lambda x: x['originalText'], filter(lambda x: x['ner'] == 'TITLE', title_check))
             name['has_title'] = len(name['titles']) > 0
 
             aux = name['text']
             for title in name['titles']:
-                aux = aux.replace(title['originalText'], '')
+                aux = aux.replace(title, '')
 
         # Check first name
         for first in dbpedia['first_names']:
