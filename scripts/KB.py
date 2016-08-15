@@ -8,7 +8,7 @@ Description:
     Attributes: first, middle and last names
 """
 
-import utils.loader as loader
+import corpus_builder.loader as loader
 
 def update(dbpedia):
     def is_added(name):

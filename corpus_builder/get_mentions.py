@@ -12,7 +12,7 @@ Description:
 import json
 import re
 
-import utils.name_variation as nv
+import corpus_builder.name_variation as nv
 
 from nltk.metrics.distance import edit_distance
 

@@ -1,3 +1,5 @@
+from ML.extractors import utilities
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -9,7 +11,6 @@ Description:
 
 import json
 import os
-import utilities
 
 if __name__ == '__main__':
     # prepare features and classes for machine learning

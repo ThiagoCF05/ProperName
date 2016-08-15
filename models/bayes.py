@@ -1,9 +1,11 @@
 __author__ = 'thiagocastroferreira'
 
 import json
-import extractors.count as count
 import operator
 import copy
+
+import ML.extractors.count as count
+
 
 def unigram(n_t, n_tm1, counts, features, laplace, entity):
     f = filter(lambda x: x[0] == n_tm1 and x[2] == entity, counts['wt_wtm1'])

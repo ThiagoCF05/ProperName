@@ -12,7 +12,7 @@ import sys
 import traceback
 import json
 
-import utils.get_mentions as get_mentions
+import corpus_builder.get_mentions as get_mentions
 import scripts.KB as kb
 
 if __name__ == '__main__':

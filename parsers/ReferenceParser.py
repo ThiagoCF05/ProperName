@@ -3,7 +3,7 @@ __author__ = 'thiagocastroferreira'
 import xml.etree.ElementTree as ET
 import copy
 from Parser import Parser
-import utils
+import corpus_builder
 
 class ReferenceParser(Parser):
     def __init__(self, append_other = False, append_refex = True, root = 'data/xmls'):
@@ -49,7 +49,7 @@ class ReferenceParser(Parser):
 
                         reference['entropy'] = float(ref.attrib['ENTROPY'])
                         reference['paragraph-recency'] = int(ref.attrib['PARAGRAPH-RECENCY'])
-                        reference['categorical-recency'] = utils.recency(int(ref.attrib['PARAGRAPH-RECENCY']))
+                        reference['categorical-recency'] = corpus_builder.recency(int(ref.attrib['PARAGRAPH-RECENCY']))
                         reference['paragraph-position'] = int(ref.attrib['PARAGRAPH-POSITION'])
                         reference['sentence-recency'] = int(ref.attrib['SENTENCE-RECENCY'])
                         reference['sentence-position'] = int(ref.attrib['SENTENCE-POSITION'])

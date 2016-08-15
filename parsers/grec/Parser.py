@@ -1,7 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
 import xml.etree.ElementTree as ET
-import utils
+import corpus_builder
 import os
 
 class GRECParser():
@@ -82,7 +82,7 @@ class GRECParser():
                         reference['syncat'] = ref.attrib['SYNCAT']
 
                         reference['paragraph-recency'] = int(ref.attrib['PARAGRAPH-RECENCY'])
-                        reference['categorical-recency'] = utils.recency(int(ref.attrib['PARAGRAPH-RECENCY']))
+                        reference['categorical-recency'] = corpus_builder.recency(int(ref.attrib['PARAGRAPH-RECENCY']))
                         reference['paragraph-position'] = int(ref.attrib['PARAGRAPH-POSITION'])
                         reference['sentence-recency'] = int(ref.attrib['SENTENCE-RECENCY'])
                         reference['sentence-position'] = int(ref.attrib['SENTENCE-POSITION'])

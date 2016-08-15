@@ -1,3 +1,5 @@
+from ML.extractors import utilities
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -9,7 +11,6 @@ Description:
 
 import os
 import json
-import utilities
 
 fdir = '/roaming/tcastrof/names/regnames/mentions'
 fwrite = '/home/tcastrof/names/classifiers/features/personal'

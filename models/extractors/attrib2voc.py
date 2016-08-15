@@ -1,3 +1,5 @@
+from ML.extractors import utilities
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -11,7 +13,6 @@ Description:
 
 import copy
 import json
-import utilities
 
 if __name__ == '__main__':
     furls = '/roaming/tcastrof/names/regnames/urls.txt'
