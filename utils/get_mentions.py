@@ -5,7 +5,7 @@ Author: Thiago Castro Ferreira
 Date: 12/04/2016
 Description:
     Main script from the code. It aims to find mentions in the texts from the corpus.
-    It only the mentions described in the Wikilinks corpus. In case you want all the references in the text,
+    It only selects the mentions described in the Wikilinks corpus. In case you want all the references in the text,
     check get_all_mentions.py
 """
 
@@ -71,6 +71,8 @@ def classify(mentions = [], dbpedia = {}, sentences = []):
             if name['startIndex'] > 2:
                 prev_token = sentences[name['sentNum']-1]['tokens'][name['startIndex']-3]
                 title_check.insert(0, prev_token)
+        title_check.extend(tokens)
+        name['text_prevTokens'] = ' '.join(map(lambda x: x['originalText'], title_check))
 
         # Check title
         m = re.match("M(r.*|s.*|rs.*)\s", name['text'])
@@ -79,7 +81,6 @@ def classify(mentions = [], dbpedia = {}, sentences = []):
             name['titles'] = [m.group(0)]
             aux = re.sub("M(r.*|s.*|rs.*)\s", "", name['text'])
         else:
-            title_check.extend(tokens)
             name['titles'] = filter(lambda x: x['ner'] == 'TITLE', title_check)
             name['has_title'] = len(name['titles']) > 0
 
