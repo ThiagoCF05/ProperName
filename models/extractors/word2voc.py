@@ -85,7 +85,7 @@ def run():
                 data.extend(process_tokens(mention, parsed, entity, False))
                 fdata.extend(process_tokens(mention, parsed, entity, True))
     json.dump(data, open('/roaming/tcastrof/names/regnames/stats/word2voc.json', 'w'), separators=(',',':'))
-    json.dump(data, open('/roaming/tcastrof/names/regnames/stats/fword2voc.json', 'w'), separators=(',',':'))
+    json.dump(fdata, open('/roaming/tcastrof/names/regnames/stats/fword2voc.json', 'w'), separators=(',',':'))
 
 if __name__ == '__main__':
     run()
