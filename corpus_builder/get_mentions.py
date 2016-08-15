@@ -116,6 +116,24 @@ def classify(mentions = [], dbpedia = {}, sentences = []):
                 # Threshold of 3 for the string distance
                 if edit_distance(str(aux).lower(), str(candidate).lower()) < 3:
                     name['name_type'].append(name_type)
+
+        # Label the reference according to the attribute set (Attributes: title, first, middle, last, appositive)
+        attribute_set = ''
+        if name['has_title']:
+            attribute_set = attribute_set + '+t'
+
+        if name['has_firstName']:
+            attribute_set = attribute_set + '+f'
+
+        if name['has_middleName']:
+            attribute_set = attribute_set + '+m'
+
+        if name['has_lastName']:
+            attribute_set = attribute_set + '+l'
+
+        if name['has_appositive']:
+            attribute_set = attribute_set + '+a'
+        name['label'] = attribute_set
         return name
 
     # initialize variables

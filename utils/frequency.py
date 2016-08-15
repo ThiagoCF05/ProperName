@@ -15,7 +15,7 @@ import json
 
 if __name__ == '__main__':
     fname = '/roaming/tcastrof/names/regnames/report.json'
-    d = "/roaming/tcastrof/names/regnames/mentions"
+    mentions_dir = "/roaming/tcastrof/names/regnames/mentions"
 
     freq_files = 0
     # corrupted files
@@ -45,13 +45,13 @@ if __name__ == '__main__':
     # size of the reference
     name_size = []
 
-    files = os.listdir(d)
+    files = os.listdir(mentions_dir)
 
     for f in files:
         print f, '\r',
         freq_files += 1
         try:
-            entities = json.load(open(os.path.join(d, f)))
+            entities = json.load(open(os.path.join(mentions_dir, f)))
             for e in entities:
                 pickle = entities[e]
                 names = filter(lambda x: x['type'] == 'PROPER', pickle)

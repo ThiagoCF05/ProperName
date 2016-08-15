@@ -1,9 +1,8 @@
 __author__ = 'thiagocastroferreira'
 
 import os
-import cPickle as p
 
-import corpus_builder.vareg_utils as vutils
+import utils.vareg_utils as vutils
 import corpus_builder.get_mentions as get_mentions
 
 def update(dbpedia):

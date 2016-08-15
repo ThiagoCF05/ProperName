@@ -4,7 +4,7 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 25/07/2016
 Description:
-    This script aims to prepare a file with features for our proposed bayesian model for words
+    This script aims to prepare a file with features for our proposed bayesian model for words (stats/word2voc.json)
 """
 
 import os

@@ -8,7 +8,7 @@ Date: 26/07/2016
 Description:
     This script aims to count attributes (title, first, last, etc.) based on the result of the word2voc.py
     script for probabilistic reasons
-    This script aims to prepare a file with features for our proposed bayesian model for attributes
+    This script aims to prepare a file with features for our proposed bayesian model for attributes (stats/attrib2voc.json)
 """
 
 import copy
