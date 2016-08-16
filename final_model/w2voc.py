@@ -100,8 +100,8 @@ def run(N, out='wtd'):
     mdir = os.path.join(root_dir, 'eacl', 'mentions')
     pdir = os.path.join(root_dir, 'regnames', 'parsed')
 
-    data = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, False))
-    fdata = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, True)) # filtered data
+    data = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, False).values())
+    fdata = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, True).values()) # filtered data
 
     if out == 'wtd':
         json.dump(data, open('/roaming/tcastrof/names/eacl/stats/word2voc.json', 'w'), separators=(',',':'))
