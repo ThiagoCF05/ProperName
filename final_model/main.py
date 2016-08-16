@@ -21,6 +21,7 @@ def run():
     parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
     references = preprocessing.filter_entities(49, mention_dir)
+    print references
 
     for entity in references:
         # Retrieve all the mentions to the entity
