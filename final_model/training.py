@@ -58,9 +58,9 @@ def w_given_e(voc, bigram=False):
 def run(train_set, bigram=False, out='wtd'):
     # CONTENT SELECTION
     s_e = s_given_e(train_set)
-    discourse_se = discourse_given_s(train_set, bigram)
-    sentence_se = sentence_given_s(train_set, bigram)
-    syntax_se = syntax_given_s(train_set, bigram)
+    discourse_se = discourse_given_s(train_set)
+    sentence_se = sentence_given_s(train_set)
+    syntax_se = syntax_given_s(train_set)
 
     # REALIZATION
     e_w = entity_given_w(train_set)

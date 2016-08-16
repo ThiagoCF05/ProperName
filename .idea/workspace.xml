@@ -123,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Bayes.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17331932" vertical-offset="45" max-vertical-offset="1650">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1650">
               <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
@@ -147,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="training.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_model/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1620">
-              <caret line="72" column="22" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.78781515" vertical-offset="165" max-vertical-offset="1620">
+              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -307,11 +307,11 @@
       <list>
         <option value="$PROJECT_DIR$/final_model/voc2count.py" />
         <option value="$PROJECT_DIR$/final_model/settings.py" />
-        <option value="$PROJECT_DIR$/final_model/training.py" />
         <option value="$PROJECT_DIR$/final_model/w2voc.py" />
         <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
         <option value="$PROJECT_DIR$/final_model/main.py" />
         <option value="$PROJECT_DIR$/final_model/Bayes.py" />
+        <option value="$PROJECT_DIR$/final_model/training.py" />
       </list>
     </option>
   </component>
@@ -1072,14 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1620">
-          <caret line="72" column="22" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="428" max-vertical-offset="1380">
@@ -1102,11 +1094,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17331932" vertical-offset="45" max-vertical-offset="1650">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1650">
           <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final_model/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78781515" vertical-offset="165" max-vertical-offset="1620">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
