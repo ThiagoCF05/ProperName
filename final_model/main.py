@@ -9,6 +9,7 @@ Description:
 
 import json
 import numpy as np
+import operator
 import os
 import preprocessing
 
@@ -46,7 +47,10 @@ def run():
                 }
 
                 print mention['label']
-                print clf.select_content(features, entity)
+                prob = clf.select_content(features, entity)
+                prob = sorted(prob.items(), key=operator.itemgetter(1))
+                prob.reverse()
+                print dict(prob)
                 print 10 * '-'
 
 if __name__ == '__main__':
