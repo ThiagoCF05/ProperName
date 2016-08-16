@@ -12,7 +12,7 @@ class Bayes(object):
         self.train()
 
     def train(self):
-        self.clf, self.laplace = training.run(self.voc, self.bigram, 'std')
+        self.clf, self.laplace = training.run(self.train_set, self.bigram, 'std')
 
     def select_content(self, features, entity):
         def calc_prob(s):

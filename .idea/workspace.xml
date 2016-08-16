@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_model/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36239496" vertical-offset="0" max-vertical-offset="952">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
               <folding>
                 <element signature="e#139#150#0" expanded="true" />
               </folding>
@@ -123,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bayes.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1650">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.17331932" vertical-offset="45" max-vertical-offset="1650">
+              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -310,8 +310,8 @@
         <option value="$PROJECT_DIR$/final_model/training.py" />
         <option value="$PROJECT_DIR$/final_model/w2voc.py" />
         <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
-        <option value="$PROJECT_DIR$/final_model/Bayes.py" />
         <option value="$PROJECT_DIR$/final_model/main.py" />
+        <option value="$PROJECT_DIR$/final_model/Bayes.py" />
       </list>
     </option>
   </component>
@@ -1080,16 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1650">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding>
-            <element signature="e#37#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="428" max-vertical-offset="1380">
@@ -1102,10 +1092,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_model/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36239496" vertical-offset="0" max-vertical-offset="952">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
           <folding>
             <element signature="e#139#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17331932" vertical-offset="45" max-vertical-offset="1650">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding>
+            <element signature="e#37#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
