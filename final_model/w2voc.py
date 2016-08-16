@@ -91,7 +91,7 @@ def filter_entities(N, parsed_dir, mention_dir, isFilter):
             if entity not in result:
                 result[entity] = []
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):
-                result[entity].append(process_tokens(mention, parsed, entity, isFilter))
+                result[entity].extend(process_tokens(mention, parsed, entity, isFilter))
 
     return dict(map(lambda x: (x, result[x]), filter(lambda e: len(result[e]) > N, result.keys())))
 

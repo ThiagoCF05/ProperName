@@ -102,8 +102,8 @@
       <file leaf-file-name="w2voc.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_model/w2voc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4012605" vertical-offset="803" max-vertical-offset="1755">
-              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.49579832" vertical-offset="803" max-vertical-offset="1755">
+              <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding>
                 <element signature="e#224#233#0" expanded="true" />
               </folding>
@@ -114,7 +114,7 @@
       <file leaf-file-name="Bayes.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1650">
+            <state vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1650">
               <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
@@ -993,7 +993,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_model/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
+        <state vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1650">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
@@ -1003,8 +1003,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_model/w2voc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4012605" vertical-offset="803" max-vertical-offset="1755">
-          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.49579832" vertical-offset="803" max-vertical-offset="1755">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
           <folding>
             <element signature="e#224#233#0" expanded="true" />
           </folding>
