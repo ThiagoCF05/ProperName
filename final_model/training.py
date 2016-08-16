@@ -55,17 +55,17 @@ def w_given_e(voc, bigram=False):
         grams = map(lambda x: (x['word'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
-def run(train_set, bigram=False, out='wtd'):
+def run(voc, bigram=False, out='wtd'):
     # CONTENT SELECTION
-    s_e = s_given_e(train_set)
-    discourse_se = discourse_given_s(train_set)
-    sentence_se = sentence_given_s(train_set)
-    syntax_se = syntax_given_s(train_set)
+    s_e = s_given_e(voc)
+    discourse_se = discourse_given_s(voc)
+    sentence_se = sentence_given_s(voc)
+    syntax_se = syntax_given_s(voc)
 
     # REALIZATION
-    e_w = entity_given_w(train_set)
-    s_we = s_given_we(train_set, bigram)
-    w_e = w_given_e(train_set, bigram)
+    e_w = entity_given_w(voc)
+    s_we = s_given_we(voc, bigram)
+    w_e = w_given_e(voc, bigram)
 
     train_set = {
         'e_w': e_w,
@@ -90,7 +90,7 @@ def run(train_set, bigram=False, out='wtd'):
             },
         'realization': {
             's_we': 28,
-            'w_e': len(set(map(lambda x: x['word'], train_set)))
+            'w_e': len(set(map(lambda x: x['word'], voc)))
         }
     }
 
