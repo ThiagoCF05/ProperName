@@ -36,7 +36,7 @@ class Bayes(object):
                 prob = prob * (float(num+1) / (dem+self.laplace['content'][feature]))
             return prob
 
-        probabilities = dict(lambda s: (s, 0), settings.labels)
+        probabilities = dict(map(lambda s: (s, 0), settings.labels))
 
         for s in probabilities:
             probabilities[s] = calc_prob(s)
