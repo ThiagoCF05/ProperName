@@ -30,7 +30,7 @@ class Bayes(object):
                 f = filter(lambda x: x[1] == s and x[2] == entity, self.clf['content'][feature])
                 dem = sum(map(lambda x: self.clf['content'][feature][x], f))
 
-                f = filter(lambda x: x[0] == self.clf['content'][feature], f)
+                f = filter(lambda x: x[0] == features[feature], f)
                 num = sum(map(lambda x: self.clf['content'][feature][x], f))
 
                 prob = prob * (float(num+1) / (dem+self.laplace['content'][feature]))
@@ -77,6 +77,7 @@ class Bayes(object):
             if w_tm1 == 'END':
                 candidates[name] = prob
             else:
+                # just consider words that are not in the proper name yet
                 for w_t in filter(lambda x: x not in name, words):
                     _name = copy.copy(list(name))
                     _name.append(w_t)

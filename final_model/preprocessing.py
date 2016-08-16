@@ -1,15 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
-"""
-Author: Thiago Castro Ferreira
-Date: 15/08/2016
-Description:
-    This script aims to prepare a training and test set of our corpus.
-    It also extract the features to train our proposed bayesian model for words (stats/word2voc.json)
-"""
-
-import os
 import json
+import os
 
 def process_tokens(mention, parsed, entity, filtered = False):
     '''
@@ -72,12 +64,10 @@ def process_tokens(mention, parsed, entity, filtered = False):
     return data
 
 # filter entities with more than N mentions and process the mentions
-def filter_entities(N, parsed_dir, mention_dir, isFilter):
+def filter_entities(N, mention_dir):
     '''
     :param N: only entities with more than N mentions should be considered
     :param mention_dir: directory where the mention files are present
-    :param parsed_dir: directory where the parsed files are present
-    :param isFilter: when processing a reference, should only the tokens among proper nouns be filtered?
     :return:
     '''
     result = {}
@@ -86,28 +76,12 @@ def filter_entities(N, parsed_dir, mention_dir, isFilter):
     for i, fname in enumerate(files):
         print i, fname, '\r',
         mentions = json.load(open(os.path.join(mention_dir, fname)))
-        parsed = json.load(open(os.path.join(parsed_dir, fname)))
 
         for entity in mentions:
             if entity not in result:
                 result[entity] = []
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):
-                result[entity].extend(process_tokens(mention, parsed, entity, isFilter))
+                mention['fname'] = fname
+                result[entity].append(mention)
 
     return dict(map(lambda x: (x, result[x]), filter(lambda e: len(result[e]) > N, result.keys())))
-
-def run(N, out='wtd'):
-    root_dir = '/roaming/tcastrof/names'
-    mdir = os.path.join(root_dir, 'eacl', 'mentions')
-    pdir = os.path.join(root_dir, 'regnames', 'parsed')
-
-    data = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, False).values())
-    fdata = reduce(lambda x, y: x+y, filter_entities(N, pdir, mdir, True).values()) # filtered data
-
-    if out == 'wtd':
-        json.dump(data, open('/roaming/tcastrof/names/eacl/stats/word2voc.json', 'w'), separators=(',',':'))
-        json.dump(fdata, open('/roaming/tcastrof/names/eacl/stats/fword2voc.json', 'w'), separators=(',',':'))
-    return data, fdata
-
-if __name__ == '__main__':
-    run(49)
