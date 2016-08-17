@@ -12,6 +12,10 @@ def word_freq(mentions, sentence):
         if len(filter(lambda x: x[0] >= i >= x[1], intervals)) == 0:
             words.append(token['word'])
 
+    print 10 * '*'
+    print map(lambda x: x['word'], sentence['tokens'])
+    print words
+    print 10 * '*'
     return nltk.FreqDist(words)
 
 def process_tokens(mention, parsed, entity, filtered = False):

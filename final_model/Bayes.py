@@ -101,7 +101,7 @@ class Bayes(object):
         if ('END' in f and len(f) == 1) or (names.keys() == _names.keys()) or len(filter(lambda name: len(name) > 5, _names.keys())) > 0:
             return _names
         else:
-            return self._beam_search(_names, words, s, entity, n)
+            return self._beam_search(_names, words, s, entity, word_freq, n)
 
     def realize(self, s, entity, word_freq):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
