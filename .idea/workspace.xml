@@ -99,10 +99,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_model/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27672955" vertical-offset="471" max-vertical-offset="1470">
+            <state vertical-scroll-proportion="0.0" vertical-offset="471" max-vertical-offset="1470">
               <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
               <folding>
                 <element signature="e#139#150#0" expanded="true" />
@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocessing.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="preprocessing.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.17295597" vertical-offset="0" max-vertical-offset="1620">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -266,8 +266,8 @@
         <option value="$PROJECT_DIR$/final_model/w2voc.py" />
         <option value="$PROJECT_DIR$/final_model/training.py" />
         <option value="$PROJECT_DIR$/final_model/Bayes.py" />
-        <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
         <option value="$PROJECT_DIR$/final_model/main.py" />
+        <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -1109,22 +1109,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/final_model/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="471" max-vertical-offset="1470">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
+            <element signature="e#139#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/main.py">
+    <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27672955" vertical-offset="471" max-vertical-offset="1470">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.17295597" vertical-offset="0" max-vertical-offset="1620">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
           <folding>
-            <element signature="e#139#150#0" expanded="true" />
+            <element signature="e#37#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

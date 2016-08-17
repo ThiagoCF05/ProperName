@@ -9,7 +9,7 @@ def word_freq(mentions, sentence):
 
     words = []
     for i, token in enumerate(sentence['tokens']):
-        if len(filter(lambda x: x[0] >= i <= x[1], intervals)) == 0:
+        if len(filter(lambda x: i not in range(x[0], x[1]+1), intervals)) == 0:
             words.append(token['word'])
 
     print 10 * '*'
