@@ -53,6 +53,7 @@ def run():
                 prob = sorted(prob.items(), key=operator.itemgetter(1))
                 prob.reverse()
                 print prob[:3]
+                print clf.realize(prob[0][0], entity)
                 print 10 * '-'
 
                 result = {
@@ -64,8 +65,6 @@ def run():
                     'entity': entity
                 }
                 label_results.append(result)
-
-                print clf.realize(prob[0][0], entity)
     # json.dump(label_results, open('results.json', 'w'))
 
 if __name__ == '__main__':
