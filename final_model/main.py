@@ -35,7 +35,6 @@ def run():
         kf = KFold(mentions.shape[0], n_folds=10)
         for train, test in kf:
             results[entity][fold] = []
-            fold = fold + 1
 
             train_set, test_set = mentions[train], mentions[test]
 
@@ -87,6 +86,7 @@ def run():
                     'entity': entity
                 }
                 results[entity][fold].append(result)
+            fold = fold + 1
     json.dump(results, open('results.json', 'w'))
 
 if __name__ == '__main__':
