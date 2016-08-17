@@ -54,6 +54,7 @@ class Bayes(object):
 
             # compute the penalty by the frequency of the word in the sentence
             print gram[0]
+            print word_freq
             if gram[0] in word_freq:
                 penalty = float(1) / (word_freq[gram[0]] + 1)
             else:
