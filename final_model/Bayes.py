@@ -53,6 +53,7 @@ class Bayes(object):
             num = sum(map(lambda x: self.clf['realization']['w_e'][x], f))
 
             # compute the penalty by the frequency of the word in the sentence
+            print gram[0]
             if gram[0] in word_freq:
                 penalty = float(1) / (word_freq[gram[0]] + 1)
             else:
