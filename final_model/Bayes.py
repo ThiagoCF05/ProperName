@@ -102,4 +102,4 @@ class Bayes(object):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
 
         names = {('*', ):0}
-        return self._beam_search(names, words, s, entity)
+        return self._beam_search(names, words, s, entity, 2)
