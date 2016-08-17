@@ -65,9 +65,9 @@ def run():
                 # compute the frequency of the words in the sentence (words that are not part of the mention)
                 parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))['sentences'][mention['sentNum']-1]
                 mentions_same_entity = filter(lambda x: x['fname'] == mention['fname'] and x['sentNum'] == mention['sentNum'], mentions)
-                word_freq = preprocessing.word_freq(mentions_same_entity, parsed)
-
-                realizer =  clf.realize(prob[0][0], entity, word_freq)
+                words_freq = preprocessing.word_freq(mentions_same_entity, parsed)
+                print dict(words_freq)
+                realizer =  clf.realize(prob[0][0], entity, words_freq)
                 print realizer
                 print 10 * '-'
 
