@@ -21,6 +21,7 @@ def run():
     mention_dir = '/roaming/tcastrof/names/eacl/mentions'
     parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
+    results = []
     references = preprocessing.filter_entities(49, mention_dir)
 
     for entity in references:
@@ -47,11 +48,23 @@ def run():
                 }
 
                 print mention['label']
+                print entity, mention['givenness'], mention['sentence-givenness'], mention['syntax']
                 prob = clf.select_content(features, entity)
                 prob = sorted(prob.items(), key=operator.itemgetter(1))
                 prob.reverse()
                 print prob
                 print 10 * '-'
+
+                result = {
+                    'R': mention['label'],
+                    'P': prob,
+                    'giveness': mention['givenness'],
+                    'sentence-givenness': mention['sentence-givenness'],
+                    'syntax': mention['syntax'],
+                    'entity': entity
+                }
+                results.append(result)
+    json.dump(results, open('results.json', 'w'))
 
 if __name__ == '__main__':
     run()
