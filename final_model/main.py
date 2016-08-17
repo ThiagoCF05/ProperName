@@ -58,7 +58,7 @@ def run():
                 prob = clf.select_content(features, entity)
                 prob = sorted(prob.items(), key=operator.itemgetter(1))
                 prob.reverse()
-                # print prob[:3]
+                print prob[:3]
 
                 # REALIZATION
                 # compute the frequency of the words in the sentence (words that are not part of the mention)
@@ -67,7 +67,7 @@ def run():
                 words_freq = dict(preprocessing.word_freq(mentions_same_entity, parsed))
 
                 realizer =  clf.realize(prob[0][0], entity, words_freq)
-                # print realizer
+                print realizer
                 print 10 * '-'
 
                 # Save results
