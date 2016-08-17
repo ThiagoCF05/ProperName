@@ -43,7 +43,7 @@ class Bayes(object):
 
         return probabilities
 
-    def _beam_search(self, names, words, s, entity, n=5):
+    def _beam_search(self, names, words, s, entity, word_freq, n=5):
         def calc_prob(gram):
             # PRIORI
             f = filter(lambda x: x[1] == gram[1] and x[2] == entity, self.clf['realization']['w_e'])
@@ -52,7 +52,12 @@ class Bayes(object):
             f = filter(lambda x: x[0] == gram[0], f)
             num = sum(map(lambda x: self.clf['realization']['w_e'][x], f))
 
-            priori = (float(num+1) / (dem+self.laplace['realization']['w_e']))
+            # compute the penalty by the frequency of the word in the sentence
+            if gram[0] in word_freq:
+                penalty = float(1) / (word_freq[gram[0]] + 1)
+            else:
+                penalty = 1
+            priori = ((float(num+1) / (dem+self.laplace['realization']['w_e']))) * penalty
 
             # POSTERIORI
             f = filter(lambda x: x[1] == gram[0] and x[2] == gram[1] and x[3] == entity, self.clf['realization']['s_we'])
@@ -98,8 +103,8 @@ class Bayes(object):
         else:
             return self._beam_search(_names, words, s, entity, n)
 
-    def realize(self, s, entity):
+    def realize(self, s, entity, word_freq):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
 
         names = {('*', ):0}
-        return self._beam_search(names, words, s, entity, 1)
+        return self._beam_search(names, words, s, entity, word_freq, 1)

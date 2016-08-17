@@ -1,7 +1,18 @@
 __author__ = 'thiagocastroferreira'
 
 import json
+import nltk
 import os
+
+def word_freq(mentions, sentence):
+    intervals = map(lambda x: (x['startIndex']-1, x['endIndex']-1), mentions)
+
+    words = []
+    for i, token in enumerate(sentence['tokens']):
+        if len(filter(lambda x: x[0] >= i >= x[1], intervals)) == 0:
+            words.append(token['word'])
+
+    return nltk.FreqDist(words)
 
 def process_tokens(mention, parsed, entity, filtered = False):
     '''
