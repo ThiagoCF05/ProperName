@@ -99,11 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_model/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="471" max-vertical-offset="1470">
-              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.33962265" vertical-offset="516" max-vertical-offset="1470">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
               <folding>
                 <element signature="e#139#150#0" expanded="true" />
               </folding>
@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocessing.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="preprocessing.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22012578" vertical-offset="0" max-vertical-offset="1620">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -266,8 +266,8 @@
         <option value="$PROJECT_DIR$/final_model/w2voc.py" />
         <option value="$PROJECT_DIR$/final_model/training.py" />
         <option value="$PROJECT_DIR$/final_model/Bayes.py" />
-        <option value="$PROJECT_DIR$/final_model/main.py" />
         <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
+        <option value="$PROJECT_DIR$/final_model/main.py" />
       </list>
     </option>
   </component>
@@ -1109,22 +1109,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/main.py">
+    <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="471" max-vertical-offset="1470">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
           <folding>
-            <element signature="e#139#150#0" expanded="true" />
+            <element signature="e#37#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_model/preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/final_model/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22012578" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.33962265" vertical-offset="516" max-vertical-offset="1470">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
+            <element signature="e#139#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
