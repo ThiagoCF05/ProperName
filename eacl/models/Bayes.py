@@ -98,6 +98,7 @@ class Bayes(object):
         _names = prune(candidates)
 
         f = set(_names.values())
+        # Stop criteria: prediction of END symbol or the beam search still the same from the last recursion or a proper name bigger than 5 is predicted
         if ('END' in f and len(f) == 1) or (names.keys() == _names.keys()) or len(filter(lambda name: len(name) > 5, _names.keys())) > 0:
             return _names
         else:

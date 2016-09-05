@@ -14,6 +14,7 @@ def word_freq(mentions, sentence):
 
     return nltk.FreqDist(words)
 
+# prepare the set of features to train our bayes model
 def process_tokens(mention, parsed, entity, filtered = False):
     '''
     :param mention: mention information
