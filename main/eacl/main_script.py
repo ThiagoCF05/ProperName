@@ -13,7 +13,8 @@ import numpy as np
 import operator
 import os
 
-# import main.eacl.preprocessing as prep
+import main.eacl.preprocessing as prep
+
 from models.Bayes import Bayes
 from models.siddharthan import Siddharthan
 from models.deemter import Deemter
@@ -56,7 +57,7 @@ def bayes_model(mention, entity, model, mentions):
 def run():
     # filter entities and their references (more than 49 references)
     results = {}
-    references = preprocessing.filter_entities(49, mention_dir)
+    references = prep.filter_entities(49, mention_dir)
 
     for entity in references:
         results[entity] = {}
@@ -77,7 +78,7 @@ def run():
             vocabulary = []
             for mention in train_set:
                 parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
-                vocabulary.extend(preprocessing.process_tokens(mention, parsed, entity, False))
+                vocabulary.extend(prep.process_tokens(mention, parsed, entity, False))
 
             # initialize our official model
             clf = Bayes(vocabulary, True)
