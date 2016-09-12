@@ -2,7 +2,7 @@ __author__ = 'thiagocastroferreira'
 
 import copy
 import operator
-from main.eacl import training, settings
+from ...eacl import training, settings
 
 class Bayes(object):
     def __init__(self, train_set, bigram):
