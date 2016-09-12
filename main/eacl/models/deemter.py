@@ -22,6 +22,7 @@ class Deemter(object):
                     return False
             return True
 
+        self.parsed = json.load(open(os.path.join(self.parsed_dir, self.target['fname'])))
         # select all the mentions to the target entity in the context window size win
         self.mentions = filter(lambda x: self.target['sentNum']-self.win <= x['sentNum'] <= self.target['sentNum'], mentions)
 
@@ -77,8 +78,6 @@ class Deemter(object):
         self.entity = entity
         self.target = target
         self.win = win
-
-        self.parsed = json.load(open(os.path.join(self.parsed_dir, target['fname'])))
 
         self.distractors = self._get_distractors(mentions)
         return self._get_reference()
