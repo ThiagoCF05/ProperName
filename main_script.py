@@ -68,7 +68,7 @@ def run():
         # compute cross validation
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
-        for train, test in kf[:1]:
+        for train, test in list(kf)[:1]:
             results[entity][fold] = []
 
             # train and test sets
