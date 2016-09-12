@@ -67,7 +67,7 @@ class Deemter(object):
         isResult = True
         for name in names:
             for distractor in self.distractors:
-                if name in distractor['text']:
+                if name in distractor:
                     isResult = False
                     break
             if isResult:
