@@ -1,3 +1,5 @@
+from main import corpus_builder as nv
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -11,8 +13,6 @@ Description:
 
 import json
 import re
-
-import corpus_builder.name_variation as nv
 
 from nltk.metrics.distance import edit_distance
 

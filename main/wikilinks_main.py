@@ -1,3 +1,5 @@
+from main import utils as kb
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -11,9 +13,6 @@ import os
 import sys
 import traceback
 import json
-
-import corpus_builder.get_mentions as get_mentions
-import utils.KB as kb
 
 if __name__ == '__main__':
     root_dir = '/roaming/tcastrof/names/eacl'

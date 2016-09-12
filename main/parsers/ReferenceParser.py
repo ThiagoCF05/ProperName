@@ -1,9 +1,11 @@
+from main import corpus_builder
+from main.parsers import Parser
+
 __author__ = 'thiagocastroferreira'
 
 import xml.etree.ElementTree as ET
 import copy
-from Parser import Parser
-import corpus_builder
+
 
 class ReferenceParser(Parser):
     def __init__(self, append_other = False, append_refex = True, root = 'data/xmls'):

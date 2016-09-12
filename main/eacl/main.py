@@ -1,4 +1,5 @@
-from eacl.models import Bayes
+from main.eacl import preprocessing
+from main.eacl.models import Bayes
 
 __author__ = 'thiagocastroferreira'
 
@@ -13,7 +14,6 @@ import json
 import numpy as np
 import operator
 import os
-import preprocessing
 
 from sklearn.cross_validation import KFold
 

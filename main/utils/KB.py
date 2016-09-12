@@ -1,3 +1,5 @@
+from main import corpus_builder as loader
+
 __author__ = 'thiagocastroferreira'
 
 """
@@ -8,7 +10,6 @@ Description:
     Attributes: first, middle and last names
 """
 
-import corpus_builder.loader as loader
 
 def update(dbpedia):
     def is_added(name):

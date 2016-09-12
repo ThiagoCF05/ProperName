@@ -1,9 +1,9 @@
+from main import utils as vutils
+
 __author__ = 'thiagocastroferreira'
 
 import os
 
-import utils.vareg_utils as vutils
-import corpus_builder.get_mentions as get_mentions
 
 def update(dbpedia):
     if 'aliases' in dbpedia.keys():

@@ -1,7 +1,8 @@
+from main import corpus_builder
+
 __author__ = 'thiagocastroferreira'
 
 import xml.etree.ElementTree as ET
-import corpus_builder
 import os
 
 class GRECParser():
