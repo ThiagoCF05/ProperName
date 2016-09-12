@@ -68,7 +68,7 @@ def run():
         # compute cross validation
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
-        for train, test in list(kf)[:1]:
+        for train, test in kf:
             results[entity][fold] = []
 
             # train and test sets
@@ -112,8 +112,8 @@ def run():
                 result['deemter'] = { 'content': r[0], 'realization': r[1] }
 
                 results[entity][fold].append(result)
-                print result
-                print 10 * '-'
+                # print result
+                # print 10 * '-'
             fold = fold + 1
     p.dump(results, open('results.json', 'w'))
 
