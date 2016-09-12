@@ -60,6 +60,7 @@ def run():
     references = prep.filter_entities(49, mention_dir)
 
     for entity in references:
+        print entity
         results[entity] = {}
 
         # Retrieve all the mentions to the entity
@@ -69,7 +70,6 @@ def run():
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
         for train, test in kf:
-            print '\nFold ', fold
             results[entity][fold] = []
 
             # train and test sets
