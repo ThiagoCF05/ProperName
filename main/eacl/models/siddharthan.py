@@ -1,11 +1,12 @@
 __author__ = 'thiagocastroferreira'
 
 import json
+import main.utils.KB as kb
 import main.eacl.preprocessing as prep
 
 class Siddharthan(object):
     def __init__(self, dbpedia_dir):
-        self.dbpedia = json.load(open(dbpedia_dir))
+        self.dbpedia = kb.update(json.load(open(dbpedia_dir)))
 
     def run(self, entity, discourse):
         if discourse == 'new':

@@ -59,7 +59,7 @@ class DemmterTest(unittest.TestCase):
                         'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
                         'label': '+f+l', 'sentNum': 3}
         win = 3
-        mentions = json.load(open(os.path.join(self.mentions_dir, self.target['fname'])))[entity]
+        mentions = json.load(open(os.path.join(self.mentions_dir, target['fname'])))[entity]
 
         self.assertTupleEqual(('+l', 'Bukowski'), tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win)))
 

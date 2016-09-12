@@ -2,11 +2,13 @@ __author__ = 'thiagocastroferreira'
 
 import json
 import os
+
 import main.eacl.preprocessing as prep
+import main.utils.KB as kb
 
 class Deemter(object):
     def __init__(self, dbpedia_dir, parsed_dir):
-        self.dbpedia = json.load(open(dbpedia_dir))
+        self.dbpedia = kb.update(json.load(open(dbpedia_dir)))
         self.parsed_dir = parsed_dir
 
         self.distractors = None
