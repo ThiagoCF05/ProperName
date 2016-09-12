@@ -99,10 +99,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="deemter.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deemter.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/deemter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4054054" vertical-offset="75" max-vertical-offset="1320">
+            <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1320">
               <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demmter_test.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="demmter_test.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1020">
-              <caret line="41" column="86" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.618442" vertical-offset="361" max-vertical-offset="1035">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -306,8 +306,8 @@
         <option value="$PROJECT_DIR$/test/eacl/models/test_demmter.py" />
         <option value="$PROJECT_DIR$/test/main_test.py" />
         <option value="$PROJECT_DIR$/test/eacl/models/siddharthan_test.py" />
-        <option value="$PROJECT_DIR$/test/eacl/models/demmter_test.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/deemter.py" />
+        <option value="$PROJECT_DIR$/test/eacl/models/demmter_test.py" />
       </list>
     </option>
   </component>
@@ -1447,20 +1447,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
+    <entry file="file://$PROJECT_DIR$/main/eacl/models/deemter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1020">
-          <caret line="41" column="86" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1320">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/models/deemter.py">
+    <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4054054" vertical-offset="75" max-vertical-offset="1320">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.618442" vertical-offset="361" max-vertical-offset="1035">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>

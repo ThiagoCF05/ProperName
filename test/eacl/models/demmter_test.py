@@ -48,6 +48,7 @@ class DemmterTest(unittest.TestCase):
 
         result = model._get_distractors(mentions)
         result.sort()
+        print result
 
         expected = ['07/11/12 13:16:04', '1987', 'Barfly', 'Dutch company Scotch & Soda', \
                     'Dutch company Scotch & Soda, acquired last year by Kellwood', 'Elena Vosnaki', \
