@@ -17,7 +17,7 @@ class SiddharthanTest(unittest.TestCase):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
 
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
-        self.assertTupleEqual(tuple(model.run(entity, 'old')), ('+f+l', 'Bukowski'))
+        self.assertTupleEqual(tuple(model.run(entity, 'old')), ('+l', 'Bukowski'))
 
     def test_birth_new(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)

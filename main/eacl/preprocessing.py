@@ -10,7 +10,6 @@ def get_label(name, dbpedia):
     # Check first name
     for first in dbpedia['first_names']:
         if str(first).lower() in str(name).lower():
-            name['has_firstName'] = True
             label = label + '+f'
             break
 
