@@ -44,7 +44,7 @@ class DemmterTest(unittest.TestCase):
                   'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
                   'label': '+f+l', 'sentNum': 3}
         model.win = 3
-        mentions = json.load(open(os.path.join(mentions_dir, model.target['fname'])))
+        mentions = json.load(open(os.path.join(mentions_dir, model.target['fname'])))['http://en.wikipedia.org/wiki/Charles_Bukowski']
 
         result = model._get_distractors(mentions)
         result.sort()
