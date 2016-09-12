@@ -28,7 +28,7 @@ class DemmterTest(unittest.TestCase):
         model.entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
         self.assertEqual(model._get_names(), ['Sandler', 'Adam', 'Adam Richard Sandler'])
 
-    def test_distractors(self):
+    def test_distractors_1(self):
         dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
         parsed_dir = '/roaming/tcastrof/names/parsed'
         mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
@@ -58,4 +58,26 @@ class DemmterTest(unittest.TestCase):
                     'their Spring-Summer 2013 collection']
 
         self.assertListEqual(result, expected)
+
+    def test_run(self):
+        dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
+        parsed_dir = '/roaming/tcastrof/names/parsed'
+        mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
+
+        entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
+        target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'], \
+                        'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
+                        'position': [3, 4], 'number': 'SINGULAR', 'has_adjective': False, 'has_middleName': False, \
+                        'appositive': None, 'syntax': 'subj-det', 'id': 17, 'titles': [], 'sentence-givenness': 'new', \
+                        'type': 'PROPER', 'isRepresentativeMention': True, 'fname': '7298454', \
+                        'name_type': ['foaf_names', 'dbp_names'], 'animacy': 'ANIMATE', 'givenness': 'new', \
+                        'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
+                        'label': '+f+l', 'sentNum': 3}
+        win = 3
+        mentions = json.load(open(os.path.join(mentions_dir, target['fname'])))
+
+        model = Deemter(dbpedia_dir, parsed_dir)
+
+        self.assertEqual('Bukowski', model.run(entity=entity, target=target, mentions=mentions, win=win))
+
 
