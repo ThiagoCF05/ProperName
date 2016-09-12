@@ -13,7 +13,7 @@ import numpy as np
 import operator
 import os
 
-import main.eacl.preprocessing as prep
+import preprocessing as prep
 
 from models.Bayes import Bayes
 from models.siddharthan import Siddharthan
