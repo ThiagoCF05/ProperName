@@ -2,7 +2,7 @@ __author__ = 'thiagocastroferreira'
 
 import copy
 import operator
-from .. import training, settings
+from main.eacl import training, settings
 
 class Bayes(object):
     def __init__(self, train_set, bigram):
@@ -32,7 +32,7 @@ class Bayes(object):
                 f = filter(lambda x: x[0] == features[feature], f)
                 num = sum(map(lambda x: self.clf['content'][feature][x], f))
 
-                prob = prob * (float(num+1) / (dem+self.laplace['content'][feature]))
+                prob = prob * (float(num+1) / (dem+slaplace['content'][feature]))
             return prob
 
         probabilities = dict(map(lambda s: (s, 0), settings.labels))

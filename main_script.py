@@ -13,11 +13,11 @@ import numpy as np
 import operator
 import os
 
-import preprocessing as prep
+import main.eacl.preprocessing as prep
 
-from models.Bayes import Bayes
-from models.siddharthan import Siddharthan
-from models.deemter import Deemter
+from main.eacl.models.Bayes import Bayes
+from main.eacl.models.siddharthan import Siddharthan
+from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold
 
 fdbpedia = 'roaming/tcastrof/names/eacl/fdbpedia.json'
