@@ -8,7 +8,7 @@ import main.utils.KB as kb
 
 class Deemter(object):
     def __init__(self, dbpedia_dir, parsed_dir):
-        self.dbpedia = kb.update(json.load(open(dbpedia_dir)))
+        self.dbpedia = json.load(open(dbpedia_dir))
         self.parsed_dir = parsed_dir
 
         self.distractors = None
@@ -74,8 +74,8 @@ class Deemter(object):
                     isResult = False
                     break
             if isResult:
-                return prep.get_label(name, self.dbpedia[self.entity]), name
-        return prep.get_label(names[-1], self.dbpedia[self.entity]), names[-1]
+                return prep.get_label(name, kb.update(self.dbpedia[self.entity])), name
+        return prep.get_label(names[-1], kb.update(self.dbpedia[self.entity])), names[-1]
 
     def run(self, entity, target, mentions, win):
         self.entity = entity
