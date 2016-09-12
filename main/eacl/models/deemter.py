@@ -15,12 +15,16 @@ class Deemter(object):
         self.target = None
         self.win = None
 
-    def _get_distractors(self):
+    def _get_distractors(self, mentions):
         def isDistractor(mention, intervals):
             for i in range(mention['startIndex']-1,mention['endIndex']):
                 if len(filter(lambda x: x[2] == mention['sentNum'] and i in range(x[0], x[1]+1), intervals)) != 0:
                     return False
             return True
+
+        # select all the mentions to the target entity in the context window size win
+        self.mentions = filter(lambda x: x['fname'] == self.target['fname'] \
+                                         and self.target['sentNum']-self.win <= x['sentNum'] <= self.target['sentNum'], mentions)
 
         intervals = map(lambda x: (x['startIndex']-1, x['endIndex']-1, x['sentNum']), self.mentions)
 
@@ -77,8 +81,5 @@ class Deemter(object):
 
         self.parsed = json.load(open(os.path.join(self.parsed_dir, target['fname'])))
 
-        # select all the mentions to the target entity in the context window size win
-        self.mentions = filter(lambda x: x['fname'] == target['fname'] \
-                                         and self.target['sentNum']-win <= x['sentNum'] <= self.target['sentNum'], mentions)
-        self.distractors = self._get_distractors()
+        self.distractors = self._get_distractors(mentions)
         return self._get_reference()
