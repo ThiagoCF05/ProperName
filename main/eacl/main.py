@@ -1,6 +1,3 @@
-from main.eacl import preprocessing
-from main.eacl.models import Bayes
-
 __author__ = 'thiagocastroferreira'
 
 """
@@ -16,6 +13,8 @@ import numpy as np
 import operator
 import os
 
+# import main.eacl.preprocessing as prep
+from main.eacl.models import Bayes
 from models.siddharthan import Siddharthan
 from models.deemter import Deemter
 from sklearn.cross_validation import KFold
