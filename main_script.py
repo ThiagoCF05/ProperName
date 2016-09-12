@@ -69,6 +69,7 @@ def run():
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
         for train, test in kf:
+            print 'Fold ', fold
             results[entity][fold] = []
 
             # train and test sets
@@ -115,7 +116,7 @@ def run():
                 # print result
                 # print 10 * '-'
             fold = fold + 1
-    p.dump(results, open('results.json', 'w'))
+    p.dump(results, open('results.pickle', 'w'))
 
 if __name__ == '__main__':
     run()
