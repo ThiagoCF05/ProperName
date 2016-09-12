@@ -48,15 +48,13 @@ class DemmterTest(unittest.TestCase):
 
         result = model._get_distractors(mentions)
         result.sort()
-        print result
 
         expected = ['07/11/12 13:16:04', '1987', 'Barfly', 'Dutch company Scotch & Soda', \
                     'Dutch company Scotch & Soda, acquired last year by Kellwood', 'Elena Vosnaki', \
-                    'Elena Vosnaki', 'Kellwood', 'Scotch & Soda', \
-                    'The textile producing Dutch company Scotch & Soda, acquired last year by Kellwood', 'Their', \
-                    'Their offering', 'a follow-up', 'a fragrance', 'autobiographical stories of the same name', \
-                    'first', 'last year', 'the eponymous film', 'the first time', \
-                    'the perfume arena for the first time', 'the same name', 'their', \
+                    'Elena Vosnaki\nThe textile producing Dutch company Scotch & Soda, acquired last year by Kellwood', \
+                    'Kellwood', 'Scotch & Soda', 'Their', 'Their offering', 'a follow-up', 'a fragrance', \
+                    'autobiographical stories of the same name', 'first', 'last year', 'the eponymous film', \
+                    'the first time', 'the perfume arena for the first time', 'the same name', 'their', \
                     'their Spring-Summer 2013 collection']
 
         self.assertListEqual(result, expected)
