@@ -14,7 +14,7 @@ import operator
 import os
 
 # import main.eacl.preprocessing as prep
-from main.eacl.models.Bayes import Bayes
+from models.Bayes import Bayes
 from models.siddharthan import Siddharthan
 from models.deemter import Deemter
 from sklearn.cross_validation import KFold
