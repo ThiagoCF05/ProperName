@@ -20,7 +20,7 @@ from main.eacl.models.siddharthan import Siddharthan
 from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold
 
-fdbpedia = 'roaming/tcastrof/names/eacl/fdbpedia.json'
+fdbpedia = '/roaming/tcastrof/names/eacl/fdbpedia.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
