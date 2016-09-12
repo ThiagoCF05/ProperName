@@ -69,7 +69,7 @@ def run():
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
         for train, test in kf:
-            print 'Fold ', fold
+            print '\nFold ', fold
             results[entity][fold] = []
 
             # train and test sets
@@ -108,8 +108,8 @@ def run():
                 result['siddharthan'] = { 'content': r[0], 'realization': r[1] }
 
                 # Deemter model
-                mentions = json.load(open(os.path.join(mention_dir, mention['fname'])))[entity]
-                r = baseline2.run(entity, mention, mentions, 3)
+                ms = json.load(open(os.path.join(mention_dir, mention['fname'])))[entity]
+                r = baseline2.run(entity, mention, ms, 3)
                 result['deemter'] = { 'content': r[0], 'realization': r[1] }
 
                 results[entity][fold].append(result)
