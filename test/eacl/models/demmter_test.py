@@ -74,7 +74,7 @@ class DemmterTest(unittest.TestCase):
                         'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
                         'label': '+f+l', 'sentNum': 3}
         win = 3
-        mentions = json.load(open(os.path.join(mentions_dir, target['fname'])))
+        mentions = json.load(open(os.path.join(mentions_dir, target['fname'])))[entity]
 
         model = Deemter(dbpedia_dir, parsed_dir)
 
