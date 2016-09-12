@@ -112,6 +112,8 @@ def run():
                 result['deemter'] = { 'content': r[0], 'realization': r[1] }
 
                 results[entity][fold].append(result)
+                print result
+                print 10 * '-'
             fold = fold + 1
     p.dump(results, open('results.json', 'w'))
 
