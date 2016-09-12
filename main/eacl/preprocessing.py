@@ -4,6 +4,30 @@ import json
 import nltk
 import os
 
+# return the proper name form
+def get_label(name, dbpedia):
+    label = ''
+    # Check first name
+    for first in dbpedia['first_names']:
+        if str(first).lower() in str(name).lower():
+            name['has_firstName'] = True
+            label = label + '+f'
+            break
+
+    # Check middle name
+    for middle in dbpedia['middle_names']:
+        if str(middle).lower() in str(name).lower():
+            label = label + '+m'
+            break
+
+    # Check last name
+    for last in dbpedia['last_names']:
+        if str(last).lower() in str(name).lower():
+            label = label + '+l'
+            break
+
+    return label
+
 def word_freq(mentions, sentence):
     intervals = map(lambda x: (x['startIndex']-1, x['endIndex']-1), mentions)
 

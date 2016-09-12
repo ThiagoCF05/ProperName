@@ -2,6 +2,7 @@ __author__ = 'thiagocastroferreira'
 
 import json
 import os
+import main.eacl.preprocessing as prep
 
 class Deemter(object):
     def __init__(self, dbpedia_dir, parsed_dir):
@@ -71,8 +72,8 @@ class Deemter(object):
                     isResult = False
                     break
             if isResult:
-                return name
-        return names[-1]
+                return prep.get_label(name, self.dbpedia[self.entity]), name
+        return prep.get_label(names[-1], self.dbpedia[self.entity]), names[-1]
 
     def run(self, entity, target, mentions, win):
         self.entity = entity

@@ -10,13 +10,17 @@ Description:
     Main method EACL 2017 model and baselines
 """
 
+import cPickle as p
 import json
 import numpy as np
 import operator
 import os
 
+from models.siddharthan import Siddharthan
+from models.deemter import Deemter
 from sklearn.cross_validation import KFold
 
+fdbpedia = 'roaming/tcastrof/names/eacl/fdbpedia.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
@@ -45,18 +49,8 @@ def bayes_model(mention, entity, model, mentions):
 
     # Save results
     result = {
-        'content': {
-            'R': mention['label'],
-            'P': prob
-        },
-        'realization': {
-            'R': mention['text'],
-            'P': realizer
-        },
-        'giveness': mention['givenness'],
-        'sentence-givenness': mention['sentence-givenness'],
-        'syntax': mention['syntax'],
-        'entity': entity
+        'content': prob,
+        'realization': realizer
     }
     return result
 
@@ -74,7 +68,7 @@ def run():
         # compute cross validation
         fold = 1
         kf = KFold(mentions.shape[0], n_folds=10)
-        for train, test in kf:
+        for train, test in kf[:1]:
             results[entity][fold] = []
 
             # train and test sets
@@ -88,12 +82,38 @@ def run():
 
             # initialize our official model
             clf = Bayes(vocabulary, True)
+            # initialize Siddharthan baseline
+            baseline1 = Siddharthan(dbpedia_dir=fdbpedia)
+            # initialize Deemter baseline
+            baseline2 = Deemter(dbpedia_dir=fdbpedia, parsed_dir=parsed_dir)
             for mention in test_set:
+                result = {
+                    'real': {
+                        'label': mention['label'],
+                        'reference': mention['text']
+                    },
+                    'features': {
+                        'giveness': mention['givenness'],
+                        'sentence-givenness': mention['sentence-givenness'],
+                        'syntax': mention['syntax']
+                    }
+                }
+
                 # Bayes model
-                result = bayes_model(mention, entity, clf, mentions)
+                result['bayes'] = bayes_model(mention, entity, clf, mentions)
+
+                # Siddharthan model
+                r = baseline1.run(entity, mention['givenness'])
+                result['siddharthan'] = { 'content': r[0], 'realization': r[1] }
+
+                # Deemter model
+                mentions = json.load(open(os.path.join(mention_dir, mention['fname'])))[entity]
+                r = baseline2.run(entity, mention, mentions, 3)
+                result['deemter'] = { 'content': r[0], 'realization': r[1] }
+
                 results[entity][fold].append(result)
             fold = fold + 1
-    json.dump(results, open('results.json', 'w'))
+    p.dump(results, open('results.json', 'w'))
 
 if __name__ == '__main__':
     run()

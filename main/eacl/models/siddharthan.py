@@ -1,6 +1,7 @@
 __author__ = 'thiagocastroferreira'
 
 import json
+import main.eacl.preprocessing as prep
 
 class Siddharthan(object):
     def __init__(self, dbpedia_dir):
@@ -15,18 +16,20 @@ class Siddharthan(object):
                 surnames = self.dbpedia[entity]['surnames']
                 last = filter(lambda x: len(x) == min(map(lambda x: len(x), surnames)), surnames)[0]
 
-                return str(first).strip() + ' ' + str(last).strip()
+                name = str(first).strip() + ' ' + str(last).strip()
+                return prep.get_label(name, self.dbpedia[entity]), name
             else:
                 birthNames = self.dbpedia[entity]['birthNames']
-                name = filter(lambda x: len(x) == min(map(lambda x: len(x), birthNames)), birthNames)[0]
-                return str(name).strip()
+                name = str(filter(lambda x: len(x) == min(map(lambda x: len(x), birthNames)), birthNames)[0]).strip()
+                return prep.get_label(name, self.dbpedia[entity]), name
         else:
             if len(self.dbpedia[entity]['surnames']) > 0:
                 surnames = self.dbpedia[entity]['surnames']
                 last = filter(lambda x: len(x) == min(map(lambda x: len(x), surnames)), surnames)[0]
 
-                return str(last).strip()
+                name = str(last).strip()
+                return prep.get_label(name, self.dbpedia[entity]), name
             else:
                 birthNames = self.dbpedia[entity]['birthNames']
-                name = filter(lambda x: len(x) == min(map(lambda x: len(x), birthNames)), birthNames)[0]
-                return str(name).strip().split()[-1]
+                name = str(filter(lambda x: len(x) == min(map(lambda x: len(x), birthNames)), birthNames)[0]).strip().split()[-1]
+                return prep.get_label(name, self.dbpedia[entity]), name

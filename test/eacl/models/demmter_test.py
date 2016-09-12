@@ -7,35 +7,24 @@ import unittest
 from main.eacl.models.deemter import Deemter
 
 class DemmterTest(unittest.TestCase):
+    dbpedia_dir = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+    parsed_dir = '/roaming/tcastrof/names/parsed'
+    mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
+
+    model = Deemter(dbpedia_dir, parsed_dir)
 
     # given and surnames
     def test_get_names_1(self):
-        dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
-        parsed_dir = '/roaming/tcastrof/names/parsed'
-
-        model = Deemter(dbpedia_dir, parsed_dir)
-
-        model.entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
-        self.assertEqual(model._get_names(), ['Bukowski', 'Charles', 'Charles Bukowski'])
+        self.model.entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
+        self.assertEqual(self.model._get_names(), ['Bukowski', 'Charles', 'Charles Bukowski'])
 
     # birth names
-    def test_get_names_1(self):
-        dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
-        parsed_dir = '/roaming/tcastrof/names/parsed'
-
-        model = Deemter(dbpedia_dir, parsed_dir)
-
-        model.entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
-        self.assertEqual(model._get_names(), ['Sandler', 'Adam', 'Adam Richard Sandler'])
+    def test_get_names_2(self):
+        self.model.entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
+        self.assertEqual(self.model._get_names(), ['Sandler', 'Adam', 'Adam Richard Sandler'])
 
     def test_distractors_1(self):
-        dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
-        parsed_dir = '/roaming/tcastrof/names/parsed'
-        mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
-
-        model = Deemter(dbpedia_dir, parsed_dir)
-
-        model.target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'],\
+        self.model.target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'],\
                   'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
                   'position': [3, 4], 'number': 'SINGULAR', 'has_adjective': False, 'has_middleName': False, \
                   'appositive': None, 'syntax': 'subj-det', 'id': 17, 'titles': [], 'sentence-givenness': 'new', \
@@ -43,10 +32,10 @@ class DemmterTest(unittest.TestCase):
                   'name_type': ['foaf_names', 'dbp_names'], 'animacy': 'ANIMATE', 'givenness': 'new', \
                   'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
                   'label': '+f+l', 'sentNum': 3}
-        model.win = 3
-        mentions = json.load(open(os.path.join(mentions_dir, model.target['fname'])))['http://en.wikipedia.org/wiki/Charles_Bukowski']
+        self.model.win = 3
+        mentions = json.load(open(os.path.join(self.mentions_dir, self.model.target['fname'])))['http://en.wikipedia.org/wiki/Charles_Bukowski']
 
-        result = model._get_distractors(mentions)
+        result = self.model._get_distractors(mentions)
         result.sort()
 
         expected = ['07/11/12 13:16:04', '1987', 'Barfly', 'Dutch company Scotch & Soda', \
@@ -60,10 +49,6 @@ class DemmterTest(unittest.TestCase):
         self.assertListEqual(result, expected)
 
     def test_run(self):
-        dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
-        parsed_dir = '/roaming/tcastrof/names/parsed'
-        mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
-
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
         target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'], \
                         'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
@@ -74,10 +59,8 @@ class DemmterTest(unittest.TestCase):
                         'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
                         'label': '+f+l', 'sentNum': 3}
         win = 3
-        mentions = json.load(open(os.path.join(mentions_dir, target['fname'])))[entity]
+        mentions = json.load(open(os.path.join(self.mentions_dir, self.target['fname'])))[entity]
 
-        model = Deemter(dbpedia_dir, parsed_dir)
-
-        self.assertEqual('Bukowski', model.run(entity=entity, target=target, mentions=mentions, win=win))
+        self.assertTupleEqual(('+l', 'Bukowski'), tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win)))
 
 
