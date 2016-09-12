@@ -22,7 +22,7 @@ class SiddharthanTest(unittest.TestCase):
     def test_birth_new(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
         entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
-        self.assertEqual(model.run(entity, 'new'), 'Adam Sandler')
+        self.assertEqual(model.run(entity, 'new'), 'Adam Richard Sandler')
 
     def test_birth_old(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)

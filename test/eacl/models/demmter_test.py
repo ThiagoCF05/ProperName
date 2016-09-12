@@ -24,4 +24,4 @@ class DemmterTest(unittest.TestCase):
         model = Deemter(dbpedia_dir, parsed_dir)
 
         model.entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
-        self.assertEqual(model._get_names(), ['Sandler', 'Adam', 'Adam Sandler'])
+        self.assertEqual(model._get_names(), ['Sandler', 'Adam', 'Adam Richard Sandler'])
