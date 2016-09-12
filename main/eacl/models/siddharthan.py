@@ -1,8 +1,8 @@
 __author__ = 'thiagocastroferreira'
 
 import json
-import main.utils.KB as kb
-import main.eacl.preprocessing as prep
+from main.utils import KB as kb
+from main.eacl import preprocessing as prep
 
 class Siddharthan(object):
     def __init__(self, dbpedia_dir):

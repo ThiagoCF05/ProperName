@@ -1,4 +1,4 @@
-from main import corpus_builder as loader
+from main.corpus_builder import loader
 
 __author__ = 'thiagocastroferreira'
 
