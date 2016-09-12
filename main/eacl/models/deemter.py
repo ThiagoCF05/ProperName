@@ -23,8 +23,7 @@ class Deemter(object):
             return True
 
         # select all the mentions to the target entity in the context window size win
-        self.mentions = filter(lambda x: x['fname'] == self.target['fname'] \
-                                         and self.target['sentNum']-self.win <= x['sentNum'] <= self.target['sentNum'], mentions)
+        self.mentions = filter(lambda x: self.target['sentNum']-self.win <= x['sentNum'] <= self.target['sentNum'], mentions)
 
         intervals = map(lambda x: (x['startIndex']-1, x['endIndex']-1, x['sentNum']), self.mentions)
 
