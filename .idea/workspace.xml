@@ -99,11 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Bayes.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.023847377" vertical-offset="480" max-vertical-offset="1725">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -131,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_script.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main_script.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4324324" vertical-offset="1231" max-vertical-offset="1860">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1231" max-vertical-offset="1860">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="e#153#172#0" expanded="true" />
@@ -295,8 +295,8 @@
         <option value="$PROJECT_DIR$/main/main_script.py" />
         <option value="$PROJECT_DIR$/main/eacl/main_script.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/siddharthan.py" />
-        <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
         <option value="$PROJECT_DIR$/main_script.py" />
+        <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
       </list>
     </option>
   </component>
@@ -1438,16 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding>
-            <element signature="e#37#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/siddharthan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -1458,10 +1448,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4324324" vertical-offset="1231" max-vertical-offset="1860">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1231" max-vertical-offset="1860">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="e#153#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023847377" vertical-offset="480" max-vertical-offset="1725">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
