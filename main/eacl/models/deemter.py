@@ -35,7 +35,7 @@ class Deemter(object):
             for mention in f:
                 # check if the mention is a distractor
                 if isDistractor(mention, intervals):
-                    distractor = self.parsed['sentences'][mention['sentNum']-1]['tokens'][mention['startIndex']-1:mention['endIndex']-1]
+                    distractor = mention['text']
                     distractors.append(distractor)
         return distractors
 

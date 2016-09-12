@@ -31,7 +31,7 @@ class DemmterTest(unittest.TestCase):
     def test_distractors(self):
         dbpedia_dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
         parsed_dir = '/roaming/tcastrof/names/parsed'
-        mentions_dir = 'roaming/tcastrof/names/eacl/mentions'
+        mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
 
         model = Deemter(dbpedia_dir, parsed_dir)
 
