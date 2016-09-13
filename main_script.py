@@ -143,8 +143,6 @@ def run():
                     }
 
                     # Bayes model
-                    print dbpedia[entity]
-                    print appositives[entity]
                     result['bayes'] = bayes_model(mention, entity, clf, dbpedia[entity], appositives[entity])
 
                     # Siddharthan model
