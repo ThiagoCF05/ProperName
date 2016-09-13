@@ -80,8 +80,6 @@ class Deemter(object):
         if surface == '':
             return prep.get_label(names[-1], kb.update(self.dbpedia[self.entity])), names[-1]
         else:
-            surface = ' '.join(name[1:-1])
-
             if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
                 if surface[-1] == 's':
                     surface = surface + '\''
