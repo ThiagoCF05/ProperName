@@ -56,7 +56,7 @@ def bayes_model(mention, entity, model, mentions):
     return result
 
 def run():
-    entity_dir = 'entity/'
+    entity_dir = '/roaming/tcastrof/names/eacl/evaluation'
     if not os.path.exists(entity_dir):
         os.makedirs(entity_dir)
 
