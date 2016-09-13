@@ -87,7 +87,7 @@ def run():
     references = prep.filter_entities(50, 200, mention_dir)
 
     # dbpedia contains only the proper names from DBpedia for each entity
-    entities_info, appositives, dbpedia = init()
+    entities_info, dbpedia, appositives = init()
 
     entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
     entities.sort()
