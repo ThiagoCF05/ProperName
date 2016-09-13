@@ -44,6 +44,9 @@ def init():
         base[entity].extend(db['middle_names'])
         base[entity].extend(db['last_names'])
 
+        # insert END token
+        base[entity].append('END')
+
         if entity in titles:
             base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
@@ -140,6 +143,8 @@ def run():
                     }
 
                     # Bayes model
+                    print dbpedia[entity]
+                    print appositives[entity]
                     result['bayes'] = bayes_model(mention, entity, clf, dbpedia[entity], appositives[entity])
 
                     # Siddharthan model
