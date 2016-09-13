@@ -14,6 +14,7 @@ import operator
 import os
 
 import main.eacl.preprocessing as prep
+import main.utils.KB as kb
 
 from main.eacl.models.Bayes import Bayes
 from main.eacl.models.siddharthan import Siddharthan
@@ -22,11 +23,32 @@ from sklearn.cross_validation import KFold
 
 fdbpedia = '/roaming/tcastrof/names/eacl/fdbpedia.json'
 fentities = '/roaming/tcastrof/names/eacl/fentities.json'
+titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
-def bayes_model(mention, entity, model, mentions):
+# initialize dbpedia, entities and appositives
+def init():
+    appositives = json.load(open(appositives_dir))
+    entities_info = json.load(open(fentities))
+
+    titles = json.load(open(titles_dir))
+    dbpedia = json.load(open(fdbpedia))
+
+    base = {}
+    for entity in dbpedia:
+        db = kb.update(dbpedia[entity])
+        base[entity] = []
+        base[entity].extend(db[entity]['first_names'])
+        base[entity].extend(db[entity]['middle_names'])
+        base[entity].extend(db[entity]['last_names'])
+        base[entity].extend(titles[entity])
+        base[entity] = list(set(base[entity]))
+
+    return entities_info, base, appositives
+
+def bayes_model(mention, entity, model, words, appositive):
     features = {
         # 's_e': mention['label'],
         'discourse_se': mention['givenness'],
@@ -46,8 +68,7 @@ def bayes_model(mention, entity, model, mentions):
     # mentions_same_entity = filter(lambda x: x['fname'] == mention['fname'] and x['sentNum'] == mention['sentNum'], mentions)
     # words_freq = dict(preprocessing.word_freq(mentions_same_entity, parsed))
 
-    words_freq = {}
-    realizer = model.realize(prob[0][0], entity, mention['syntax'], words_freq)
+    realizer = model.realizeWithWords(prob[0][0], entity, mention['syntax'], words, appositive)
 
     # Save results
     result = {
@@ -57,7 +78,7 @@ def bayes_model(mention, entity, model, mentions):
     return result
 
 def run():
-    evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation'
+    evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
     if not os.path.exists(evaluation_dir):
         os.makedirs(evaluation_dir)
 
@@ -65,8 +86,8 @@ def run():
     results = {}
     references = prep.filter_entities(50, 200, mention_dir)
 
-    appositives = json.load(open(appositives_dir))
-    entities_info = json.load(open(fentities))
+    # dbpedia contains only the proper names from DBpedia for each entity
+    entities_info, appositives, dbpedia = init()
 
     entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
     entities.sort()
@@ -97,7 +118,7 @@ def run():
                     vocabulary.extend(tokens)
 
                 # initialize our official model
-                clf = Bayes(vocabulary, appositives, True)
+                clf = Bayes(vocabulary, True)
                 # initialize Siddharthan baseline
                 baseline1 = Siddharthan(dbpedia_dir=fdbpedia)
                 # initialize Deemter baseline
@@ -117,7 +138,7 @@ def run():
                     }
 
                     # Bayes model
-                    result['bayes'] = bayes_model(mention, entity, clf, mentions)
+                    result['bayes'] = bayes_model(mention, entity, clf, dbpedia[entity], appositives[entity])
 
                     # Siddharthan model
                     r = baseline1.run(entity, mention['givenness'], mention['syntax'])

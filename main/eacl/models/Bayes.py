@@ -5,10 +5,9 @@ import operator
 from main.eacl import training, settings
 
 class Bayes(object):
-    def __init__(self, train_set, appositives, bigram):
+    def __init__(self, train_set, bigram):
         self.train_set = train_set
         self.bigram = bigram
-        self.appositives = appositives
         self.train()
 
     def train(self):
@@ -104,7 +103,7 @@ class Bayes(object):
         else:
             return self._beam_search(_names, words, s, entity, word_freq, n)
 
-    def realize(self, s, entity, syntax, word_freq):
+    def realize(self, s, entity, syntax, word_freq, appositive):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
 
         names = {('*', ):0}
@@ -120,6 +119,27 @@ class Bayes(object):
                 else:
                     surface = surface + '\'s'
             if '+a' in s:
-                surface = surface + ', ' + self.appositives[entity]
+                surface = surface + ', ' + appositive
+            names.append((surface, result[name]))
+        return names
+
+    # Realization with only the words present in the proper name knowledge base
+    def realizeWithWords(self, s, entity, syntax, words, appositive):
+        word_freq = {}
+
+        names = {('*', ):0}
+        result = self._beam_search(names, words, s, entity, word_freq, 1)
+
+        names = []
+        for name in result:
+            surface = ' '.join(name[1:-1])
+
+            if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
+                if surface[-1] == 's':
+                    surface = surface + '\''
+                else:
+                    surface = surface + '\'s'
+            if '+a' in s:
+                surface = surface + ', ' + appositive
             names.append((surface, result[name]))
         return names
