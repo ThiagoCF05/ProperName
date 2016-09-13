@@ -40,9 +40,9 @@ def init():
     for entity in dbpedia:
         db = kb.update(dbpedia[entity])
         base[entity] = []
-        base[entity].extend(db[entity]['first_names'])
-        base[entity].extend(db[entity]['middle_names'])
-        base[entity].extend(db[entity]['last_names'])
+        base[entity].extend(db['first_names'])
+        base[entity].extend(db['middle_names'])
+        base[entity].extend(db['last_names'])
         base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
 
