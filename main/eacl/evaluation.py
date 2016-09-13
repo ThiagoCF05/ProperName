@@ -37,10 +37,10 @@ if __name__ == '__main__':
                 dist_siddharthan = edit_distance(string_siddharthan, string_real)
                 dist_deemter = edit_distance(string_deemter, string_real)
 
-                tokens_real = nltk.word_tokenize(string_real)
-                tokens_bayes = nltk.word_tokenize(string_bayes)
-                tokens_siddharthan = nltk.word_tokenize(string_siddharthan)
-                tokens_deemter = nltk.word_tokenize(string_deemter)
+                tokens_real = set(nltk.word_tokenize(string_real))
+                tokens_bayes = set(nltk.word_tokenize(string_bayes))
+                tokens_siddharthan = set(nltk.word_tokenize(string_siddharthan))
+                tokens_deemter = set(nltk.word_tokenize(string_deemter))
 
                 jaccard_bayes = jaccard_distance(tokens_bayes, tokens_real)
                 jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
