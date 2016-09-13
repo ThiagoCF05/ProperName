@@ -22,13 +22,13 @@ def get_titles(mention_dir, write_dir):
             if entity not in result:
                 result[entity] = []
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):
-                titles = mention['titles']
+                titles = map(lambda title: title.split()[0].strip(), mention['titles'])
                 result[entity].extend(titles)
 
     for entity in result:
         result[entity] = list(set(result[entity]))
 
-    json.dump(result, open(write_dir, 'w'))
+    json.dump(result, open(write_dir, 'w'), separators=(',',':'))
 
 if __name__ == '__main__':
     mention_dir = '/roaming/tcastrof/names/eacl/mentions'
