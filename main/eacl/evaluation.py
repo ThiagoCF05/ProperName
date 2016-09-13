@@ -79,7 +79,27 @@ if __name__ == '__main__':
                         'jaccard': jaccard_deemter
                     }
                 }
+
+    general_bayes = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_siddharthan = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_deemter = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+
     for fold in bayes:
+        general_siddharthan['y_real'].extend(siddharthan[fold]['y_real'])
+        general_siddharthan['y_pred'].extend(siddharthan[fold]['y_pred'])
+        general_siddharthan['string'].extend(siddharthan[fold]['string'])
+        general_siddharthan['jaccard'].extend(siddharthan[fold]['jaccard'])
+
+        general_deemter['y_real'].extend(deemter[fold]['y_real'])
+        general_deemter['y_pred'].extend(deemter[fold]['y_pred'])
+        general_deemter['string'].extend(deemter[fold]['string'])
+        general_deemter['jaccard'].extend(deemter[fold]['jaccard'])
+
+        general_bayes['y_real'].extend(bayes[fold]['y_real'])
+        general_bayes['y_pred'].extend(bayes[fold]['y_pred'])
+        general_bayes['string'].extend(bayes[fold]['string'])
+        general_bayes['jaccard'].extend(bayes[fold]['jaccard'])
+
         print 'Fold', fold
         print 'Labels: '
         print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
@@ -97,3 +117,21 @@ if __name__ == '__main__':
         print 'Bayes: ', np.mean(bayes[fold]['jaccard'])
         print 20 * '-'
         print '\n'
+
+    print 'GENERAL'
+    print 'Labels: '
+    print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
+    print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
+    print 'Bayes: ', accuracy_score(general_bayes['y_real'], general_bayes['y_pred'])
+    print 20 * '-'
+    print 'String Distance: '
+    print 'Siddharthan: ', np.mean(general_siddharthan['string'])
+    print 'Deemter: ', np.mean(general_deemter['string'])
+    print 'Bayes: ', np.mean(general_bayes['string'])
+    print 20 * '-'
+    print 'Jaccard Distance: '
+    print 'Siddharthan: ', np.mean(general_siddharthan['jaccard'])
+    print 'Deemter: ', np.mean(general_deemter['jaccard'])
+    print 'Bayes: ', np.mean(general_bayes['jaccard'])
+    print 20 * '-'
+    print '\n'
