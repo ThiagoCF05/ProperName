@@ -61,7 +61,7 @@ def run():
     if not os.path.exists(evaluation_dir):
         os.makedirs(evaluation_dir)
 
-    # filter entities and their references (more than 49 references)
+    # filter entities and their references (more than X references and less than Y)
     results = {}
     references = prep.filter_entities(50, 200, mention_dir)
 
