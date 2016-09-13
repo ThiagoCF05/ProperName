@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 
 if __name__ == '__main__':
     fentities = '/roaming/tcastrof/names/eacl/fentities.json'
-    entities_dir = '/roaming/tcastrof/names/eacl/evaluation'
+    entities_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
     entities = os.listdir(entities_dir)
 
     results = {}
