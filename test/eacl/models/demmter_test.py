@@ -100,5 +100,3 @@ class DemmterTest(unittest.TestCase):
 
         result = tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win, syntax='np-subj'))
         self.assertTupleEqual(('+l', 'Bukowski'), result)
-
-
