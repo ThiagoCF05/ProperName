@@ -61,7 +61,7 @@ def run():
 
     # filter entities and their references (more than 49 references)
     results = {}
-    references = prep.filter_entities(49, mention_dir)
+    references = prep.filter_entities(50, 200, mention_dir)
 
     entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
     entities.sort()
@@ -125,7 +125,7 @@ def run():
                 # print result
                 # print 10 * '-'
             fold = fold + 1
-        p.dump(results[entity], open(os.path.join(entity_dir, entity)))
+        p.dump(results[entity], open(os.path.join(entity_dir, entity.split('/')[-1].split('_')[-1], 'w')))
     p.dump(results, open('results.pickle', 'w'))
 
 if __name__ == '__main__':

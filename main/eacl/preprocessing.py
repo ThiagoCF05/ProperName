@@ -114,7 +114,7 @@ def process_tokens(mention, parsed, entity, filtered = False):
     return data
 
 # filter entities with more than N mentions and process the mentions
-def filter_entities(N, mention_dir):
+def filter_entities(N_min, N_max, mention_dir):
     '''
     :param N: only entities with more than N mentions should be considered
     :param mention_dir: directory where the mention files are present
@@ -133,5 +133,7 @@ def filter_entities(N, mention_dir):
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):
                 mention['fname'] = fname
                 result[entity].append(mention)
-
-    return dict(map(lambda x: (x, result[x]), filter(lambda e: len(result[e]) > N, result.keys())))
+    if N_max == 0:
+        return dict(map(lambda x: (x, result[x]), filter(lambda e: len(result[e]) >= N_min, result.keys())))
+    else:
+        return dict(map(lambda x: (x, result[x]), filter(lambda e: N_min <= len(result[e]) <= N_max, result.keys())))
