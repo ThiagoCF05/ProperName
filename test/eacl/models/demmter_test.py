@@ -49,6 +49,7 @@ class DemmterTest(unittest.TestCase):
         self.assertListEqual(result, expected)
 
     def test_get_reference(self):
+        self.model.entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
         self.model.target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'], \
                              'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
                              'position': [3, 4], 'number': 'SINGULAR', 'has_adjective': False, 'has_middleName': False, \
@@ -67,7 +68,7 @@ class DemmterTest(unittest.TestCase):
                     'their Spring-Summer 2013 collection', 'Bukowski', 'Charles']
 
         result = tuple(self.model._get_reference(syntax='np-subj'))
-        self.assertTupleEqual(('+f_l', 'Charles Bukowski'), result)
+        self.assertTupleEqual(('+f+l', 'Charles Bukowski'), result)
 
     def test_run_1(self):
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
