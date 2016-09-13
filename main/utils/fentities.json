@@ -1,0 +1,3637 @@
+[
+    {
+        "freebase_id": "9202a8c04000641f8000000000037477",
+        "id": "4976",
+        "url": "http://en.wikipedia.org/wiki/Steve_Jobs"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032c10",
+        "id": "4559",
+        "url": "http://en.wikipedia.org/wiki/Ronald_Reagan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000026134",
+        "id": "4248",
+        "url": "http://en.wikipedia.org/wiki/Muhammad"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040628",
+        "id": "4160",
+        "url": "http://en.wikipedia.org/wiki/William_Shakespeare"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000249c6",
+        "id": "3844",
+        "url": "http://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002856b",
+        "id": "3673",
+        "url": "http://en.wikipedia.org/wiki/Martin_Luther_King,_Jr."
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000cb7c",
+        "id": "3619",
+        "url": "http://en.wikipedia.org/wiki/Charles_Darwin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000142c1",
+        "id": "3514",
+        "url": "http://en.wikipedia.org/wiki/Elvis_Presley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040b95",
+        "id": "3445",
+        "url": "http://en.wikipedia.org/wiki/Winston_Churchill"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032d27",
+        "id": "3416",
+        "url": "http://en.wikipedia.org/wiki/Richard_Nixon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000004566",
+        "id": "3387",
+        "url": "http://en.wikipedia.org/wiki/Andy_Warhol"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac487f",
+        "id": "3254",
+        "url": "http://en.wikipedia.org/wiki/John_Lennon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003abd178",
+        "id": "3227",
+        "url": "http://en.wikipedia.org/wiki/Bob_Dylan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001e13a",
+        "id": "3205",
+        "url": "http://en.wikipedia.org/wiki/Isaac_Newton"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002cdc9",
+        "id": "3192",
+        "url": "http://en.wikipedia.org/wiki/Osama_bin_Laden"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000034fb5",
+        "id": "3058",
+        "url": "http://en.wikipedia.org/wiki/Sigmund_Freud"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000083329d",
+        "id": "3054",
+        "url": "http://en.wikipedia.org/wiki/Mark_Zuckerberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000303e7",
+        "id": "2997",
+        "url": "http://en.wikipedia.org/wiki/Pablo_Picasso"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040523",
+        "id": "2902",
+        "url": "http://en.wikipedia.org/wiki/Vladimir_Putin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000121865",
+        "id": "2842",
+        "url": "http://en.wikipedia.org/wiki/Mark_Twain"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000544b7",
+        "id": "2812",
+        "url": "http://en.wikipedia.org/wiki/Carl_Jung"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003a49c44",
+        "id": "2696",
+        "url": "http://en.wikipedia.org/wiki/Charles_Dickens"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002b03d",
+        "id": "2684",
+        "url": "http://en.wikipedia.org/wiki/Nikola_Tesla"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000035608",
+        "id": "2645",
+        "url": "http://en.wikipedia.org/wiki/Steven_Spielberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac7f48",
+        "id": "2558",
+        "url": "http://en.wikipedia.org/wiki/Madonna_(entertainer)"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000147df",
+        "id": "2541",
+        "url": "http://en.wikipedia.org/wiki/Ernest_Hemingway"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000167fb8",
+        "id": "2537",
+        "url": "http://en.wikipedia.org/wiki/Warren_Buffett"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020773",
+        "id": "2503",
+        "url": "http://en.wikipedia.org/wiki/Julius_Caesar"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000022172",
+        "id": "2475",
+        "url": "http://en.wikipedia.org/wiki/Karl_Marx"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000a5be",
+        "id": "2464",
+        "url": "http://en.wikipedia.org/wiki/Benjamin_Franklin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000026ed7",
+        "id": "2425",
+        "url": "http://en.wikipedia.org/wiki/Marilyn_Monroe"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000017db0",
+        "id": "2397",
+        "url": "http://en.wikipedia.org/wiki/Frank_Sinatra"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003389f",
+        "id": "2387",
+        "url": "http://en.wikipedia.org/wiki/Richard_Dawkins"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000008747ff3",
+        "id": "2362",
+        "url": "http://en.wikipedia.org/wiki/Lady_Gaga"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002a365",
+        "id": "2337",
+        "url": "http://en.wikipedia.org/wiki/Michelangelo"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000016e51",
+        "id": "2335",
+        "url": "http://en.wikipedia.org/wiki/Frank_Lloyd_Wright"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003ab3d",
+        "id": "2312",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Edison"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000652b8",
+        "id": "2307",
+        "url": "http://en.wikipedia.org/wiki/Hosni_Mubarak"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002b8f6",
+        "id": "2296",
+        "url": "http://en.wikipedia.org/wiki/Nelson_Mandela"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004098a",
+        "id": "2251",
+        "url": "http://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000016de0",
+        "id": "2244",
+        "url": "http://en.wikipedia.org/wiki/Friedrich_Nietzsche"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000009e99",
+        "id": "2237",
+        "url": "http://en.wikipedia.org/wiki/Bill_Gates"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fe4d",
+        "id": "2234",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Stalin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004068f",
+        "id": "2219",
+        "url": "http://en.wikipedia.org/wiki/Walt_Disney"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d2eb5c",
+        "id": "2210",
+        "url": "http://en.wikipedia.org/wiki/Margaret_Thatcher"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000043eb",
+        "id": "2196",
+        "url": "http://en.wikipedia.org/wiki/Alfred_Hitchcock"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000028c9a",
+        "id": "2188",
+        "url": "http://en.wikipedia.org/wiki/Hayao_Miyazaki"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac74f9",
+        "id": "2175",
+        "url": "http://en.wikipedia.org/wiki/David_Bowie"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000005000",
+        "id": "2174",
+        "url": "http://en.wikipedia.org/wiki/Alan_Turing"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021420",
+        "id": "2161",
+        "url": "http://en.wikipedia.org/wiki/Jackson_Pollock"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000868d41",
+        "id": "2136",
+        "url": "http://en.wikipedia.org/wiki/Sarah_Palin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003b0aa",
+        "id": "2131",
+        "url": "http://en.wikipedia.org/wiki/Tim_Berners-Lee"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac7476",
+        "id": "2066",
+        "url": "http://en.wikipedia.org/wiki/Jimi_Hendrix"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000019238",
+        "id": "2056",
+        "url": "http://en.wikipedia.org/wiki/Galileo_Galilei"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000019158",
+        "id": "2031",
+        "url": "http://en.wikipedia.org/wiki/George_Orwell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000292080",
+        "id": "2030",
+        "url": "http://en.wikipedia.org/wiki/Kanye_West"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000014b28",
+        "id": "1985",
+        "url": "http://en.wikipedia.org/wiki/Edgar_Allan_Poe"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002d2a2",
+        "id": "1985",
+        "url": "http://en.wikipedia.org/wiki/Oscar_Wilde"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000576a",
+        "id": "1973",
+        "url": "http://en.wikipedia.org/wiki/Abraham"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002759f",
+        "id": "1947",
+        "url": "http://en.wikipedia.org/wiki/Martin_Luther"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000003c45",
+        "id": "1924",
+        "url": "http://en.wikipedia.org/wiki/Ayn_Rand"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000004ee2",
+        "id": "1901",
+        "url": "http://en.wikipedia.org/wiki/Aleister_Crowley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000fb7d",
+        "id": "1900",
+        "url": "http://en.wikipedia.org/wiki/Carl_Sagan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000095a7",
+        "id": "1899",
+        "url": "http://en.wikipedia.org/wiki/Britney_Spears"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000069e521",
+        "id": "1877",
+        "url": "http://en.wikipedia.org/wiki/Rihanna"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001437d8",
+        "id": "1873",
+        "url": "http://en.wikipedia.org/wiki/Newt_Gingrich"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ad7576",
+        "id": "1872",
+        "url": "http://en.wikipedia.org/wiki/Prince_(musician)"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032ef1",
+        "id": "1863",
+        "url": "http://en.wikipedia.org/wiki/Richard_Feynman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000271aa",
+        "id": "1857",
+        "url": "http://en.wikipedia.org/wiki/Mahatma_Gandhi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b6004b",
+        "id": "1844",
+        "url": "http://en.wikipedia.org/wiki/C._S._Lewis"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002a8db",
+        "id": "1838",
+        "url": "http://en.wikipedia.org/wiki/Neil_Armstrong"
+    },
+    {
+        "freebase_id": "-",
+        "id": "1821",
+        "url": "http://en.wikipedia.org/wiki/Salvador_Dal%C3%AD"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069dbd",
+        "id": "1814",
+        "url": "http://en.wikipedia.org/wiki/Lyndon_B._Johnson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003abf881",
+        "id": "1814",
+        "url": "http://en.wikipedia.org/wiki/Elton_John"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c00c",
+        "id": "1767",
+        "url": "http://en.wikipedia.org/wiki/H._P._Lovecraft"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001ab63b",
+        "id": "1758",
+        "url": "http://en.wikipedia.org/wiki/Simon_Cowell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000003e3d",
+        "id": "1745",
+        "url": "http://en.wikipedia.org/wiki/Aldous_Huxley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004c40d",
+        "id": "1744",
+        "url": "http://en.wikipedia.org/wiki/Fidel_Castro"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000db16285",
+        "id": "1733",
+        "url": "http://en.wikipedia.org/wiki/Justin_Bieber"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000081548",
+        "id": "1731",
+        "url": "http://en.wikipedia.org/wiki/Napoleon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000006cdb",
+        "id": "1720",
+        "url": "http://en.wikipedia.org/wiki/Augustine_of_Hippo"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033ef1",
+        "id": "1720",
+        "url": "http://en.wikipedia.org/wiki/Rupert_Murdoch"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000021a8ea",
+        "id": "1711",
+        "url": "http://en.wikipedia.org/wiki/Banksy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001d976",
+        "id": "1710",
+        "url": "http://en.wikipedia.org/wiki/Hunter_S._Thompson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000067358",
+        "id": "1688",
+        "url": "http://en.wikipedia.org/wiki/Muammar_Gaddafi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000029476d",
+        "id": "1676",
+        "url": "http://en.wikipedia.org/wiki/Shepard_Fairey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000007013b9c",
+        "id": "1671",
+        "url": "http://en.wikipedia.org/wiki/Lewis_Carroll"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000039653af",
+        "id": "1671",
+        "url": "http://en.wikipedia.org/wiki/Stephen_Hawking"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003dd87",
+        "id": "1666",
+        "url": "http://en.wikipedia.org/wiki/Tim_Burton"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002019a",
+        "id": "1666",
+        "url": "http://en.wikipedia.org/wiki/Jane_Austen"
+    },
+    {
+        "freebase_id": "-",
+        "id": "1654",
+        "url": "http://en.wikipedia.org/wiki/Buckminster_Fuller"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000083781",
+        "id": "1641",
+        "url": "http://en.wikipedia.org/wiki/Johnny_Depp"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001bb93",
+        "id": "1639",
+        "url": "http://en.wikipedia.org/wiki/Henry_Ford"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000009cee",
+        "id": "1632",
+        "url": "http://en.wikipedia.org/wiki/Benito_Mussolini"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000006609",
+        "id": "1622",
+        "url": "http://en.wikipedia.org/wiki/Amitabh_Bachchan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000041acc",
+        "id": "1610",
+        "url": "http://en.wikipedia.org/wiki/Whitney_Houston"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000243b0",
+        "id": "1604",
+        "url": "http://en.wikipedia.org/wiki/Le_Corbusier"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000029161",
+        "id": "1598",
+        "url": "http://en.wikipedia.org/wiki/Michael_Jordan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000c04d50",
+        "id": "1598",
+        "url": "http://en.wikipedia.org/wiki/Rabindranath_Tagore"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000c965",
+        "id": "1598",
+        "url": "http://en.wikipedia.org/wiki/Charlie_Chaplin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056f83",
+        "id": "1593",
+        "url": "http://en.wikipedia.org/wiki/Henry_David_Thoreau"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000219481a5",
+        "id": "1590",
+        "url": "http://en.wikipedia.org/wiki/Stephen_King"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000117099",
+        "id": "1584",
+        "url": "http://en.wikipedia.org/wiki/Stevie_Wonder"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000067f67",
+        "id": "1584",
+        "url": "http://en.wikipedia.org/wiki/Frank_Gehry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000205e0",
+        "id": "1583",
+        "url": "http://en.wikipedia.org/wiki/J._R._R._Tolkien"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000233639",
+        "id": "1580",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Kony"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003af201d",
+        "id": "1579",
+        "url": "http://en.wikipedia.org/wiki/Joss_Whedon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000a2069",
+        "id": "1572",
+        "url": "http://en.wikipedia.org/wiki/Richard_Branson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001f253",
+        "id": "1569",
+        "url": "http://en.wikipedia.org/wiki/Indira_Gandhi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000027490",
+        "id": "1542",
+        "url": "http://en.wikipedia.org/wiki/Marshall_McLuhan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021218",
+        "id": "1541",
+        "url": "http://en.wikipedia.org/wiki/Jawaharlal_Nehru"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004eeb9",
+        "id": "1541",
+        "url": "http://en.wikipedia.org/wiki/Pope_Benedict_XVI"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002780e",
+        "id": "1537",
+        "url": "http://en.wikipedia.org/wiki/Milton_Friedman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fdcc",
+        "id": "1527",
+        "url": "http://en.wikipedia.org/wiki/James_Cameron"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000034e87",
+        "id": "1523",
+        "url": "http://en.wikipedia.org/wiki/Stanley_Kubrick"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000018663a",
+        "id": "1520",
+        "url": "http://en.wikipedia.org/wiki/Peter_Drucker"
+    },
+    {
+        "freebase_id": "-",
+        "id": "1519",
+        "url": "http://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005596f",
+        "id": "1519",
+        "url": "http://en.wikipedia.org/wiki/Marcel_Duchamp"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003dc2f",
+        "id": "1518",
+        "url": "http://en.wikipedia.org/wiki/Tom_Cruise"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056de6",
+        "id": "1513",
+        "url": "http://en.wikipedia.org/wiki/Clint_Eastwood"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021479",
+        "id": "1498",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Campbell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000034233",
+        "id": "1491",
+        "url": "http://en.wikipedia.org/wiki/Ralph_Waldo_Emerson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020123",
+        "id": "1482",
+        "url": "http://en.wikipedia.org/wiki/Jules_Verne"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017a8da",
+        "id": "1475",
+        "url": "http://en.wikipedia.org/wiki/Christopher_Hitchens"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000054de4",
+        "id": "1471",
+        "url": "http://en.wikipedia.org/wiki/Elizabeth_Taylor"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000262fd",
+        "id": "1469",
+        "url": "http://en.wikipedia.org/wiki/Martin_Scorsese"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001df89",
+        "id": "1468",
+        "url": "http://en.wikipedia.org/wiki/Isaac_Asimov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac3af4",
+        "id": "1467",
+        "url": "http://en.wikipedia.org/wiki/Eminem"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000922391",
+        "id": "1462",
+        "url": "http://en.wikipedia.org/wiki/Tony_Blair"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000060d31",
+        "id": "1456",
+        "url": "http://en.wikipedia.org/wiki/Che_Guevara"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021bfa",
+        "id": "1449",
+        "url": "http://en.wikipedia.org/wiki/Jack_Kirby"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002c5ff",
+        "id": "1442",
+        "url": "http://en.wikipedia.org/wiki/Orson_Welles"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012c404",
+        "id": "1442",
+        "url": "http://en.wikipedia.org/wiki/Frida_Kahlo"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004064f",
+        "id": "1441",
+        "url": "http://en.wikipedia.org/wiki/Woody_Allen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001906f",
+        "id": "1437",
+        "url": "http://en.wikipedia.org/wiki/George_Lucas"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fd07",
+        "id": "1413",
+        "url": "http://en.wikipedia.org/wiki/James_Joyce"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000059acf",
+        "id": "1405",
+        "url": "http://en.wikipedia.org/wiki/Brad_Pitt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000022096",
+        "id": "1400",
+        "url": "http://en.wikipedia.org/wiki/Kurt_Cobain"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032472",
+        "id": "1398",
+        "url": "http://en.wikipedia.org/wiki/Quentin_Tarantino"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001b6db1",
+        "id": "1388",
+        "url": "http://en.wikipedia.org/wiki/Damien_Hirst"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002186c",
+        "id": "1388",
+        "url": "http://en.wikipedia.org/wiki/Julia_Child"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000047a1",
+        "id": "1381",
+        "url": "http://en.wikipedia.org/wiki/Arthur_Conan_Doyle"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032ded",
+        "id": "1377",
+        "url": "http://en.wikipedia.org/wiki/Ridley_Scott"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d38398",
+        "id": "1376",
+        "url": "http://en.wikipedia.org/wiki/William_Blake"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000017a0c",
+        "id": "1375",
+        "url": "http://en.wikipedia.org/wiki/F._Scott_Fitzgerald"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001feb7c",
+        "id": "1370",
+        "url": "http://en.wikipedia.org/wiki/Bashar_al-Assad"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000d2695e",
+        "id": "1368",
+        "url": "http://en.wikipedia.org/wiki/Angelina_Jolie"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000037432",
+        "id": "1367",
+        "url": "http://en.wikipedia.org/wiki/Steve_Wozniak"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001ad8e",
+        "id": "1363",
+        "url": "http://en.wikipedia.org/wiki/George_Bernard_Shaw"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002fc19",
+        "id": "1346",
+        "url": "http://en.wikipedia.org/wiki/Ptolemy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000636b8",
+        "id": "1345",
+        "url": "http://en.wikipedia.org/wiki/Roger_Ebert"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002250d",
+        "id": "1337",
+        "url": "http://en.wikipedia.org/wiki/Kofi_Annan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000075f70",
+        "id": "1334",
+        "url": "http://en.wikipedia.org/wiki/Oprah_Winfrey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000f290",
+        "id": "1334",
+        "url": "http://en.wikipedia.org/wiki/Claude_Monet"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012cc4b",
+        "id": "1333",
+        "url": "http://en.wikipedia.org/wiki/Annie_Leibovitz"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001be8c",
+        "id": "1332",
+        "url": "http://en.wikipedia.org/wiki/H._G._Wells"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000036b471",
+        "id": "1331",
+        "url": "http://en.wikipedia.org/wiki/Malcolm_Gladwell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000b5b264",
+        "id": "1330",
+        "url": "http://en.wikipedia.org/wiki/Wesley_Everest"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000a1f523d",
+        "id": "1328",
+        "url": "http://en.wikipedia.org/wiki/Bernard_Madoff"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003416b",
+        "id": "1328",
+        "url": "http://en.wikipedia.org/wiki/Ray_Bradbury"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000009c00b",
+        "id": "1327",
+        "url": "http://en.wikipedia.org/wiki/William_James"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033bac",
+        "id": "1325",
+        "url": "http://en.wikipedia.org/wiki/Ray_Kurzweil"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000041063",
+        "id": "1321",
+        "url": "http://en.wikipedia.org/wiki/William_S._Burroughs"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003f660",
+        "id": "1317",
+        "url": "http://en.wikipedia.org/wiki/Voltaire"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008480e",
+        "id": "1311",
+        "url": "http://en.wikipedia.org/wiki/Angela_Merkel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005e53f",
+        "id": "1308",
+        "url": "http://en.wikipedia.org/wiki/Michel_Foucault"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000c06a04",
+        "id": "1305",
+        "url": "http://en.wikipedia.org/wiki/Dick_Cheney"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000024395",
+        "id": "1302",
+        "url": "http://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000006d22df",
+        "id": "1297",
+        "url": "http://en.wikipedia.org/wiki/Harold_Camping"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002a26c",
+        "id": "1293",
+        "url": "http://en.wikipedia.org/wiki/Mikhail_Gorbachev"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000005ff238",
+        "id": "1290",
+        "url": "http://en.wikipedia.org/wiki/Ben_Bernanke"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000bbd145",
+        "id": "1289",
+        "url": "http://en.wikipedia.org/wiki/Piet_Mondrian"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001b6f62",
+        "id": "1288",
+        "url": "http://en.wikipedia.org/wiki/Yoweri_Museveni"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000134618",
+        "id": "1271",
+        "url": "http://en.wikipedia.org/wiki/Lil_Wayne"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001387b",
+        "id": "1267",
+        "url": "http://en.wikipedia.org/wiki/Dr._Seuss"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000545a4",
+        "id": "1266",
+        "url": "http://en.wikipedia.org/wiki/Bob_Marley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000011a50",
+        "id": "1266",
+        "url": "http://en.wikipedia.org/wiki/David_Hume"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020679",
+        "id": "1258",
+        "url": "http://en.wikipedia.org/wiki/Jack_Kerouac"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005cb4a",
+        "id": "1253",
+        "url": "http://en.wikipedia.org/wiki/Charles_II_of_England"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006ffb625",
+        "id": "1250",
+        "url": "http://en.wikipedia.org/wiki/Johnny_Cash"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001a9ca",
+        "id": "1250",
+        "url": "http://en.wikipedia.org/wiki/Guy_Fawkes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000eb099",
+        "id": "1249",
+        "url": "http://en.wikipedia.org/wiki/Mark_Rothko"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020b8f",
+        "id": "1236",
+        "url": "http://en.wikipedia.org/wiki/J._K._Rowling"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000013131",
+        "id": "1236",
+        "url": "http://en.wikipedia.org/wiki/David_Beckham"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001349e0",
+        "id": "1235",
+        "url": "http://en.wikipedia.org/wiki/Ron_Paul"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000126a24",
+        "id": "1235",
+        "url": "http://en.wikipedia.org/wiki/Condoleezza_Rice"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000141199",
+        "id": "1232",
+        "url": "http://en.wikipedia.org/wiki/Christopher_Nolan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000bb7830f",
+        "id": "1225",
+        "url": "http://en.wikipedia.org/wiki/Vladimir_Lenin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000028fbc",
+        "id": "1223",
+        "url": "http://en.wikipedia.org/wiki/Miles_Davis"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000019dc0",
+        "id": "1221",
+        "url": "http://en.wikipedia.org/wiki/Coco_Chanel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fe08",
+        "id": "1220",
+        "url": "http://en.wikipedia.org/wiki/James_Cook"
+    },
+    {
+        "freebase_id": "-",
+        "id": "1214",
+        "url": "http://en.wikipedia.org/wiki/Antoni_Gaud%C3%AD"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ada26f",
+        "id": "1212",
+        "url": "http://en.wikipedia.org/wiki/Snoop_Dogg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000807ad",
+        "id": "1210",
+        "url": "http://en.wikipedia.org/wiki/Justin_Timberlake"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000065973",
+        "id": "1210",
+        "url": "http://en.wikipedia.org/wiki/Audrey_Hepburn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002a4a1f",
+        "id": "1208",
+        "url": "http://en.wikipedia.org/wiki/Rick_Perry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001199c",
+        "id": "1207",
+        "url": "http://en.wikipedia.org/wiki/David_Lynch"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000116986",
+        "id": "1206",
+        "url": "http://en.wikipedia.org/wiki/Aretha_Franklin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004a584",
+        "id": "1205",
+        "url": "http://en.wikipedia.org/wiki/Bruce_Lee"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000225cb",
+        "id": "1196",
+        "url": "http://en.wikipedia.org/wiki/Kurt_Vonnegut"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072f09",
+        "id": "1196",
+        "url": "http://en.wikipedia.org/wiki/Bruce_Springsteen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000023a8d",
+        "id": "1194",
+        "url": "http://en.wikipedia.org/wiki/Linus_Torvalds"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001c0240",
+        "id": "1191",
+        "url": "http://en.wikipedia.org/wiki/Salman_Khan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002dbda",
+        "id": "1190",
+        "url": "http://en.wikipedia.org/wiki/Philip_K._Dick"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001d3361",
+        "id": "1188",
+        "url": "http://en.wikipedia.org/wiki/Phil_Esposito"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001205c",
+        "id": "1185",
+        "url": "http://en.wikipedia.org/wiki/Douglas_Adams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003455f",
+        "id": "1180",
+        "url": "http://en.wikipedia.org/wiki/Rudyard_Kipling"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001ee8d5",
+        "id": "1177",
+        "url": "http://en.wikipedia.org/wiki/Mother_Teresa"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000039ef0",
+        "id": "1174",
+        "url": "http://en.wikipedia.org/wiki/Stephen_Sondheim"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000039664a",
+        "id": "1171",
+        "url": "http://en.wikipedia.org/wiki/Vladislav_Tretiak"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000018197",
+        "id": "1166",
+        "url": "http://en.wikipedia.org/wiki/Francis_Bacon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000231a4a",
+        "id": "1165",
+        "url": "http://en.wikipedia.org/wiki/David_Cameron"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002015d",
+        "id": "1164",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Goebbels"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012d2b7",
+        "id": "1163",
+        "url": "http://en.wikipedia.org/wiki/Aamir_Khan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006cc4f",
+        "id": "1162",
+        "url": "http://en.wikipedia.org/wiki/Benjamin_Netanyahu"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000ac4742",
+        "id": "1155",
+        "url": "http://en.wikipedia.org/wiki/Rembrandt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000006663aa",
+        "id": "1154",
+        "url": "http://en.wikipedia.org/wiki/Mahmoud_Ahmadinejad"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001a0c9",
+        "id": "1154",
+        "url": "http://en.wikipedia.org/wiki/Gustav_Klimt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000039f1b58",
+        "id": "1144",
+        "url": "http://en.wikipedia.org/wiki/Leo_Tolstoy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000044c224",
+        "id": "1144",
+        "url": "http://en.wikipedia.org/wiki/Jakaya_Kikwete"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000149a85",
+        "id": "1141",
+        "url": "http://en.wikipedia.org/wiki/Samuel_Hahnemann"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c39b",
+        "id": "1140",
+        "url": "http://en.wikipedia.org/wiki/Herman_Melville"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003f5ee",
+        "id": "1140",
+        "url": "http://en.wikipedia.org/wiki/Virgil"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000004aef",
+        "id": "1138",
+        "url": "http://en.wikipedia.org/wiki/Allen_Ginsberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003577a9f",
+        "id": "1137",
+        "url": "http://en.wikipedia.org/wiki/Lindsay_Lohan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000025062",
+        "id": "1133",
+        "url": "http://en.wikipedia.org/wiki/Louis_Armstrong"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000098a49",
+        "id": "1131",
+        "url": "http://en.wikipedia.org/wiki/Neil_Young"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003bbabb",
+        "id": "1131",
+        "url": "http://en.wikipedia.org/wiki/Valeri_Kharlamov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003c8a09",
+        "id": "1129",
+        "url": "http://en.wikipedia.org/wiki/Neelie_Kroes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011791f",
+        "id": "1127",
+        "url": "http://en.wikipedia.org/wiki/Marvin_Gaye"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072f3f",
+        "id": "1126",
+        "url": "http://en.wikipedia.org/wiki/Henri_Matisse"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000127977",
+        "id": "1126",
+        "url": "http://en.wikipedia.org/wiki/George_Clooney"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000008c7c7a",
+        "id": "1122",
+        "url": "http://en.wikipedia.org/wiki/Alexander_Yakushev"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000eb5d",
+        "id": "1121",
+        "url": "http://en.wikipedia.org/wiki/Claude_Debussy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000558c3",
+        "id": "1119",
+        "url": "http://en.wikipedia.org/wiki/Charles_Manson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005a277",
+        "id": "1118",
+        "url": "http://en.wikipedia.org/wiki/Marie_Antoinette"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003b84a",
+        "id": "1112",
+        "url": "http://en.wikipedia.org/wiki/T._S._Eliot"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000414de",
+        "id": "1110",
+        "url": "http://en.wikipedia.org/wiki/Wassily_Kandinsky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000116839",
+        "id": "1108",
+        "url": "http://en.wikipedia.org/wiki/Nancy_Pelosi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000862e197",
+        "id": "1108",
+        "url": "http://en.wikipedia.org/wiki/Eric_Holder"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072dcc",
+        "id": "1108",
+        "url": "http://en.wikipedia.org/wiki/Roy_Lichtenstein"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005906e",
+        "id": "1096",
+        "url": "http://en.wikipedia.org/wiki/Raphael"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000008b566fb",
+        "id": "1092",
+        "url": "http://en.wikipedia.org/wiki/Salman_Rushdie"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000079eb0",
+        "id": "1090",
+        "url": "http://en.wikipedia.org/wiki/Bruce_Willis"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005fe0b",
+        "id": "1089",
+        "url": "http://en.wikipedia.org/wiki/Douglas_MacArthur"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002018a",
+        "id": "1085",
+        "url": "http://en.wikipedia.org/wiki/Jorge_Luis_Borges"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000027fed",
+        "id": "1082",
+        "url": "http://en.wikipedia.org/wiki/Marlon_Brando"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000353af4",
+        "id": "1077",
+        "url": "http://en.wikipedia.org/wiki/Marriner_Stoddard_Eccles"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000e5163",
+        "id": "1073",
+        "url": "http://en.wikipedia.org/wiki/Charles,_Prince_of_Wales"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c120",
+        "id": "1070",
+        "url": "http://en.wikipedia.org/wiki/Hans_Christian_Andersen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003d7cb",
+        "id": "1070",
+        "url": "http://en.wikipedia.org/wiki/Tupac_Shakur"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d00c44",
+        "id": "1069",
+        "url": "http://en.wikipedia.org/wiki/Franz_Kafka"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c7ed",
+        "id": "1065",
+        "url": "http://en.wikipedia.org/wiki/Henry_Kissinger"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000075060",
+        "id": "1063",
+        "url": "http://en.wikipedia.org/wiki/Sylvester_Stallone"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000047433b6",
+        "id": "1062",
+        "url": "http://en.wikipedia.org/wiki/Ai_Weiwei"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040c04",
+        "id": "1057",
+        "url": "http://en.wikipedia.org/wiki/William_Morris"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000bb6520",
+        "id": "1052",
+        "url": "http://en.wikipedia.org/wiki/Donald_Trump"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000085b9ce",
+        "id": "1051",
+        "url": "http://en.wikipedia.org/wiki/Raila_Odinga"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000111f07",
+        "id": "1051",
+        "url": "http://en.wikipedia.org/wiki/Christina_Aguilera"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000024359",
+        "id": "1048",
+        "url": "http://en.wikipedia.org/wiki/Leon_Trotsky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007040e",
+        "id": "1046",
+        "url": "http://en.wikipedia.org/wiki/Judy_Garland"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000684c9d",
+        "id": "1044",
+        "url": "http://en.wikipedia.org/wiki/Michele_Bachmann"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000121d91",
+        "id": "1042",
+        "url": "http://en.wikipedia.org/wiki/Will_Smith"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000093b80",
+        "id": "1034",
+        "url": "http://en.wikipedia.org/wiki/Ansel_Adams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000349ac",
+        "id": "1033",
+        "url": "http://en.wikipedia.org/wiki/Rosa_Parks"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000041ec9",
+        "id": "1033",
+        "url": "http://en.wikipedia.org/wiki/Yuri_Gagarin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006e3cc",
+        "id": "1033",
+        "url": "http://en.wikipedia.org/wiki/Sachin_Tendulkar"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021021",
+        "id": "1032",
+        "url": "http://en.wikipedia.org/wiki/John_Dewey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001fb510",
+        "id": "1029",
+        "url": "http://en.wikipedia.org/wiki/Thaksin_Shinawatra"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003aa033f",
+        "id": "1029",
+        "url": "http://en.wikipedia.org/wiki/Freddie_Mercury"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b34e26",
+        "id": "1028",
+        "url": "http://en.wikipedia.org/wiki/Rush_Limbaugh"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000031e7d01",
+        "id": "1027",
+        "url": "http://en.wikipedia.org/wiki/Mick_Jagger"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002cc0f",
+        "id": "1025",
+        "url": "http://en.wikipedia.org/wiki/Oliver_Cromwell"
+    },
+    {
+        "freebase_id": "-",
+        "id": "1024",
+        "url": "http://en.wikipedia.org/wiki/Leonardo_DiCaprio"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000959ca5",
+        "id": "1024",
+        "url": "http://en.wikipedia.org/wiki/Richard_Stallman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000333538",
+        "id": "1022",
+        "url": "http://en.wikipedia.org/wiki/Anna_Wintour"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001aaf54",
+        "id": "1021",
+        "url": "http://en.wikipedia.org/wiki/Kate_Moss"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000028674",
+        "id": "1020",
+        "url": "http://en.wikipedia.org/wiki/M._C._Escher"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032a8e",
+        "id": "1019",
+        "url": "http://en.wikipedia.org/wiki/Robert_A._Heinlein"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004bff6",
+        "id": "1018",
+        "url": "http://en.wikipedia.org/wiki/Igor_Stravinsky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000eca897",
+        "id": "1017",
+        "url": "http://en.wikipedia.org/wiki/Manmohan_Singh"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000460f119",
+        "id": "1015",
+        "url": "http://en.wikipedia.org/wiki/Kim_Kardashian"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000049102",
+        "id": "1014",
+        "url": "http://en.wikipedia.org/wiki/Robert_Burns"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000214b3",
+        "id": "1013",
+        "url": "http://en.wikipedia.org/wiki/Joseph_McCarthy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006f1858f",
+        "id": "1012",
+        "url": "http://en.wikipedia.org/wiki/Jerry_Sandusky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000053250",
+        "id": "1011",
+        "url": "http://en.wikipedia.org/wiki/Duke_Ellington"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002cd857",
+        "id": "1008",
+        "url": "http://en.wikipedia.org/wiki/Akshay_Kumar"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001aed3a",
+        "id": "1006",
+        "url": "http://en.wikipedia.org/wiki/Maurice_Sendak"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000009183",
+        "id": "998",
+        "url": "http://en.wikipedia.org/wiki/Augusto_Pinochet"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000b98e01",
+        "id": "996",
+        "url": "http://en.wikipedia.org/wiki/Usain_Bolt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000211f52",
+        "id": "995",
+        "url": "http://en.wikipedia.org/wiki/Paris_Hilton"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000402e3",
+        "id": "994",
+        "url": "http://en.wikipedia.org/wiki/Virginia_Woolf"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000555f5",
+        "id": "993",
+        "url": "http://en.wikipedia.org/wiki/Nikita_Khrushchev"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020dd0",
+        "id": "991",
+        "url": "http://en.wikipedia.org/wiki/John_Wayne"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d13c01",
+        "id": "991",
+        "url": "http://en.wikipedia.org/wiki/Malcolm_X"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072ca7",
+        "id": "990",
+        "url": "http://en.wikipedia.org/wiki/Eadweard_Muybridge"
+    },
+    {
+        "freebase_id": "-",
+        "id": "988",
+        "url": "http://en.wikipedia.org/wiki/Slavoj_%C5%BDi%C5%BEek"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056bd5",
+        "id": "987",
+        "url": "http://en.wikipedia.org/wiki/Leonard_Bernstein"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000027b20",
+        "id": "986",
+        "url": "http://en.wikipedia.org/wiki/Michael_Faraday"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004a551",
+        "id": "985",
+        "url": "http://en.wikipedia.org/wiki/Martin_Heidegger"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000066435",
+        "id": "983",
+        "url": "http://en.wikipedia.org/wiki/Ivan_Pavlov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002a6de9",
+        "id": "982",
+        "url": "http://en.wikipedia.org/wiki/Muhammad_Yunus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000946841",
+        "id": "980",
+        "url": "http://en.wikipedia.org/wiki/Goodluck_Jonathan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b4d5ff",
+        "id": "977",
+        "url": "http://en.wikipedia.org/wiki/Jim_Morrison"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000036ded",
+        "id": "976",
+        "url": "http://en.wikipedia.org/wiki/Samuel_Beckett"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000742c6",
+        "id": "975",
+        "url": "http://en.wikipedia.org/wiki/Sergey_Brin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000013e649",
+        "id": "975",
+        "url": "http://en.wikipedia.org/wiki/Karl_Lagerfeld"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002299a7",
+        "id": "973",
+        "url": "http://en.wikipedia.org/wiki/Rahm_Emanuel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000016b983",
+        "id": "972",
+        "url": "http://en.wikipedia.org/wiki/Rick_Santorum"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001bfdbb",
+        "id": "970",
+        "url": "http://en.wikipedia.org/wiki/Abraham_Maslow"
+    },
+    {
+        "freebase_id": "-",
+        "id": "969",
+        "url": "http://en.wikipedia.org/wiki/Ren%C3%A9_Magritte"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002006c",
+        "id": "968",
+        "url": "http://en.wikipedia.org/wiki/Johannes_Kepler"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d17eeb",
+        "id": "966",
+        "url": "http://en.wikipedia.org/wiki/Barbra_Streisand"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001318a",
+        "id": "962",
+        "url": "http://en.wikipedia.org/wiki/Donald_Rumsfeld"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033727",
+        "id": "959",
+        "url": "http://en.wikipedia.org/wiki/Rube_Goldberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021117",
+        "id": "959",
+        "url": "http://en.wikipedia.org/wiki/John_Milton"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004b545",
+        "id": "958",
+        "url": "http://en.wikipedia.org/wiki/Jack_Nicholson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004b593",
+        "id": "957",
+        "url": "http://en.wikipedia.org/wiki/Ovid"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005732e",
+        "id": "954",
+        "url": "http://en.wikipedia.org/wiki/Tom_Hanks"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fdec",
+        "id": "953",
+        "url": "http://en.wikipedia.org/wiki/John_Stuart_Mill"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000027d5d",
+        "id": "952",
+        "url": "http://en.wikipedia.org/wiki/Mary_Shelley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004c875",
+        "id": "951",
+        "url": "http://en.wikipedia.org/wiki/Natalie_Portman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001458f5",
+        "id": "951",
+        "url": "http://en.wikipedia.org/wiki/Saul_Alinsky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000035503",
+        "id": "948",
+        "url": "http://en.wikipedia.org/wiki/Silvio_Berlusconi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001c43f8",
+        "id": "945",
+        "url": "http://en.wikipedia.org/wiki/Robert_Rauschenberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011cfbf",
+        "id": "943",
+        "url": "http://en.wikipedia.org/wiki/Hu_Jintao"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000da7e",
+        "id": "941",
+        "url": "http://en.wikipedia.org/wiki/Charles_Babbage"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000185a9",
+        "id": "940",
+        "url": "http://en.wikipedia.org/wiki/Francisco_Franco"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021228",
+        "id": "940",
+        "url": "http://en.wikipedia.org/wiki/Janis_Joplin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000742b6",
+        "id": "935",
+        "url": "http://en.wikipedia.org/wiki/Larry_Page"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000086138",
+        "id": "935",
+        "url": "http://en.wikipedia.org/wiki/Peter_Jackson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000007d40b26",
+        "id": "935",
+        "url": "http://en.wikipedia.org/wiki/Katy_Perry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002c267",
+        "id": "935",
+        "url": "http://en.wikipedia.org/wiki/Neil_Gaiman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000093915",
+        "id": "931",
+        "url": "http://en.wikipedia.org/wiki/Dietrich_Bonhoeffer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000783b9",
+        "id": "930",
+        "url": "http://en.wikipedia.org/wiki/Stephen_Fry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005a9d2",
+        "id": "929",
+        "url": "http://en.wikipedia.org/wiki/David_Foster_Wallace"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000035b1607",
+        "id": "928",
+        "url": "http://en.wikipedia.org/wiki/Amy_Winehouse"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008316b",
+        "id": "927",
+        "url": "http://en.wikipedia.org/wiki/Jane_Jacobs"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000a67305",
+        "id": "927",
+        "url": "http://en.wikipedia.org/wiki/Miley_Cyrus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002a7a0",
+        "id": "927",
+        "url": "http://en.wikipedia.org/wiki/Niels_Bohr"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005b29f",
+        "id": "927",
+        "url": "http://en.wikipedia.org/wiki/Hieronymus_Bosch"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000018e3d",
+        "id": "927",
+        "url": "http://en.wikipedia.org/wiki/Ferdinand_Magellan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000a81c",
+        "id": "926",
+        "url": "http://en.wikipedia.org/wiki/Blaise_Pascal"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000004942",
+        "id": "921",
+        "url": "http://en.wikipedia.org/wiki/Ada_Lovelace"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000130514",
+        "id": "920",
+        "url": "http://en.wikipedia.org/wiki/Daniel_Kahneman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002017a",
+        "id": "919",
+        "url": "http://en.wikipedia.org/wiki/Coen_brothers"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001abf3",
+        "id": "918",
+        "url": "http://en.wikipedia.org/wiki/Geoffrey_Chaucer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000034955",
+        "id": "918",
+        "url": "http://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001aca5c",
+        "id": "918",
+        "url": "http://en.wikipedia.org/wiki/Charlie_Sheen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001347b4",
+        "id": "916",
+        "url": "http://en.wikipedia.org/wiki/Rodney_King"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001cc483",
+        "id": "915",
+        "url": "http://en.wikipedia.org/wiki/Paul_Krugman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002df560",
+        "id": "915",
+        "url": "http://en.wikipedia.org/wiki/Abhishek_Bachchan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056d94",
+        "id": "911",
+        "url": "http://en.wikipedia.org/wiki/Tiger_Woods"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000593a8",
+        "id": "910",
+        "url": "http://en.wikipedia.org/wiki/Tennessee_Williams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000039776",
+        "id": "909",
+        "url": "http://en.wikipedia.org/wiki/Saint_Patrick"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000200c1",
+        "id": "908",
+        "url": "http://en.wikipedia.org/wiki/Johannes_Gutenberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000016bbb",
+        "id": "907",
+        "url": "http://en.wikipedia.org/wiki/Francis_Ford_Coppola"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000061982",
+        "id": "906",
+        "url": "http://en.wikipedia.org/wiki/Paul_Newman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000211a7",
+        "id": "906",
+        "url": "http://en.wikipedia.org/wiki/Jim_Henson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040ef2",
+        "id": "906",
+        "url": "http://en.wikipedia.org/wiki/William_Randolph_Hearst"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000009ee2",
+        "id": "905",
+        "url": "http://en.wikipedia.org/wiki/Bertolt_Brecht"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002c2d0a",
+        "id": "905",
+        "url": "http://en.wikipedia.org/wiki/Joe_Paterno"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001d123",
+        "id": "904",
+        "url": "http://en.wikipedia.org/wiki/Howard_Hughes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000062943",
+        "id": "901",
+        "url": "http://en.wikipedia.org/wiki/Billie_Holiday"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000009da212",
+        "id": "899",
+        "url": "http://en.wikipedia.org/wiki/Jimmy_Wales"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020407",
+        "id": "898",
+        "url": "http://en.wikipedia.org/wiki/John_Steinbeck"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000226850",
+        "id": "898",
+        "url": "http://en.wikipedia.org/wiki/Paul_Ryan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020719",
+        "id": "897",
+        "url": "http://en.wikipedia.org/wiki/Jean-Michel_Basquiat"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000b0962",
+        "id": "897",
+        "url": "http://en.wikipedia.org/wiki/Diego_Rivera"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003a78126",
+        "id": "897",
+        "url": "http://en.wikipedia.org/wiki/Victor_Hugo"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac7fb9",
+        "id": "896",
+        "url": "http://en.wikipedia.org/wiki/Buddy_Holly"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020c93",
+        "id": "894",
+        "url": "http://en.wikipedia.org/wiki/James_Clerk_Maxwell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000a894d4",
+        "id": "894",
+        "url": "http://en.wikipedia.org/wiki/Anna_Hazare"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000179c0",
+        "id": "893",
+        "url": "http://en.wikipedia.org/wiki/Frederick_Douglass"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c592",
+        "id": "893",
+        "url": "http://en.wikipedia.org/wiki/Herbert_Hoover"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000024273",
+        "id": "891",
+        "url": "http://en.wikipedia.org/wiki/L._Ron_Hubbard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000eec4db",
+        "id": "890",
+        "url": "http://en.wikipedia.org/wiki/George_Soros"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000018ae1",
+        "id": "888",
+        "url": "http://en.wikipedia.org/wiki/Friedrich_Hayek"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003a362",
+        "id": "887",
+        "url": "http://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000072c256",
+        "id": "886",
+        "url": "http://en.wikipedia.org/wiki/Ban_Ki-moon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002237f9",
+        "id": "886",
+        "url": "http://en.wikipedia.org/wiki/Henri_Cartier-Bresson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000219f6",
+        "id": "886",
+        "url": "http://en.wikipedia.org/wiki/Josephus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000014eaa",
+        "id": "883",
+        "url": "http://en.wikipedia.org/wiki/Edgar_Rice_Burroughs"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033e6c",
+        "id": "879",
+        "url": "http://en.wikipedia.org/wiki/Robert_E._Howard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001738a9",
+        "id": "879",
+        "url": "http://en.wikipedia.org/wiki/A._R._Rahman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000219dbb",
+        "id": "878",
+        "url": "http://en.wikipedia.org/wiki/Heath_Ledger"
+    },
+    {
+        "freebase_id": "-",
+        "id": "878",
+        "url": "http://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020c2f",
+        "id": "877",
+        "url": "http://en.wikipedia.org/wiki/J._Edgar_Hoover"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001bdbe",
+        "id": "877",
+        "url": "http://en.wikipedia.org/wiki/Heinrich_Himmler"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001cec19",
+        "id": "877",
+        "url": "http://en.wikipedia.org/wiki/Fela_Kuti"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001d4827",
+        "id": "877",
+        "url": "http://en.wikipedia.org/wiki/Osamu_Tezuka"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001b4e7",
+        "id": "876",
+        "url": "http://en.wikipedia.org/wiki/Gordon_Brown"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002b14d",
+        "id": "876",
+        "url": "http://en.wikipedia.org/wiki/Nicole_Kidman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006bbae3f",
+        "id": "876",
+        "url": "http://en.wikipedia.org/wiki/Cher"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003c772",
+        "id": "875",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Paine"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac753f",
+        "id": "874",
+        "url": "http://en.wikipedia.org/wiki/Bing_Crosby"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021dc6",
+        "id": "873",
+        "url": "http://en.wikipedia.org/wiki/Karl_Popper"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000415d1",
+        "id": "872",
+        "url": "http://en.wikipedia.org/wiki/Walt_Whitman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001df4b3",
+        "id": "867",
+        "url": "http://en.wikipedia.org/wiki/Christian_Bale"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000561bd",
+        "id": "866",
+        "url": "http://en.wikipedia.org/wiki/Robert_Mugabe"
+    },
+    {
+        "freebase_id": "-",
+        "id": "866",
+        "url": "http://en.wikipedia.org/wiki/Hugo_Ch%C3%A1vez"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008f2ea",
+        "id": "866",
+        "url": "http://en.wikipedia.org/wiki/Hamid_Karzai"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000207b2",
+        "id": "858",
+        "url": "http://en.wikipedia.org/wiki/John_Calvin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ad2893",
+        "id": "858",
+        "url": "http://en.wikipedia.org/wiki/Nicolas_Cage"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b6265a",
+        "id": "857",
+        "url": "http://en.wikipedia.org/wiki/Quincy_Jones"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000014f3a",
+        "id": "856",
+        "url": "http://en.wikipedia.org/wiki/Ernst_Haeckel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000b3483",
+        "id": "855",
+        "url": "http://en.wikipedia.org/wiki/Danny_Boyle"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005583e",
+        "id": "852",
+        "url": "http://en.wikipedia.org/wiki/Grace_Kelly"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072b75",
+        "id": "852",
+        "url": "http://en.wikipedia.org/wiki/Janet_Jackson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000f81ead1",
+        "id": "850",
+        "url": "http://en.wikipedia.org/wiki/Ray_Charles"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000640b6",
+        "id": "849",
+        "url": "http://en.wikipedia.org/wiki/Charles_de_Gaulle"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002a355",
+        "id": "849",
+        "url": "http://en.wikipedia.org/wiki/Marcel_Proust"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005bb6d",
+        "id": "848",
+        "url": "http://en.wikipedia.org/wiki/Jeremy_Bentham"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005584e",
+        "id": "847",
+        "url": "http://en.wikipedia.org/wiki/Gwyneth_Paltrow"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033f6c",
+        "id": "847",
+        "url": "http://en.wikipedia.org/wiki/Rudolf_Steiner"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056a5a",
+        "id": "846",
+        "url": "http://en.wikipedia.org/wiki/Alex_Ferguson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003d069",
+        "id": "844",
+        "url": "http://en.wikipedia.org/wiki/Timothy_Leary"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001b491",
+        "id": "840",
+        "url": "http://en.wikipedia.org/wiki/George_Gershwin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008e5a5",
+        "id": "839",
+        "url": "http://en.wikipedia.org/wiki/Paul_Klee"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000089679",
+        "id": "837",
+        "url": "http://en.wikipedia.org/wiki/John_Ruskin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000b27d33",
+        "id": "836",
+        "url": "http://en.wikipedia.org/wiki/Stephenie_Meyer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000042089",
+        "id": "835",
+        "url": "http://en.wikipedia.org/wiki/Yasser_Arafat"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000029c43",
+        "id": "835",
+        "url": "http://en.wikipedia.org/wiki/Mary_Magdalene"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001007a",
+        "id": "832",
+        "url": "http://en.wikipedia.org/wiki/Colin_Powell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d21f92",
+        "id": "832",
+        "url": "http://en.wikipedia.org/wiki/Vladimir_Nabokov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000025ecdb",
+        "id": "832",
+        "url": "http://en.wikipedia.org/wiki/Jonathan_Ive"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000030f34",
+        "id": "830",
+        "url": "http://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004d9e1",
+        "id": "830",
+        "url": "http://en.wikipedia.org/wiki/Cary_Grant"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000016befd",
+        "id": "829",
+        "url": "http://en.wikipedia.org/wiki/John_Muir"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000098f59",
+        "id": "828",
+        "url": "http://en.wikipedia.org/wiki/Edward_Gorey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007ac79",
+        "id": "828",
+        "url": "http://en.wikipedia.org/wiki/Edward_Hopper"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007836b",
+        "id": "828",
+        "url": "http://en.wikipedia.org/wiki/Meryl_Streep"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007a05c",
+        "id": "826",
+        "url": "http://en.wikipedia.org/wiki/Paul_Gauguin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011db54",
+        "id": "825",
+        "url": "http://en.wikipedia.org/wiki/Dean_Martin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003dea8",
+        "id": "824",
+        "url": "http://en.wikipedia.org/wiki/Timothy_McVeigh"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000007a61",
+        "id": "824",
+        "url": "http://en.wikipedia.org/wiki/Anton_Chekhov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000076230",
+        "id": "824",
+        "url": "http://en.wikipedia.org/wiki/Man_Ray"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000a1f2",
+        "id": "820",
+        "url": "http://en.wikipedia.org/wiki/Brigitte_Bardot"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000760fc",
+        "id": "819",
+        "url": "http://en.wikipedia.org/wiki/Gertrude_Stein"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000148ec3",
+        "id": "818",
+        "url": "http://en.wikipedia.org/wiki/Presidency_of_George_W._Bush"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017ad3f",
+        "id": "816",
+        "url": "http://en.wikipedia.org/wiki/Haruki_Murakami"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000041368",
+        "id": "816",
+        "url": "http://en.wikipedia.org/wiki/William_Faulkner"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000825ce",
+        "id": "815",
+        "url": "http://en.wikipedia.org/wiki/Charles_V,_Holy_Roman_Emperor"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000013c545",
+        "id": "814",
+        "url": "http://en.wikipedia.org/wiki/Roland_Barthes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000035618",
+        "id": "814",
+        "url": "http://en.wikipedia.org/wiki/Spike_Lee"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000034ee6",
+        "id": "814",
+        "url": "http://en.wikipedia.org/wiki/Sean_Connery"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007a4a3",
+        "id": "814",
+        "url": "http://en.wikipedia.org/wiki/Fred_Astaire"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000071c57",
+        "id": "814",
+        "url": "http://en.wikipedia.org/wiki/Charles_Bukowski"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000021d449",
+        "id": "812",
+        "url": "http://en.wikipedia.org/wiki/Rick_Rubin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000259555",
+        "id": "808",
+        "url": "http://en.wikipedia.org/wiki/Willem_de_Kooning"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004f1ab",
+        "id": "807",
+        "url": "http://en.wikipedia.org/wiki/Norman_Rockwell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000062796",
+        "id": "807",
+        "url": "http://en.wikipedia.org/wiki/Ella_Fitzgerald"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000613287",
+        "id": "805",
+        "url": "http://en.wikipedia.org/wiki/Robert_Pattinson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002082d",
+        "id": "804",
+        "url": "http://en.wikipedia.org/wiki/John_von_Neumann"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000006dd3",
+        "id": "804",
+        "url": "http://en.wikipedia.org/wiki/Auguste_Rodin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003325f",
+        "id": "803",
+        "url": "http://en.wikipedia.org/wiki/Raymond_Chandler"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006a6c7",
+        "id": "803",
+        "url": "http://en.wikipedia.org/wiki/Saint_Nicholas"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001bfb92",
+        "id": "802",
+        "url": "http://en.wikipedia.org/wiki/Hulk_Hogan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000d0c9b4",
+        "id": "802",
+        "url": "http://en.wikipedia.org/wiki/Oscar_Pistorius"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000004c3d4f",
+        "id": "801",
+        "url": "http://en.wikipedia.org/wiki/Daniel_Craig"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008bcca",
+        "id": "800",
+        "url": "http://en.wikipedia.org/wiki/David_Attenborough"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001d6a64",
+        "id": "799",
+        "url": "http://en.wikipedia.org/wiki/Nicolaus_Copernicus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000028fec",
+        "id": "798",
+        "url": "http://en.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020fce",
+        "id": "796",
+        "url": "http://en.wikipedia.org/wiki/Jennifer_Lopez"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000126956",
+        "id": "796",
+        "url": "http://en.wikipedia.org/wiki/Edward_Bernays"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000023d6b",
+        "id": "796",
+        "url": "http://en.wikipedia.org/wiki/Louis_Pasteur"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000059c6e",
+        "id": "795",
+        "url": "http://en.wikipedia.org/wiki/Robert_Schumann"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012a334",
+        "id": "795",
+        "url": "http://en.wikipedia.org/wiki/Fred_Phelps"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001fd90",
+        "id": "795",
+        "url": "http://en.wikipedia.org/wiki/Jonathan_Swift"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000078679",
+        "id": "792",
+        "url": "http://en.wikipedia.org/wiki/Jane_Fonda"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000b470d",
+        "id": "792",
+        "url": "http://en.wikipedia.org/wiki/Clara_Bow"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000077e5e",
+        "id": "791",
+        "url": "http://en.wikipedia.org/wiki/Edgar_Degas"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000001c9e5525",
+        "id": "789",
+        "url": "http://en.wikipedia.org/wiki/Mohamed_Bouazizi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000067a36",
+        "id": "789",
+        "url": "http://en.wikipedia.org/wiki/Jacques_Derrida"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000130bb",
+        "id": "788",
+        "url": "http://en.wikipedia.org/wiki/Desmond_Tutu"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017395c",
+        "id": "788",
+        "url": "http://en.wikipedia.org/wiki/Mani_Ratnam"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000075b5",
+        "id": "788",
+        "url": "http://en.wikipedia.org/wiki/Arthur_Miller"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069794",
+        "id": "788",
+        "url": "http://en.wikipedia.org/wiki/Samuel_L._Jackson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001acbd",
+        "id": "788",
+        "url": "http://en.wikipedia.org/wiki/Garry_Kasparov"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006a2be",
+        "id": "787",
+        "url": "http://en.wikipedia.org/wiki/Andrew_Lloyd_Webber"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000004852d0",
+        "id": "786",
+        "url": "http://en.wikipedia.org/wiki/Chris_Hemsworth"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001878cc",
+        "id": "785",
+        "url": "http://en.wikipedia.org/wiki/LeBron_James"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000026f6f",
+        "id": "784",
+        "url": "http://en.wikipedia.org/wiki/Marco_Polo"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012bc9d",
+        "id": "783",
+        "url": "http://en.wikipedia.org/wiki/Alan_Greenspan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006529d",
+        "id": "782",
+        "url": "http://en.wikipedia.org/wiki/Gamal_Abdel_Nasser"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000132592",
+        "id": "780",
+        "url": "http://en.wikipedia.org/wiki/Matt_Damon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000040830",
+        "id": "780",
+        "url": "http://en.wikipedia.org/wiki/William_Gibson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000013d78",
+        "id": "780",
+        "url": "http://en.wikipedia.org/wiki/Django_Reinhardt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000155d65",
+        "id": "779",
+        "url": "http://en.wikipedia.org/wiki/Harvey_Milk"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001a2ac4",
+        "id": "778",
+        "url": "http://en.wikipedia.org/wiki/Jeremy_Clarkson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012584e",
+        "id": "777",
+        "url": "http://en.wikipedia.org/wiki/Keith_Richards"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000205415",
+        "id": "776",
+        "url": "http://en.wikipedia.org/wiki/Dan_Savage"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000092538",
+        "id": "776",
+        "url": "http://en.wikipedia.org/wiki/Henry_James"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000027225",
+        "id": "775",
+        "url": "http://en.wikipedia.org/wiki/Maimonides"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011ecf0",
+        "id": "775",
+        "url": "http://en.wikipedia.org/wiki/Sean_Combs"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002b4fa",
+        "id": "775",
+        "url": "http://en.wikipedia.org/wiki/Nostradamus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000036ee54",
+        "id": "774",
+        "url": "http://en.wikipedia.org/wiki/Priyanka_Chopra"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004141c",
+        "id": "773",
+        "url": "http://en.wikipedia.org/wiki/Wernher_von_Braun"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000015131",
+        "id": "773",
+        "url": "http://en.wikipedia.org/wiki/Eleanor_Roosevelt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000054f8b",
+        "id": "769",
+        "url": "http://en.wikipedia.org/wiki/John_Wesley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001d759",
+        "id": "767",
+        "url": "http://en.wikipedia.org/wiki/Hugh_Hefner"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000951cd",
+        "id": "766",
+        "url": "http://en.wikipedia.org/wiki/Amelia_Earhart"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000169d1b",
+        "id": "766",
+        "url": "http://en.wikipedia.org/wiki/Alexander_Calder"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003bbaf97",
+        "id": "765",
+        "url": "http://en.wikipedia.org/wiki/Diana_Ross"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056d07",
+        "id": "764",
+        "url": "http://en.wikipedia.org/wiki/Katharine_Hepburn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004969c",
+        "id": "764",
+        "url": "http://en.wikipedia.org/wiki/Magic_Johnson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000023dd56",
+        "id": "763",
+        "url": "http://en.wikipedia.org/wiki/Andy_Goldsworthy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000121aae",
+        "id": "761",
+        "url": "http://en.wikipedia.org/wiki/John_Williams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000015315",
+        "id": "761",
+        "url": "http://en.wikipedia.org/wiki/Edvard_Munch"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000498c",
+        "id": "761",
+        "url": "http://en.wikipedia.org/wiki/Agatha_Christie"
+    },
+    {
+        "freebase_id": "-",
+        "id": "760",
+        "url": "http://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069402",
+        "id": "759",
+        "url": "http://en.wikipedia.org/wiki/John_Travolta"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005a560",
+        "id": "759",
+        "url": "http://en.wikipedia.org/wiki/Sacha_Baron_Cohen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003431c",
+        "id": "758",
+        "url": "http://en.wikipedia.org/wiki/Ruhollah_Khomeini"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d03691",
+        "id": "757",
+        "url": "http://en.wikipedia.org/wiki/Lou_Reed"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006b451",
+        "id": "756",
+        "url": "http://en.wikipedia.org/wiki/Roald_Dahl"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003071f",
+        "id": "754",
+        "url": "http://en.wikipedia.org/wiki/Pervez_Musharraf"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002727f",
+        "id": "754",
+        "url": "http://en.wikipedia.org/wiki/Max_Weber"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007b672",
+        "id": "750",
+        "url": "http://en.wikipedia.org/wiki/Buzz_Aldrin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003bcac",
+        "id": "749",
+        "url": "http://en.wikipedia.org/wiki/Terry_Gilliam"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b5155c",
+        "id": "749",
+        "url": "http://en.wikipedia.org/wiki/Percy_Bysshe_Shelley"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000008db231",
+        "id": "749",
+        "url": "http://en.wikipedia.org/wiki/Dmitry_Medvedev"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001e12a",
+        "id": "747",
+        "url": "http://en.wikipedia.org/wiki/Ingmar_Bergman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000a713f",
+        "id": "747",
+        "url": "http://en.wikipedia.org/wiki/Matthew_Shepard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000099be93",
+        "id": "745",
+        "url": "http://en.wikipedia.org/wiki/Julian_Castro"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000005d47ec",
+        "id": "743",
+        "url": "http://en.wikipedia.org/wiki/Megan_Fox"
+    },
+    {
+        "freebase_id": "-",
+        "id": "743",
+        "url": "http://en.wikipedia.org/wiki/Jos%C3%A9_Rizal"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000732dd",
+        "id": "743",
+        "url": "http://en.wikipedia.org/wiki/Jean-Luc_Godard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002819f",
+        "id": "742",
+        "url": "http://en.wikipedia.org/wiki/Mark_Antony"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012791a",
+        "id": "742",
+        "url": "http://en.wikipedia.org/wiki/George_Carlin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000010eb83",
+        "id": "742",
+        "url": "http://en.wikipedia.org/wiki/Pete_Seeger"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001ab8f",
+        "id": "741",
+        "url": "http://en.wikipedia.org/wiki/George_Frideric_Handel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000178be6",
+        "id": "739",
+        "url": "http://en.wikipedia.org/wiki/Walter_Benjamin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000679bf",
+        "id": "739",
+        "url": "http://en.wikipedia.org/wiki/Robin_Williams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000015edf5",
+        "id": "738",
+        "url": "http://en.wikipedia.org/wiki/Celine_Dion"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002cd110",
+        "id": "738",
+        "url": "http://en.wikipedia.org/wiki/Anthony_Bourdain"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000586b0",
+        "id": "736",
+        "url": "http://en.wikipedia.org/wiki/Mel_Gibson"
+    },
+    {
+        "freebase_id": "-",
+        "id": "734",
+        "url": "http://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000005ba645",
+        "id": "734",
+        "url": "http://en.wikipedia.org/wiki/Cary_Lu"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000067de8",
+        "id": "733",
+        "url": "http://en.wikipedia.org/wiki/Eero_Saarinen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000c7848",
+        "id": "733",
+        "url": "http://en.wikipedia.org/wiki/Sean_Penn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056da4",
+        "id": "732",
+        "url": "http://en.wikipedia.org/wiki/Hokusai"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000077e00",
+        "id": "732",
+        "url": "http://en.wikipedia.org/wiki/Marc_Chagall"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000024375",
+        "id": "731",
+        "url": "http://en.wikipedia.org/wiki/Lord_Byron"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000067f25",
+        "id": "731",
+        "url": "http://en.wikipedia.org/wiki/Harry_Houdini"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000568c2",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Langston_Hughes"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069deb",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Eddie_Murphy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006bf9a",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Peter_Gabriel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000259c88",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Ralph_Lauren"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000226dc",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Kylie_Minogue"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000a4720",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Jean_Piaget"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000153ec8",
+        "id": "728",
+        "url": "http://en.wikipedia.org/wiki/Benazir_Bhutto"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001fc43e",
+        "id": "727",
+        "url": "http://en.wikipedia.org/wiki/George_A._Romero"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000041774",
+        "id": "726",
+        "url": "http://en.wikipedia.org/wiki/William_Wordsworth"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000351e03",
+        "id": "726",
+        "url": "http://en.wikipedia.org/wiki/Richard_Avedon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b18b08",
+        "id": "725",
+        "url": "http://en.wikipedia.org/wiki/James_Dean"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006a836",
+        "id": "724",
+        "url": "http://en.wikipedia.org/wiki/Whoopi_Goldberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000021be78",
+        "id": "724",
+        "url": "http://en.wikipedia.org/wiki/Alexander_McQueen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000065cbd",
+        "id": "724",
+        "url": "http://en.wikipedia.org/wiki/John_Carpenter"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000021eb30",
+        "id": "724",
+        "url": "http://en.wikipedia.org/wiki/Muhammad_Ali_Jinnah"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000092a01",
+        "id": "723",
+        "url": "http://en.wikipedia.org/wiki/Sting_(musician)"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001623b4",
+        "id": "723",
+        "url": "http://en.wikipedia.org/wiki/Aaron_Sorkin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000598b13",
+        "id": "722",
+        "url": "http://en.wikipedia.org/wiki/Dominique_Strauss-Kahn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000018cd84",
+        "id": "722",
+        "url": "http://en.wikipedia.org/wiki/Kobe_Bryant"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000092196",
+        "id": "721",
+        "url": "http://en.wikipedia.org/wiki/Charles_Lindbergh"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007603f",
+        "id": "721",
+        "url": "http://en.wikipedia.org/wiki/Robert_Redford"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000013562",
+        "id": "721",
+        "url": "http://en.wikipedia.org/wiki/Daniel_Dennett"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001d0d7",
+        "id": "719",
+        "url": "http://en.wikipedia.org/wiki/Humphrey_Bogart"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000ec1b57",
+        "id": "718",
+        "url": "http://en.wikipedia.org/wiki/Selena_Gomez"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002cc1f",
+        "id": "716",
+        "url": "http://en.wikipedia.org/wiki/Otto_von_Bismarck"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000023d7b",
+        "id": "715",
+        "url": "http://en.wikipedia.org/wiki/Ludwig_Wittgenstein"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000076366",
+        "id": "715",
+        "url": "http://en.wikipedia.org/wiki/Prince_Philip,_Duke_of_Edinburgh"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000479ee9d",
+        "id": "715",
+        "url": "http://en.wikipedia.org/wiki/David_Dale_(author)"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005466d",
+        "id": "714",
+        "url": "http://en.wikipedia.org/wiki/Clark_Gable"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017459e",
+        "id": "714",
+        "url": "http://en.wikipedia.org/wiki/Jim_Jones"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000afe9c",
+        "id": "714",
+        "url": "http://en.wikipedia.org/wiki/Alphonse_Mucha"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005595f",
+        "id": "714",
+        "url": "http://en.wikipedia.org/wiki/Max_Ernst"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000137850",
+        "id": "713",
+        "url": "http://en.wikipedia.org/wiki/Robert_Downey,_Jr."
+    },
+    {
+        "freebase_id": "-",
+        "id": "712",
+        "url": "http://en.wikipedia.org/wiki/Hrithik_Roshan"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000346347",
+        "id": "711",
+        "url": "http://en.wikipedia.org/wiki/Leon_Panetta"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000c0d9",
+        "id": "710",
+        "url": "http://en.wikipedia.org/wiki/Barry_Goldwater"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000055fedc3",
+        "id": "708",
+        "url": "http://en.wikipedia.org/wiki/Eunhyuk"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000634c5",
+        "id": "707",
+        "url": "http://en.wikipedia.org/wiki/Egon_Schiele"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011f496",
+        "id": "707",
+        "url": "http://en.wikipedia.org/wiki/Dorothea_Lange"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001b728",
+        "id": "707",
+        "url": "http://en.wikipedia.org/wiki/Gene_Roddenberry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000c935",
+        "id": "707",
+        "url": "http://en.wikipedia.org/wiki/Charlize_Theron"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004f6ef",
+        "id": "707",
+        "url": "http://en.wikipedia.org/wiki/Jennifer_Aniston"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000ddd7",
+        "id": "705",
+        "url": "http://en.wikipedia.org/wiki/Charles_Baudelaire"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000023b7d",
+        "id": "705",
+        "url": "http://en.wikipedia.org/wiki/Lee_Harvey_Oswald"
+    },
+    {
+        "freebase_id": "-",
+        "id": "705",
+        "url": "http://en.wikipedia.org/wiki/Georges_M%C3%A9li%C3%A8s"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004d5b0",
+        "id": "704",
+        "url": "http://en.wikipedia.org/wiki/Michael_Bloomberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033adf",
+        "id": "703",
+        "url": "http://en.wikipedia.org/wiki/Robert_Frost"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000120ab",
+        "id": "701",
+        "url": "http://en.wikipedia.org/wiki/Dave_Grohl"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001a9352",
+        "id": "700",
+        "url": "http://en.wikipedia.org/wiki/Ashton_Kutcher"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003ac118b",
+        "id": "699",
+        "url": "http://en.wikipedia.org/wiki/John_Peel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001aaf2a",
+        "id": "698",
+        "url": "http://en.wikipedia.org/wiki/Heidi_Klum"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003dd66c",
+        "id": "698",
+        "url": "http://en.wikipedia.org/wiki/Karan_Johar"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000005552a0",
+        "id": "698",
+        "url": "http://en.wikipedia.org/wiki/James_Franco"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000795df",
+        "id": "698",
+        "url": "http://en.wikipedia.org/wiki/Liam_Neeson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000a5de",
+        "id": "697",
+        "url": "http://en.wikipedia.org/wiki/Bram_Stoker"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002da266",
+        "id": "697",
+        "url": "http://en.wikipedia.org/wiki/Peter_Thiel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000014b900",
+        "id": "696",
+        "url": "http://en.wikipedia.org/wiki/John_D._Rockefeller"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000093f0c",
+        "id": "696",
+        "url": "http://en.wikipedia.org/wiki/Josef_Mengele"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021bcf",
+        "id": "696",
+        "url": "http://en.wikipedia.org/wiki/Julia_Roberts"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000828a4",
+        "id": "696",
+        "url": "http://en.wikipedia.org/wiki/Idi_Amin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000036bdc55",
+        "id": "695",
+        "url": "http://en.wikipedia.org/wiki/Dennis_Bovell"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002e3a0c",
+        "id": "695",
+        "url": "http://en.wikipedia.org/wiki/Jim_Lee"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000006322d",
+        "id": "694",
+        "url": "http://en.wikipedia.org/wiki/Paul_Simon"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000ac4b8f",
+        "id": "694",
+        "url": "http://en.wikipedia.org/wiki/Tim_Gunn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001d6bc",
+        "id": "693",
+        "url": "http://en.wikipedia.org/wiki/Helen_Keller"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000ec7f7e",
+        "id": "693",
+        "url": "http://en.wikipedia.org/wiki/Jack_the_Ripper"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003a48e",
+        "id": "693",
+        "url": "http://en.wikipedia.org/wiki/Sandra_Bullock"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000057262e5",
+        "id": "692",
+        "url": "http://en.wikipedia.org/wiki/Stieg_Larsson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000028f64",
+        "id": "692",
+        "url": "http://en.wikipedia.org/wiki/Michael_Schumacher"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000af8ef",
+        "id": "692",
+        "url": "http://en.wikipedia.org/wiki/Tina_Fey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001a368",
+        "id": "692",
+        "url": "http://en.wikipedia.org/wiki/Grover_Cleveland"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000a9b597",
+        "id": "692",
+        "url": "http://en.wikipedia.org/wiki/Steven_Meisel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007515b",
+        "id": "690",
+        "url": "http://en.wikipedia.org/wiki/Michael_Caine"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003adf6d5",
+        "id": "689",
+        "url": "http://en.wikipedia.org/wiki/Tina_Turner"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000085bc66",
+        "id": "689",
+        "url": "http://en.wikipedia.org/wiki/Katrina_Kaif"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003b3d6c5",
+        "id": "688",
+        "url": "http://en.wikipedia.org/wiki/Les_Paul"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000bb7dbe9",
+        "id": "685",
+        "url": "http://en.wikipedia.org/wiki/Werner_Herzog"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000563beb5",
+        "id": "684",
+        "url": "http://en.wikipedia.org/wiki/Leeteuk"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000128326",
+        "id": "684",
+        "url": "http://en.wikipedia.org/wiki/Hans_Zimmer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000007c6f4a",
+        "id": "684",
+        "url": "http://en.wikipedia.org/wiki/Kristen_Stewart"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006ffb6da",
+        "id": "683",
+        "url": "http://en.wikipedia.org/wiki/Tom_Waits"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000121241",
+        "id": "683",
+        "url": "http://en.wikipedia.org/wiki/Pete_Townshend"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003b07c",
+        "id": "680",
+        "url": "http://en.wikipedia.org/wiki/Terry_Pratchett"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001846b5",
+        "id": "679",
+        "url": "http://en.wikipedia.org/wiki/Karl_Rove"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000092d74",
+        "id": "679",
+        "url": "http://en.wikipedia.org/wiki/Leonard_Cohen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000309ae",
+        "id": "679",
+        "url": "http://en.wikipedia.org/wiki/Pol_Pot"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000111c2f",
+        "id": "678",
+        "url": "http://en.wikipedia.org/wiki/Trent_Reznor"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000e7fe",
+        "id": "677",
+        "url": "http://en.wikipedia.org/wiki/Carl_Friedrich_Gauss"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021d2a",
+        "id": "677",
+        "url": "http://en.wikipedia.org/wiki/Keanu_Reeves"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000377269",
+        "id": "676",
+        "url": "http://en.wikipedia.org/wiki/Saul_Bass"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000aafe16",
+        "id": "676",
+        "url": "http://en.wikipedia.org/wiki/Dieter_Rams"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000044d399",
+        "id": "676",
+        "url": "http://en.wikipedia.org/wiki/Takashi_Murakami"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001232c7",
+        "id": "675",
+        "url": "http://en.wikipedia.org/wiki/Truman_Capote"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001fc40c",
+        "id": "675",
+        "url": "http://en.wikipedia.org/wiki/Grant_Morrison"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000321d8a",
+        "id": "675",
+        "url": "http://en.wikipedia.org/wiki/Neil_Patrick_Harris"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000099cca",
+        "id": "674",
+        "url": "http://en.wikipedia.org/wiki/Roger_Corman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006d2e2bc",
+        "id": "674",
+        "url": "http://en.wikipedia.org/wiki/Timbaland"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000575be",
+        "id": "674",
+        "url": "http://en.wikipedia.org/wiki/Laurence_Olivier"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000033aa3",
+        "id": "674",
+        "url": "http://en.wikipedia.org/wiki/Rem_Koolhaas"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000017443",
+        "id": "673",
+        "url": "http://en.wikipedia.org/wiki/Francisco_Goya"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004e394",
+        "id": "673",
+        "url": "http://en.wikipedia.org/wiki/Anne_Boleyn"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000116533",
+        "id": "673",
+        "url": "http://en.wikipedia.org/wiki/Christian_Dior"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005860f",
+        "id": "672",
+        "url": "http://en.wikipedia.org/wiki/Ezra_Pound"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000aee8f",
+        "id": "672",
+        "url": "http://en.wikipedia.org/wiki/Peter_Paul_Rubens"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000003f843",
+        "id": "671",
+        "url": "http://en.wikipedia.org/wiki/Vint_Cerf"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003b786a",
+        "id": "671",
+        "url": "http://en.wikipedia.org/wiki/Bradley_Wiggins"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000008d20f",
+        "id": "671",
+        "url": "http://en.wikipedia.org/wiki/Serge_Gainsbourg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000072044",
+        "id": "670",
+        "url": "http://en.wikipedia.org/wiki/Alicia_Keys"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000032be0",
+        "id": "669",
+        "url": "http://en.wikipedia.org/wiki/Roman_Polanski"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001e31a5",
+        "id": "668",
+        "url": "http://en.wikipedia.org/wiki/Stephen_Colbert"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005b94d",
+        "id": "668",
+        "url": "http://en.wikipedia.org/wiki/Joan_Crawford"
+    },
+    {
+        "freebase_id": "-",
+        "id": "668",
+        "url": "http://en.wikipedia.org/wiki/Cormac_McCarthy"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000b4834",
+        "id": "667",
+        "url": "http://en.wikipedia.org/wiki/Jared_Diamond"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000070fa0",
+        "id": "667",
+        "url": "http://en.wikipedia.org/wiki/Judas_Iscariot"
+    },
+    {
+        "freebase_id": "-",
+        "id": "666",
+        "url": "http://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000550ddb",
+        "id": "665",
+        "url": "http://en.wikipedia.org/wiki/Mihaly_Csikszentmihalyi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000119e80",
+        "id": "663",
+        "url": "http://en.wikipedia.org/wiki/Willie_Nelson"
+    },
+    {
+        "freebase_id": "-",
+        "id": "662",
+        "url": "http://en.wikipedia.org/wiki/Paul_C%C3%A9zanne"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000b3384",
+        "id": "662",
+        "url": "http://en.wikipedia.org/wiki/John_Singer_Sargent"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000169bcb",
+        "id": "660",
+        "url": "http://en.wikipedia.org/wiki/Gary_Oldman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069a1e",
+        "id": "659",
+        "url": "http://en.wikipedia.org/wiki/Dizzy_Gillespie"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001a565",
+        "id": "659",
+        "url": "http://en.wikipedia.org/wiki/Gregor_Mendel"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000004148a",
+        "id": "657",
+        "url": "http://en.wikipedia.org/wiki/Walter_Gropius"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005f5f6",
+        "id": "656",
+        "url": "http://en.wikipedia.org/wiki/Irving_Berlin"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000010f8c9",
+        "id": "656",
+        "url": "http://en.wikipedia.org/wiki/Jeff_Bezos"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000683a8",
+        "id": "656",
+        "url": "http://en.wikipedia.org/wiki/John_Coltrane"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002153e",
+        "id": "655",
+        "url": "http://en.wikipedia.org/wiki/Johannes_Brahms"
+    },
+    {
+        "freebase_id": "-",
+        "id": "654",
+        "url": "http://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001689a8",
+        "id": "654",
+        "url": "http://en.wikipedia.org/wiki/Dario_Argento"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000065de8e",
+        "id": "654",
+        "url": "http://en.wikipedia.org/wiki/Russell_Brand"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000231284",
+        "id": "653",
+        "url": "http://en.wikipedia.org/wiki/Glenn_Beck"
+    },
+    {
+        "freebase_id": "-",
+        "id": "653",
+        "url": "http://en.wikipedia.org/wiki/Felipe_Calder%C3%B3n"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012f2a4",
+        "id": "652",
+        "url": "http://en.wikipedia.org/wiki/Etta_James"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001c692",
+        "id": "652",
+        "url": "http://en.wikipedia.org/wiki/Halle_Berry"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000399891",
+        "id": "651",
+        "url": "http://en.wikipedia.org/wiki/James_Hansen"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000cd4928",
+        "id": "651",
+        "url": "http://en.wikipedia.org/wiki/Gabrielle_Giffords"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002c5b8",
+        "id": "651",
+        "url": "http://en.wikipedia.org/wiki/Oliver_Stone"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012812c",
+        "id": "650",
+        "url": "http://en.wikipedia.org/wiki/Emily_Dickinson"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020ec0",
+        "id": "649",
+        "url": "http://en.wikipedia.org/wiki/Jefferson_Davis"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005f69a",
+        "id": "648",
+        "url": "http://en.wikipedia.org/wiki/Oscar_Niemeyer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000056c5c",
+        "id": "647",
+        "url": "http://en.wikipedia.org/wiki/Johannes_Vermeer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000038b50",
+        "id": "646",
+        "url": "http://en.wikipedia.org/wiki/Sam_Raimi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002134ba",
+        "id": "646",
+        "url": "http://en.wikipedia.org/wiki/Frank_Frazetta"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001bd370",
+        "id": "646",
+        "url": "http://en.wikipedia.org/wiki/Gloria_Steinem"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003a79a1",
+        "id": "645",
+        "url": "http://en.wikipedia.org/wiki/Elon_Musk"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000000fc90",
+        "id": "644",
+        "url": "http://en.wikipedia.org/wiki/Clarence_Thomas"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001365e",
+        "id": "644",
+        "url": "http://en.wikipedia.org/wiki/Marquis_de_Sade"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000005484e",
+        "id": "643",
+        "url": "http://en.wikipedia.org/wiki/Dustin_Hoffman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000069a5c",
+        "id": "643",
+        "url": "http://en.wikipedia.org/wiki/Charlie_Parker"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007d9d5",
+        "id": "642",
+        "url": "http://en.wikipedia.org/wiki/Franz_Liszt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000003af01c4",
+        "id": "641",
+        "url": "http://en.wikipedia.org/wiki/The_Notorious_B.I.G."
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002afb8",
+        "id": "640",
+        "url": "http://en.wikipedia.org/wiki/Neville_Chamberlain"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000012c98",
+        "id": "640",
+        "url": "http://en.wikipedia.org/wiki/Arthur_Wellesley,_1st_Duke_of_Wellington"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000af921",
+        "id": "640",
+        "url": "http://en.wikipedia.org/wiki/Adam_Sandler"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000002f28a",
+        "id": "639",
+        "url": "http://en.wikipedia.org/wiki/Peter_Singer"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000021430",
+        "id": "639",
+        "url": "http://en.wikipedia.org/wiki/Jet_Li"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000073131",
+        "id": "638",
+        "url": "http://en.wikipedia.org/wiki/Kevin_Smith"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000035628",
+        "id": "637",
+        "url": "http://en.wikipedia.org/wiki/Spike_Jonze"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017ceb6",
+        "id": "637",
+        "url": "http://en.wikipedia.org/wiki/Jean_Baudrillard"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000083ca2",
+        "id": "637",
+        "url": "http://en.wikipedia.org/wiki/Prince_William,_Duke_of_Cambridge"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000005f2a64",
+        "id": "635",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Gordon-Levitt"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000000408b2",
+        "id": "635",
+        "url": "http://en.wikipedia.org/wiki/Werner_Heisenberg"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000135f79",
+        "id": "635",
+        "url": "http://en.wikipedia.org/wiki/Sonia_Gandhi"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000006ffa64e",
+        "id": "634",
+        "url": "http://en.wikipedia.org/wiki/Hugh_Jackman"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000002b7a10",
+        "id": "634",
+        "url": "http://en.wikipedia.org/wiki/Michael_Bay"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000011394a",
+        "id": "633",
+        "url": "http://en.wikipedia.org/wiki/Marlene_Dietrich"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000001ab40",
+        "id": "633",
+        "url": "http://en.wikipedia.org/wiki/Giacomo_Puccini"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000007a915",
+        "id": "631",
+        "url": "http://en.wikipedia.org/wiki/Gustav_Mahler"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000181eec",
+        "id": "631",
+        "url": "http://en.wikipedia.org/wiki/Jon_Stewart"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001d3ba4",
+        "id": "630",
+        "url": "http://en.wikipedia.org/wiki/David_Sedaris"
+    },
+    {
+        "freebase_id": "-",
+        "id": "630",
+        "url": "http://en.wikipedia.org/wiki/Ferran_Adri%C3%A0"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000005a93a02",
+        "id": "630",
+        "url": "http://en.wikipedia.org/wiki/Shindong"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003403c1",
+        "id": "629",
+        "url": "http://en.wikipedia.org/wiki/Aubrey_de_Grey"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000001feafc",
+        "id": "629",
+        "url": "http://en.wikipedia.org/wiki/Alfred_Stieglitz"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000012cc85",
+        "id": "629",
+        "url": "http://en.wikipedia.org/wiki/Diane_Arbus"
+    },
+    {
+        "freebase_id": "9202a8c04000641f80000000003c00fd",
+        "id": "627",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Keller"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000163c2b",
+        "id": "627",
+        "url": "http://en.wikipedia.org/wiki/Lucian_Freud"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000097052",
+        "id": "627",
+        "url": "http://en.wikipedia.org/wiki/Jim_Carrey"
+    },
+    {
+        "freebase_id": "-",
+        "id": "627",
+        "url": "http://en.wikipedia.org/wiki/Fran%C3%A7ois_Hollande"
+    },
+    {
+        "freebase_id": "9202a8c04000641f8000000000020426",
+        "id": "626",
+        "url": "http://en.wikipedia.org/wiki/Joseph_Schumpeter"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000017295e",
+        "id": "626",
+        "url": "http://en.wikipedia.org/wiki/Ellen_DeGeneres"
+    },
+    {
+        "freebase_id": "9202a8c04000641f800000000014938b",
+        "id": "625",
+        "url": "http://en.wikipedia.org/wiki/Ted_Kennedy"
+    }
+]
