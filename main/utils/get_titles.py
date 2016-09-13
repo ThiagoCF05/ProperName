@@ -26,7 +26,7 @@ def get_titles(mention_dir, write_dir):
                 result[entity].extend(titles)
 
     for entity in result:
-        result[entity] = set(result[entity])
+        result[entity] = list(set(result[entity]))
 
     json.dump(result, open(write_dir, 'w'))
 
