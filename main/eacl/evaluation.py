@@ -53,12 +53,12 @@ if __name__ == '__main__':
                 bayes[fold]['jaccard'].append(jaccard_bayes)
 
                 siddharthan[fold]['y_real'].append(item['real']['label'])
-                siddharthan[fold]['y_pred'].append(item['siddharthan']['label'][0])
+                siddharthan[fold]['y_pred'].append(item['siddharthan']['label'])
                 siddharthan[fold]['string'].append(dist_siddharthan)
                 siddharthan[fold]['jaccard'].append(jaccard_siddharthan)
 
                 deemter[fold]['y_real'].append(item['real']['label'])
-                deemter[fold]['y_pred'].append(item['deemter']['label'][0])
+                deemter[fold]['y_pred'].append(item['deemter']['label'])
                 deemter[fold]['string'].append(dist_deemter)
                 deemter[fold]['jaccard'].append(jaccard_deemter)
 
