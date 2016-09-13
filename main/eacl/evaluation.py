@@ -28,10 +28,10 @@ if __name__ == '__main__':
             deemter[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
 
             for item in evaluation[fold]:
-                string_real = evaluation[fold]['real']['reference']
-                string_bayes = evaluation[fold]['bayes']['reference'][0][0]
-                string_siddharthan = evaluation[fold]['siddharthan']['reference']
-                string_deemter = evaluation[fold]['deemter']['reference']
+                string_real = item['real']['reference']
+                string_bayes = item['bayes']['reference'][0][0]
+                string_siddharthan = item['siddharthan']['reference']
+                string_deemter = item['deemter']['reference']
 
                 dist_bayes = edit_distance(string_bayes, string_real)
                 dist_siddharthan = edit_distance(string_siddharthan, string_real)
@@ -46,34 +46,34 @@ if __name__ == '__main__':
                 jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
                 jaccard_deemter = jaccard_distance(tokens_deemter, tokens_real)
 
-                bayes[fold]['y_real'].append(evaluation[fold]['real']['label'])
-                bayes[fold]['y_pred'].append(evaluation[fold]['bayes']['label'][0])
+                bayes[fold]['y_real'].append(item['real']['label'])
+                bayes[fold]['y_pred'].append(item['bayes']['label'][0])
                 bayes[fold]['string'].append(dist_bayes)
                 bayes[fold]['jaccard'].append(jaccard_bayes)
 
-                siddharthan[fold]['y_real'].append(evaluation[fold]['real']['label'])
-                siddharthan[fold]['y_pred'].append(evaluation[fold]['siddharthan']['label'][0])
+                siddharthan[fold]['y_real'].append(item['real']['label'])
+                siddharthan[fold]['y_pred'].append(item['siddharthan']['label'][0])
                 siddharthan[fold]['string'].append(dist_siddharthan)
                 siddharthan[fold]['jaccard'].append(jaccard_siddharthan)
 
-                deemter[fold]['y_real'].append(evaluation[fold]['real']['label'])
-                deemter[fold]['y_pred'].append(evaluation[fold]['deemter']['label'][0])
+                deemter[fold]['y_real'].append(item['real']['label'])
+                deemter[fold]['y_pred'].append(item['deemter']['label'][0])
                 deemter[fold]['string'].append(dist_deemter)
                 deemter[fold]['jaccard'].append(jaccard_deemter)
 
                 result = {
                     'bayes': {
-                        'label': (evaluation[fold]['real']['label'], evaluation[fold]['bayes']['label'][0]),
+                        'label': (item['real']['label'], item['bayes']['label'][0]),
                         'string': dist_bayes,
                         'jaccard': jaccard_bayes
                     },
                     'siddharthan': {
-                        'label': (evaluation[fold]['real']['label'], evaluation[fold]['siddharthan']['label']),
+                        'label': (item['real']['label'], item['siddharthan']['label']),
                         'string': dist_siddharthan,
                         'jaccard': jaccard_siddharthan
                     },
                     'deemter': {
-                        'label': (evaluation[fold]['real']['label'], evaluation[fold]['deemter']['label']),
+                        'label': (item['real']['label'], item['deemter']['label']),
                         'string': dist_deemter,
                         'jaccard': jaccard_deemter
                     }
