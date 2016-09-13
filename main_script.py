@@ -125,7 +125,7 @@ def run():
                 # print result
                 # print 10 * '-'
             fold = fold + 1
-        p.dump(results[entity], open(os.path.join(entity_dir, entity.split('/')[-1].split('_')[-1], 'w')))
+        p.dump(results[entity], open(os.path.join(entity_dir, entity.split('/')[-1].split('_')[-1]), 'w'))
     p.dump(results, open('results.pickle', 'w'))
 
 if __name__ == '__main__':
