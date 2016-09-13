@@ -4,6 +4,21 @@ import json
 import nltk
 import os
 
+import main.utils.KB as kb
+
+def get_knowledge_base(dbpedia, titles):
+    base = {}
+
+    for entity in dbpedia:
+        db = kb.update(dbpedia[entity])
+        base[entity] = []
+        base[entity].extend(db[entity]['first_names'])
+        base[entity].extend(db[entity]['middle_names'])
+        base[entity].extend(db[entity]['last_names'])
+
+        base[entity].extend(titles[entity])
+    return base
+
 # return the proper name form
 def get_label(name, dbpedia):
     label = ''

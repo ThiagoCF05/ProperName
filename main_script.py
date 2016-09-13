@@ -63,7 +63,7 @@ def run():
     results = {}
     references = prep.filter_entities(49, mention_dir)
 
-    entities = references.keys()
+    entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
     entities.sort()
     for entity in entities:
         print entity
@@ -85,7 +85,9 @@ def run():
             vocabulary = []
             for mention in train_set:
                 parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
-                vocabulary.extend(prep.process_tokens(mention, parsed, entity, False))
+
+                tokens = prep.process_tokens(mention, parsed, entity, False)
+                vocabulary.extend(tokens)
 
             # initialize our official model
             clf = Bayes(vocabulary, True)
@@ -93,6 +95,7 @@ def run():
             baseline1 = Siddharthan(dbpedia_dir=fdbpedia)
             # initialize Deemter baseline
             baseline2 = Deemter(dbpedia_dir=fdbpedia, parsed_dir=parsed_dir)
+
             for mention in test_set:
                 result = {
                     'real': {
