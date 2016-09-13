@@ -76,6 +76,7 @@ class Deemter(object):
                     break
             if isResult:
                 surface = name
+                break
 
         if surface == '':
             return prep.get_label(names[-1], kb.update(self.dbpedia[self.entity])), names[-1]

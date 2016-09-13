@@ -109,14 +109,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deemter.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deemter.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/deemter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70063025" vertical-offset="563" max-vertical-offset="1515">
-              <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="473" max-vertical-offset="1530">
+              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demmter_test.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.85084033" vertical-offset="0" max-vertical-offset="1575">
+              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/main/eacl/models/siddharthan.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -150,16 +160,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
               <caret line="39" column="93" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demmter_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1260">
-              <caret line="57" column="86" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -317,11 +317,11 @@
         <option value="$PROJECT_DIR$/main/utils/get_appositives.py" />
         <option value="$PROJECT_DIR$/main/eacl/preprocessing.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
-        <option value="$PROJECT_DIR$/test/eacl/models/demmter_test.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/siddharthan.py" />
         <option value="$PROJECT_DIR$/test/eacl/models/siddharthan_test.py" />
         <option value="$PROJECT_DIR$/main_script.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/deemter.py" />
+        <option value="$PROJECT_DIR$/test/eacl/models/demmter_test.py" />
       </list>
     </option>
   </component>
@@ -1470,26 +1470,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1920">
-          <caret line="123" column="49" selection-start-line="114" selection-start-column="12" selection-end-line="123" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/eacl/models/siddharthan_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="39" column="93" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1260">
-          <caret line="57" column="86" selection-start-line="57" selection-start-column="86" selection-end-line="57" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -1507,7 +1491,7 @@
     <entry file="file://$PROJECT_DIR$/main/eacl/models/siddharthan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>
@@ -1516,11 +1500,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/deemter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70063025" vertical-offset="563" max-vertical-offset="1515">
-          <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1530">
+          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1920">
+          <caret line="123" column="49" selection-start-line="114" selection-start-column="12" selection-end-line="123" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85084033" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
