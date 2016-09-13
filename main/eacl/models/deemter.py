@@ -63,24 +63,36 @@ class Deemter(object):
             last = aux[-1]
         return [last, first, name]
 
-    def _get_reference(self):
+    def _get_reference(self, syntax):
         # get last, first and full name from the entity
         names = self._get_names()
 
         isResult = True
+        surface = ''
         for name in names:
             for distractor in self.distractors:
                 if name in distractor:
                     isResult = False
                     break
             if isResult:
-                return prep.get_label(name, kb.update(self.dbpedia[self.entity])), name
-        return prep.get_label(names[-1], kb.update(self.dbpedia[self.entity])), names[-1]
+                surface = name
 
-    def run(self, entity, target, mentions, win):
+        if surface == '':
+            return prep.get_label(names[-1], kb.update(self.dbpedia[self.entity])), names[-1]
+        else:
+            surface = ' '.join(name[1:-1])
+
+            if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
+                if surface[-1] == 's':
+                    surface = surface + '\''
+                else:
+                    surface = surface + '\'s'
+            return prep.get_label(surface, kb.update(self.dbpedia[self.entity])), surface
+
+    def run(self, entity, target, mentions, win, syntax):
         self.entity = entity
         self.target = target
         self.win = win
 
         self.distractors = self._get_distractors(mentions)
-        return self._get_reference()
+        return self._get_reference(syntax)

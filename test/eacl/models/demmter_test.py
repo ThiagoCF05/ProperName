@@ -48,7 +48,7 @@ class DemmterTest(unittest.TestCase):
 
         self.assertListEqual(result, expected)
 
-    def test_run(self):
+    def test_run_1(self):
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
         target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'], \
                         'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
@@ -61,6 +61,22 @@ class DemmterTest(unittest.TestCase):
         win = 3
         mentions = json.load(open(os.path.join(self.mentions_dir, target['fname'])))[entity]
 
-        self.assertTupleEqual(('+l', 'Bukowski'), tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win)))
+        self.assertTupleEqual(('+l', 'Bukowski\'s'), tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win, syntax=target['syntax'])))
+
+    def test_run_2(self):
+        entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
+        target = {'has_appositive': False, 'text': 'Charles Bukowski', 'syntax-governor': [9, 'collection'], \
+                  'text_prevTokens': 'of the Charles Bukowski', 'has_lastName': True, 'endIndex': 9, \
+                  'position': [3, 4], 'number': 'SINGULAR', 'has_adjective': False, 'has_middleName': False, \
+                  'appositive': None, 'syntax': 'subj-det', 'id': 17, 'titles': [], 'sentence-givenness': 'new', \
+                  'type': 'PROPER', 'isRepresentativeMention': True, 'fname': '7298454', \
+                  'name_type': ['foaf_names', 'dbp_names'], 'animacy': 'ANIMATE', 'givenness': 'new', \
+                  'has_title': False, 'gender': 'MALE', 'has_firstName': True, 'startIndex': 7, \
+                  'label': '+f+l', 'sentNum': 3}
+        win = 3
+        mentions = json.load(open(os.path.join(self.mentions_dir, target['fname'])))[entity]
+
+        result = tuple(self.model.run(entity=entity, target=target, mentions=mentions, win=win, syntax='np-subj'))
+        self.assertTupleEqual(('+l', 'Bukowski'), result)
 
 

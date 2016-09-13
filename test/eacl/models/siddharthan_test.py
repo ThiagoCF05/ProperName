@@ -11,20 +11,30 @@ class SiddharthanTest(unittest.TestCase):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
 
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
-        self.assertTupleEqual(tuple(model.run(entity, 'new')), ('+f+l', 'Charles Bukowski'))
+        self.assertTupleEqual(tuple(model.run(entity, 'new', 'np-subj')), ('+f+l', 'Charles Bukowski'))
 
     def test_foaf_old(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
 
         entity = 'http://en.wikipedia.org/wiki/Charles_Bukowski'
-        self.assertTupleEqual(tuple(model.run(entity, 'old')), ('+l', 'Bukowski'))
+        self.assertTupleEqual(tuple(model.run(entity, 'old', 'np-subj')), ('+l', 'Bukowski'))
 
     def test_birth_new(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
         entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
-        self.assertTupleEqual(tuple(model.run(entity, 'new')), ('+f+m+l', 'Adam Richard Sandler'))
+        self.assertTupleEqual(tuple(model.run(entity, 'new', 'np-subj')), ('+f+m+l', 'Adam Richard Sandler'))
 
     def test_birth_old(self):
         model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
         entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
-        self.assertTupleEqual(tuple(model.run(entity, 'old')), ('+l', 'Sandler'))
+        self.assertTupleEqual(tuple(model.run(entity, 'old', 'np-subj')), ('+l', 'Sandler'))
+
+    def test_birth_new_det(self):
+        model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
+        entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
+        self.assertTupleEqual(tuple(model.run(entity, 'new', 'subj-det')), ('+f+m+l', 'Adam Richard Sandler\'s'))
+
+    def test_birth_old_det(self):
+        model = Siddharthan(dbpedia_dir=self.dbpedia_dir)
+        entity = "http://en.wikipedia.org/wiki/Adam_Sandler"
+        self.assertTupleEqual(tuple(model.run(entity, 'old', 'subj-det')), ('+l', 'Sandler\'s'))

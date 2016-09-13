@@ -50,8 +50,8 @@ def bayes_model(mention, entity, model, mentions):
 
     # Save results
     result = {
-        'content': prob[0],
-        'realization': realizer
+        'label': prob[0],
+        'reference': realizer
     }
     return result
 
@@ -116,13 +116,13 @@ def run():
                 result['bayes'] = bayes_model(mention, entity, clf, mentions)
 
                 # Siddharthan model
-                r = baseline1.run(entity, mention['givenness'])
-                result['siddharthan'] = { 'content': r[0], 'realization': r[1] }
+                r = baseline1.run(entity, mention['givenness'], mention['syntax'])
+                result['siddharthan'] = { 'label': r[0], 'reference': r[1] }
 
                 # Deemter model
                 ms = json.load(open(os.path.join(mention_dir, mention['fname'])))[entity]
-                r = baseline2.run(entity, mention, ms, 3)
-                result['deemter'] = { 'content': r[0], 'realization': r[1] }
+                r = baseline2.run(entity, mention, ms, 3, mention['syntax'])
+                result['deemter'] = { 'label': r[0], 'reference': r[1] }
 
                 results[entity][fold].append(result)
                 # print result
