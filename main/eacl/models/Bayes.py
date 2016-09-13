@@ -5,9 +5,10 @@ import operator
 from main.eacl import training, settings
 
 class Bayes(object):
-    def __init__(self, train_set, bigram):
+    def __init__(self, train_set, appositives, bigram):
         self.train_set = train_set
         self.bigram = bigram
+        self.appositives = appositives
         self.train()
 
     def train(self):
@@ -103,8 +104,22 @@ class Bayes(object):
         else:
             return self._beam_search(_names, words, s, entity, word_freq, n)
 
-    def realize(self, s, entity, word_freq):
+    def realize(self, s, entity, syntax, word_freq):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
 
         names = {('*', ):0}
-        return self._beam_search(names, words, s, entity, word_freq, 1)
+        result = self._beam_search(names, words, s, entity, word_freq, 1)
+
+        names = []
+        for name in result:
+            surface = ' '.join(name[1:-1])
+
+            if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
+                if surface[-1] == 's':
+                    surface = surface + '\''
+                else:
+                    surface = surface + '\'s'
+            if '+a' in s:
+                surface = surface + ', ' + self.appositives[entity]
+            names.append((surface, result[name]))
+        return names

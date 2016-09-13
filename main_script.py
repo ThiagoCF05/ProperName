@@ -21,6 +21,7 @@ from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold
 
 fdbpedia = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
@@ -45,11 +46,11 @@ def bayes_model(mention, entity, model, mentions):
     # words_freq = dict(preprocessing.word_freq(mentions_same_entity, parsed))
 
     words_freq = {}
-    realizer = model.realize(prob[0][0], entity, words_freq)
+    realizer = model.realize(prob[0][0], entity, mention['syntax'], words_freq)
 
     # Save results
     result = {
-        'content': prob,
+        'content': prob[0],
         'realization': realizer
     }
     return result
@@ -62,6 +63,8 @@ def run():
     # filter entities and their references (more than 49 references)
     results = {}
     references = prep.filter_entities(50, 200, mention_dir)
+
+    appositives = json.load(open(appositives_dir))
 
     entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
     entities.sort()
@@ -90,7 +93,7 @@ def run():
                 vocabulary.extend(tokens)
 
             # initialize our official model
-            clf = Bayes(vocabulary, True)
+            clf = Bayes(vocabulary, appositives, True)
             # initialize Siddharthan baseline
             baseline1 = Siddharthan(dbpedia_dir=fdbpedia)
             # initialize Deemter baseline
