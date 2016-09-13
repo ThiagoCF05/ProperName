@@ -23,9 +23,10 @@ if __name__ == '__main__':
 
         for fold in evaluation:
             results[_id][fold] = {}
-            bayes[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-            siddharthan[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-            deemter[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+            if fold not in bayes:
+                bayes[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+                siddharthan[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+                deemter[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
 
             for item in evaluation[fold]:
                 string_real = item['real']['reference']
@@ -78,21 +79,21 @@ if __name__ == '__main__':
                         'jaccard': jaccard_deemter
                     }
                 }
-
-            print 'Fold', fold
-            print 'Labels: '
-            print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
-            print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
-            print 'Bayes: ', accuracy_score(bayes[fold]['y_real'], bayes[fold]['y_pred'])
-            print 20 * '-'
-            print 'String Distance: '
-            print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
-            print 'Deemter: ', np.mean(deemter[fold]['string'])
-            print 'Bayes: ', np.mean(bayes[fold]['string'])
-            print 20 * '-'
-            print 'Jaccard Distance: '
-            print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
-            print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
-            print 'Bayes: ', np.mean(bayes[fold]['jaccard'])
-            print 20 * '-'
-            print '\n'
+    for fold in bayes:
+        print 'Fold', fold
+        print 'Labels: '
+        print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
+        print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
+        print 'Bayes: ', accuracy_score(bayes[fold]['y_real'], bayes[fold]['y_pred'])
+        print 20 * '-'
+        print 'String Distance: '
+        print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
+        print 'Deemter: ', np.mean(deemter[fold]['string'])
+        print 'Bayes: ', np.mean(bayes[fold]['string'])
+        print 20 * '-'
+        print 'Jaccard Distance: '
+        print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
+        print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
+        print 'Bayes: ', np.mean(bayes[fold]['jaccard'])
+        print 20 * '-'
+        print '\n'
