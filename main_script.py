@@ -55,11 +55,17 @@ def bayes_model(mention, entity, model, mentions):
     return result
 
 def run():
+    entity_dir = 'entity/'
+    if not os.path.exists(entity_dir):
+        os.makedirs(entity_dir)
+
     # filter entities and their references (more than 49 references)
     results = {}
     references = prep.filter_entities(49, mention_dir)
 
-    for entity in references:
+    entities = references.keys()
+    entities.sort()
+    for entity in entities:
         print entity
         results[entity] = {}
 
@@ -116,6 +122,7 @@ def run():
                 # print result
                 # print 10 * '-'
             fold = fold + 1
+        p.dump(results[entity], open(os.path.join(entity_dir, entity)))
     p.dump(results, open('results.pickle', 'w'))
 
 if __name__ == '__main__':
