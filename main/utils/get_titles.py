@@ -28,7 +28,7 @@ def get_titles(mention_dir, write_dir):
     for entity in result:
         result[entity] = list(set(result[entity]))
 
-    json.dump(result, open(write_dir, 'w'), separators=(',',':'))
+    json.dump(result, open(write_dir, 'w'), indent=4, separators=(',', ': '))
 
 if __name__ == '__main__':
     mention_dir = '/roaming/tcastrof/names/eacl/mentions'

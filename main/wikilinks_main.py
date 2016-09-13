@@ -41,7 +41,7 @@ if __name__ == '__main__':
                     j[entity] = mentions
                 else:
                     j = { entity:mentions }
-                json.dump(j, open(os.path.join(mentions_dir, url['id']), 'w'), separators=(',',':'))
+                json.dump(j, open(os.path.join(mentions_dir, url['id']), 'w'), indent=4, separators=(',', ': '))
             except ValueError:
                 nfiles -= 1
                 notfound += 1
