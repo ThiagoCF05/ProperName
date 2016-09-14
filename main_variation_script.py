@@ -80,9 +80,6 @@ def get_features_visited(mention, features):
 
     if ('syntax', mention['syntax']) not in result:
         result.append(('syntax', mention['syntax']))
-    # print 'Result: ', result
-    # print 'Features: ', features
-    # print '-'
     return result
 
 def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive):
@@ -178,7 +175,6 @@ def run():
                         # Bayes model selection
                         form_distribution = bayes_selection(mention, entity, clf)
 
-                        print len(test_set_same_features)
                         # Generate proper names for each group of features
                         group_result = []
                         for filtered_mention in test_set_same_features:
@@ -216,11 +212,11 @@ def run():
                             realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
                             result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
-                            print result
                             group_result.append(result)
 
                         # Generate proper names with individual variation in the for choice
                         results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive))
+                print results[entity][fold][-1]
                 fold = fold + 1
             p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
             # p.dump(results, open('EVALUATION.pickle', 'w'))
