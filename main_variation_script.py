@@ -80,9 +80,9 @@ def get_features_visited(mention, features):
 
     if ('syntax', mention['syntax']) not in result:
         result.append(('syntax', mention['syntax']))
-    print 'Result: ', result
-    print 'Features: ', features
-    print '-'
+    # print 'Result: ', result
+    # print 'Features: ', features
+    # print '-'
     return result
 
 def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive):
@@ -178,6 +178,7 @@ def run():
                         # Bayes model selection
                         form_distribution = bayes_selection(mention, entity, clf)
 
+                        print len(test_set_same_features)
                         # Generate proper names for each group of features
                         group_result = []
                         for filtered_mention in test_set_same_features:
