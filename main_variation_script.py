@@ -70,8 +70,7 @@ def bayes_realization(form, mention, entity, model, words, appositive):
 
 # check the feature values already processed
 def get_features_visited(mention, features):
-    print features
-    result = copy.copy(features)
+    result = copy.copy2(features)
 
     if mention['givenness'] not in features['givenness']:
         result['givenness'].append(mention['givenness'])
@@ -169,7 +168,7 @@ def run():
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
                     if aux != features:
-                        features = copy.copy(aux)
+                        features = copy.copy2(aux)
 
                         # Group proper name references from the test fold by feature values
                         test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
