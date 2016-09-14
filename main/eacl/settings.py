@@ -30,3 +30,9 @@ labels = [
     '+f+m+l+a',
     '+t+f+m+l+a',
 ]
+
+features = {
+    'syntax':['np-subj', 'np-obj', 'subj-det'],
+    'givenness':['new', 'old'],
+    'sentence-givenness':['new', 'old']
+}

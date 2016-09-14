@@ -4,11 +4,10 @@ import json
 import os
 
 from main.eacl import preprocessing as prep
-from main.utils import KB as kb
 
 class Deemter(object):
-    def __init__(self, dbpedia_dir, parsed_dir):
-        self.dbpedia = json.load(open(dbpedia_dir))
+    def __init__(self, dbpedia, parsed_dir):
+        self.dbpedia = dbpedia
         self.parsed_dir = parsed_dir
 
         self.distractors = None
@@ -86,7 +85,7 @@ class Deemter(object):
                     surface = surface + '\''
                 else:
                     surface = surface + '\'s'
-            return prep.get_label(surface, kb.update(self.dbpedia[self.entity])), surface
+            return prep.get_label(surface, self.dbpedia[self.entity]), surface
 
     def run(self, entity, target, mentions, win, syntax):
         self.entity = entity

@@ -10,13 +10,13 @@ Description:
 import cPickle as p
 import json
 import numpy as np
-import operator
 import os
 
 import main.eacl.preprocessing as prep
 import main.utils.KB as kb
 
 from main.eacl.models.Bayes import Bayes
+from main.eacl.models.random import Random
 from main.eacl.models.siddharthan import Siddharthan
 from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold
@@ -28,7 +28,7 @@ appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 
-# initialize dbpedia, entities and appositives
+# initialize vocabulary, dbpedia, entities and appositives
 def init():
     appositives = json.load(open(appositives_dir))
     entities_info = json.load(open(fentities))
@@ -39,6 +39,7 @@ def init():
     base = {}
     for entity in dbpedia:
         db = kb.update(dbpedia[entity])
+        dbpedia[entity] = db
         base[entity] = []
         base[entity].extend(db['first_names'])
         base[entity].extend(db['middle_names'])
@@ -51,7 +52,7 @@ def init():
             base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
 
-    return entities_info, base, appositives
+    return entities_info, base, appositives, dbpedia
 
 def bayes_model(mention, entity, model, words, appositive):
     features = {
@@ -63,8 +64,6 @@ def bayes_model(mention, entity, model, words, appositive):
 
     # CONTENT SELECTION
     prob = model.select_content(features, entity)
-    prob = sorted(prob.items(), key=operator.itemgetter(1))
-    prob.reverse()
 
     # REALIZATION
     #TO DO: review this penalty function
@@ -89,20 +88,31 @@ def run():
 
     # filter entities and their references (more than X references and less than Y)
     results = {}
-    references = prep.filter_entities(50, 500, mention_dir)
+    references = prep.filter_entities(50, 0, mention_dir)
 
-    # dbpedia contains only the proper names from DBpedia for each entity
-    entities_info, dbpedia, appositives = init()
+    # dbpedia contains only the proper names / titles from DBpedia for each entity
+    entities_info, voc, appositives, dbpedia = init()
 
+    # Sort entities and start the process
     entities = references.keys()
     entities.sort()
     for entity in entities:
+        # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
         if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
             print entity
             results[entity] = {}
 
-            # Retrieve all the mentions to the entity
+            # Get appositive
+            if entity in appositives:
+                appositive = appositives[entity]
+            else:
+                appositive = ''
+
+            # Get proper nouns to be tested whether should be included in the reference
+            words = voc[entity]
+
+            # Retrieve 500 mentions to the entity
             mentions = np.array(references[entity])
 
             # compute cross validation
@@ -124,10 +134,12 @@ def run():
 
                 # initialize our official model
                 clf = Bayes(vocabulary, True)
+                # initialize random baseline
+                baseline_random = Random(dbpedia=dbpedia)
                 # initialize Siddharthan baseline
-                baseline1 = Siddharthan(dbpedia_dir=fdbpedia)
+                baseline1 = Siddharthan(dbpedia=dbpedia)
                 # initialize Deemter baseline
-                baseline2 = Deemter(dbpedia_dir=fdbpedia, parsed_dir=parsed_dir)
+                baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=parsed_dir)
 
                 for mention in test_set:
                     result = {
@@ -143,7 +155,11 @@ def run():
                     }
 
                     # Bayes model
-                    result['bayes'] = bayes_model(mention, entity, clf, dbpedia[entity], appositives[entity])
+                    result['bayes'] = bayes_model(mention, entity, clf, words, appositive)
+
+                    # Random model
+                    r = baseline_random.run(entity)
+                    result['random'] = { 'label': r[0], 'reference': r[1] }
 
                     # Siddharthan model
                     r = baseline1.run(entity, mention['givenness'], mention['syntax'])

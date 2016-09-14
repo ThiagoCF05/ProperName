@@ -37,12 +37,20 @@ class Bayes(object):
 
         probabilities = dict(map(lambda s: (s, 0), settings.labels))
 
-        for s in probabilities:
-            probabilities[s] = calc_prob(s)
+        for form in probabilities:
+            probabilities[form] = calc_prob(form)
+
+        # Frequency distribution
+        total = sum(probabilities.items())
+        for form in probabilities:
+            probabilities[form] = float(probabilities[form]) / total
+
+        probabilities = sorted(probabilities.items(), key=operator.itemgetter(1))
+        probabilities.reverse()
 
         return probabilities
 
-    def _beam_search(self, names, words, s, entity, word_freq, n=5):
+    def _beam_search(self, names, words, form, entity, word_freq, n=5):
         def calc_prob(gram):
             # PRIORI
             f = filter(lambda x: x[1] == gram[1] and x[2] == entity, self.clf['realization']['w_e'])
@@ -62,7 +70,7 @@ class Bayes(object):
             f = filter(lambda x: x[1] == gram[0] and x[2] == gram[1] and x[3] == entity, self.clf['realization']['s_we'])
             dem = sum(map(lambda x: self.clf['realization']['s_we'][x], f))
 
-            f = filter(lambda x: x[0] == s, f)
+            f = filter(lambda x: x[0] == form, f)
             num = sum(map(lambda x: self.clf['realization']['s_we'][x], f))
 
             posteriori = (float(num+1) / (dem+self.laplace['realization']['s_we']))
@@ -101,13 +109,13 @@ class Bayes(object):
         if ('END' in f and len(f) == 1) or (names.keys() == _names.keys()) or len(filter(lambda name: len(name) > 5, _names.keys())) > 0:
             return _names
         else:
-            return self._beam_search(_names, words, s, entity, word_freq, n)
+            return self._beam_search(_names, words, form, entity, word_freq, n)
 
-    def realize(self, s, entity, syntax, word_freq, appositive):
+    def realize(self, form, entity, syntax, word_freq, appositive):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf['e_w']))
 
         names = {('*', ):0}
-        result = self._beam_search(names, words, s, entity, word_freq, 1)
+        result = self._beam_search(names, words, form, entity, word_freq, 1)
 
         names = []
         for name in result:
@@ -118,17 +126,17 @@ class Bayes(object):
                     surface = surface + '\''
                 else:
                     surface = surface + '\'s'
-            if '+a' in s:
+            if '+a' in form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
         return names
 
     # Realization with only the words present in the proper name knowledge base
-    def realizeWithWords(self, s, entity, syntax, words, appositive):
+    def realizeWithWords(self, form, entity, syntax, words, appositive):
         word_freq = {}
 
         names = {('*', ):0}
-        result = self._beam_search(names, words, s, entity, word_freq, 1)
+        result = self._beam_search(names, words, form, entity, word_freq, 1)
 
         names = []
         for name in result:
@@ -139,7 +147,7 @@ class Bayes(object):
                     surface = surface + '\''
                 else:
                     surface = surface + '\'s'
-            if '+a' in s:
+            if '+a' in form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
         return names

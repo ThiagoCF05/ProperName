@@ -1,12 +1,10 @@
 __author__ = 'thiagocastroferreira'
 
-import json
-from main.utils import KB as kb
 from main.eacl import preprocessing as prep
 
 class Siddharthan(object):
-    def __init__(self, dbpedia_dir):
-        self.dbpedia = json.load(open(dbpedia_dir))
+    def __init__(self, dbpedia):
+        self.dbpedia = dbpedia
 
     def realize(self, name, syntax):
         if syntax == 'subj-det' and (name[-2:] != '\'s' or name[-1] != '\''):
@@ -40,4 +38,4 @@ class Siddharthan(object):
                 name = str(filter(lambda x: len(x) == min(map(lambda x: len(x), birthNames)), birthNames)[0]).strip().split()[-1]
 
         name = self.realize(name, syntax)
-        return prep.get_label(name, kb.update(self.dbpedia[entity])), name
+        return prep.get_label(name, self.dbpedia[entity]), name
