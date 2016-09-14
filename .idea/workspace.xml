@@ -114,8 +114,8 @@
       <file leaf-file-name="main_variation_script.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_variation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81092435" vertical-offset="2543" max-vertical-offset="3495">
-              <caret line="221" column="72" selection-start-line="221" selection-start-column="72" selection-end-line="221" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.7636555" vertical-offset="2528" max-vertical-offset="3495">
+              <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
               <folding>
                 <element signature="e#200#211#0" expanded="true" />
               </folding>
@@ -1508,8 +1508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_variation_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81092435" vertical-offset="2543" max-vertical-offset="3495">
-          <caret line="221" column="72" selection-start-line="221" selection-start-column="72" selection-end-line="221" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.7636555" vertical-offset="2528" max-vertical-offset="3495">
+          <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
           <folding>
             <element signature="e#200#211#0" expanded="true" />
           </folding>

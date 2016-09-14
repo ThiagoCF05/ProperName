@@ -174,7 +174,6 @@ def run():
                         test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
                                                                   and x['sentence-givenness'] == mention['sentence-givenness'] \
                                                                   and x['syntax'] == mention['syntax'], test_set)
-                        print len(test_set_same_features), mention['givenness'], mention['sentence-givenness'], mention['syntax']
 
                         # Bayes model selection
                         form_distribution = bayes_selection(mention, entity, clf)
@@ -216,6 +215,7 @@ def run():
                             realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
                             result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
+                            print result
                             group_result.append(result)
 
                         # Generate proper names with individual variation in the for choice
