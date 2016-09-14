@@ -180,6 +180,7 @@ def run():
                         form_distribution = bayes_selection(mention, entity, clf)
 
                         # Generate proper names for each group of features
+                        group_result = []
                         for filtered_mention in test_set_same_features:
                             result = {
                                 'real': {
@@ -215,10 +216,10 @@ def run():
                             realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
                             result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
-                            results[entity][fold].append(result)
+                            group_result.append(result)
 
                         # Generate proper names with individual variation in the for choice
-                        results[entity][fold] = bayes_variation(results[entity][fold], form_distribution, test_set_same_features, entity, clf, words, appositive)
+                        results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive))
                 fold = fold + 1
             p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
             # p.dump(results, open('EVALUATION.pickle', 'w'))
