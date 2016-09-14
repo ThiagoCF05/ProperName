@@ -92,7 +92,7 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
     for i, reference in enumerate(references):
         form = filter(lambda x: distribution[x] == max(distribution.values()), distribution.keys())[0]
 
-        label =  filter(lambda x: x[0] == form, form_distribution)[0]
+        label = filter(lambda x: x[0] == form, form_distribution)[0]
         realizer = bayes_realization(form, test_set_same_features[i], entity, model, words, appositive)
         references[i]['bayes_variation'] = { 'label': label, 'reference': realizer }
 
@@ -165,6 +165,7 @@ def run():
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
+                    print aux != features
                     if aux != features:
                         features = aux
 
@@ -215,6 +216,7 @@ def run():
                             result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
                             results[entity][fold].append(result)
+
                         # Generate proper names with individual variation in the for choice
                         results[entity][fold] = bayes_variation(results[entity][fold], form_distribution, test_set_same_features, entity, clf, words, appositive)
                 fold = fold + 1
