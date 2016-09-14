@@ -165,9 +165,9 @@ def run():
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
-                    print aux != features, aux, features
+                    print aux != features
                     if aux != features:
-                        features = aux
+                        features = copy.copy(aux)
 
                         # Group proper name references from the test fold by feature values
                         test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
