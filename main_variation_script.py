@@ -70,6 +70,7 @@ def bayes_realization(form, mention, entity, model, words, appositive):
 
 # check the feature values already processed
 def get_features_visited(mention, features):
+    print features
     result = copy.copy(features)
 
     if mention['givenness'] not in features['givenness']:
