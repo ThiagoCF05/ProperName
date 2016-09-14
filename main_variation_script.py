@@ -73,13 +73,13 @@ def get_features_visited(mention, features):
     result = copy.copy(features)
 
     if mention['givenness'] not in features:
-        result.append(mention['givenness'])
+        result.append(('givenness', mention['givenness']))
 
     if mention['sentence-givenness'] not in features:
-        result.append(mention['sentence-givenness'])
+        result.append(('sentence-givenness', mention['sentence-givenness']))
 
     if mention['syntax'] not in features:
-        result.append(mention['syntax'])
+        result.append(('syntax', mention['syntax']))
     print 'Result: ', result
     print 'Features: ', features
     print '-'
@@ -195,7 +195,7 @@ def run():
                             }
 
                             # Random model
-                            r = baseline_random.run(entity)
+                            r = baseline_random.run(entity, filtered_mention['syntax'])
                             result['random'] = { 'label': r[0], 'reference': r[1] }
 
                             # Siddharthan model

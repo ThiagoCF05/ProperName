@@ -156,7 +156,7 @@ def run():
                     result['bayes'] = bayes_model(mention, entity, clf, words, appositive)
 
                     # Random model
-                    r = baseline_random.run(entity)
+                    r = baseline_random.run(entity, mention['syntax'])
                     result['random'] = { 'label': r[0], 'reference': r[1] }
 
                     # Siddharthan model
