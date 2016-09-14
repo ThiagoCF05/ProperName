@@ -70,16 +70,16 @@ def bayes_realization(form, mention, entity, model, words, appositive):
 
 # check the feature values already processed
 def get_features_visited(mention, features):
-    result = copy.copy2(features)
+    result = copy.copy(features)
 
-    if mention['givenness'] not in features['givenness']:
-        result['givenness'].append(mention['givenness'])
+    if mention['givenness'] not in features:
+        result.append(mention['givenness'])
 
-    if mention['sentence-givenness'] not in features['sentence-givenness']:
-        result['sentence-givenness'].append(mention['sentence-givenness'])
+    if mention['sentence-givenness'] not in features:
+        result.append(mention['sentence-givenness'])
 
-    if mention['syntax'] not in features['syntax']:
-        result['syntax'].append(mention['syntax'])
+    if mention['syntax'] not in features:
+        result.append(mention['syntax'])
     print 'Result: ', result
     print 'Features: ', features
     print '-'
@@ -163,12 +163,12 @@ def run():
                 baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=parsed_dir)
 
 
-                features = {'givenness':[], 'sentence-givenness':[], 'syntax':[]}
+                features = []
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
                     if aux != features:
-                        features = copy.copy2(aux)
+                        features = copy.copy(aux)
 
                         # Group proper name references from the test fold by feature values
                         test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
