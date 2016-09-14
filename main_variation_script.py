@@ -72,13 +72,13 @@ def bayes_realization(form, mention, entity, model, words, appositive):
 def get_features_visited(mention, features):
     result = copy.copy(features)
 
-    if mention['givenness'] not in features:
+    if mention['givenness'] not in result:
         result.append(('givenness', mention['givenness']))
 
-    if mention['sentence-givenness'] not in features:
+    if mention['sentence-givenness'] not in result:
         result.append(('sentence-givenness', mention['sentence-givenness']))
 
-    if mention['syntax'] not in features:
+    if mention['syntax'] not in result:
         result.append(('syntax', mention['syntax']))
     print 'Result: ', result
     print 'Features: ', features
@@ -178,7 +178,6 @@ def run():
 
                         # Bayes model selection
                         form_distribution = bayes_selection(mention, entity, clf)
-                        print 'Forms: ', form_distribution
 
                         # Generate proper names for each group of features
                         for filtered_mention in test_set_same_features:
