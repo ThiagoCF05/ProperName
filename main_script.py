@@ -13,7 +13,6 @@ import numpy as np
 import os
 
 import main.eacl.preprocessing as prep
-import main.utils.KB as kb
 
 from main.eacl.models.Bayes import Bayes
 from main.eacl.models.random_baseline import Random
@@ -21,7 +20,7 @@ from main.eacl.models.siddharthan import Siddharthan
 from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold
 
-fdbpedia = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/fentities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
@@ -38,12 +37,10 @@ def init():
 
     base = {}
     for entity in dbpedia:
-        db = kb.update(dbpedia[entity])
-        dbpedia[entity] = db
         base[entity] = []
-        base[entity].extend(db['first_names'])
-        base[entity].extend(db['middle_names'])
-        base[entity].extend(db['last_names'])
+        base[entity].extend(dbpedia[entity]['first_names'])
+        base[entity].extend(dbpedia[entity]['middle_names'])
+        base[entity].extend(dbpedia[entity]['last_names'])
 
         # insert END token
         base[entity].append('END')

@@ -10,6 +10,7 @@ Description:
     Attributes: first, middle and last names
 """
 
+import json
 
 def update(dbpedia):
     def is_added(name):
@@ -70,8 +71,22 @@ def update(dbpedia):
     dbpedia['first_names'] = list(set(dbpedia['first_names']))
     dbpedia['middle_names'] = list(set(dbpedia['middle_names']))
     dbpedia['last_names'] = list(set(dbpedia['last_names']))
-    return dbpedia
+
+    name_base = {}
+    name_base['first_names'] = dbpedia['first_names']
+    name_base['middle_names'] = dbpedia['middle_names']
+    name_base['last_names'] = dbpedia['last_names']
+    return dbpedia, name_base
 
 if __name__ == '__main__':
-    entities = loader.get_entities_indir('/roaming/tcastrof/names/entities')
+    _dir = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+    write_dir = '/roaming/tcastrof/names/eacl/name_base.json'
+
+    dbpedia = json.load(open(_dir))
+
+    name_base = {}
+    for entity in dbpedia:
+        name_base[entity] = update(dbpedia[entity])[1]
+
+    json.dump(name_base, open(write_dir, 'w'), indent=4, separators=(',', ': '))
 

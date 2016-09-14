@@ -5,19 +5,13 @@ import os
 import unittest
 
 from main.eacl.models.deemter import Deemter
-import main.utils.KB as kb
 
 class DemmterTest(unittest.TestCase):
-    dbpedia_dir = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+    dbpedia_dir = '/roaming/tcastrof/names/eacl/name_base.json'
     parsed_dir = '/roaming/tcastrof/names/parsed'
     mentions_dir = '/roaming/tcastrof/names/eacl/mentions'
 
     dbpedia = json.load(open(dbpedia_dir))
-
-    base = {}
-    for entity in dbpedia:
-        db = kb.update(dbpedia[entity])
-        dbpedia[entity] = db
 
     model = Deemter(dbpedia, parsed_dir)
 

@@ -4,10 +4,9 @@ import json
 import unittest
 
 from main.eacl.models.siddharthan import Siddharthan
-import main.utils.KB as kb
 
 class SiddharthanTest(unittest.TestCase):
-    dbpedia_dir = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+    dbpedia_dir = '/roaming/tcastrof/names/eacl/name_base.json'
 
     dbpedia = json.load(open(dbpedia_dir))
 
