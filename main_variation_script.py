@@ -80,7 +80,9 @@ def get_features_visited(mention, features):
 
     if mention['syntax'] not in features['syntax']:
         result['syntax'].append(mention['syntax'])
-
+    print 'Result: ', result
+    print 'Features: ', features
+    print '-'
     return result
 
 def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive):
@@ -165,7 +167,6 @@ def run():
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
-                    print aux != features
                     if aux != features:
                         features = copy.copy(aux)
 
