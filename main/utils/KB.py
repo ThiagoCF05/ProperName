@@ -1,5 +1,3 @@
-from main.corpus_builder import loader
-
 __author__ = 'thiagocastroferreira'
 
 """
