@@ -216,7 +216,6 @@ def run():
 
                         # Generate proper names with individual variation in the for choice
                         results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive))
-                print results[entity][fold][-1]
                 fold = fold + 1
             p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
             # p.dump(results, open('EVALUATION.pickle', 'w'))
