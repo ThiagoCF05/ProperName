@@ -89,12 +89,12 @@ def run():
 
     # filter entities and their references (more than X references and less than Y)
     results = {}
-    references = prep.filter_entities(50, 200, mention_dir)
+    references = prep.filter_entities(50, 500, mention_dir)
 
     # dbpedia contains only the proper names from DBpedia for each entity
     entities_info, dbpedia, appositives = init()
 
-    entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', references.keys())
+    entities = references.keys()
     entities.sort()
     for entity in entities:
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
