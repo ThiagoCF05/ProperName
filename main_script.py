@@ -16,7 +16,7 @@ import main.eacl.preprocessing as prep
 import main.utils.KB as kb
 
 from main.eacl.models.Bayes import Bayes
-from main.eacl.models.random import Random
+from main.eacl.models.random_baseline import Random
 from main.eacl.models.siddharthan import Siddharthan
 from main.eacl.models.deemter import Deemter
 from sklearn.cross_validation import KFold

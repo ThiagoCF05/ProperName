@@ -3,7 +3,7 @@ __author__ = 'thiagocastroferreira'
 __author__ = 'thiagocastroferreira'
 
 from main.eacl import preprocessing as prep
-from random import randint
+from random_baseline import randint
 
 class Random(object):
     def __init__(self, dbpedia):
