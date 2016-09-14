@@ -72,13 +72,13 @@ def bayes_realization(form, mention, entity, model, words, appositive):
 def get_features_visited(mention, features):
     result = copy.copy(features)
 
-    if mention['givenness'] not in result:
+    if ('givenness', mention['givenness']) not in result:
         result.append(('givenness', mention['givenness']))
 
-    if mention['sentence-givenness'] not in result:
+    if ('sentence-givenness', mention['sentence-givenness']) not in result:
         result.append(('sentence-givenness', mention['sentence-givenness']))
 
-    if mention['syntax'] not in result:
+    if ('syntax', mention['syntax']) not in result:
         result.append(('syntax', mention['syntax']))
     print 'Result: ', result
     print 'Features: ', features
