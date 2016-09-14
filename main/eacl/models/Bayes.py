@@ -40,9 +40,8 @@ class Bayes(object):
         for form in probabilities:
             probabilities[form] = calc_prob(form)
 
-        print probabilities
         # Frequency distribution
-        total = sum(probabilities.items())
+        total = sum(probabilities.values())
         for form in probabilities:
             probabilities[form] = float(probabilities[form]) / total
 
