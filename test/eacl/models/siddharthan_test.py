@@ -10,11 +10,6 @@ class SiddharthanTest(unittest.TestCase):
 
     dbpedia = json.load(open(dbpedia_dir))
 
-    base = {}
-    for entity in dbpedia:
-        db = kb.update(dbpedia[entity])
-        dbpedia[entity] = db
-
     model = Siddharthan(dbpedia)
 
     def test_foaf_new(self):
