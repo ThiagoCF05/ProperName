@@ -11,6 +11,14 @@ class Random(object):
 
         self.entity = None
 
+    def realize(self, name, syntax):
+        if syntax == 'subj-det' and (name[-2:] != '\'s' or name[-1] != '\''):
+            if name[-1] == 's':
+                name = name + '\''
+            else:
+                name = name + '\'s'
+        return name
+
     # return the last, first and complete name from the entity (int this order)
     def _get_names(self):
         if len(self.dbpedia[self.entity]['givenNames']) > 0:
@@ -32,12 +40,12 @@ class Random(object):
             last = aux[-1]
         return [last, first, name]
 
-    def run(self, entity):
+    def run(self, entity, syntax):
         self.entity = entity
 
         self.names = self._get_names()
 
         index = randint(0, len(self.names)-1)
-        name = self.names[index]
 
+        name = self.realize(self.names[index], syntax)
         return prep.get_label(name, self.dbpedia[self.entity]), name

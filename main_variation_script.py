@@ -165,7 +165,6 @@ def run():
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
-                    print aux
                     if aux != features:
                         features = aux
 
@@ -173,9 +172,11 @@ def run():
                         test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
                                                                   and x['sentence-givenness'] == mention['sentence-givenness'] \
                                                                   and x['syntax'] == mention['syntax'], test_set)
+                        print len(test_set_same_features), mention['givenness'], mention['sentence-givenness'], mention['syntax']
 
                         # Bayes model selection
                         form_distribution = bayes_selection(mention, entity, clf)
+                        print 'Forms: ', form_distribution
 
                         # Generate proper names for each group of features
                         for filtered_mention in test_set_same_features:
