@@ -165,6 +165,7 @@ def run():
                 for mention in test_set:
                     # Check if the set of features was processed already
                     aux = get_features_visited(mention, features)
+                    print aux
                     if aux != features:
                         features = aux
 

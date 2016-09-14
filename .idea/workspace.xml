@@ -99,11 +99,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="main_script.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_script.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1808" max-vertical-offset="2760">
+              <caret line="154" column="20" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+              <folding>
+                <element signature="e#153#172#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main_variation_script.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_variation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3420">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1958" max-vertical-offset="3435">
+              <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
               <folding>
                 <element signature="e#200#211#0" expanded="true" />
               </folding>
@@ -111,13 +123,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_script.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_script.py">
+      <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2745">
-              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.5829832" vertical-offset="75" max-vertical-offset="2385">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding>
-                <element signature="e#153#172#0" expanded="true" />
+                <element signature="e#37#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,11 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="random_baseline.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="random_baseline.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/random_baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.078781515" vertical-offset="0" max-vertical-offset="952">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -318,17 +330,17 @@
         <option value="$PROJECT_DIR$/main/eacl/evaluation.py" />
         <option value="$PROJECT_DIR$/main/eacl/settings.py" />
         <option value="$PROJECT_DIR$/main_script2.py" />
-        <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
         <option value="$PROJECT_DIR$/main_utils.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/random.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/siddharthan.py" />
-        <option value="$PROJECT_DIR$/main_variation_script.py" />
         <option value="$PROJECT_DIR$/test/eacl/models/demmter_test.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/deemter.py" />
-        <option value="$PROJECT_DIR$/main_script.py" />
         <option value="$PROJECT_DIR$/main/utils/KB.py" />
         <option value="$PROJECT_DIR$/test/eacl/models/siddharthan_test.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/random_baseline.py" />
+        <option value="$PROJECT_DIR$/main_script.py" />
+        <option value="$PROJECT_DIR$/main_variation_script.py" />
+        <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
       </list>
     </option>
   </component>
@@ -1486,16 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding>
-            <element signature="e#37#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="953" max-vertical-offset="1905">
@@ -1522,32 +1524,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2745">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="e#153#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/eacl/models/demmter_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_variation_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <element signature="e#200#211#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1580,9 +1562,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/random_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.078781515" vertical-offset="0" max-vertical-offset="952">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_variation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1958" max-vertical-offset="3435">
+          <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
+          <folding>
+            <element signature="e#200#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1808" max-vertical-offset="2760">
+          <caret line="154" column="20" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+          <folding>
+            <element signature="e#153#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5829832" vertical-offset="75" max-vertical-offset="2385">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="e#37#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

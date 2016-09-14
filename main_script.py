@@ -93,6 +93,7 @@ def run():
     # Sort entities and start the process
     entities = references.keys()
     entities.sort()
+    print 'Number of entities: ', len(entities)
     for entity in entities:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
