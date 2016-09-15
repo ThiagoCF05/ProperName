@@ -84,17 +84,17 @@ if __name__ == '__main__':
 
                 result = {
                     'bayes_random': {
-                        'label': (item['real']['label'], item['bayes']['label'][0]),
+                        'label': (item['real']['label'], item['bayes_random']['label'][0]),
                         'string': dist_bayes_random,
                         'jaccard': jaccard_bayes_random
                     },
                     'bayes_no_variation': {
-                        'label': (item['real']['label'], item['bayes']['label'][0]),
+                        'label': (item['real']['label'], item['bayes_no_variation']['label'][0]),
                         'string': dist_bayes_no_variation,
                         'jaccard': jaccard_bayes_no_variation
                     },
                     'bayes_variation': {
-                        'label': (item['real']['label'], item['bayes']['label'][0]),
+                        'label': (item['real']['label'], item['bayes_variation']['label'][0]),
                         'string': dist_bayes_variation,
                         'jaccard': jaccard_bayes_variation
                     },
