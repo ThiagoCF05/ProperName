@@ -112,7 +112,7 @@
       <file leaf-file-name="main_variation_script.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_variation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2481" max-vertical-offset="3435">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2018" max-vertical-offset="3435">
               <caret line="207" column="54" selection-start-line="207" selection-start-column="36" selection-end-line="207" selection-end-column="54" />
               <folding>
                 <element signature="e#200#211#0" expanded="true" />
@@ -124,8 +124,8 @@
       <file leaf-file-name="evaluation.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6533613" vertical-offset="2393" max-vertical-offset="3345">
-              <caret line="201" column="29" selection-start-line="201" selection-start-column="29" selection-end-line="201" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.13340336" vertical-offset="128" max-vertical-offset="3345">
+              <caret line="17" column="109" selection-start-line="17" selection-start-column="109" selection-end-line="17" selection-end-column="109" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -1480,8 +1480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6533613" vertical-offset="2393" max-vertical-offset="3345">
-          <caret line="201" column="29" selection-start-line="201" selection-start-column="29" selection-end-line="201" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.13340336" vertical-offset="128" max-vertical-offset="3345">
+          <caret line="17" column="109" selection-start-line="17" selection-start-column="109" selection-end-line="17" selection-end-column="109" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>

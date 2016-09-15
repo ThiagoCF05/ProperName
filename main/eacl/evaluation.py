@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     results = {}
 
-    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}
+    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}, {}
     for _id in entities:
         results[_id] = {}
 
