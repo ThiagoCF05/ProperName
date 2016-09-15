@@ -191,16 +191,16 @@ def run(std=True):
             print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
             print 'Deemter: ', np.mean(deemter[fold]['string'])
             print 'Bayes Random: ', np.mean(bayes_random[fold]['string'])
-            print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
-            print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+            print 'Bayes No Variation: ', np.mean(bayes_no_variation[fold]['string'])
+            print 'Bayes Variation: ', np.mean(bayes_variation[fold]['string'])
             print 20 * '-'
             print 'Jaccard Distance: '
             print 'Random: ', np.mean(_random[fold]['jaccard'])
             print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
             print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
             print 'Bayes Random: ', np.mean(bayes_random[fold]['jaccard'])
-            print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
-            print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+            print 'Bayes No Variation: ', np.mean(bayes_no_variation[fold]['jaccard'])
+            print 'Bayes Variation: ', np.mean(bayes_variation[fold]['jaccard'])
             print 20 * '-'
             print '\n'
 
