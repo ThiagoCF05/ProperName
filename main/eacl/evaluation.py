@@ -85,13 +85,18 @@ if __name__ == '__main__':
                 result = {
                     'bayes_random': {
                         'label': (item['real']['label'], item['bayes']['label'][0]),
-                        'string': dist_bayes,
-                        'jaccard': jaccard_bayes
+                        'string': dist_bayes_random,
+                        'jaccard': jaccard_bayes_random
                     },
                     'bayes_no_variation': {
                         'label': (item['real']['label'], item['bayes']['label'][0]),
-                        'string': dist_bayes,
-                        'jaccard': jaccard_bayes
+                        'string': dist_bayes_no_variation,
+                        'jaccard': jaccard_bayes_no_variation
+                    },
+                    'bayes_variation': {
+                        'label': (item['real']['label'], item['bayes']['label'][0]),
+                        'string': dist_bayes_variation,
+                        'jaccard': jaccard_bayes_variation
                     },
                     'siddharthan': {
                         'label': (item['real']['label'], item['siddharthan']['label']),
@@ -105,11 +110,13 @@ if __name__ == '__main__':
                     }
                 }
 
-    general_bayes = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_bayes_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_bayes_no_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_bayes_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_siddharthan = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_deemter = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
 
-    for fold in bayes:
+    for fold in bayes_random:
         general_siddharthan['y_real'].extend(siddharthan[fold]['y_real'])
         general_siddharthan['y_pred'].extend(siddharthan[fold]['y_pred'])
         general_siddharthan['string'].extend(siddharthan[fold]['string'])
@@ -120,26 +127,42 @@ if __name__ == '__main__':
         general_deemter['string'].extend(deemter[fold]['string'])
         general_deemter['jaccard'].extend(deemter[fold]['jaccard'])
 
-        general_bayes['y_real'].extend(bayes[fold]['y_real'])
-        general_bayes['y_pred'].extend(bayes[fold]['y_pred'])
-        general_bayes['string'].extend(bayes[fold]['string'])
-        general_bayes['jaccard'].extend(bayes[fold]['jaccard'])
+        general_bayes_random['y_real'].extend(bayes_random[fold]['y_real'])
+        general_bayes_random['y_pred'].extend(bayes_random[fold]['y_pred'])
+        general_bayes_random['string'].extend(bayes_random[fold]['string'])
+        general_bayes_random['jaccard'].extend(bayes_random[fold]['jaccard'])
+
+        general_bayes_no_variation['y_real'].extend(bayes_no_variation[fold]['y_real'])
+        general_bayes_no_variation['y_pred'].extend(bayes_no_variation[fold]['y_pred'])
+        general_bayes_no_variation['string'].extend(bayes_no_variation[fold]['string'])
+        general_bayes_no_variation['jaccard'].extend(bayes_no_variation[fold]['jaccard'])
+
+        general_bayes_variation['y_real'].extend(bayes_variation[fold]['y_real'])
+        general_bayes_variation['y_pred'].extend(bayes_variation[fold]['y_pred'])
+        general_bayes_variation['string'].extend(bayes_variation[fold]['string'])
+        general_bayes_variation['jaccard'].extend(bayes_variation[fold]['jaccard'])
 
         print 'Fold', fold
         print 'Labels: '
         print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
         print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
-        print 'Bayes: ', accuracy_score(bayes[fold]['y_real'], bayes[fold]['y_pred'])
+        print 'Bayes Random: ', accuracy_score(bayes_random[fold]['y_real'], bayes_random[fold]['y_pred'])
+        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
         print 20 * '-'
         print 'String Distance: '
         print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
         print 'Deemter: ', np.mean(deemter[fold]['string'])
-        print 'Bayes: ', np.mean(bayes[fold]['string'])
+        print 'Bayes Random: ', np.mean(bayes_random[fold]['string'])
+        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
         print 20 * '-'
         print 'Jaccard Distance: '
         print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
         print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
-        print 'Bayes: ', np.mean(bayes[fold]['jaccard'])
+        print 'Bayes Random: ', np.mean(bayes_random[fold]['jaccard'])
+        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
         print 20 * '-'
         print '\n'
 
@@ -147,16 +170,22 @@ if __name__ == '__main__':
     print 'Labels: '
     print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
     print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
-    print 'Bayes: ', accuracy_score(general_bayes['y_real'], general_bayes['y_pred'])
+    print 'Bayes Random: ', accuracy_score(general_bayes_random['y_real'], general_bayes_random['y_pred'])
+    print 'Bayes No Variation: ', accuracy_score(general_bayes_no_variation['y_real'], general_bayes_no_variation['y_pred'])
+    print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
     print 20 * '-'
     print 'String Distance: '
     print 'Siddharthan: ', np.mean(general_siddharthan['string'])
     print 'Deemter: ', np.mean(general_deemter['string'])
-    print 'Bayes: ', np.mean(general_bayes['string'])
+    print 'Bayes Random: ', np.mean(general_bayes_random['string'])
+    print 'Bayes No Variation: ', np.mean(general_bayes_no_variation['string'])
+    print 'Bayes Variation: ', np.mean(general_bayes_variation['string'])
     print 20 * '-'
     print 'Jaccard Distance: '
     print 'Siddharthan: ', np.mean(general_siddharthan['jaccard'])
     print 'Deemter: ', np.mean(general_deemter['jaccard'])
-    print 'Bayes: ', np.mean(general_bayes['jaccard'])
+    print 'Bayes Random: ', np.mean(general_bayes_random['jaccard'])
+    print 'Bayes No Variation: ', np.mean(general_bayes_no_variation['jaccard'])
+    print 'Bayes Variation: ', np.mean(general_bayes_variation['jaccard'])
     print 20 * '-'
     print '\n'
