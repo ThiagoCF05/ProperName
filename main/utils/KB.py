@@ -87,4 +87,3 @@ if __name__ == '__main__':
         name_base[entity] = update(dbpedia[entity])[0]
 
     json.dump(name_base, open(write_dir, 'w'), indent=4, separators=(',', ': '))
-

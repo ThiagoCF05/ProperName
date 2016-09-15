@@ -7,22 +7,26 @@ import os
 
 from nltk.metrics.distance import edit_distance, jaccard_distance
 from sklearn.metrics import accuracy_score
+import scipy as sp
+import scipy.stats
 
-if __name__ == '__main__':
-    fentities = '/roaming/tcastrof/names/eacl/fentities.json'
-    entities_dir = '/roaming/tcastrof/names/eacl/evaluationVariation'
-    entities = os.listdir(entities_dir)
+fentities = '/roaming/tcastrof/names/eacl/fentities.json'
+entities_dir = '/roaming/tcastrof/names/eacl/evaluationVariation'
 
-    results = {}
+def mean_confidence_interval(data, confidence=0.95):
+    a = 1.0*np.array(data)
+    n = len(a)
+    m, se = np.mean(a), scipy.stats.sem(a)
+    h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
+    return m, m-h, m+h
 
+def get_values(entities):
     _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}, {}
-    for _id in entities:
-        results[_id] = {}
 
+    for _id in entities:
         evaluation = p.load(open(os.path.join(entities_dir, _id)))
 
         for fold in evaluation:
-            results[_id][fold] = {}
             if fold not in bayes_random:
                 _random[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
                 bayes_random[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
@@ -124,6 +128,15 @@ if __name__ == '__main__':
                         'jaccard': jaccard_deemter
                     }
                 }
+    return _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter
+
+def run(std=True):
+    entities = os.listdir(entities_dir)
+
+    results = {}
+
+    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = get_values(entities)
+
 
     general_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_bayes_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
@@ -163,56 +176,61 @@ if __name__ == '__main__':
         general_bayes_variation['string'].extend(bayes_variation[fold]['string'])
         general_bayes_variation['jaccard'].extend(bayes_variation[fold]['jaccard'])
 
-        print 'Fold', fold
+        if std:
+            print 'Fold', fold
+            print 'Labels: '
+            print 'Random: ', accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred'])
+            print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
+            print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
+            print 'Bayes Random: ', accuracy_score(bayes_random[fold]['y_real'], bayes_random[fold]['y_pred'])
+            print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+            print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+            print 20 * '-'
+            print 'String Distance: '
+            print 'Random: ', np.mean(_random[fold]['string'])
+            print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
+            print 'Deemter: ', np.mean(deemter[fold]['string'])
+            print 'Bayes Random: ', np.mean(bayes_random[fold]['string'])
+            print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+            print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+            print 20 * '-'
+            print 'Jaccard Distance: '
+            print 'Random: ', np.mean(_random[fold]['jaccard'])
+            print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
+            print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
+            print 'Bayes Random: ', np.mean(bayes_random[fold]['jaccard'])
+            print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
+            print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+            print 20 * '-'
+            print '\n'
+
+    if std:
+        print 'GENERAL'
         print 'Labels: '
-        print 'Random: ', accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred'])
-        print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
-        print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
-        print 'Bayes Random: ', accuracy_score(bayes_random[fold]['y_real'], bayes_random[fold]['y_pred'])
-        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
-        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+        print 'Random: ', accuracy_score(general_random['y_real'], general_random['y_pred'])
+        print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
+        print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
+        print 'Bayes Random: ', accuracy_score(general_bayes_random['y_real'], general_bayes_random['y_pred'])
+        print 'Bayes No Variation: ', accuracy_score(general_bayes_no_variation['y_real'], general_bayes_no_variation['y_pred'])
+        print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
         print 20 * '-'
         print 'String Distance: '
-        print 'Random: ', np.mean(_random[fold]['string'])
-        print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
-        print 'Deemter: ', np.mean(deemter[fold]['string'])
-        print 'Bayes Random: ', np.mean(bayes_random[fold]['string'])
-        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
-        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+        print 'Random: ', mean_confidence_interval(general_random['string'])
+        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['string'])
+        print 'Deemter: ', mean_confidence_interval(general_deemter['string'])
+        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['string'])
+        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['string'])
+        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['string'])
         print 20 * '-'
         print 'Jaccard Distance: '
-        print 'Random: ', np.mean(_random[fold]['jaccard'])
-        print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
-        print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
-        print 'Bayes Random: ', np.mean(bayes_random[fold]['jaccard'])
-        print 'Bayes No Variation: ', accuracy_score(bayes_no_variation[fold]['y_real'], bayes_no_variation[fold]['y_pred'])
-        print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
+        print 'Random: ', mean_confidence_interval(general_random['jaccard'])
+        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['jaccard'])
+        print 'Deemter: ', mean_confidence_interval(general_deemter['jaccard'])
+        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['jaccard'])
+        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['jaccard'])
+        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['jaccard'])
         print 20 * '-'
         print '\n'
 
-    print 'GENERAL'
-    print 'Labels: '
-    print 'Random: ', accuracy_score(general_random['y_real'], general_random['y_pred'])
-    print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
-    print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
-    print 'Bayes Random: ', accuracy_score(general_bayes_random['y_real'], general_bayes_random['y_pred'])
-    print 'Bayes No Variation: ', accuracy_score(general_bayes_no_variation['y_real'], general_bayes_no_variation['y_pred'])
-    print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
-    print 20 * '-'
-    print 'String Distance: '
-    print 'Random: ', np.mean(general_random['string'])
-    print 'Siddharthan: ', np.mean(general_siddharthan['string'])
-    print 'Deemter: ', np.mean(general_deemter['string'])
-    print 'Bayes Random: ', np.mean(general_bayes_random['string'])
-    print 'Bayes No Variation: ', np.mean(general_bayes_no_variation['string'])
-    print 'Bayes Variation: ', np.mean(general_bayes_variation['string'])
-    print 20 * '-'
-    print 'Jaccard Distance: '
-    print 'Random: ', np.mean(general_random['jaccard'])
-    print 'Siddharthan: ', np.mean(general_siddharthan['jaccard'])
-    print 'Deemter: ', np.mean(general_deemter['jaccard'])
-    print 'Bayes Random: ', np.mean(general_bayes_random['jaccard'])
-    print 'Bayes No Variation: ', np.mean(general_bayes_no_variation['jaccard'])
-    print 'Bayes Variation: ', np.mean(general_bayes_variation['jaccard'])
-    print 20 * '-'
-    print '\n'
+if __name__ == '__main__':
+    run(True)

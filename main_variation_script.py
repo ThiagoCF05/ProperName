@@ -107,7 +107,7 @@ def run():
     results = {}
     references = prep.filter_entities(50, 0, mention_dir)
 
-    # dbpedia contains only the proper names / titles from DBpedia for each entity
+    # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, voc, appositives, dbpedia = init()
 
     # Sort entities and start the process
@@ -130,7 +130,7 @@ def run():
             # Get proper nouns to be tested whether should be included in the reference
             words = voc[entity]
 
-            # Retrieve 500 mentions to the entity
+            # Retrieve all the mentions to the entity
             mentions = np.array(references[entity])
 
             # compute cross validation
