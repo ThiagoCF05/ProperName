@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     results = {}
 
-    bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}
+    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}
     for _id in entities:
         results[_id] = {}
 
@@ -24,6 +24,7 @@ if __name__ == '__main__':
         for fold in evaluation:
             results[_id][fold] = {}
             if fold not in bayes_random:
+                _random[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
                 bayes_random[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
                 bayes_no_variation[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
                 bayes_variation[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
@@ -32,12 +33,14 @@ if __name__ == '__main__':
 
             for item in evaluation[fold]:
                 string_real = item['real']['reference']
+                string_random = item['random']['reference'][0][0]
                 string_bayes_random = item['bayes_random']['reference'][0][0]
                 string_bayes_no_variation = item['bayes_no_variation']['reference'][0][0]
                 string_bayes_variation = item['bayes_variation']['reference'][0][0]
                 string_siddharthan = item['siddharthan']['reference']
                 string_deemter = item['deemter']['reference']
 
+                dist_random = edit_distance(string_random, string_real)
                 dist_bayes_random = edit_distance(string_bayes_random, string_real)
                 dist_bayes_no_variation = edit_distance(string_bayes_no_variation, string_real)
                 dist_bayes_variation = edit_distance(string_bayes_variation, string_real)
@@ -45,17 +48,24 @@ if __name__ == '__main__':
                 dist_deemter = edit_distance(string_deemter, string_real)
 
                 tokens_real = set(nltk.word_tokenize(string_real))
+                tokens_random = set(nltk.word_tokenize(string_random))
                 tokens_bayes_random = set(nltk.word_tokenize(string_bayes_random))
                 tokens_bayes_no_variation = set(nltk.word_tokenize(string_bayes_no_variation))
                 tokens_bayes_variation = set(nltk.word_tokenize(string_bayes_variation))
                 tokens_siddharthan = set(nltk.word_tokenize(string_siddharthan))
                 tokens_deemter = set(nltk.word_tokenize(string_deemter))
 
+                jaccard_random = jaccard_distance(tokens_random, tokens_real)
                 jaccard_bayes_random = jaccard_distance(tokens_bayes_random, tokens_real)
                 jaccard_bayes_no_variation = jaccard_distance(tokens_bayes_no_variation, tokens_real)
                 jaccard_bayes_variation = jaccard_distance(tokens_bayes_variation, tokens_real)
                 jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
                 jaccard_deemter = jaccard_distance(tokens_deemter, tokens_real)
+
+                _random[fold]['y_real'].append(item['real']['label'])
+                _random[fold]['y_pred'].append(item['random']['label'][0])
+                _random[fold]['string'].append(dist_random)
+                _random[fold]['jaccard'].append(jaccard_random)
 
                 bayes_random[fold]['y_real'].append(item['real']['label'])
                 bayes_random[fold]['y_pred'].append(item['bayes_random']['label'][0])
@@ -98,6 +108,11 @@ if __name__ == '__main__':
                         'string': dist_bayes_variation,
                         'jaccard': jaccard_bayes_variation
                     },
+                    'random': {
+                        'label': (item['real']['label'], item['random']['label']),
+                        'string': dist_random,
+                        'jaccard': jaccard_random
+                    },
                     'siddharthan': {
                         'label': (item['real']['label'], item['siddharthan']['label']),
                         'string': dist_siddharthan,
@@ -110,6 +125,7 @@ if __name__ == '__main__':
                     }
                 }
 
+    general_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_bayes_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_bayes_no_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
     general_bayes_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
@@ -117,6 +133,11 @@ if __name__ == '__main__':
     general_deemter = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
 
     for fold in bayes_random:
+        general_random['y_real'].extend(_random[fold]['y_real'])
+        general_random['y_pred'].extend(_random[fold]['y_pred'])
+        general_random['string'].extend(_random[fold]['string'])
+        general_random['jaccard'].extend(_random[fold]['jaccard'])
+
         general_siddharthan['y_real'].extend(siddharthan[fold]['y_real'])
         general_siddharthan['y_pred'].extend(siddharthan[fold]['y_pred'])
         general_siddharthan['string'].extend(siddharthan[fold]['string'])
@@ -144,6 +165,7 @@ if __name__ == '__main__':
 
         print 'Fold', fold
         print 'Labels: '
+        print 'Random: ', accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred'])
         print 'Siddharthan: ', accuracy_score(siddharthan[fold]['y_real'], siddharthan[fold]['y_pred'])
         print 'Deemter: ', accuracy_score(deemter[fold]['y_real'], deemter[fold]['y_pred'])
         print 'Bayes Random: ', accuracy_score(bayes_random[fold]['y_real'], bayes_random[fold]['y_pred'])
@@ -151,6 +173,7 @@ if __name__ == '__main__':
         print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
         print 20 * '-'
         print 'String Distance: '
+        print 'Random: ', np.mean(_random[fold]['string'])
         print 'Siddharthan: ', np.mean(siddharthan[fold]['string'])
         print 'Deemter: ', np.mean(deemter[fold]['string'])
         print 'Bayes Random: ', np.mean(bayes_random[fold]['string'])
@@ -158,6 +181,7 @@ if __name__ == '__main__':
         print 'Bayes Variation: ', accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred'])
         print 20 * '-'
         print 'Jaccard Distance: '
+        print 'Random: ', np.mean(_random[fold]['jaccard'])
         print 'Siddharthan: ', np.mean(siddharthan[fold]['jaccard'])
         print 'Deemter: ', np.mean(deemter[fold]['jaccard'])
         print 'Bayes Random: ', np.mean(bayes_random[fold]['jaccard'])
@@ -168,6 +192,7 @@ if __name__ == '__main__':
 
     print 'GENERAL'
     print 'Labels: '
+    print 'Random: ', accuracy_score(general_random['y_real'], general_random['y_pred'])
     print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
     print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
     print 'Bayes Random: ', accuracy_score(general_bayes_random['y_real'], general_bayes_random['y_pred'])
@@ -175,6 +200,7 @@ if __name__ == '__main__':
     print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
     print 20 * '-'
     print 'String Distance: '
+    print 'Random: ', np.mean(general_random['string'])
     print 'Siddharthan: ', np.mean(general_siddharthan['string'])
     print 'Deemter: ', np.mean(general_deemter['string'])
     print 'Bayes Random: ', np.mean(general_bayes_random['string'])
@@ -182,6 +208,7 @@ if __name__ == '__main__':
     print 'Bayes Variation: ', np.mean(general_bayes_variation['string'])
     print 20 * '-'
     print 'Jaccard Distance: '
+    print 'Random: ', np.mean(general_random['jaccard'])
     print 'Siddharthan: ', np.mean(general_siddharthan['jaccard'])
     print 'Deemter: ', np.mean(general_deemter['jaccard'])
     print 'Bayes Random: ', np.mean(general_bayes_random['jaccard'])
