@@ -18,7 +18,7 @@ def mean_confidence_interval(data, confidence=0.95):
     n = len(a)
     m, se = np.mean(a), scipy.stats.sem(a)
     h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
-    return m, h, m-h, m+h
+    return round(m, 6), round(h, 6), round(m-h, 6), round(m+h, 6)
 
 def get_values(entities):
     _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = {}, {}, {}, {}, {}, {}
