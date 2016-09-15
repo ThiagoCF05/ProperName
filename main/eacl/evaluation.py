@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
             for item in evaluation[fold]:
                 string_real = item['real']['reference']
-                string_random = item['random']['reference'][0]
+                string_random = item['random']['reference']
                 string_bayes_random = item['bayes_random']['reference'][0][0]
                 string_bayes_no_variation = item['bayes_no_variation']['reference'][0][0]
                 string_bayes_variation = item['bayes_variation']['reference'][0][0]
