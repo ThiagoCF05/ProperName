@@ -62,11 +62,6 @@ if __name__ == '__main__':
                 jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
                 jaccard_deemter = jaccard_distance(tokens_deemter, tokens_real)
 
-                _random[fold]['y_real'].append(item['real']['label'])
-                _random[fold]['y_pred'].append(item['random']['label'][0])
-                _random[fold]['string'].append(dist_random)
-                _random[fold]['jaccard'].append(jaccard_random)
-
                 bayes_random[fold]['y_real'].append(item['real']['label'])
                 bayes_random[fold]['y_pred'].append(item['bayes_random']['label'][0])
                 bayes_random[fold]['string'].append(dist_bayes_random)
@@ -81,6 +76,11 @@ if __name__ == '__main__':
                 bayes_variation[fold]['y_pred'].append(item['bayes_variation']['label'][0])
                 bayes_variation[fold]['string'].append(dist_bayes_variation)
                 bayes_variation[fold]['jaccard'].append(jaccard_bayes_variation)
+
+                _random[fold]['y_real'].append(item['real']['label'])
+                _random[fold]['y_pred'].append(item['random']['label'])
+                _random[fold]['string'].append(dist_random)
+                _random[fold]['jaccard'].append(jaccard_random)
 
                 siddharthan[fold]['y_real'].append(item['real']['label'])
                 siddharthan[fold]['y_pred'].append(item['siddharthan']['label'])
