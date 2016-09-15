@@ -205,6 +205,25 @@ def run(std=True):
             print '\n'
 
     if std:
+        print 'Is the string distance distributions normal?'
+        print 'Random: ', scipy.stats.mstats.normaltest(general_random['string'])
+        print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['string'])
+        print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['string'])
+        print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['string'])
+        print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['string'])
+        print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['string'])
+        print 20 * '-'
+        print '\n'
+        print 'Is the jaccard distance distributions normal?'
+        print 'Random: ', scipy.stats.mstats.normaltest(general_random['jaccard'])
+        print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['jaccard'])
+        print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['jaccard'])
+        print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['jaccard'])
+        print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['jaccard'])
+        print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['jaccard'])
+        print 20 * '-'
+        print '\n'
+
         print 'GENERAL'
         print 'Labels: '
         print 'Random: ', accuracy_score(general_random['y_real'], general_random['y_pred'])

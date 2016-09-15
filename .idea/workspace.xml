@@ -124,8 +124,8 @@
       <file leaf-file-name="evaluation.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32194045" vertical-offset="8" max-vertical-offset="3615">
-              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.4642857" vertical-offset="2798" max-vertical-offset="3900">
+              <caret line="216" column="29" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -321,10 +321,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1681" />
-    <option name="y" value="-120" />
+    <option name="x" value="-1680" />
+    <option name="y" value="-143" />
     <option name="width" value="1680" />
-    <option name="height" value="1027" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -409,7 +409,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -938,7 +938,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1681" y="-120" width="1680" height="1027" extended-state="7" />
+    <frame x="-1680" y="-143" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1459,8 +1459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32194045" vertical-offset="8" max-vertical-offset="3615">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.4642857" vertical-offset="2798" max-vertical-offset="3900">
+          <caret line="216" column="29" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
