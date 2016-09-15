@@ -215,12 +215,12 @@ def run(std=True):
         print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
         print 20 * '-'
         print 'String Distance: '
-        print 'Random: ', mean_confidence_interval(general_random['string']), scipy.stats.bayes_mvs(general_random['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_random['string']), scale=np.std(general_random['string'])/np.sqrt(len(general_random['string'])))
-        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['string']), scipy.stats.bayes_mvs(general_siddharthan['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_siddharthan['string']), scale=np.std(general_siddharthan['string'])/np.sqrt(len(general_siddharthan['string'])))
-        print 'Deemter: ', mean_confidence_interval(general_deemter['string']), scipy.stats.bayes_mvs(general_deemter['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_deemter['string']), scale=np.std(general_deemter['string'])/np.sqrt(len(general_deemter['string'])))
-        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['string']), scipy.stats.bayes_mvs(general_bayes_random['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_bayes_random['string']), scale=np.std(general_bayes_random['string'])/np.sqrt(len(general_bayes_random['string'])))
-        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['string']), scipy.stats.bayes_mvs(general_bayes_no_variation['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_bayes_no_variation['string']), scale=np.std(general_bayes_no_variation['string'])/np.sqrt(len(general_bayes_no_variation['string'])))
-        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['string']), scipy.stats.bayes_mvs(general_bayes_variation['string'])[0], scipy.stats.norm.interval(0.95, loc=np.mean(general_bayes_variation['string']), scale=np.std(general_bayes_variation['string'])/np.sqrt(len(general_bayes_variation['string'])))
+        print 'Random: ', mean_confidence_interval(general_random['string'])
+        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['string'])
+        print 'Deemter: ', mean_confidence_interval(general_deemter['string'])
+        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['string'])
+        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['string'])
+        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['string'])
         print 20 * '-'
         print 'Jaccard Distance: '
         print 'Random: ', mean_confidence_interval(general_random['jaccard'])
