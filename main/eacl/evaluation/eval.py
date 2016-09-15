@@ -1,5 +1,6 @@
 __author__ = 'thiagocastroferreira'
 
+import bootstrap
 import cPickle as p
 import nltk
 import numpy as np
@@ -205,24 +206,24 @@ def run(std=True):
             print '\n'
 
     if std:
-        print 'Is the string distance distributions normal?'
-        print 'Random: ', scipy.stats.mstats.normaltest(general_random['string'])
-        print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['string'])
-        print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['string'])
-        print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['string'])
-        print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['string'])
-        print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['string'])
-        print 20 * '-'
-        print '\n'
-        print 'Is the jaccard distance distributions normal?'
-        print 'Random: ', scipy.stats.mstats.normaltest(general_random['jaccard'])
-        print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['jaccard'])
-        print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['jaccard'])
-        print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['jaccard'])
-        print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['jaccard'])
-        print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['jaccard'])
-        print 20 * '-'
-        print '\n'
+        # print 'Is the string distance distributions normal?'
+        # print 'Random: ', scipy.stats.mstats.normaltest(general_random['string'])
+        # print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['string'])
+        # print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['string'])
+        # print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['string'])
+        # print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['string'])
+        # print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['string'])
+        # print 20 * '-'
+        # print '\n'
+        # print 'Is the jaccard distance distributions normal?'
+        # print 'Random: ', scipy.stats.mstats.normaltest(general_random['jaccard'])
+        # print 'Siddharthan: ', scipy.stats.mstats.normaltest(general_siddharthan['jaccard'])
+        # print 'Deemter: ', scipy.stats.mstats.normaltest(general_deemter['jaccard'])
+        # print 'Bayes Random: ', scipy.stats.mstats.normaltest(general_bayes_random['jaccard'])
+        # print 'Bayes No Variation: ', scipy.stats.mstats.normaltest(general_bayes_no_variation['jaccard'])
+        # print 'Bayes Variation: ', scipy.stats.mstats.normaltest(general_bayes_variation['jaccard'])
+        # print 20 * '-'
+        # print '\n'
 
         print 'GENERAL'
         print 'Labels: '
@@ -234,20 +235,20 @@ def run(std=True):
         print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
         print 20 * '-'
         print 'String Distance: '
-        print 'Random: ', mean_confidence_interval(general_random['string'])
-        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['string'])
-        print 'Deemter: ', mean_confidence_interval(general_deemter['string'])
-        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['string'])
-        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['string'])
-        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['string'])
+        print 'Random: ', mean_confidence_interval(general_random['string']), bootstrap.ci(general_random['string'])
+        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['string']), bootstrap.ci(general_siddharthan['string'])
+        print 'Deemter: ', mean_confidence_interval(general_deemter['string']), bootstrap.ci(general_deemter['string'])
+        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['string']), bootstrap.ci(general_bayes_random['string'])
+        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['string']), bootstrap.ci(general_bayes_no_variation['string'])
+        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['string']), bootstrap.ci(general_bayes_variation['string'])
         print 20 * '-'
         print 'Jaccard Distance: '
-        print 'Random: ', mean_confidence_interval(general_random['jaccard'])
-        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['jaccard'])
-        print 'Deemter: ', mean_confidence_interval(general_deemter['jaccard'])
-        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['jaccard'])
-        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['jaccard'])
-        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['jaccard'])
+        print 'Random: ', mean_confidence_interval(general_random['jaccard']), bootstrap.ci(general_random['jaccard'])
+        print 'Siddharthan: ', mean_confidence_interval(general_siddharthan['jaccard']), bootstrap.ci(general_siddharthan['jaccard'])
+        print 'Deemter: ', mean_confidence_interval(general_deemter['jaccard']), bootstrap.ci(general_deemter['jaccard'])
+        print 'Bayes Random: ', mean_confidence_interval(general_bayes_random['jaccard']), bootstrap.ci(general_bayes_random['jaccard'])
+        print 'Bayes No Variation: ', mean_confidence_interval(general_bayes_no_variation['jaccard']), bootstrap.ci(general_bayes_no_variation['jaccard'])
+        print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['jaccard']), bootstrap.ci(general_bayes_variation['jaccard'])
         print 20 * '-'
         print '\n'
 
