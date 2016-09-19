@@ -23,12 +23,13 @@ from main.eacl.models.deemter import Deemter
 from random import randint, shuffle
 from sklearn.cross_validation import KFold
 
-fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
-fentities = '/roaming/tcastrof/names/eacl/fentities.json'
+fdbpedia = '/roaming/tcastrof/names/eacl/dbpedia.json'
+fentities = '/roaming/tcastrof/names/eacl/entities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
+evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation'
 
 # initialize vocabulary, dbpedia, entities and appositives
 def init():
@@ -99,7 +100,6 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
     return references
 
 def run():
-    evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationVariation'
     if not os.path.exists(evaluation_dir):
         os.makedirs(evaluation_dir)
 

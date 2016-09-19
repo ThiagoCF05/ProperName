@@ -45,7 +45,7 @@ def run(entity_dir, write_dir):
     return appositives
 
 if __name__ == '__main__':
-    entity_dir = 'fentities.json'
+    entity_dir = 'entities.json'
     write_dir = 'appositives.json'
 
     run(entity_dir, write_dir)

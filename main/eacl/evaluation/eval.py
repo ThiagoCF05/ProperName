@@ -13,7 +13,7 @@ import scipy as sp
 import scipy.stats
 
 fentities = '/roaming/tcastrof/names/eacl/fentities.json'
-entities_dir = '/roaming/tcastrof/names/eacl/evaluationVariation'
+entities_dir = '/roaming/tcastrof/names/eacl/evaluation'
 
 def mean_confidence_interval(data, confidence=0.95):
     a = 1.0*np.array(data)
@@ -272,18 +272,18 @@ def run(std=True):
         print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['jaccard']), bootstrap.ci(general_bayes_variation['jaccard'])
         print 20 * '-'
         print '\n'
+
+        print 'String -> T-test: PN-Variation X PN+Variation'
+        t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+
+        print 'Jaccard -> T-test: PN-Variation X PN+Variation'
+        t, p = stats.ttest_rel(general_bayes_no_variation['jaccard'], general_bayes_variation['jaccard'])
+        print round(t, 6), p
+        print 10 * '-'
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
-
-    print 'String -> T-test: PN-Variation X PN+Variation'
-    t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
-    print round(t, 6), p
-    print 10 * '-'
-
-    print 'Jaccard -> T-test: PN-Variation X PN+Variation'
-    t, p = stats.ttest_rel(general_bayes_no_variation['jaccard'], general_bayes_variation['jaccard'])
-    print round(t, 6), p
-    print 10 * '-'
 
 if __name__ == '__main__':
     run(False)

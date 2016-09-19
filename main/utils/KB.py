@@ -77,7 +77,7 @@ def update(dbpedia):
     return dbpedia, name_base
 
 if __name__ == '__main__':
-    _dir = '/roaming/tcastrof/names/eacl/fdbpedia.json'
+    _dir = '/roaming/tcastrof/names/eacl/dbpedia.json'
     write_dir = '/roaming/tcastrof/names/eacl/name_base.json'
 
     dbpedia = json.load(open(_dir))
