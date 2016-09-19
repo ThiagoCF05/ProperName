@@ -277,12 +277,12 @@ def run(std=True):
 
     print 'String -> T-test: PN-Variation X PN+Variation'
     t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
-    print round(t, 6), round(p, 6)
+    print round(t, 6), p
     print 10 * '-'
 
     print 'Jaccard -> T-test: PN-Variation X PN+Variation'
     t, p = stats.ttest_rel(general_bayes_no_variation['jaccard'], general_bayes_variation['jaccard'])
-    print round(t, 6), round(p, 6)
+    print round(t, 6), p
     print 10 * '-'
 
 if __name__ == '__main__':
