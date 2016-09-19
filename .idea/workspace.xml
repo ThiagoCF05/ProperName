@@ -124,8 +124,8 @@
       <file leaf-file-name="get_abstracts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/utils/get_abstracts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3616352" vertical-offset="0" max-vertical-offset="954">
-              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.23584905" vertical-offset="0" max-vertical-offset="954">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -1460,8 +1460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/utils/get_abstracts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3616352" vertical-offset="0" max-vertical-offset="954">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.23584905" vertical-offset="0" max-vertical-offset="954">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>

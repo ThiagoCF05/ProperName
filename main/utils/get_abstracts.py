@@ -11,9 +11,9 @@ resource_url = 'http://dbpedia.org/resource/'
 
 def get_abstract(entity):
     print entity['url'], '\r',
-    entity = entity['url'].split('/')[-1]
+    tag = entity['url'].split('/')[-1]
 
-    url = dbpedia_url + entity + '.json'
+    url = dbpedia_url + tag + '.json'
     response = urllib2.urlopen(url)
     page = json.loads(response.read())
 
