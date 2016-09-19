@@ -7,7 +7,7 @@ entities_dir = '/roaming/tcastrof/names/eacl/entities.json'
 write_dir = '/roaming/tcastrof/names/eacl/abstracts.json'
 
 dbpedia_url = 'http://dbpedia.org/data/'
-resource_url = 'http://dbpedia.org/resource/Steve_Jobs'
+resource_url = 'http://dbpedia.org/resource/'
 
 def get_abstract(entity):
     print entity['url'], '\r',

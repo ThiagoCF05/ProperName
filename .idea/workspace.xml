@@ -124,8 +124,8 @@
       <file leaf-file-name="get_abstracts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/utils/get_abstracts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5188679" vertical-offset="0" max-vertical-offset="954">
-              <caret line="33" column="55" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.3616352" vertical-offset="0" max-vertical-offset="954">
+              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
               </folding>
@@ -306,10 +306,10 @@
         <option value="$PROJECT_DIR$/main/eacl/evaluation.py" />
         <option value="$PROJECT_DIR$/main/eacl/evaluation/bootstrap.py" />
         <option value="$PROJECT_DIR$/main/eacl/evaluation/eval.py" />
-        <option value="$PROJECT_DIR$/main/utils/get_abstracts.py" />
         <option value="$PROJECT_DIR$/main_variation_script.py" />
         <option value="$PROJECT_DIR$/main/utils/KB.py" />
         <option value="$PROJECT_DIR$/main/utils/get_appositives.py" />
+        <option value="$PROJECT_DIR$/main/utils/get_abstracts.py" />
       </list>
     </option>
   </component>
@@ -1460,8 +1460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/utils/get_abstracts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5188679" vertical-offset="0" max-vertical-offset="954">
-          <caret line="33" column="55" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.3616352" vertical-offset="0" max-vertical-offset="954">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
           </folding>
