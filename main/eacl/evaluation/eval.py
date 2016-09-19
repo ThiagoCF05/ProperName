@@ -135,8 +135,8 @@ def write_csv(general_random, general_siddharthan, general_deemter, general_baye
     if not os.path.exists(write_dir):
         os.mkdir(write_dir)
 
-    f_string = open(os.path.join(write_dir, 'string.csv'))
-    f_jaccard = open(os.path.join(write_dir, 'jaccard.csv'))
+    f_string = open(os.path.join(write_dir, 'string.csv'), 'w')
+    f_jaccard = open(os.path.join(write_dir, 'jaccard.csv'), 'w')
 
     f_string.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
     f_jaccard.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
