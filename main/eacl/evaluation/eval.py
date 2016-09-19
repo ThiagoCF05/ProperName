@@ -8,6 +8,7 @@ import os
 
 from nltk.metrics.distance import edit_distance, jaccard_distance
 from sklearn.metrics import accuracy_score
+from scipy import stats
 import scipy as sp
 import scipy.stats
 
@@ -273,6 +274,16 @@ def run(std=True):
         print '\n'
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
+
+    print 'String -> T-test: PN-Variation X PN+Variation'
+    t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
+    print round(t, 6), round(p, 6)
+    print 10 * '-'
+
+    print 'Jaccard -> T-test: PN-Variation X PN+Variation'
+    t, p = stats.ttest_rel(general_bayes_no_variation['jaccard'], general_bayes_variation['jaccard'])
+    print round(t, 6), round(p, 6)
+    print 10 * '-'
 
 if __name__ == '__main__':
     run(False)
