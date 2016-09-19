@@ -141,7 +141,7 @@ def write_csv(general_random, general_siddharthan, general_deemter, general_baye
     f_string.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
     f_jaccard.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
 
-    for i in range(0, len(general_random['random'])):
+    for i in range(0, len(general_random['string'])):
         f_string.write(str(i+1)+','+general_random['string'][i]+','+general_deemter['string'][i]+','+ \
                        general_siddharthan['string'][i]+','+general_bayes_no_variation['string'][i]+ \
                        ','+general_bayes_variation['string'][i]+'\n')
