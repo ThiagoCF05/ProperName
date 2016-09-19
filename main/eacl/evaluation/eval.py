@@ -131,6 +131,26 @@ def get_values(entities):
                 }
     return _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter
 
+def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir):
+    if not os.path.exists(write_dir):
+        os.mkdirs(write_dir)
+
+    f_string = open(os.path.join(write_dir, 'string.csv'))
+    f_jaccard = open(os.path.join(write_dir, 'jaccard.csv'))
+
+    f_string.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
+    f_jaccard.write('Subject,Random,Deemter,Siddharthan,PN-Variation,PN+Variation\n')
+
+    for i in range(0, len(general_random['random'])):
+        f_string.write(str(i+1)+','+general_random['string'][i]+','+general_deemter['string'][i]+','+ \
+                       general_siddharthan['string'][i]+','+general_bayes_no_variation['string'][i]+ \
+                       ','+general_bayes_variation['string'][i]+'\n')
+        f_jaccard.write(str(i+1)+','+general_random['jaccard'][i]+','+general_deemter['jaccard'][i]+','+ \
+                       general_siddharthan['jaccard'][i]+','+general_bayes_no_variation['jaccard'][i]+ \
+                       ','+general_bayes_variation['jaccard'][i]+'\n')
+    f_string.close()
+    f_jaccard.close()
+
 def run(std=True):
     entities = os.listdir(entities_dir)
 
@@ -251,6 +271,8 @@ def run(std=True):
         print 'Bayes Variation: ', mean_confidence_interval(general_bayes_variation['jaccard']), bootstrap.ci(general_bayes_variation['jaccard'])
         print 20 * '-'
         print '\n'
+    write_dir = '/roaming/tcastrof/names/eacl/evaluation'
+    write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
     run(True)
