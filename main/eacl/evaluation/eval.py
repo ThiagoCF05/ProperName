@@ -133,7 +133,7 @@ def get_values(entities):
 
 def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir):
     if not os.path.exists(write_dir):
-        os.mkdirs(write_dir)
+        os.mkdir(write_dir)
 
     f_string = open(os.path.join(write_dir, 'string.csv'))
     f_jaccard = open(os.path.join(write_dir, 'jaccard.csv'))
@@ -275,4 +275,4 @@ def run(std=True):
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
-    run(True)
+    run(False)
