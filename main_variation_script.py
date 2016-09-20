@@ -221,4 +221,11 @@ def run():
             # p.dump(results, open('EVALUATION.pickle', 'w'))
 
 if __name__ == '__main__':
-    run()
+    # run()
+
+    references = prep.filter_entities(50, 0, mention_dir)
+
+    entities = dict(references).keys()
+
+    for entity in entities:
+        print entity
