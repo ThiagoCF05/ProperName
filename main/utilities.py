@@ -50,3 +50,6 @@ def recency(position):
 tagset = ['PRP$', 'VBG', 'VBD', '``', 'VBN', ',', "''", 'VBP', 'WDT', 'JJ', 'WP', 'VBZ', 'DT', 'RP', '$', 'NN', ')',\
           '(', 'FW', 'POS', '.', 'TO', 'LS', 'RB', ':', 'NNS', 'NNP', 'VB', 'WRB', 'CC', 'PDT', 'RBS', 'RBR', 'CD',\
           'PRP', 'EX', 'IN', 'WP$', 'MD', 'NNPS', '--', 'JJS', 'JJR', 'SYM', 'UH', '-NONE-', '#']
+
+dbpedia_dir = "/roaming/tcastrof/names/eacl/name_base.json"
+entities_dir = "/roaming/tcastrof/names/eacl/entities.json"

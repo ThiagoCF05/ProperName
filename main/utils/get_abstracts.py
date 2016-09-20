@@ -1,5 +1,12 @@
 __author__ = 'thiagocastroferreira'
 
+"""
+Author: Thiago Castro Ferreira
+Date: 20/09/2016
+Description:
+    This script aims to get the abstracts from each entity in their DBpedia page.
+"""
+
 import json
 import urllib2
 
