@@ -33,9 +33,9 @@ if __name__ == '__main__':
 
             if os.path.isfile(os.path.join(mentions_dir, entity['id'])):
                 j = json.load(open(os.path.join(mentions_dir, entity['id'])))
-                j[entity] = mentions
+                j[entity['url']] = mentions
             else:
-                j = { entity:mentions }
+                j = { entity['url']:mentions }
             json.dump(j, open(os.path.join(mentions_dir, entity['id']), 'w'), indent=4, separators=(',', ': '))
         except ValueError:
             nfiles -= 1
