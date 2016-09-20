@@ -1,5 +1,3 @@
-from main import corpus_builder as nv
-
 __author__ = 'thiagocastroferreira'
 
 """
