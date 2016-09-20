@@ -11,6 +11,7 @@ Description:
     check get_all_mentions.py
 """
 
+from name_variation import get_variations_db
 import json
 import re
 
@@ -242,7 +243,7 @@ def extract_syntax(mentions, sentences):
 def run(fname, dbpedia):
     r = json.load(open(fname))
 
-    variations = nv.get_variations_db(dbpedia_names=dbpedia)
+    variations = get_variations_db(dbpedia_names=dbpedia)
     mentions = find_mentions(r['corefs'], variations, r['sentences'])
     mentions = classify(mentions, dbpedia, r['sentences'])
     mentions = clean(mentions, r['sentences'])
