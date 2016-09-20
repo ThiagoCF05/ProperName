@@ -50,6 +50,62 @@ class Bayes(object):
 
         return probabilities
 
+    def select_content_backoff(self, features, entity, K):
+        def calc_prob(s):
+            # PRIORI
+            f = filter(lambda x: x[1] == entity, self.clf['content']['s_e'])
+            dem = sum(map(lambda x: self.clf['content']['s_e'][x], f))
+
+            f = filter(lambda x: x[0] == s, f)
+            num = sum(map(lambda x: self.clf['content']['s_e'][x], f))
+
+            if num <= K:
+                f = self.clf['content']['s'].keys()
+                dem = sum(map(lambda x: self.clf['content']['s'][x], f))
+
+                num = self.clf['content']['s'][s]
+
+                prob = (float(num+1) / (dem+self.laplace['content']['s']))
+            else:
+                prob = float(num) / dem
+
+            # POSTERIORI
+            for feature in features:
+                f = filter(lambda x: x[1] == s and x[2] == entity, self.clf['content'][feature])
+                dem = sum(map(lambda x: self.clf['content'][feature][x], f))
+
+                f = filter(lambda x: x[0] == features[feature], f)
+                num = sum(map(lambda x: self.clf['content'][feature][x], f))
+
+                if num <= K:
+                    feat = feature[:-1]
+
+                    f = filter(lambda x: x[1] == s, self.clf['content'][feat])
+                    dem = sum(map(lambda x: self.clf['content'][feat][x], f))
+
+                    f = filter(lambda x: x[0] == features[feat], f)
+                    num = sum(map(lambda x: self.clf['content'][feat][x], f))
+
+                    prob = prob * (float(num+1) / (dem+self.laplace['content'][feat]))
+                else:
+                    prob = prob * (float(num)/dem)
+            return prob
+
+        probabilities = dict(map(lambda s: (s, 0), settings.labels))
+
+        for form in probabilities:
+            probabilities[form] = calc_prob(form)
+
+        # Frequency distribution
+        total = sum(probabilities.values())
+        for form in probabilities:
+            probabilities[form] = float(probabilities[form]) / total
+
+        probabilities = sorted(probabilities.items(), key=operator.itemgetter(1))
+        probabilities.reverse()
+
+        return probabilities
+
     def _beam_search(self, names, words, form, entity, word_freq, n=5):
         def calc_prob(gram):
             # PRIORI

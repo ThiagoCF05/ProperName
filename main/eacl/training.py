@@ -13,42 +13,63 @@ import nltk
 import settings
 
 # CONTENT SELECTION
-# calculate count(s | e)
-def s_given_e(voc):
+
+# calculate count(f)
+def f(voc):
+    grams = map(lambda x: x['label'], voc)
+    return dict(nltk.FreqDist(grams))
+
+# calculate count(f | p)
+def f_given_p(voc):
     grams = map(lambda x: (x['label'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
-# calculate givenness count(dg | s, e)
-def discourse_given_s(voc):
+# calculate givenness count(dg | f)
+def discourse_given_f(voc):
+    grams = map(lambda x: (x['givenness'], x['label']), voc)
+    return dict(nltk.FreqDist(grams))
+
+# calculate givenness count(dg | f, p)
+def discourse_given_fp(voc):
     grams = map(lambda x: (x['givenness'], x['label'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
-# calculate sentence givenness count(sg | s, e)
-def sentence_given_s(voc):
+# calculate sentence givenness count(sg | f)
+def sentence_given_f(voc):
+    grams = map(lambda x: (x['sentence-givenness'], x['label']), voc)
+    return dict(nltk.FreqDist(grams))
+
+# calculate sentence givenness count(sg | f, p)
+def sentence_given_fp(voc):
     grams = map(lambda x: (x['sentence-givenness'], x['label'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
-# calculate count(syntax | s, e)
-def syntax_given_s(voc):
+# calculate count(syntax | f)
+def syntax_given_f(voc):
+    grams = map(lambda x: (x['syntax'], x['label']), voc)
+    return dict(nltk.FreqDist(grams))
+
+# calculate count(syntax | f, p)
+def syntax_given_fp(voc):
     grams = map(lambda x: (x['syntax'], x['label'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
 # REALIZATION
-# calculate entity given w count(e | w)
+# calculate entity given w count(p | w)
 def entity_given_w(voc):
     grams = map(lambda x: (x['entity'], x['word']), voc)
     return dict(nltk.FreqDist(grams))
 
-# calculate count(s | w, e)
-def s_given_we(voc, bigram=False):
+# calculate count(s | w, p)
+def s_given_wp(voc, bigram=False):
     if bigram:
         grams = map(lambda x: (x['label'], x['bigram'][0], x['bigram'][1], x['entity']), voc)
     else:
         grams = map(lambda x: (x['label'], x['word'], x['entity']), voc)
     return dict(nltk.FreqDist(grams))
 
-# calculate entity given w count(w | e)
-def w_given_e(voc, bigram=False):
+# calculate entity given w count(w | p)
+def w_given_p(voc, bigram=False):
     if bigram:
         grams = map(lambda x: (x['bigram'][0], x['bigram'][1], x['entity']), voc)
     else:
@@ -57,15 +78,20 @@ def w_given_e(voc, bigram=False):
 
 def run(voc, bigram=False, out='wtd'):
     # CONTENT SELECTION
-    s_e = s_given_e(voc)
-    discourse_se = discourse_given_s(voc)
-    sentence_se = sentence_given_s(voc)
-    syntax_se = syntax_given_s(voc)
+    s = f(voc)
+    s_e = f_given_p(voc)
+    discourse_se = discourse_given_fp(voc)
+    sentence_se = sentence_given_fp(voc)
+    syntax_se = syntax_given_fp(voc)
+
+    discourse_s = discourse_given_f(voc)
+    sentence_s = sentence_given_f(voc)
+    syntax_s = syntax_given_f(voc)
 
     # REALIZATION
     e_w = entity_given_w(voc)
-    s_we = s_given_we(voc, bigram)
-    w_e = w_given_e(voc, bigram)
+    s_we = s_given_wp(voc, bigram)
+    w_e = w_given_p(voc, bigram)
 
     train_set = {
         'e_w': e_w,
@@ -73,7 +99,11 @@ def run(voc, bigram=False, out='wtd'):
             's_e': s_e,
             'discourse_se': discourse_se,
             'sentence_se': sentence_se,
-            'syntax_se': syntax_se
+            'syntax_se': syntax_se,
+            's': s,
+            'discourse_s': discourse_s,
+            'sentence_s': sentence_s,
+            'syntax_s': syntax_s
         },
         'realization': {
             's_we': s_we,

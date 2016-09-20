@@ -55,7 +55,7 @@ def init():
 
     return entities_info, base, appositives, dbpedia
 
-def bayes_selection(mention, entity, model):
+def bayes_selection(mention, entity, model, k):
     features = {
         # 's_e': mention['label'],
         'discourse_se': mention['givenness'],
@@ -63,7 +63,10 @@ def bayes_selection(mention, entity, model):
         'syntax_se': mention['syntax']
     }
 
-    prob = model.select_content(features, entity)
+    if k != None:
+        prob = model.select_content_backoff(features, entity, k)
+    else:
+        prob = model.select_content(features, entity)
     return prob
 
 def bayes_realization(form, mention, entity, model, words, appositive):
@@ -83,7 +86,7 @@ def get_features_visited(mention, features):
         result.append(('syntax', mention['syntax']))
     return result
 
-def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive):
+def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive, name):
     distribution = {}
     for form in form_distribution:
         distribution[form[0]] = len(references) * form[1]
@@ -94,7 +97,7 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
 
         label = filter(lambda x: x[0] == form, form_distribution)[0]
         realizer = bayes_realization(form, test_set_same_features[i], entity, model, words, appositive)
-        references[i]['bayes_variation'] = { 'label': label, 'reference': realizer }
+        references[i][name] = { 'label': label, 'reference': realizer }
 
         distribution[form] -= 1
     return references
@@ -173,7 +176,9 @@ def run():
                                                                   and x['syntax'] == mention['syntax'], test_set)
 
                         # Bayes model selection
-                        form_distribution = bayes_selection(mention, entity, clf)
+                        form_distribution = bayes_selection(mention, entity, clf, None)
+                        form_distribution_k0 = bayes_selection(mention, entity, clf, 0)
+                        form_distribution_k2 = bayes_selection(mention, entity, clf, 2)
 
                         # Generate proper names for each group of features
                         group_result = []
@@ -207,6 +212,10 @@ def run():
                             realizer = bayes_realization(form_distribution[0][0], filtered_mention, entity, clf, words, appositive)
                             result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': realizer }
 
+                            # Bayes backoff model with no variation (Realization with the most likely referential form)
+                            realizer = bayes_realization(form_distribution[0][0], filtered_mention, entity, clf, words, appositive)
+                            result['bayes_backoff_no_variation'] = { 'label': form_distribution_k0[0], 'reference': realizer }
+
                             # Bayes model with random choice of proper name form
                             index = randint(0, len(form_distribution)-1)
                             realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
@@ -215,7 +224,8 @@ def run():
                             group_result.append(result)
 
                         # Generate proper names with individual variation in the for choice
-                        results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive))
+                        results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation'))
+                        results[entity][fold].extend(bayes_variation(group_result, form_distribution_k0, test_set_same_features, entity, clf, words, appositive, 'bayes_backoff_variation'))
                 fold = fold + 1
             p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
             # p.dump(results, open('EVALUATION.pickle', 'w'))
