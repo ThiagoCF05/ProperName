@@ -137,7 +137,11 @@ def run():
             mentions = np.array(references[entity])
 
             # compute the set of features (vocabulary) from other entities
-            other_mentions = map(lambda x: references[x], filter(lambda x: x != entity, references.keys()))
+            other_mentions = []
+            for e in references:
+                if entity != e:
+                    other_mentions.extend(references[e])
+
             general_voc = []
             for mention in other_mentions:
                 parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
