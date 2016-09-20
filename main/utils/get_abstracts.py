@@ -19,9 +19,11 @@ def get_abstract(entity):
 
     resource = resource_url + tag
 
-    abstracts = page[resource]['http://dbpedia.org/ontology/abstract']
-
-    abstract = filter(lambda x: x['lang'] == 'en', abstracts)[0]['value']
+    try:
+        abstracts = page[resource]['http://dbpedia.org/ontology/abstract']
+        abstract = filter(lambda x: x['lang'] == 'en', abstracts)[0]['value']
+    except:
+        abstract = ''
     return (entity['url'], abstract)
 
 if __name__ == '__main__':
