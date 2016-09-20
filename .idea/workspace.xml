@@ -102,8 +102,8 @@
       <file leaf-file-name="main_variation_script.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_variation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9528302" vertical-offset="2346" max-vertical-offset="3345">
-              <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.9056604" vertical-offset="2376" max-vertical-offset="3330">
+              <caret line="229" column="60" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -1413,8 +1413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_variation_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9528302" vertical-offset="2346" max-vertical-offset="3345">
-          <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.9056604" vertical-offset="2376" max-vertical-offset="3330">
+          <caret line="229" column="60" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="60" />
           <folding />
         </state>
       </provider>
