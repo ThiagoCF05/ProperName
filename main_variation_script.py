@@ -227,4 +227,4 @@ if __name__ == '__main__':
 
     entities = dict(references).keys()
 
-    json.dump(open('/roaming/tcastrof/names/eacl/entities_50.json', 'w'))
+    json.dump(entities, open('/roaming/tcastrof/names/eacl/entities_50.json', 'w'))
