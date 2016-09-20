@@ -221,10 +221,4 @@ def run():
             # p.dump(results, open('EVALUATION.pickle', 'w'))
 
 if __name__ == '__main__':
-    # run()
-
-    references = prep.filter_entities(50, 0, mention_dir)
-
-    entities = dict(references).keys()
-
-    json.dump(entities, open('/roaming/tcastrof/names/eacl/entities_50.json', 'w'))
+    run()
