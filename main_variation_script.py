@@ -23,7 +23,7 @@ from main.eacl.models.deemter import Deemter
 from random import randint, shuffle
 from sklearn.cross_validation import KFold
 
-fdbpedia = '/roaming/tcastrof/names/eacl/dbpedia.json'
+fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
