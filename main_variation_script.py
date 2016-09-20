@@ -29,7 +29,7 @@ titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
-evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation'
+evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
 
 # initialize vocabulary, dbpedia, entities and appositives
 def init():
