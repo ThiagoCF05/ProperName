@@ -17,7 +17,7 @@ def get_abstract(entity):
     response = urllib2.urlopen(url)
     page = json.loads(response.read())
 
-    resource = resource_url + entity
+    resource = resource_url + tag
 
     abstracts = page[resource]['http://dbpedia.org/ontology/abstract']
 
