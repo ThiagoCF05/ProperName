@@ -63,9 +63,10 @@ class Bayes(object):
                 f = self.clf['content']['s'].keys()
                 dem = sum(map(lambda x: self.clf['content']['s'][x], f))
 
-                num = self.clf['content']['s'][s]
+                f = filter(lambda x: x == s, f)
+                num = sum(map(lambda x: self.clf['content']['s'][x], f))
 
-                prob = (float(num+1) / (dem+self.laplace['content']['s']))
+                prob = (float(num+1) / (dem+self.laplace['content']['s_e']))
             else:
                 prob = float(num) / dem
 
@@ -86,7 +87,7 @@ class Bayes(object):
                     f = filter(lambda x: x[0] == features[feat], f)
                     num = sum(map(lambda x: self.clf['content'][feat][x], f))
 
-                    prob = prob * (float(num+1) / (dem+self.laplace['content'][feat]))
+                    prob = prob * (float(num+1) / (dem+self.laplace['content'][feature]))
                 else:
                     prob = prob * (float(num)/dem)
             return prob
