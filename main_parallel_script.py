@@ -238,7 +238,7 @@ def run():
     entities = vocabulary.keys()
     entities.sort()
 
-    pool = Pool(5)
+    # pool = Pool(5)
 
     print 'Number of entities: ', len(entities)
     for entity in entities:
@@ -255,10 +255,10 @@ def run():
             # Get proper nouns to be tested whether should be included in the reference
             words = tested_words[entity]
 
-            pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
-            # process_entity(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id)
-    pool.close()
-    pool.join()
+            # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
+            process_entity(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id)
+    # pool.close()
+    # pool.join()
 
 if __name__ == '__main__':
     run()
