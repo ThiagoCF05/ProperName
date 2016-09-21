@@ -112,8 +112,8 @@
       <file leaf-file-name="w2voc.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/w2voc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5754717" vertical-offset="636" max-vertical-offset="1590">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.3081761" vertical-offset="651" max-vertical-offset="1605">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="e#275#284#0" expanded="true" />
               </folding>
@@ -1478,8 +1478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/w2voc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5754717" vertical-offset="636" max-vertical-offset="1590">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.3081761" vertical-offset="651" max-vertical-offset="1605">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding>
             <element signature="e#275#284#0" expanded="true" />
           </folding>
