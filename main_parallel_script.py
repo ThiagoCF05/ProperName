@@ -35,13 +35,18 @@ evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
+    print 'Initializing appositives...'
     appositives = json.load(open(appositives_dir))
+    print 'Initializing entities_info...'
     entities_info = json.load(open(fentities))
 
+    print 'Initializing titles...'
     titles = json.load(open(titles_dir))
     dbpedia = json.load(open(fdbpedia))
+    print 'Initializing vocabulary...'
     vocabulary = json.load(open(vocabulary_dir))
 
+    print 'Initializing dbpedia...'
     base = {}
     for entity in dbpedia:
         base[entity] = []
