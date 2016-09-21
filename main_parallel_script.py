@@ -222,7 +222,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                 group_result = bayes_variation(group_result, form_distribution_k2, test_set_same_features, entity, clf, words, appositive, 'bayes_backoffk2_variation')
                 results[fold].extend(group_result)
         fold = fold + 1
-    p.dump(results[entity], open(os.path.join(evaluation_dir, fname), 'w'))
+    p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
 
 def run():
     if not os.path.exists(evaluation_dir):
@@ -238,7 +238,7 @@ def run():
     entities = vocabulary.keys()
     entities.sort()
 
-    p = Pool(5)
+    pool = Pool(5)
 
     print 'Number of entities: ', len(entities)
     for entity in entities:
@@ -255,10 +255,10 @@ def run():
             # Get proper nouns to be tested whether should be included in the reference
             words = tested_words[entity]
 
-            p.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
+            pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
             # process_entity(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id)
-    p.close()
-    p.join()
+    pool.close()
+    pool.join()
 
 if __name__ == '__main__':
     run()
