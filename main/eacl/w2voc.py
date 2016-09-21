@@ -80,8 +80,8 @@ def run(N, out='wtd'):
     data = prep.filter_entities(N, 0, mention_dir)
 
     voc = {}
-    for entity in data:
-        print entity
+    for i, entity in enumerate(data):
+        print i+1, entity
         voc[entity] = []
         fnames = map(lambda x: x['fname'], data[entity])
 

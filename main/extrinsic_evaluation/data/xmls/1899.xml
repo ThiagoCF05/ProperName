@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<TEXT ID="1899">
+	<TITLE>Britney Spears</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Britney Jean Spears
+		</REFERENCE>
+		<STRING> (born December 2, 1981) is an American singer and actress. Born in McComb, Mississippi, and raised in Kentwood, Louisiana, she performed acting roles in stage productions and television shows as a child before signing with Jive Records in 1997. </STRING>
+		<REFERENCE ID="2" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears's
+		</REFERENCE>
+		<STRING> first and second studio albums, ...Baby One More Time (1999) and Oops!... I Did It Again (2000), became international successes, with the former becoming the best-selling album by a teenage solo artist. Title tracks "...Baby One More Time" and "Oops!... I Did It Again" broke international sales records. In 2001, </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears
+		</REFERENCE>
+		<STRING> released her self-titled third studio album, Britney, and played the starring role in the film Crossroads (2002). She assumed creative control of her fourth studio album, In the Zone (2003), which yielded the worldwide success of the "Toxic" single.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>In 2007, </STRING>
+		<REFERENCE ID="4" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears's
+		</REFERENCE>
+		<STRING> much-publicized personal issues sent her career into hiatus. Her fifth studio album, Blackout, was released later that year, and spawned hits such as "Gimme More" and "Piece of Me". Her erratic behavior and hospitalizations continued through the following year, at which point she was placed under a still on-going conservatorship. </STRING>
+		<REFERENCE ID="5" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears's
+		</REFERENCE>
+		<STRING> sixth studio album, Circus (2008), included global chart-topping lead single "Womanizer". Its supporting tour The Circus Starring Britney Spears was one of the highest-grossing global concert tours in 2009. Later that October, "3" became </STRING>
+		<REFERENCE ID="6" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears's
+		</REFERENCE>
+		<STRING> third single to reach number one on the Billboard Hot 100. Her seventh studio album, Femme Fatale (2011), became her first to yield three top-ten singles in the United States: "Hold It Against Me", "Till the World Ends" and "I Wanna Go". She also served as a judge during the second season of the American version of The X Factor. </STRING>
+		<REFERENCE ID="7" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears's
+		</REFERENCE>
+		<STRING> eponymous eighth studio album Britney Jean was released in 2013; it spawned the top 15 hit "Work Bitch", however it became the lowest-selling record of her career. Later that year, </STRING>
+		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears
+		</REFERENCE>
+		<STRING> began the four-year residency show Britney: Piece of Me at The AXIS at Planet Hollywood Resort & Casino in Las Vegas.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears
+		</REFERENCE>
+		<STRING> was established as a pop icon and credited with influencing the revival of teen pop during the late 1990s. She became the 'best-selling teenaged artist of all time' and garnered honorific titles including the "Princess of Pop". Her work has earned her numerous awards and accolades, including a Grammy Award, six MTV Video Music Awards including the Lifetime Achievement Award, nine Billboard Music Awards, and a star on the Hollywood Walk of Fame. In 2009, Billboard ranked her as the 8th overall Artist of the Decade, and also recognized her as the best-selling female artist of the 2000s, as well as the fifth overall. The Recording Industry Association of America (RIAA) named </STRING>
+		<REFERENCE ID="10" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears
+		</REFERENCE>
+		<STRING> as the eighth top-selling female artist in the United States, with 34 million certified albums. She has sold over 100 million albums worldwide, making her one of the best-selling music artists of all time. Rolling Stone recognized her instant success as one of the Top 25 Teen Idol Breakout Moments of all time, while VH1 ranked her eleventh on their "100 Greatest Women in Music" list in 2012, and Billboard named her the sexiest woman in music. Forbes reported that </STRING>
+		<REFERENCE ID="11" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Spears
+		</REFERENCE>
+		<STRING> was the highest paid female musician of 2012, with earnings of $58 million, having last topped the list in 2002.</STRING>
+	</PARAGRAPH>
+</TEXT>

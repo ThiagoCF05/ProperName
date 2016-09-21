@@ -29,16 +29,23 @@ titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
+vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
 evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
 
-# initialize vocabulary, dbpedia, entities and appositives
+# initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
+    print 'Initializing appositives...'
     appositives = json.load(open(appositives_dir))
+    print 'Initializing entities_info...'
     entities_info = json.load(open(fentities))
 
+    print 'Initializing titles...'
     titles = json.load(open(titles_dir))
     dbpedia = json.load(open(fdbpedia))
+    print 'Initializing vocabulary...'
+    vocabulary = json.load(open(vocabulary_dir))
 
+    print 'Initializing dbpedia...'
     base = {}
     for entity in dbpedia:
         base[entity] = []
@@ -53,7 +60,7 @@ def init():
             base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
 
-    return entities_info, base, appositives, dbpedia
+    return entities_info, base, appositives, dbpedia, vocabulary
 
 def bayes_selection(mention, entity, model, k):
     features = {
@@ -111,10 +118,10 @@ def run():
     references = prep.filter_entities(50, 0, mention_dir)
 
     # voc contains only the proper names / titles from DBpedia for each entity
-    entities_info, voc, appositives, dbpedia = init()
+    entities_info, tested_words, appositives, dbpedia, vocabulary = init()
 
     # Sort entities and start the process
-    entities = references.keys()
+    entities = vocabulary.keys()
     entities.sort()
     print 'Number of entities: ', len(entities)
     for entity in entities:
@@ -131,23 +138,16 @@ def run():
                 appositive = ''
 
             # Get proper nouns to be tested whether should be included in the reference
-            words = voc[entity]
+            words = tested_words[entity]
 
             # Retrieve all the mentions to the entity
             mentions = np.array(references[entity])
 
             # compute the set of features (vocabulary) from other entities
-            other_mentions = []
-            for e in references:
-                if entity != e:
-                    other_mentions.extend(references[e])
-
             general_voc = []
-            for mention in other_mentions:
-                parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
-
-                tokens = prep.process_tokens(mention, parsed, entity, False)
-                general_voc.extend(tokens)
+            for e in vocabulary:
+                if e != entity:
+                    general_voc.extend(vocabulary[e])
 
             # compute cross validation
             fold = 1
@@ -240,8 +240,9 @@ def run():
                             group_result.append(result)
 
                         # Generate proper names with individual variation in the for choice
-                        results[entity][fold].extend(bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation'))
-                        results[entity][fold].extend(bayes_variation(group_result, form_distribution_k0, test_set_same_features, entity, clf, words, appositive, 'bayes_backoff_variation'))
+                        group_result = bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation')
+                        group_result = bayes_variation(group_result, form_distribution_k0, test_set_same_features, entity, clf, words, appositive, 'bayes_backoff_variation')
+                        results[entity][fold].extend(group_result)
                 fold = fold + 1
             p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
             # p.dump(results, open('EVALUATION.pickle', 'w'))

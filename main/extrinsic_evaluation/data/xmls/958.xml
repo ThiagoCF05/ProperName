@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<TEXT ID="958">
+	<TITLE>Jack Nicholson</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			John Joseph "Jack" Nicholson
+		</REFERENCE>
+		<STRING> (born April 22, 1937) is an American actor and filmmaker, having performed for nearly 60 years. He is known for playing a wide range of starring or supporting roles, including satirical comedy, romance and dark portrayals of excitable and psychopathic characters. In many of his films he played the "eternal outsider, the sardonic drifter", and someone who rebels against the social structure.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<REFERENCE ID="2" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Nicholson's
+		</REFERENCE>
+		<STRING> 12 Academy Award nominations make him the most nominated male actor in the Academy's history. </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Nicholson
+		</REFERENCE>
+		<STRING> has won the Academy Award for Best Actor twice, one for the drama One Flew Over the Cuckoo's Nest (1975) and the other for the romantic comedy As Good as It Gets (1997). He also won the Academy Award for Best Supporting Actor for the comedy-drama Terms of Endearment (1983). </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Nicholson
+		</REFERENCE>
+		<STRING> is one of three male actors to win three Academy Awards. </STRING>
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Nicholson
+		</REFERENCE>
+		<STRING> is one of only two actors to be nominated for an Academy Award for acting in every decade from the 1960s to the 2000s; the other was Michael Caine. He has won six Golden Globe Awards, and received the Kennedy Center Honor in 2001. In 1994, he became one of the youngest actors to be awarded the American Film Institute's Life Achievement Award. Other notable films in which he has starred include the road movie Easy Rider (1969), the drama Five Easy Pieces (1970), the comedy-drama film The Last Detail (1973), the neo-noir mystery film Chinatown (1974), the drama The Passenger (1975), and the epic film Reds (1981). He played Jack Torrance in the Stanley Kubrick's horror film The Shining (1980), the Joker in Batman (1989), and Frank Costello in the Martin Scorsese's crime drama The Departed (2006). Other films include the legal drama A Few Good Men (1992), the Sean Penn-directed mystery film The Pledge (2001), and the comedy-drama About Schmidt (2002).</STRING>
+	</PARAGRAPH>
+</TEXT>

@@ -1,0 +1,12 @@
+1688 http://en.wikipedia.org/wiki/Muammar_Gaddafi 10
+1513 http://en.wikipedia.org/wiki/Clint_Eastwood 11
+1437 http://en.wikipedia.org/wiki/George_Lucas 17
+958 http://en.wikipedia.org/wiki/Jack_Nicholson 11
+1022 http://en.wikipedia.org/wiki/Anna_Wintour 20
+1137 http://en.wikipedia.org/wiki/Lindsay_Lohan 25
+1899 http://en.wikipedia.org/wiki/Britney_Spears 21
+995 http://en.wikipedia.org/wiki/Paris_Hilton 14
+1119 http://en.wikipedia.org/wiki/Charles_Manson 10
+1305 http://en.wikipedia.org/wiki/Dick_Cheney 11
+765 http://en.wikipedia.org/wiki/Diana_Ross 12
+3054 http://en.wikipedia.org/wiki/Mark_Zuckerberg 8

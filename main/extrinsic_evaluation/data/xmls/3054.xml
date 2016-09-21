@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<TEXT ID="3054">
+	<TITLE>Mark Zuckerberg</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Mark Elliot Zuckerberg
+		</REFERENCE>
+		<STRING> (born May 14, 1984) is an American computer programmer and Internet entrepreneur. He is best known as one of five co-founders of the social networking website Facebook. </STRING>
+		<REFERENCE ID="2" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> is the chairman and chief executive of Facebook, Inc. His personal wealth, as of July 2015, is estimated to be $38.6 billion. </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> receives a one-dollar salary as CEO of Facebook.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Together with his college roommates and fellow Harvard University students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, he launched Facebook from Harvard University's dormitory rooms. The group then introduced Facebook onto other campuses nationwide and moved to Palo Alto, California shortly afterwards. In 2007, at the age of 23, </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> became a billionaire as a result of Facebook's success. The number of Facebook users worldwide reached a total of one billion in 2012. </STRING>
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> was involved in various legal disputes that were initiated by others in the group, who claimed a share of the company based upon their involvement during the development phase of Facebook.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>Since 2010, Time magazine has named </STRING>
+		<REFERENCE ID="6" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> among the 100 wealthiest and most influential people in the world as a part of its Person of the Year distinction. In 2011, </STRING>
+		<REFERENCE ID="7" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> ranked first on the list of the "Most Influential Jews in the World" by The Jerusalem Post. </STRING>
+		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Zuckerberg
+		</REFERENCE>
+		<STRING> was played by actor Jesse Eisenberg in the 2010 film The Social Network, in which the rise of Facebook is portrayed.</STRING>
+	</PARAGRAPH>
+</TEXT>
