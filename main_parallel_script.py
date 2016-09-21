@@ -11,6 +11,7 @@ Description:
 import copy
 import cPickle as p
 import json
+import numpy as np
 import os
 
 import main.eacl.preprocessing as prep
@@ -256,7 +257,7 @@ def run():
             words = tested_words[entity]
 
             # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
-            process_entity(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id)
+            process_entity(entity, words, np.array(references[entity]), vocabulary, dbpedia, appositive, entity_id)
     # pool.close()
     # pool.join()
 
