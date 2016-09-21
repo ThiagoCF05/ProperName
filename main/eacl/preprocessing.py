@@ -112,7 +112,9 @@ def filter_entities(N_min, N_max, mention_dir):
         print i, fname, '\r',
         mentions = json.load(open(os.path.join(mention_dir, fname)))
 
-        for entity in mentions:
+        # Exclude this entity from the set
+        entities = filter(lambda x: x != 'http://en.wikipedia.org/wiki/Whoopi_Goldberg', mentions)
+        for entity in entities:
             if entity not in result:
                 result[entity] = []
             for mention in filter(lambda mention: mention['type'] == 'PROPER', mentions[entity]):

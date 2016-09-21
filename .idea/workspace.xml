@@ -109,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="w2voc.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="w2voc.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/w2voc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3081761" vertical-offset="651" max-vertical-offset="1605">
-              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1605">
+              <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding>
                 <element signature="e#275#284#0" expanded="true" />
               </folding>
@@ -121,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocessing.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="preprocessing.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="1905">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.827044" vertical-offset="951" max-vertical-offset="1935">
+              <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -300,7 +300,6 @@
         <option value="$PROJECT_DIR$/main/main_script.py" />
         <option value="$PROJECT_DIR$/main/eacl/main_script.py" />
         <option value="$PROJECT_DIR$/main/utils/get_titles.py" />
-        <option value="$PROJECT_DIR$/main/eacl/preprocessing.py" />
         <option value="$PROJECT_DIR$/main/eacl/settings.py" />
         <option value="$PROJECT_DIR$/main_script2.py" />
         <option value="$PROJECT_DIR$/main_utils.py" />
@@ -327,6 +326,7 @@
         <option value="$PROJECT_DIR$/main_script.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
         <option value="$PROJECT_DIR$/main/eacl/w2voc.py" />
+        <option value="$PROJECT_DIR$/main/eacl/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -1468,21 +1468,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="597" max-vertical-offset="1905">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/w2voc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3081761" vertical-offset="651" max-vertical-offset="1605">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1605">
+          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
           <folding>
             <element signature="e#275#284#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.827044" vertical-offset="951" max-vertical-offset="1935">
+          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
