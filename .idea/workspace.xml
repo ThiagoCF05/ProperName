@@ -99,10 +99,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Bayes.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0084034" vertical-offset="0" max-vertical-offset="3300">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
               <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
@@ -111,20 +111,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parse_xml.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="parse_xml.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parse_xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2310">
-              <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.17331932" vertical-offset="0" max-vertical-offset="2310">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
               <folding>
-                <element signature="e#37#48#0" expanded="true" />
-                <element signature="e#1501#1981#0" expanded="false" />
-                <element signature="e#2036#2495#0" expanded="false" />
-                <element signature="e#2585#3193#0" expanded="false" />
-                <element signature="e#6511#7507#0" expanded="false" />
-                <element signature="e#7560#8468#0" expanded="false" />
-                <element signature="e#8786#9704#0" expanded="false" />
-                <element signature="e#9837#11397#0" expanded="false" />
+                <element signature="e#1531#2011#0" expanded="false" />
+                <element signature="e#2066#2525#0" expanded="false" />
+                <element signature="e#2615#3223#0" expanded="false" />
+                <element signature="e#6541#7537#0" expanded="false" />
+                <element signature="e#7590#8498#0" expanded="false" />
+                <element signature="e#8816#9734#0" expanded="false" />
+                <element signature="e#9867#11427#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -278,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/final_model/settings.py" />
         <option value="$PROJECT_DIR$/final_model/w2voc.py" />
         <option value="$PROJECT_DIR$/final_model/training.py" />
         <option value="$PROJECT_DIR$/final_model/preprocessing.py" />
@@ -329,6 +327,7 @@
         <option value="$PROJECT_DIR$/main/extrinsic_evaluation/parse_xml.py" />
         <option value="$PROJECT_DIR$/main/eacl/human_evaluation/parse_xml.py" />
         <option value="$PROJECT_DIR$/main/eacl/parse_xml.py" />
+        <option value="$PROJECT_DIR$/parse_xml.py" />
       </list>
     </option>
   </component>
@@ -976,7 +975,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1499,29 +1498,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parse_xml.py">
+    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2310">
-          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
-            <element signature="e#1501#1981#0" expanded="false" />
-            <element signature="e#2036#2495#0" expanded="false" />
-            <element signature="e#2585#3193#0" expanded="false" />
-            <element signature="e#6511#7507#0" expanded="false" />
-            <element signature="e#7560#8468#0" expanded="false" />
-            <element signature="e#8786#9704#0" expanded="false" />
-            <element signature="e#9837#11397#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
+    <entry file="file://$PROJECT_DIR$/parse_xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0084034" vertical-offset="0" max-vertical-offset="3300">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.17331932" vertical-offset="0" max-vertical-offset="2310">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
-            <element signature="e#37#48#0" expanded="true" />
+            <element signature="e#1531#2011#0" expanded="false" />
+            <element signature="e#2066#2525#0" expanded="false" />
+            <element signature="e#2615#3223#0" expanded="false" />
+            <element signature="e#6541#7537#0" expanded="false" />
+            <element signature="e#7590#8498#0" expanded="false" />
+            <element signature="e#8816#9734#0" expanded="false" />
+            <element signature="e#9867#11427#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -7,9 +7,9 @@ import os
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
-from models.Bayes import Bayes
-from models.random_baseline import Random
-from models.siddharthan import Siddharthan
+from main.eacl.models.Bayes import Bayes
+from main.eacl.models.random_baseline import Random
+from main.eacl.models.siddharthan import Siddharthan
 
 from random import randint, shuffle
 
