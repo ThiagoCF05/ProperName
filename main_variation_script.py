@@ -143,15 +143,16 @@ def run():
                 train_set, test_set = mentions[train], mentions[test]
 
                 # compute the set of features (vocabulary) for the bayes model
-                vocabulary = []
+                vocabulary_content, vocabulary_realization = [], []
                 for mention in train_set:
                     parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
 
                     tokens = prep.process_tokens(mention, parsed, entity, False)
-                    vocabulary.extend(tokens)
+                    vocabulary_content.extend(tokens)
+                    vocabulary_realization.extend(tokens)
 
                 # initialize our official model
-                clf = Bayes(vocabulary, True)
+                clf = Bayes(vocabulary_content, vocabulary_realization, True)
                 # initialize random baseline
                 baseline_random = Random(dbpedia=dbpedia)
                 # initialize Siddharthan baseline

@@ -30,7 +30,7 @@ appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
+evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV3'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
@@ -61,6 +61,46 @@ def init():
         base[entity] = list(set(base[entity]))
 
     return entities_info, base, appositives, dbpedia, vocabulary
+
+# filter 1 toke per discourse feature value for the vocabulary. Overcome lack of resourses
+def filter_voc(entity, vocabulary):
+    result = []
+
+    count = {'np-subj':0, 'np-obj':0, 'subj-det':0, 'givenness_new':0, 'givenness_old':0, 'sentence-givenness_new':0, 'sentence-givenness_old':0}
+    for e in vocabulary:
+        if e != entity:
+            _max = max(count.values())
+
+            f = filter(lambda x: x['syntax'] == 'np-subj', vocabulary[e])[:(_max+1)-count['np-subj']]
+            count['np-subj'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['syntax'] == 'np-obj', vocabulary[e])[:(_max+1)-count['np-obj']]
+            count['np-obj'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['syntax'] == 'subj-det', vocabulary[e])[:(_max+1)-count['subj-det']]
+            count['subj-det'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['givenness'] == 'new', vocabulary[e])[:(_max+1)-count['givenness_new']]
+            count['givenness_new'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['givenness'] == 'old', vocabulary[e])[:(_max+1)-count['givenness_old']]
+            count['givenness_old'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['sentence-givenness'] == 'new', vocabulary[e])[:(_max+1)-count['sentence-givenness_new']]
+            count['sentence-givenness_new'] += len(f)
+            result.extend(f)
+
+            f = filter(lambda x: x['sentence-givenness'] == 'old', vocabulary[e])[:(_max+1)-count['sentence-givenness_old']]
+            count['sentence-givenness_old'] += len(f)
+            result.extend(f)
+
+    return result
+
 
 def bayes_selection(mention, entity, model, k):
     features = {
@@ -116,33 +156,33 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
     # mentions = np.array(references[entity])
 
     # compute the set of features (vocabulary) from other entities
-    general_voc = []
-    for e in vocabulary:
-        if e != entity:
-            general_voc.extend(vocabulary[e])
+    print 'Filter general training set'
+    general_voc = filter_voc(entity, vocabulary)
 
     # compute cross validation
     fold = 1
     kf = KFold(mentions.shape[0], n_folds=10)
     for train, test in kf:
+        print 'Fold', str(fold)
         results[fold] = []
 
         # train and test sets
         train_set, test_set = mentions[train], mentions[test]
 
         # compute the set of features (vocabulary) for the bayes model
-        vocabulary = []
+        content_vocabulary, realization_vocabulary = [], []
         for mention in train_set:
             parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
 
             tokens = prep.process_tokens(mention, parsed, entity, False)
-            vocabulary.extend(tokens)
+            content_vocabulary.extend(tokens)
+            realization_vocabulary.extend(tokens)
 
         # Consider data from other entities in the training set
-        vocabulary.extend(general_voc)
+        content_vocabulary.extend(general_voc)
 
         # initialize our official model
-        clf = Bayes(vocabulary, True)
+        clf = Bayes(content_vocabulary, realization_vocabulary, True)
         # initialize random baseline
         baseline_random = Random(dbpedia=dbpedia)
         # initialize Siddharthan baseline
@@ -221,13 +261,16 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                 group_result = bayes_variation(group_result, form_distribution_k2, test_set_same_features, entity, clf, words, appositive, 'bayes_backoffk2_variation')
                 results[fold].extend(group_result)
         fold = fold + 1
+    print 'Saving results for ', str(entity)
     p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
+    print 10 * '-'
 
 def run():
     if not os.path.exists(evaluation_dir):
         os.makedirs(evaluation_dir)
 
     # filter entities and their references (more than X references and less than Y)
+    print 'Filter entities and their references (more than X references and less than Y)'
     references = prep.filter_entities(50, 0, mention_dir)
 
     # voc contains only the proper names / titles from DBpedia for each entity
@@ -236,8 +279,6 @@ def run():
     # Sort entities and start the process
     entities = vocabulary.keys()
     entities.sort()
-
-    # pool = Pool(5)
 
     print 'Number of entities: ', len(entities)
     for entity in entities:
@@ -256,8 +297,6 @@ def run():
 
             # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
             process_entity(entity, words, np.array(references[entity]), vocabulary, dbpedia, appositive, entity_id)
-    # pool.close()
-    # pool.join()
 
 if __name__ == '__main__':
     run()
