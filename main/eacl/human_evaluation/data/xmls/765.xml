@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<TEXT ID="765">
+<TEXT ID="765" ENTITY="http://en.wikipedia.org/wiki/Diana_Ross">
 	<TITLE>Diana Ross</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
@@ -45,14 +45,14 @@
 			Ross
 		</REFERENCE>
 		<STRING> the most successful female music artist in history due to her success in the United States and United Kingdom for having more hits than any female artist in the charts with a career total of 70 hit singles with her work with the Supremes and as a solo artist. </STRING>
-		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
 			Ross
 		</REFERENCE>
 		<STRING> has sold more than 200 million records worldwide when her releases with the Supremes and as a solo artist are tallied.</STRING>
 	</PARAGRAPH>
 	<PARAGRAPH ID="6">
 		<STRING>In 1988, </STRING>
-		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+		<REFERENCE ID="10" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
 			Ross
 		</REFERENCE>
 		<STRING> was inducted to the Rock and Roll Hall of Fame as member of the Supremes alongside Florence Ballard and Mary Wilson. She is the recipient of the Kennedy Center Honors in 2007. She is a twelve-time Grammy nominee later becoming the recipient of her only Grammy Award to date by being honored the Grammy Lifetime Achievement Award in 2012.</STRING>
