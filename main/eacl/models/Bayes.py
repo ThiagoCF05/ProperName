@@ -65,7 +65,7 @@ class Bayes(object):
             num = sum(map(lambda x: self.clf_content['s_e'][x], f))
 
             if num <= K:
-                f = self.clf['content']['s'].keys()
+                f = self.clf_content['s'].keys()
                 dem = sum(map(lambda x: self.clf_content['s'][x], f))
 
                 f = filter(lambda x: x == s, f)
