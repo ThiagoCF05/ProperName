@@ -199,6 +199,9 @@ titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
 
+xmls_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/'
+write_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'
+
 def init():
     print 'Initializing appositives...'
     appositives = json.load(open(appositives_dir))
@@ -271,13 +274,13 @@ if __name__ == '__main__':
     # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, tested_words, appositives, dbpedia, vocabulary = init()
 
-    xmls = os.listdir('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/')
+    xmls = os.listdir(xmls_dir)
 
-    if not os.path.exists('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'):
-        os.mkdir('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed')
+    if not os.path.exists(write_dir):
+        os.mkdir(write_dir)
 
     for xml in xmls:
-        root = ET.parse(xml)
+        root = ET.parse(os.path.join(xmls_dir, xml))
         entity = root.attrib['ENTITY']
 
         if entity in appositives:
@@ -293,5 +296,5 @@ if __name__ == '__main__':
         content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
         content_vocabulary.extend(general_voc)
 
-        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, xml, '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed')
+        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, xml, write_dir)
         print 10 * '-'
