@@ -271,10 +271,10 @@ if __name__ == '__main__':
     # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, tested_words, appositives, dbpedia, vocabulary = init()
 
-    xmls = os.listdir('data/xmls')
+    xmls = os.listdir('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/')
 
-    if not os.path.exists('data/processed'):
-        os.mkdir('data/processed')
+    if not os.path.exists('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'):
+        os.mkdir('/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed')
 
     for xml in xmls:
         root = ET.parse(xml)
@@ -293,5 +293,5 @@ if __name__ == '__main__':
         content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
         content_vocabulary.extend(general_voc)
 
-        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, xml, 'data/processed')
+        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, xml, '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed')
         print 10 * '-'
