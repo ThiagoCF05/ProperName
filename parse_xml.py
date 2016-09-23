@@ -39,11 +39,12 @@ class HumanEvaluation(object):
         self.entity = root.attrib['ENTITY']
         self.references = map(lambda x: x.attrib, reduce(lambda x, y: x+y, reference_tags))
 
+        print 'R: ', len(self.references)
+
         print 'Generating...'
         self._generate()
 
-        for e in self.results:
-            print e, self.results[e]
+        print 'G: ', len(self.results.keys())
 
         print 'Parsing...'
         new_xml = self._parse(root)
