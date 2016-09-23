@@ -56,7 +56,8 @@ if __name__ == '__main__':
 
     nfiles = 0
     notfound = 0
-    for e in fentities:
+    for i, e in enumerate(fentities):
+        print i, e
         # try:
         entity = filter(lambda x: x['url'] == e, entities)[0]
         mentions = get_mentions.run(os.path.join(parsed_dir, entity['id']), dbpedia[entity['url']])
