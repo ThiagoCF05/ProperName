@@ -44,6 +44,6 @@ if __name__ == '__main__':
         abstracts.append((url, abstract))
 
         with open(os.path.join(abstracts_dir, entity['id']), 'w') as f:
-            f.write(abstract)
+            f.write(abstract.encode('utf-8'))
 
     json.dump(dict(abstracts), open(write_dir, 'w'), indent=4, separators=(',', ': '))

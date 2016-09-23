@@ -114,8 +114,8 @@
       <file leaf-file-name="get_abstracts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/human_evaluation/get_abstracts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38210228" vertical-offset="91" max-vertical-offset="810">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.82954544" vertical-offset="106" max-vertical-offset="810">
+              <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
               <folding>
                 <element signature="e#189#200#0" expanded="true" />
               </folding>
@@ -1476,8 +1476,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/human_evaluation/get_abstracts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38210228" vertical-offset="91" max-vertical-offset="810">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.82954544" vertical-offset="106" max-vertical-offset="810">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
           <folding>
             <element signature="e#189#200#0" expanded="true" />
           </folding>
