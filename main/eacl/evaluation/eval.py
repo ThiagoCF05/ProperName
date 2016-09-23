@@ -271,6 +271,16 @@ def run(std=True):
         general_bayes_backoffk0_no_variation['string'].extend(bayes_backoffk0_no_variation[fold]['string'])
         general_bayes_backoffk0_no_variation['jaccard'].extend(bayes_backoffk0_no_variation[fold]['jaccard'])
 
+        general_bayes_backoffk0_variation['y_real'].extend(bayes_backoffk0_variation[fold]['y_real'])
+        general_bayes_backoffk0_variation['y_pred'].extend(bayes_backoffk0_variation[fold]['y_pred'])
+        general_bayes_backoffk0_variation['string'].extend(bayes_backoffk0_variation[fold]['string'])
+        general_bayes_backoffk0_variation['jaccard'].extend(bayes_backoffk0_variation[fold]['jaccard'])
+
+        general_bayes_backoffk2_no_variation['y_real'].extend(bayes_backoffk2_no_variation[fold]['y_real'])
+        general_bayes_backoffk2_no_variation['y_pred'].extend(bayes_backoffk2_no_variation[fold]['y_pred'])
+        general_bayes_backoffk2_no_variation['string'].extend(bayes_backoffk2_no_variation[fold]['string'])
+        general_bayes_backoffk2_no_variation['jaccard'].extend(bayes_backoffk2_no_variation[fold]['jaccard'])
+
         general_bayes_backoffk2_variation['y_real'].extend(bayes_backoffk2_variation[fold]['y_real'])
         general_bayes_backoffk2_variation['y_pred'].extend(bayes_backoffk2_variation[fold]['y_pred'])
         general_bayes_backoffk2_variation['string'].extend(bayes_backoffk2_variation[fold]['string'])
