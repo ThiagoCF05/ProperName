@@ -224,16 +224,16 @@ def run(std=True):
     _random, bayes_random, bayes_no_variation, bayes_variation, bayes_backoffk0_no_variation, bayes_backoffk0_variation, bayes_backoffk2_no_variation, bayes_backoffk2_variation, siddharthan, deemter  = get_values(entities)
 
 
-    general_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_random = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_no_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_backoffk0_no_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_backoffk0_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_backoffk2_no_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_bayes_backoffk2_variation = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_siddharthan = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
-    general_deemter = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
+    general_random = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_random = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_no_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_backoffk0_no_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_backoffk0_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_backoffk2_no_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_bayes_backoffk2_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_siddharthan = {'accuracy':[], 'string':[], 'jaccard':[]}
+    general_deemter = {'accuracy':[], 'string':[], 'jaccard':[]}
 
     for fold in bayes_random:
         general_random['accuracy'].append(accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred']))
