@@ -112,13 +112,13 @@
       <file leaf-file-name="parse_xml.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parse_xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7169811" vertical-offset="2676" max-vertical-offset="3630">
-              <caret line="298" column="13" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.51995796" vertical-offset="705" max-vertical-offset="3660">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
-                <element signature="e#1650#2130#0" expanded="false" />
-                <element signature="e#2185#2644#0" expanded="false" />
-                <element signature="e#2734#3342#0" expanded="false" />
-                <element signature="e#9149#10067#0" expanded="false" />
+                <element signature="e#1631#2111#0" expanded="false" />
+                <element signature="e#2166#2625#0" expanded="false" />
+                <element signature="e#2715#3323#0" expanded="false" />
+                <element signature="e#9130#10048#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -948,7 +948,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="-143" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -965,7 +965,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14041515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14041515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1478,13 +1478,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parse_xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7169811" vertical-offset="2676" max-vertical-offset="3630">
-          <caret line="298" column="13" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.51995796" vertical-offset="705" max-vertical-offset="3660">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
-            <element signature="e#1650#2130#0" expanded="false" />
-            <element signature="e#2185#2644#0" expanded="false" />
-            <element signature="e#2734#3342#0" expanded="false" />
-            <element signature="e#9149#10067#0" expanded="false" />
+            <element signature="e#1631#2111#0" expanded="false" />
+            <element signature="e#2166#2625#0" expanded="false" />
+            <element signature="e#2715#3323#0" expanded="false" />
+            <element signature="e#9130#10048#0" expanded="false" />
           </folding>
         </state>
       </provider>

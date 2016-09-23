@@ -24,7 +24,6 @@ class HumanEvaluation(object):
         self.appositive = appositive
         self.xml = xml
         self.write_dir = write_dir
-        self.run()
 
         self.references = []
         self.results = {}
@@ -294,14 +293,17 @@ if __name__ == '__main__':
         root = root.getroot()
         entity = root.attrib['ENTITY']
 
+        print 'Get appsotive...'
         if entity in appositives:
             appositive = appositives[entity]
         else:
             appositive = ''
 
+        print 'Get proper nouns...'
         # Get proper nouns to be tested whether should be included in the reference
         words = tested_words[entity]
 
+        print 'Get training and test vocs...'
         general_voc = filter_voc(entity, vocabulary)
         # compute the set of features (vocabulary) for the bayes model
         content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
