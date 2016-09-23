@@ -112,15 +112,15 @@
       <file leaf-file-name="parse_xml.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parse_xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2289916" vertical-offset="337" max-vertical-offset="2340">
-              <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.43067226" vertical-offset="1060" max-vertical-offset="3435">
+              <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
               <folding>
-                <element signature="e#1526#6652#0" expanded="false" />
+                <element signature="e#37#48#0" expanded="true" />
                 <element signature="e#1636#2116#0" expanded="false" />
                 <element signature="e#2171#2630#0" expanded="false" />
                 <element signature="e#2720#3328#0" expanded="false" />
-                <element signature="e#6694#7689#0" expanded="false" />
-                <element signature="e#9137#10055#0" expanded="false" />
+                <element signature="e#6690#7685#0" expanded="false" />
+                <element signature="e#9244#10162#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1502,15 +1502,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parse_xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2289916" vertical-offset="337" max-vertical-offset="2340">
-          <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.43067226" vertical-offset="1060" max-vertical-offset="3435">
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
           <folding>
-            <element signature="e#1526#6652#0" expanded="false" />
+            <element signature="e#37#48#0" expanded="true" />
             <element signature="e#1636#2116#0" expanded="false" />
             <element signature="e#2171#2630#0" expanded="false" />
             <element signature="e#2720#3328#0" expanded="false" />
-            <element signature="e#6694#7689#0" expanded="false" />
-            <element signature="e#9137#10055#0" expanded="false" />
+            <element signature="e#6690#7685#0" expanded="false" />
+            <element signature="e#9244#10162#0" expanded="false" />
           </folding>
         </state>
       </provider>

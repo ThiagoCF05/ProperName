@@ -132,11 +132,11 @@ class HumanEvaluation(object):
 
                     result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
-                    result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'reference': bayes_result[0][0] }
+                    result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result[0][0] }
 
-                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0][0], 'reference': bayes_backoffk0_result[0][0] }
+                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
 
-                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0][0], 'reference': bayes_backoffk2_result[0][0] }
+                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
 
                     group_result.append(result)
 
@@ -146,7 +146,7 @@ class HumanEvaluation(object):
                 group_result = bayes_variation(group_result, form_distribution_k2, same_features, 'bayes_backoffk2_variation')
 
                 for result in group_result:
-                    self.results[result['ID']]= result
+                    self.results[int(result['ID'])]= result
 
     def _parse(self, text_tag):
         new_tag = ET.fromstring("<?xml version=\"1.0\" encoding=\"utf-8\"?><TEXT></TEXT>")
@@ -179,25 +179,26 @@ class HumanEvaluation(object):
 
     def _parse_reference(self, reference):
         new_reference_tag = ET.Element('REFERENCE')
-        new_reference_tag.attrib = reference.attrib
+        new_reference_tag.attrib = copy.copy(reference.attrib)
 
         models = ['random', 'siddharthan', \
                   'bayes_no_variation', 'bayes_variation', \
                   'bayes_backoffk0_no_variation', 'bayes_backoffk0_variation', \
                   'bayes_backoffk2_no_variation', 'bayes_backoffk2_variation']
 
-        reference_id = new_reference_tag.attrib['ID']
+        reference_id = int(new_reference_tag.attrib['ID'])
 
         for model in models:
             refex = ET.SubElement(new_reference_tag, 'REFEX')
             refex.attrib['MODEL']= model
-            refex.attrib['FORM'] = self.results[reference_id][model]['label']
+            refex.attrib['FORM'] = self.results[reference_id][model]['label'][0]
+            refex.attrib['PROB'] = self.results[reference_id][model]['label'][1]
             refex.text = self.results[reference_id][model]['reference']
 
         refex = ET.SubElement(new_reference_tag, 'REFEX')
         refex.attrib['MODEL']= 'original'
         refex.attrib['FORM'] = ''
-        refex.text = reference.text
+        refex.text = copy.copy(reference.text)
 
         return new_reference_tag
 
