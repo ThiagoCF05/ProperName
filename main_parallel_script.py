@@ -79,23 +79,23 @@ def filter_voc(entity, vocabulary):
             count['np-obj'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['syntax'] == 'subj-det', vocabulary[e])[:(_max+1)-count['subj-det']]
+            f = filter(lambda x: x['syntax'] == 'subj-det', vocabulary[e])[:(_max+1)-count['subj-det'])]
             count['subj-det'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['givenness'] == 'new', vocabulary[e])[:(_max+1)-count['givenness_new']]
+            f = filter(lambda x: x['givenness'] == 'new', vocabulary[e])[:(_max+1)-len(count['givenness_new'])]
             count['givenness_new'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['givenness'] == 'old', vocabulary[e])[:(_max+1)-count['givenness_old']]
+            f = filter(lambda x: x['givenness'] == 'old', vocabulary[e])[:(_max+1)-len(count['givenness_old'])]
             count['givenness_old'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['sentence-givenness'] == 'new', vocabulary[e])[:(_max+1)-count['sentence-givenness_new']]
+            f = filter(lambda x: x['sentence-givenness'] == 'new', vocabulary[e])[:(_max+1)-len(count['sentence-givenness_new'])]
             count['sentence-givenness_new'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['sentence-givenness'] == 'old', vocabulary[e])[:(_max+1)-count['sentence-givenness_old']]
+            f = filter(lambda x: x['sentence-givenness'] == 'old', vocabulary[e])[:(_max+1)-len(count['sentence-givenness_old'])]
             count['sentence-givenness_old'] += len(f)
             result.extend(f)
 
