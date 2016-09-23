@@ -285,6 +285,7 @@ if __name__ == '__main__':
 
     for xml in xmls:
         root = ET.parse(os.path.join(xmls_dir, xml))
+        root = root.getroot()
         entity = root.attrib['ENTITY']
 
         if entity in appositives:
