@@ -338,16 +338,16 @@ def run(std=True):
 
         print 'GENERAL'
         print 'Labels: '
-        print 'Random: ', accuracy_score(general_random['y_real'], general_random['y_pred'])
-        print 'Siddharthan: ', accuracy_score(general_siddharthan['y_real'], general_siddharthan['y_pred'])
-        print 'Deemter: ', accuracy_score(general_deemter['y_real'], general_deemter['y_pred'])
-        print 'Bayes Random: ', accuracy_score(general_bayes_random['y_real'], general_bayes_random['y_pred'])
-        print 'Bayes No Variation: ', accuracy_score(general_bayes_no_variation['y_real'], general_bayes_no_variation['y_pred'])
-        print 'Bayes Variation: ', accuracy_score(general_bayes_variation['y_real'], general_bayes_variation['y_pred'])
-        print 'Bayes Backoff K0 No Variation: ', accuracy_score(general_bayes_backoffk0_no_variation['y_real'], general_bayes_backoffk0_no_variation['y_pred'])
-        print 'Bayes Backoff K0 Variation: ', accuracy_score(general_bayes_backoffk0_variation['y_real'], general_bayes_backoffk0_variation['y_pred'])
-        print 'Bayes Backoff K2 No Variation: ', accuracy_score(general_bayes_backoffk2_no_variation['y_real'], general_bayes_backoffk2_no_variation['y_pred'])
-        print 'Bayes Backoff K2 Variation: ', accuracy_score(general_bayes_backoffk2_variation['y_real'], general_bayes_backoffk2_variation['y_pred'])
+        print 'Random: ', np.mean(general_random['accuracy'])
+        print 'Siddharthan: ', np.mean(general_siddharthan['accuracy'])
+        print 'Deemter: ', np.mean(general_deemter['accuracy'])
+        print 'Bayes Random: ', np.mean(general_bayes_random['accuracy'])
+        print 'Bayes No Variation: ', np.mean(general_bayes_no_variation['accuracy'])
+        print 'Bayes Variation: ', np.mean(general_bayes_variation['accuracy'])
+        print 'Bayes Backoff K0 No Variation: ', np.mean(general_bayes_backoffk0_no_variation['accuracy'])
+        print 'Bayes Backoff K0 Variation: ', np.mean(general_bayes_backoffk0_variation['accuracy'])
+        print 'Bayes Backoff K2 No Variation: ', np.mean(general_bayes_backoffk2_no_variation['accuracy'])
+        print 'Bayes Backoff K2 Variation: ', np.mean(general_bayes_backoffk2_variation['accuracy'])
         print 20 * '-'
         print 'String Distance: '
         print 'Random: ', mean_confidence_interval(general_random['string']), bootstrap.ci(general_random['string'])
