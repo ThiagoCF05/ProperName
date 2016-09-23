@@ -67,7 +67,7 @@ if __name__ == '__main__':
     entities = json.load(open(entities_dir))
     abstracts = []
 
-    fentities = filter_entities(50, mention_dir)
+    fentities = filter_entities(50, 0, mention_dir)
 
     for e in fentities:
         entity = filter(lambda x: x['url'] == e, entities)
