@@ -388,4 +388,4 @@ def run(std=True):
     # write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
-    run(False)
+    run(True)
