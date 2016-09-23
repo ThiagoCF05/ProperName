@@ -124,8 +124,8 @@
       <file leaf-file-name="get_mentions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/get_mentions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0440341" vertical-offset="45" max-vertical-offset="1275">
-              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.87215906" vertical-offset="571" max-vertical-offset="1275">
+              <caret line="79" column="31" selection-start-line="71" selection-start-column="20" selection-end-line="79" selection-end-column="31" />
               <folding>
                 <element signature="e#170#179#0" expanded="true" />
               </folding>
@@ -1489,8 +1489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/get_mentions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0440341" vertical-offset="45" max-vertical-offset="1275">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.87215906" vertical-offset="571" max-vertical-offset="1275">
+          <caret line="79" column="31" selection-start-line="71" selection-start-column="20" selection-end-line="79" selection-end-column="31" />
           <folding>
             <element signature="e#170#179#0" expanded="true" />
           </folding>
