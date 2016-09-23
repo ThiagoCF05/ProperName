@@ -32,6 +32,7 @@ class HumanEvaluation(object):
         self.run()
 
     def run(self):
+        print 'Get references...'
         root = ET.parse(self.xml)
         root = root.getroot()
         reference_tags = map(lambda paragraph: paragraph.findall('REFERENCE'), root.findall('PARAGRAPH'))
@@ -39,9 +40,13 @@ class HumanEvaluation(object):
         self.entity = root.attrib['ENTITY']
         self.references = map(lambda x: x.attrib, reduce(lambda x, y: x+y, reference_tags))
 
+        print 'Generating...'
         self._generate()
+
+        print 'Parsing...'
         new_xml = self._parse(root)
 
+        print 'Writing...'
         with open(os.path.join(self.write_dir, root.attrib['ID']+'.xml')) as f:
             f.write(new_xml.encode('utf-8'))
 
@@ -284,6 +289,7 @@ if __name__ == '__main__':
         os.mkdir(write_dir)
 
     for xml in xmls:
+        print xml
         root = ET.parse(os.path.join(xmls_dir, xml))
         root = root.getroot()
         entity = root.attrib['ENTITY']
@@ -301,5 +307,5 @@ if __name__ == '__main__':
         content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
         content_vocabulary.extend(general_voc)
 
-        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, xml, write_dir)
+        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, os.path.join(xmls_dir, xml), write_dir)
         print 10 * '-'
