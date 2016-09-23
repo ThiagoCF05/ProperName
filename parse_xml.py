@@ -193,7 +193,7 @@ class HumanEvaluation(object):
             refex = ET.SubElement(new_reference_tag, 'REFEX')
             refex.attrib['MODEL']= model
             refex.attrib['FORM'] = self.results[reference_id][model]['label'][0]
-            refex.attrib['PROB'] = self.results[reference_id][model]['label'][1]
+            refex.attrib['PROB'] = str(round(self.results[reference_id][model]['label'][1], 6))
             refex.text = self.results[reference_id][model]['reference']
 
         refex = ET.SubElement(new_reference_tag, 'REFEX')
