@@ -42,6 +42,9 @@ class HumanEvaluation(object):
         print 'Generating...'
         self._generate()
 
+        for e in self.results:
+            print e, self.results[e]
+
         print 'Parsing...'
         new_xml = self._parse(root)
 
@@ -193,7 +196,7 @@ class HumanEvaluation(object):
             refex = ET.SubElement(new_reference_tag, 'REFEX')
             refex.attrib['MODEL']= model
             refex.attrib['FORM'] = self.results[reference_id][model]['label'][0]
-            refex.attrib['PROB'] = str(round(self.results[reference_id][model]['label'][1], 6))
+            # refex.attrib['PROB'] = str(round(self.results[reference_id][model]['label'][1], 6))
             refex.text = self.results[reference_id][model]['reference']
 
         refex = ET.SubElement(new_reference_tag, 'REFEX')
@@ -207,7 +210,7 @@ fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
-vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
+vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc_test.json'
 
 xmls_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/'
 write_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'
