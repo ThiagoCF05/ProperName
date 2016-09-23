@@ -17,6 +17,7 @@ from corpus_builder import get_mentions
 
 parsed_dir = "/roaming/tcastrof/names/eacl/evaluation/extrinsic/parsed"
 mentions_dir = "/roaming/tcastrof/names/eacl/evaluation/extrinsic/mentions"
+m_dir = '/roaming/tcastrof/names/eacl/mentions'
 
 # filter entities with more than N mentions and process the mentions
 def filter_entities(N_min, N_max, mention_dir):
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     dbpedia = json.load(open(utilities.dbpedia_dir))
     entities = json.load(open(utilities.entities_dir))
 
-    fentities = filter_entities(50, 0, mentions_dir)
+    fentities = filter_entities(50, 0, m_dir)
 
     if not os.path.exists(mentions_dir):
         os.makedirs(mentions_dir)
