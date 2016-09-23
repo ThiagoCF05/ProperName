@@ -134,9 +134,9 @@ class HumanEvaluation(object):
 
                     result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'reference': bayes_result[0][0] }
 
-                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
+                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0][0], 'reference': bayes_backoffk0_result[0][0] }
 
-                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
+                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0][0], 'reference': bayes_backoffk2_result[0][0] }
 
                     group_result.append(result)
 
