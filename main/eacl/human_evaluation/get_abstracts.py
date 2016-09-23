@@ -70,7 +70,7 @@ if __name__ == '__main__':
     fentities = filter_entities(50, 0, mention_dir)
 
     for e in fentities:
-        entity = filter(lambda x: x['url'] == e, entities)
+        entity = filter(lambda x: x['url'] == e, entities)[0]
         url, abstract = get_abstract(entity)
         abstracts.append((url, abstract))
 
