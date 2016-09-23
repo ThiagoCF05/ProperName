@@ -79,28 +79,27 @@ def filter_voc(entity, vocabulary):
             count['np-obj'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['syntax'] == 'subj-det', vocabulary[e])[:(_max+1)-count['subj-det'])]
+            f = filter(lambda x: x['syntax'] == 'subj-det', vocabulary[e])[:(_max+1)-count['subj-det']]
             count['subj-det'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['givenness'] == 'new', vocabulary[e])[:(_max+1)-len(count['givenness_new'])]
+            f = filter(lambda x: x['givenness'] == 'new', vocabulary[e])[:(_max+1)-count['givenness_new']]
             count['givenness_new'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['givenness'] == 'old', vocabulary[e])[:(_max+1)-len(count['givenness_old'])]
+            f = filter(lambda x: x['givenness'] == 'old', vocabulary[e])[:(_max+1)-count['givenness_old']]
             count['givenness_old'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['sentence-givenness'] == 'new', vocabulary[e])[:(_max+1)-len(count['sentence-givenness_new'])]
+            f = filter(lambda x: x['sentence-givenness'] == 'new', vocabulary[e])[:(_max+1)-count['sentence-givenness_new']]
             count['sentence-givenness_new'] += len(f)
             result.extend(f)
 
-            f = filter(lambda x: x['sentence-givenness'] == 'old', vocabulary[e])[:(_max+1)-len(count['sentence-givenness_old'])]
+            f = filter(lambda x: x['sentence-givenness'] == 'old', vocabulary[e])[:(_max+1)-count['sentence-givenness_old']]
             count['sentence-givenness_old'] += len(f)
             result.extend(f)
 
     return result
-
 
 def bayes_selection(mention, entity, model, k):
     features = {
@@ -115,9 +114,6 @@ def bayes_selection(mention, entity, model, k):
     else:
         prob = model.select_content(features, entity)
     return prob
-
-def bayes_realization(form, mention, entity, model, words, appositive):
-    return model.realizeWithWords(form, entity, mention['syntax'], words, appositive)
 
 # check the feature values already processed
 def get_features_visited(mention, features):
@@ -143,7 +139,7 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
         form = filter(lambda x: distribution[x] == max(distribution.values()), distribution.keys())[0]
 
         label = filter(lambda x: x[0] == form, form_distribution)[0]
-        realizer = bayes_realization(form, test_set_same_features[i], entity, model, words, appositive)
+        realizer = model.realizeWithWords(form, entity, test_set_same_features[i]['syntax'], words, appositive)
         references[i][name] = { 'label': label, 'reference': realizer }
 
         distribution[form] -= 1
@@ -208,6 +204,18 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                 form_distribution_k0 = bayes_selection(mention, entity, clf, 0)
                 form_distribution_k2 = bayes_selection(mention, entity, clf, 2)
 
+                # Siddharthan model
+                siddharthan_result = baseline1.run(entity, mention['givenness'], mention['syntax'])
+
+                # Bayes model with no variation (Realization with the most likely referential form)
+                bayes_result = clf.realizeWithWords(form_distribution[0][0], entity, mention['syntax'], words, appositive)
+
+                # Bayes backoff model with no variation (Realization with the most likely referential form)
+                bayes_backoffk0_result = clf.realizeWithWords(form_distribution_k0[0][0], entity, mention['syntax'], words, appositive)
+
+                # Bayes backoff model with no variation (Realization with the most likely referential form)
+                bayes_backoffk2_result = clf.realizeWithWords(form_distribution_k2[0][0], entity, mention['syntax'], words, appositive)
+
                 # Generate proper names for each group of features
                 group_result = []
                 for filtered_mention in test_set_same_features:
@@ -227,30 +235,22 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                     r = baseline_random.run(entity, filtered_mention['syntax'])
                     result['random'] = { 'label': r[0], 'reference': r[1] }
 
-                    # Siddharthan model
-                    r = baseline1.run(entity, filtered_mention['givenness'], filtered_mention['syntax'])
-                    result['siddharthan'] = { 'label': r[0], 'reference': r[1] }
+                    result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
                     # Deemter model
                     ms = json.load(open(os.path.join(mention_dir, filtered_mention['fname'])))[entity]
                     r = baseline2.run(entity, filtered_mention, ms, 3, filtered_mention['syntax'])
                     result['deemter'] = { 'label': r[0], 'reference': r[1] }
 
-                    # Bayes model with no variation (Realization with the most likely referential form)
-                    realizer = bayes_realization(form_distribution[0][0], filtered_mention, entity, clf, words, appositive)
-                    result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': realizer }
+                    result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result }
 
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    realizer = bayes_realization(form_distribution_k0[0][0], filtered_mention, entity, clf, words, appositive)
-                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': realizer }
+                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result }
 
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    realizer = bayes_realization(form_distribution_k2[0][0], filtered_mention, entity, clf, words, appositive)
-                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': realizer }
+                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result }
 
                     # Bayes model with random choice of proper name form
                     index = randint(0, len(form_distribution)-1)
-                    realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
+                    realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
                     result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
                     group_result.append(result)

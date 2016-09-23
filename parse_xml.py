@@ -105,6 +105,18 @@ class HumanEvaluation(object):
                 form_distribution_k0 = bayes_selection(mention, 0)
                 form_distribution_k2 = bayes_selection(mention, 2)
 
+                # Siddharthan model
+                siddharthan_result = self.siddharthan.run(self.entity, mention['GIVENNESS'], mention['SYNCAT'])
+
+                # Bayes model with no variation (Realization with the most likely referential form)
+                bayes_result = self.bayes.realizeWithWords(form_distribution[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+
+                # Bayes backoff model with no variation (Realization with the most likely referential form)
+                bayes_backoffk0_result = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+
+                # Bayes backoff model with no variation (Realization with the most likely referential form)
+                bayes_backoffk2_result = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+
                 # Generate proper names for each group of features
                 group_result = []
                 for filtered_mention in same_features:
@@ -114,21 +126,13 @@ class HumanEvaluation(object):
                     r = self.random_baseline.run(self.entity, filtered_mention['SYNCAT'])
                     result['random'] = { 'label': r[0], 'reference': r[1] }
 
-                    # Siddharthan model
-                    r = self.siddharthan.run(self.entity, filtered_mention['GIVENNESS'], filtered_mention['SYNCAT'])
-                    result['siddharthan'] = { 'label': r[0], 'reference': r[1] }
+                    result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
-                    # Bayes model with no variation (Realization with the most likely referential form)
-                    realizer = self.bayes.realizeWithWords(form_distribution[0][0], self.entity, filtered_mention['SYNCAT'], self.words, self.appositive)
-                    result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'reference': realizer[0][0] }
+                    result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'reference': bayes_result[0][0] }
 
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    realizer = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, filtered_mention['SYNCAT'], self.words, self.appositive)
-                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': realizer[0][0] }
+                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
 
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    realizer = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, filtered_mention['SYNCAT'], self.words, self.appositive)
-                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': realizer[0][0] }
+                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
 
                     group_result.append(result)
 
