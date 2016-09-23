@@ -39,12 +39,8 @@ class HumanEvaluation(object):
         self.entity = root.attrib['ENTITY']
         self.references = map(lambda x: x.attrib, reduce(lambda x, y: x+y, reference_tags))
 
-        print 'R: ', len(self.references)
-
         print 'Generating...'
         self._generate()
-
-        print 'G: ', len(self.results.keys())
 
         print 'Parsing...'
         new_xml = self._parse(root)
@@ -194,7 +190,7 @@ fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
-vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc_test.json'
+vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
 
 xmls_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/'
 write_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'
@@ -272,6 +268,7 @@ if __name__ == '__main__':
     entities_info, tested_words, appositives, dbpedia, vocabulary = init()
 
     xmls = os.listdir(xmls_dir)
+    xmls = filter(lambda x: x != '.DS_Store', xmls)
 
     if not os.path.exists(write_dir):
         os.mkdir(write_dir)
