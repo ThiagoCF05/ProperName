@@ -68,7 +68,7 @@ class HumanEvaluation(object):
 
                 realizer = self.bayes.realizeWithWords(form, self.entity, mentions[i]['SYNCAT'], self.words, self.appositive)
                 label = filter(lambda x: x[0] == form, form_distribution)[0]
-                references[i][name] = { 'label': label, 'reference': realizer[0][0] }
+                references[i][name] = { 'label': form, 'prob': label[1], 'reference': realizer[0][0] }
 
                 distribution[form] -= 1
             return references
@@ -116,11 +116,11 @@ class HumanEvaluation(object):
 
                         result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
-                        result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result[0][0] }
+                        result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'prob': form_distribution[0][1], 'reference': bayes_result[0][0] }
 
-                        result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
+                        result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'prob': form_distribution_k0[0][1], 'reference': bayes_backoffk0_result[0][0] }
 
-                        result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
+                        result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'prob': form_distribution_k2[0][1], 'reference': bayes_backoffk2_result[0][0] }
 
                         group_result.append(result)
 
@@ -175,8 +175,8 @@ class HumanEvaluation(object):
         for model in models:
             refex = ET.SubElement(new_reference_tag, 'REFEX')
             refex.attrib['MODEL']= model
-            refex.attrib['FORM'] = self.results[reference_id][model]['label'][0]
-            # refex.attrib['PROB'] = str(round(self.results[reference_id][model]['label'][1], 6))
+            refex.attrib['FORM'] = self.results[reference_id][model]['label']
+            refex.attrib['PROB'] = str(round(self.results[reference_id][model]['prob'], 6))
             refex.text = self.results[reference_id][model]['reference']
 
         refex = ET.SubElement(new_reference_tag, 'REFEX')
