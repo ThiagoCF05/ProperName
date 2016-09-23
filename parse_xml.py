@@ -192,7 +192,7 @@ class HumanEvaluation(object):
             refex = ET.SubElement(new_reference_tag, 'REFEX')
             refex.attrib['MODEL']= model
             refex.attrib['FORM'] = self.results[reference_id][model]['label']
-            refex.text = self.references[reference_id][model]['reference']
+            refex.text = self.results[reference_id][model]['reference']
 
         refex = ET.SubElement(new_reference_tag, 'REFEX')
         refex.attrib['MODEL']= 'original'
