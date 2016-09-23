@@ -54,28 +54,7 @@ class HumanEvaluation(object):
             f.write(new_xml.encode('utf-8'))
 
     def _generate(self):
-        # check the feature values already processed
-        def get_features_visited(mention, features):
-            result = copy.copy(features)
-
-            if ('GIVENNESS', mention['GIVENNESS']) not in result:
-                result.append(('GIVENNESS', mention['GIVENNESS']))
-
-            if ('SENTENCE-GIVENNESS', mention['SENTENCE-GIVENNESS']) not in result:
-                result.append(('SENTENCE-GIVENNESS', mention['SENTENCE-GIVENNESS']))
-
-            if ('SYNCAT', mention['SYNCAT']) not in result:
-                result.append(('SYNCAT', mention['SYNCAT']))
-            return result
-
-        def bayes_selection(mention, k):
-            _features = {
-                # 's_e': mention['label'],
-                'discourse_se': mention['GIVENNESS'],
-                'sentence_se': mention['SENTENCE-GIVENNESS'],
-                'syntax_se': mention['SYNCAT']
-            }
-
+        def bayes_selection(_features, k):
             if k != None:
                 prob = self.bayes.select_content_backoff(_features, self.entity, k)
             else:
@@ -98,61 +77,64 @@ class HumanEvaluation(object):
                 distribution[form] -= 1
             return references
 
-        features = []
-        for mention in self.references:
-            aux = get_features_visited(mention, features)
-            if aux != features:
-                features = copy.copy(aux)
-                print features
+        for _givenness in ['new', 'old']:
+            for _sgivenness in ['new', 'old']:
+                for _syntax in ['np-subj', 'np-obj', 'subj-det']:
+                    # Group proper name references from the test fold by feature values
+                    same_features = filter(lambda x: x['GIVENNESS'] == _givenness \
+                                                              and x['SENTENCE-GIVENNESS'] == _sgivenness \
+                                                              and x['SYNCAT'] == _syntax, self.references)
 
-                # Group proper name references from the test fold by feature values
-                same_features = filter(lambda x: x['GIVENNESS'] == mention['GIVENNESS'] \
-                                                          and x['SENTENCE-GIVENNESS'] == mention['SENTENCE-GIVENNESS'] \
-                                                          and x['SYNCAT'] == mention['SYNCAT'], self.references)
+                    _features = {
+                        # 's_e': mention['label'],
+                        'discourse_se': _givenness,
+                        'sentence_se': _sgivenness,
+                        'syntax_se': _syntax
+                    }
 
-                # Bayes model selection
-                form_distribution = bayes_selection(mention, None)
-                form_distribution_k0 = bayes_selection(mention, 0)
-                form_distribution_k2 = bayes_selection(mention, 2)
+                    # Bayes model selection
+                    form_distribution = bayes_selection(_features, None)
+                    form_distribution_k0 = bayes_selection(_features, 0)
+                    form_distribution_k2 = bayes_selection(_features, 2)
 
-                # Siddharthan model
-                siddharthan_result = self.siddharthan.run(self.entity, mention['GIVENNESS'], mention['SYNCAT'])
+                    # Siddharthan model
+                    siddharthan_result = self.siddharthan.run(self.entity, _givenness, _syntax)
 
-                # Bayes model with no variation (Realization with the most likely referential form)
-                bayes_result = self.bayes.realizeWithWords(form_distribution[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+                    # Bayes model with no variation (Realization with the most likely referential form)
+                    bayes_result = self.bayes.realizeWithWords(form_distribution[0][0], self.entity, _syntax, self.words, self.appositive)
 
-                # Bayes backoff model with no variation (Realization with the most likely referential form)
-                bayes_backoffk0_result = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+                    # Bayes backoff model with no variation (Realization with the most likely referential form)
+                    bayes_backoffk0_result = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, _syntax, self.words, self.appositive)
 
-                # Bayes backoff model with no variation (Realization with the most likely referential form)
-                bayes_backoffk2_result = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, mention['SYNCAT'], self.words, self.appositive)
+                    # Bayes backoff model with no variation (Realization with the most likely referential form)
+                    bayes_backoffk2_result = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, _syntax, self.words, self.appositive)
 
-                # Generate proper names for each group of features
-                group_result = []
-                for filtered_mention in same_features:
-                    result = {'ID': filtered_mention['ID']}
+                    # Generate proper names for each group of features
+                    group_result = []
+                    for filtered_mention in same_features:
+                        result = {'ID': filtered_mention['ID']}
 
-                    # Random model
-                    r = self.random_baseline.run(self.entity, filtered_mention['SYNCAT'])
-                    result['random'] = { 'label': r[0], 'reference': r[1] }
+                        # Random model
+                        r = self.random_baseline.run(self.entity, filtered_mention['SYNCAT'])
+                        result['random'] = { 'label': r[0], 'reference': r[1] }
 
-                    result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
+                        result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
-                    result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result[0][0] }
+                        result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result[0][0] }
 
-                    result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
+                        result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result[0][0] }
 
-                    result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
+                        result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result[0][0] }
 
-                    group_result.append(result)
+                        group_result.append(result)
 
-                # Generate proper names with individual variation in the for choice
-                group_result = bayes_variation(group_result, form_distribution, same_features, 'bayes_variation')
-                group_result = bayes_variation(group_result, form_distribution_k0, same_features, 'bayes_backoffk0_variation')
-                group_result = bayes_variation(group_result, form_distribution_k2, same_features, 'bayes_backoffk2_variation')
+                    # Generate proper names with individual variation in the for choice
+                    group_result = bayes_variation(group_result, form_distribution, same_features, 'bayes_variation')
+                    group_result = bayes_variation(group_result, form_distribution_k0, same_features, 'bayes_backoffk0_variation')
+                    group_result = bayes_variation(group_result, form_distribution_k2, same_features, 'bayes_backoffk2_variation')
 
-                for result in group_result:
-                    self.results[int(result['ID'])]= result
+                    for result in group_result:
+                        self.results[int(result['ID'])]= result
 
     def _parse(self, text_tag):
         new_tag = ET.fromstring("<?xml version=\"1.0\" encoding=\"utf-8\"?><TEXT></TEXT>")
