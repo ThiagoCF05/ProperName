@@ -8,7 +8,6 @@ Description:
     Appliying Individual Variation
 """
 
-import copy
 import cPickle as p
 import json
 import numpy as np
