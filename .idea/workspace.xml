@@ -144,8 +144,8 @@
       <file leaf-file-name="eval.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/evaluation/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69713074" vertical-offset="4849" max-vertical-offset="5790">
-              <caret line="377" column="60" selection-start-line="377" selection-start-column="60" selection-end-line="377" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.20722635" vertical-offset="0" max-vertical-offset="5805">
+              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -1526,8 +1526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/evaluation/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69713074" vertical-offset="4849" max-vertical-offset="5790">
-          <caret line="377" column="60" selection-start-line="377" selection-start-column="60" selection-end-line="377" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.20722635" vertical-offset="0" max-vertical-offset="5805">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding />
         </state>
       </provider>
