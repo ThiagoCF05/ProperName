@@ -103,6 +103,7 @@ class HumanEvaluation(object):
             aux = get_features_visited(mention, features)
             if aux != features:
                 features = copy.copy(aux)
+                print features
 
                 # Group proper name references from the test fold by feature values
                 same_features = filter(lambda x: x['GIVENNESS'] == mention['GIVENNESS'] \
