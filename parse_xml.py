@@ -88,7 +88,8 @@ class HumanEvaluation(object):
                 form = filter(lambda x: distribution[x] == max(distribution.values()), distribution.keys())[0]
 
                 realizer = self.bayes.realizeWithWords(form, self.entity, mentions[i]['SYNCAT'], self.words, self.appositive)
-                references[i][name] = { 'label': form, 'reference': realizer[0][0] }
+                label = filter(lambda x: x[0] == form, form_distribution)[0]
+                references[i][name] = { 'label': label, 'reference': realizer[0][0] }
 
                 distribution[form] -= 1
             return references
@@ -294,7 +295,7 @@ if __name__ == '__main__':
         root = root.getroot()
         entity = root.attrib['ENTITY']
 
-        print 'Get appsotive...'
+        print 'Get appositive...'
         if entity in appositives:
             appositive = appositives[entity]
         else:
