@@ -170,7 +170,7 @@ class HumanEvaluation(object):
                     new_elem = ET.SubElement(new_paragraph_tag, 'STRING')
                     new_elem.text = elem.text
                 else:
-                    new_paragraph_tag.append(self.process_reference(elem))
+                    new_paragraph_tag.append(self._parse_reference(elem))
 
         rough_string = ET.tostring(new_tag, 'utf-8')
         reparsed = minidom.parseString(rough_string)
