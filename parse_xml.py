@@ -4,6 +4,7 @@ import copy
 import json
 import os
 
+import main.eacl.preprocessing as prep
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as minidom
 
@@ -192,7 +193,8 @@ fentities = '/roaming/tcastrof/names/eacl/entities.json'
 titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-
+mention_dir = '/roaming/tcastrof/names/eacl/mentions'
+parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 xmls_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/xmls/'
 write_dir = '/home/tcastrof/names/ProperName/main/eacl/human_evaluation/data/processed'
 
@@ -206,7 +208,7 @@ def init():
     titles = json.load(open(titles_dir))
     dbpedia = json.load(open(fdbpedia))
     print 'Initializing vocabulary...'
-    vocabulary = json.load(open(vocabulary_dir))
+    # vocabulary = json.load(open(vocabulary_dir))
 
     print 'Initializing dbpedia...'
     base = {}
@@ -223,7 +225,7 @@ def init():
             base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
 
-    return entities_info, base, appositives, dbpedia, vocabulary
+    return entities_info, base, appositives, dbpedia, []
 
 # filter 1 toke per discourse feature value for the vocabulary. Overcome lack of resourses
 def filter_voc(entity, vocabulary):
@@ -290,11 +292,24 @@ if __name__ == '__main__':
         # Get proper nouns to be tested whether should be included in the reference
         words = tested_words[entity]
 
-        print 'Get training and test vocs...'
-        general_voc = filter_voc(entity, vocabulary)
-        # compute the set of features (vocabulary) for the bayes model
-        content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
-        content_vocabulary.extend(general_voc)
+        # print 'Get training and test vocs...'
+        # general_voc = filter_voc(entity, vocabulary)
+        # # compute the set of features (vocabulary) for the bayes model
+        # content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
+        # content_vocabulary.extend(general_voc)
 
-        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, os.path.join(xmls_dir, xml), write_dir)
+        # filter entities and their references (more than X references and less than Y)
+        print 'Filter entities and their references (more than X references and less than Y)'
+        references = prep.filter_entities(50, 0, mention_dir)
+
+        # compute the set of features (vocabulary) for the bayes model
+        content_vocabulary, realization_vocabulary = [], []
+        for mention in references[entity]:
+            parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
+
+            content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
+            content_vocabulary.append(content_data)
+            realization_vocabulary.extend(realization_data)
+
+        HumanEvaluation(content_data, realization_vocabulary, dbpedia, words, appositive, os.path.join(xmls_dir, xml), write_dir)
         print 10 * '-'

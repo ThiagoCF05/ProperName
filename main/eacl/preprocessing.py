@@ -70,7 +70,30 @@ def process_tokens(mention, parsed, entity, filtered = False):
         else:
             return tokens
 
-    data = []
+    # CONTENT SELECTION
+    # elements from the form
+    elems = []
+    if '+f' in mention['label']:
+        elems.append('+f')
+    if '+m' in mention['label']:
+        elems.append('+m')
+    if '+l' in mention['label']:
+        elems.append('+l')
+    if '+t' in mention['label']:
+        elems.append('+t')
+    if '+a' in mention['label']:
+        elems.append('+a')
+
+    content_data = {
+        'entity': entity,
+        'givenness': mention['givenness'],
+        'sentence-givenness': mention['sentence-givenness'],
+        'syntax': mention['syntax'],
+        'label': mention['label'],
+        'label_elems': elems
+    }
+
+    realization_data = []
     tokens = get_tokens()
     prev = '*'
     for token in tokens:
@@ -84,7 +107,7 @@ def process_tokens(mention, parsed, entity, filtered = False):
             'label': mention['label']
         }
         prev = token['word']
-        data.append(t)
+        realization_data.append(t)
 
     t = {
         'word': 'END',
@@ -95,8 +118,8 @@ def process_tokens(mention, parsed, entity, filtered = False):
         'syntax': mention['syntax'],
         'label': mention['label']
     }
-    data.append(t)
-    return data
+    realization_data.append(t)
+    return content_data, realization_data
 
 # filter entities with more than N mentions and process the mentions
 def filter_entities(N_min, N_max, mention_dir):

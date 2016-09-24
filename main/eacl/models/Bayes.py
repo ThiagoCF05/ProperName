@@ -13,10 +13,10 @@ class Bayes(object):
         self.train_realization()
 
     def train_content(self):
-        self.clf_content, self.laplace_content = training.run_content(self.train_set_content, self.bigram, 'std')
+        self.clf_content, self.laplace_content = training.run_content(self.train_set_content)
 
     def train_realization(self):
-        self.clf_realization, self.laplace_realization = training.run_realization(self.train_set_realization, self.bigram, 'std')
+        self.clf_realization = training.run_realization(self.train_set_realization, self.bigram)
 
     def select_content(self, features, entity):
         def calc_prob(s):
@@ -114,29 +114,16 @@ class Bayes(object):
 
     def _beam_search(self, names, words, form, entity, word_freq, n=5):
         def calc_prob(gram):
-            # PRIORI
-            f = filter(lambda x: x[1] == gram[1] and x[2] == entity, self.clf_realization['w_e'])
-            dem = sum(map(lambda x: self.clf_realization['w_e'][x], f))
+            prob = 0
+            f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
+            dem = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
 
-            f = filter(lambda x: x[0] == gram[0], f)
-            num = sum(map(lambda x: self.clf_realization['w_e'][x], f))
+            if dem != 0:
+                f = filter(lambda x: x[0] == gram[0], f)
+                num = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
+                prob = float(num) / dem
 
-            # compute the penalty by the frequency of the word in the sentence
-            if gram[0] in word_freq:
-                penalty = float(1) / (word_freq[gram[0]] + 1)
-            else:
-                penalty = 1
-            priori = ((float(num+1) / (dem+self.laplace_realization['w_e']))) * penalty
-
-            # POSTERIORI
-            f = filter(lambda x: x[1] == gram[0] and x[2] == gram[1] and x[3] == entity, self.clf_realization['s_we'])
-            dem = sum(map(lambda x: self.clf_realization['s_we'][x], f))
-
-            f = filter(lambda x: x[0] == form, f)
-            num = sum(map(lambda x: self.clf_realization['s_we'][x], f))
-
-            posteriori = (float(num+1) / (dem+self.laplace_realization['s_we']))
-            return priori * posteriori
+            return prob
 
         # prunning the tree
         def prune(candidates):
@@ -193,12 +180,36 @@ class Bayes(object):
             names.append((surface, result[name]))
         return names
 
+    # Drop the less frequent attribute of the form
+    def _backoff(self, form, entity):
+        elems = []
+        if '+f' in form:
+            elems.append('+f')
+        if '+m' in form:
+            elems.append('+m')
+        if '+l' in form:
+            elems.append('+l')
+        if '+t' in form:
+            elems.append('+t')
+        if '+a' in form:
+            elems.append('+a')
+
+        keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
+        elems = dict(map(lambda x: (x, self.clf_content['elem_p'][x]), keys))
+        elem = sorted(elems.items(), key=operator.itemgetter(1))[0][0]
+        form = str(form).replace(elem, '')
+        return form
+
     # Realization with only the words present in the proper name knowledge base
     def realizeWithWords(self, form, entity, syntax, words, appositive):
         word_freq = {}
 
+        # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
+        while result[0][1] == 0 or len(form) == 2:
+            form = self._backoff(form, entity)
+            result = self._beam_search(names, words, form, entity, word_freq, 1)
 
         names = []
         for name in result:

@@ -149,9 +149,9 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
         for mention in train_set:
             parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
 
-            tokens = prep.process_tokens(mention, parsed, entity, False)
-            content_vocabulary.extend(tokens)
-            realization_vocabulary.extend(tokens)
+            content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
+            content_vocabulary.append(content_data)
+            realization_vocabulary.extend(realization_data)
 
         # Consider data from other entities in the training set
         # content_vocabulary.extend(general_voc)

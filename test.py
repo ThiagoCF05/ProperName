@@ -127,13 +127,6 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
 def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fname):
     results = {}
 
-    # Retrieve all the mentions to the entity
-    # mentions = np.array(references[entity])
-
-    # compute the set of features (vocabulary) from other entities
-    # print 'Filter general training set'
-    # general_voc = filter_voc(entity, vocabulary)
-
     # compute cross validation
     fold = 1
     kf = KFold(mentions.shape[0], n_folds=10)
@@ -149,9 +142,9 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
         for mention in train_set:
             parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
 
-            tokens = prep.process_tokens(mention, parsed, entity, False)
-            content_vocabulary.extend(tokens)
-            realization_vocabulary.extend(tokens)
+            content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
+            content_vocabulary.append(content_data)
+            realization_vocabulary.extend(realization_data)
 
         # Consider data from other entities in the training set
         # content_vocabulary.extend(general_voc)
