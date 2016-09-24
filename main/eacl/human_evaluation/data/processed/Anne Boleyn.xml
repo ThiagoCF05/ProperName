@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Anne_Boleyn" ID="646">
+	<TITLE>Anne Boleyn</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="siddharthan">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne Boleyn</REFEX>
+		</REFERENCE>
+		<STRING> (c. 1501 – 19 May 1536) was Queen of England from 1533 to 1536 as the second wife of King Henry VIII, and Marquess of Pembroke in her own right. Henry's marriage to </STRING>
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING>, and her subsequent execution, made her a key figure in the political and religious upheaval that was the start of the English Reformation. </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Anne</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> was the daughter of Thomas Boleyn, 1st Earl of Wiltshire, and his wife, Lady Elizabeth Howard, and was educated in the Netherlands and France, largely as a maid of honour to Claude of France. She returned to England in early 1522, to marry her Irish cousin James Butler, 9th Earl of Ormond; the marriage plans were broken up by Cardinal Wolsey, and instead she secured a post at court as maid of honour to Henry VIII's wife, Catherine of Aragon.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Early in 1523 </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> was secretly betrothed to Henry Percy, son of the 5th Earl of Northumberland. In January 1524, Cardinal Wolsey broke the betrothal, </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Anne</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> was sent back home to Hever Castle, and Percy was married to Lady Mary Talbot, to whom he had been betrothed since adolescence. In February/March 1526, Henry VIII began his pursuit of </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+l" MODEL="random">Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING>. She resisted his attempts to seduce her, refusing to become his mistress – which her sister Mary had been. It soon became the one absorbing object of Henry's desires to annul his marriage to Queen Catherine so he would be free to marry </STRING>
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+l" MODEL="random">Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_backoffk0_variation">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING>. When it became clear that Pope Clement VII would not annul the marriage, the breaking of the power of the Catholic Church in England began. In 1532, Henry granted </STRING>
+		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+l" MODEL="random">Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> the Marquessate of Pembroke.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>Henry and </STRING>
+		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Anne</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> married on 25 January 1533. On 23 May 1533, Thomas Cranmer declared Henry and Catherine's marriage null and void; five days later, he declared Henry and </STRING>
+		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
+			<REFEX FORM="+l" MODEL="random">Boleyn's</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn's</REFEX>
+			<REFEX FORM="" MODEL="original">Anne's</REFEX>
+		</REFERENCE>
+		<STRING> marriage valid. Shortly afterwards, the Pope decreed sentences of excommunication against Henry and Cranmer. As a result of this marriage and these excommunications, the first break between the Church of England and Rome took place and the Church of England was brought under the King's control. </STRING>
+		<REFERENCE GIVENNESS="old" ID="11" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> was crowned Queen of England on 1 June 1533. On 7 September, she gave birth to the future Queen Elizabeth I. Henry was disappointed to have a daughter rather than a son but hoped a son would follow and professed to love Elizabeth. </STRING>
+		<REFERENCE GIVENNESS="old" ID="12" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Anne</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> subsequently had three miscarriages, and by March 1536, Henry was courting Jane Seymour.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>Henry had </STRING>
+		<REFERENCE GIVENNESS="old" ID="13" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+f+l" MODEL="random">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_no_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_backoffk2_variation">Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> investigated for high treason in April 1536. On 2 May she was arrested and sent to the Tower of London, where she was tried before a jury of peers – which included Henry Percy, her former betrothed, and her own uncle, Thomas Howard – and found guilty on 15 May. She was beheaded four days later. Modern historians view the charges against her, which included adultery, incest, and witchcraft, as unconvincing. Following the coronation of her daughter Elizabeth as queen, </STRING>
+		<REFERENCE GIVENNESS="old" ID="14" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_variation">Anne</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> was venerated as a martyr and heroine of the English Reformation, particularly through the works of John Foxe. Over the centuries, she has inspired or been mentioned in numerous artistic and cultural works. As a result, she has retained her hold on the popular imagination. </STRING>
+		<REFERENCE GIVENNESS="old" ID="15" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Anne Boleyn</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Anne</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk0_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk0_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_backoffk2_no_variation">Anne</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_backoffk2_variation">Anne Boleyn</REFEX>
+			<REFEX FORM="" MODEL="original">Anne</REFEX>
+		</REFERENCE>
+		<STRING> has been called &quot;the most influential and important queen consort England has ever had&quot;, since she provided the occasion for Henry VIII to annul his marriage to Catherine of Aragon, and declare his independence from Rome.</STRING>
+	</PARAGRAPH>
+</TEXT>
