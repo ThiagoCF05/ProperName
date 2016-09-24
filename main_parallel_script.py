@@ -191,6 +191,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
                     # Bayes model with no variation (Realization with the most likely referential form)
                     bayes_result = clf.realizeWithWords(form_distribution[0][0], entity, _syntax, words, appositive)
+                    print form_distribution[0][0], bayes_result
 
                     # Bayes backoff model with no variation (Realization with the most likely referential form)
                     # bayes_backoffk0_result = clf.realizeWithWords(form_distribution_k0[0][0], entity, _syntax, words, appositive)
@@ -244,7 +245,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                     results[fold].extend(group_result)
         fold = fold + 1
     print 'Saving results for ', str(entity)
-    p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
+    # p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
     print 10 * '-'
 
 def run():
@@ -263,7 +264,7 @@ def run():
     entities.sort()
 
     print 'Number of entities: ', len(entities)
-    for entity in entities:
+    for entity in ['http://en.wikipedia.org/wiki/Raila_Odinga']:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
         if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
@@ -276,6 +277,7 @@ def run():
 
             # Get proper nouns to be tested whether should be included in the reference
             words = tested_words[entity]
+            print words
 
             # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
             process_entity(entity, words, np.array(references[entity]), vocabulary, dbpedia, appositive, entity_id)
