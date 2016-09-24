@@ -46,7 +46,8 @@ class HumanEvaluation(object):
         new_xml = self._parse(root)
 
         print 'Writing...'
-        with open(os.path.join(self.write_dir, root.attrib['ID']+'.xml'), 'w') as f:
+        title = root.find('TITLE').text
+        with open(os.path.join(self.write_dir, title+'.xml'), 'w') as f:
             f.write(new_xml.encode('utf-8'))
 
     def _generate(self):

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<TEXT ID="" ENTITY="http://en.wikipedia.org/wiki/Kobe_Bryant">
+<TEXT ID="564" ENTITY="http://en.wikipedia.org/wiki/Kobe_Bryant">
 	<TITLE>Kobe Bryant</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
