@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<TEXT ID="1688" ENTITY="http://en.wikipedia.org/wiki/Neville_Chamberlain">
+	<TITLE>Neville Chamberlain</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Arthur Neville Chamberlain
+		</REFERENCE>
+		<STRING> FRS (18 March 1869 – 9 November 1940) was a British Conservative politician who served as Prime Minister of the United Kingdom from May 1937 to May 1940. </STRING>
+		<REFERENCE ID="2" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> is best known for his appeasement foreign policy, and in particular for his signing of the Munich Agreement in 1938, conceding the German-speaking Sudetenland region of Czechoslovakia to Germany. However, when Adolf Hitler later invaded Poland, the UK declared war on Germany on 3 September 1939, and </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> led Britain through the first eight months of World War II.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>After working in business and local government and after a short spell as Director of National Service in 1916 and 1917, </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> followed his father, Joseph Chamberlain, and older half-brother, Austen Chamberlain, in becoming a member of parliament in the 1918 general election at age 49. He declined a junior ministerial position, remaining a backbencher until 1922. He was rapidly promoted in 1923 to Minister of Health and then Chancellor of the Exchequer. After a short Labour-led government, he returned as Minister of Health, introducing a range of reform measures from 1924 to 1929. He was appointed Chancellor of the Exchequer in the National Government in 1931.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>When Stanley Baldwin retired in May 1937, </STRING>
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> took his place as Prime Minister. His premiership was dominated by the question of policy toward the increasingly aggressive Germany, and his actions at Munich were widely popular among Britons at the time. When Hitler continued his aggression, </STRING>
+		<REFERENCE ID="6" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> pledged Britain to defend Poland's independence if the latter were attacked, an alliance that brought Britain into war when Germany attacked Poland in 1939.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<REFERENCE ID="7" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> resigned the premiership on 10 May 1940 after the Allies were forced to retreat from Norway, as he believed a government supported by all parties was essential, and the Labour and Liberal parties would not join a government headed by him. He was succeeded by Winston Churchill but remained very well regarded in Parliament, especially among Conservatives. Before ill health forced him to resign he was an important member of Churchill's War Cabinet, heading it in the new premier's absence. </STRING>
+		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> died of cancer six months after leaving the premiership.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="5">
+		<REFERENCE ID="9" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain's
+		</REFERENCE>
+		<STRING> reputation remains controversial among historians, with the initial high regard for him being entirely eroded by books such as Guilty Men, published in July 1940, which blamed </STRING>
+		<REFERENCE ID="10" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="old">
+			Chamberlain
+		</REFERENCE>
+		<STRING> and his associates for the Munich accord and for allegedly failing to prepare the country for war. Most historians in the generation following </STRING>
+		<REFERENCE ID="11" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain's
+		</REFERENCE>
+		<STRING> death held similar views, led by Churchill in The Gathering Storm. Some recent historians have taken a more favourable perspective of </STRING>
+		<REFERENCE ID="12" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> and his policies citing government papers released under the Thirty Year Rule. Nevertheless, </STRING>
+		<REFERENCE ID="13" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Chamberlain
+		</REFERENCE>
+		<STRING> is still unfavourably ranked amongst British Prime Ministers.</STRING>
+	</PARAGRAPH>
+</TEXT>

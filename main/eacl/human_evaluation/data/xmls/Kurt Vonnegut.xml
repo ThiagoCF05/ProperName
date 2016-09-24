@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<TEXT ID="1688" ENTITY="http://en.wikipedia.org/wiki/Kurt_Vonnegut">
+	<TITLE>Kurt Vonnegut</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Kurt Vonnegut, Jr.
+		</REFERENCE>
+		<STRING> (November 11, 1922 – April 11, 2007) was an American writer and humorist. In a career spanning over 50 years, </STRING>
+		<REFERENCE ID="2" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> published fourteen novels, three short story collections, five plays, and five works of non-fiction. He is most famous for his darkly satirical, best-selling novel Slaughterhouse-Five (1969).</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Born and raised in Indianapolis, Indiana, </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> attended Cornell University, but dropped out in January 1943 and enlisted in the United States Army. He was deployed to Europe to fight in World War II, and was captured by the Germans during the Battle of the Bulge. He was interned in Dresden and survived the Allied bombing of the city by taking refuge in a meat locker. After the war, </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> married Jane Marie Cox, with whom he had three children. He later adopted his sister's three sons, after she died of cancer and her husband died in a train accident.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> published his first novel, Player Piano, in 1952. The novel was reviewed positively, but was not commercially successful. In the nearly twenty years that followed, </STRING>
+		<REFERENCE ID="6" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> published several novels that were only marginally successful, such as Cat's Cradle (1963) and God Bless You, Mr. Rosewater (1964). </STRING>
+		<REFERENCE ID="7" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut's
+		</REFERENCE>
+		<STRING> magnum opus, however, was his immediately successful sixth novel, Slaughterhouse-Five. The book's antiwar sentiment resonated with its readers amidst the ongoing Vietnam War, and its reviews were generally positive. After its release, Slaughterhouse-Five rocketed to the top of The New York Times Best Seller list, thrusting </STRING>
+		<REFERENCE ID="8" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut
+		</REFERENCE>
+		<STRING> into fame. He was invited to give speeches, lectures, and commencement addresses around the country and received many awards and honors.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>Later in his career, </STRING>
+		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="old">
+			Vonnegut
+		</REFERENCE>
+		<STRING> published several autobiographical essay and short-story collections, including Fates Worse Than Death (1991), and A Man Without a Country (2005). After his death, he was hailed as a morbidly comical commentator on the society in which he lived, and as one of the most important contemporary writers. </STRING>
+		<REFERENCE ID="10" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut's
+		</REFERENCE>
+		<STRING> son Mark published a compilation of his father's unpublished compositions, titled Armageddon in Retrospect. Numerous scholarly works were released, examining </STRING>
+		<REFERENCE ID="11" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Vonnegut's
+		</REFERENCE>
+		<STRING> writing and humor.</STRING>
+	</PARAGRAPH>
+</TEXT>
