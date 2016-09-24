@@ -311,5 +311,5 @@ if __name__ == '__main__':
             content_vocabulary.append(content_data)
             realization_vocabulary.extend(realization_data)
 
-        HumanEvaluation(content_data, realization_vocabulary, dbpedia, words, appositive, os.path.join(xmls_dir, xml), write_dir)
+        HumanEvaluation(content_vocabulary, realization_vocabulary, dbpedia, words, appositive, os.path.join(xmls_dir, xml), write_dir)
         print 10 * '-'
