@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<TEXT ID="" ENTITY="http://en.wikipedia.org/wiki/Rick_Santorum">
+	<TITLE>Rick Santorum</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Richard John "Rick" Santorum
+		</REFERENCE>
+		<STRING> (born May 10, 1958) is an American attorney and Republican Party politician. He served as a United States Senator representing Pennsylvania (1995–2007) and was the Senate's third-ranking Republican (2001–07). He ran as a candidate for the 2012 Republican Party presidential nomination, finishing second to the eventual Republican nominee Mitt Romney.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Born in Virginia, </STRING>
+		<REFERENCE ID="2" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> was raised primarily in Butler, Pennsylvania. He obtained an undergraduate degree from Pennsylvania State University, an M.B.A. from the University of Pittsburgh, and a J.D. from the Dickinson School of Law (now part of Penn State). </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> worked as an attorney at Kirkpatrick and Lockhart, where he met Karen Garver. They married in 1990, and have seven living children (one child died shortly after birth). </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> was elected to the U.S. House of Representatives to represent Pennsylvania's 18th congressional district in 1990 and later became a member of a group dubbed the "Gang of Seven".</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> was elected as a United States Senator for Pennsylvania in 1994. He served two terms until losing his re-election bid in 2006. A devout, practicing Catholic, </STRING>
+		<REFERENCE ID="6" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> is a social conservative who opposes same-sex marriage and artificial birth control. While serving as a senator, </STRING>
+		<REFERENCE ID="7" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> was the author of what came to be known as the Santorum Amendment, which promoted the teaching of intelligent design. In 2005, </STRING>
+		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> introduced the Workplace Religious Freedom Act along with Senator John Kerry.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>In the years following his departure from the Senate, </STRING>
+		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="old">
+			Santorum
+		</REFERENCE>
+		<STRING> worked as a consultant, private-practice lawyer, and news contributor. On June 6, 2011, </STRING>
+		<REFERENCE ID="10" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> announced his run for the Republican nomination in the 2012 U.S. presidential election. Upon announcing his campaign suspension on April 10, 2012, he had won 11 primaries and caucuses and received nearly 4 million votes, making him the runner-up to eventual nominee Mitt Romney. </STRING>
+		<REFERENCE ID="11" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> officially endorsed Romney on May 7, 2012. </STRING>
+		<REFERENCE ID="12" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Santorum
+		</REFERENCE>
+		<STRING> announced his candidacy for the 2016 presidential election on May 27, 2015.</STRING>
+	</PARAGRAPH>
+</TEXT>

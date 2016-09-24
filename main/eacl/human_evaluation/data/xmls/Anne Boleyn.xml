@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<TEXT ID="1688" ENTITY="http://en.wikipedia.org/wiki/Anne_Boleyn">
+<TEXT ID="" ENTITY="http://en.wikipedia.org/wiki/Anne_Boleyn">
 	<TITLE>Anne Boleyn</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">Anne Boleyn</REFERENCE>
@@ -15,7 +15,8 @@
 		<STRING> was secretly betrothed to Henry Percy, son of the 5th Earl of Northumberland. In January 1524, Cardinal Wolsey broke the betrothal, </STRING>
 		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">Anne</REFERENCE>
 		<STRING> was sent back home to Hever Castle, and Percy was married to Lady Mary Talbot, to whom he had been betrothed since adolescence. In February/March 1526, Henry VIII began his pursuit of </STRING>
-		<REFERENCE ID="6" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">Anne</REFERENCE><STRING>. She resisted his attempts to seduce her, refusing to become his mistress – which her sister Mary had been. It soon became the one absorbing object of Henry's desires to annul his marriage to Queen Catherine so he would be free to marry </STRING>
+		<REFERENCE ID="6" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">Anne</REFERENCE>
+		<STRING>. She resisted his attempts to seduce her, refusing to become his mistress – which her sister Mary had been. It soon became the one absorbing object of Henry's desires to annul his marriage to Queen Catherine so he would be free to marry </STRING>
 		<REFERENCE ID="7" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">Anne</REFERENCE>
 		<STRING>. When it became clear that Pope Clement VII would not annul the marriage, the breaking of the power of the Catholic Church in England began. In 1532, Henry granted </STRING>
 		<REFERENCE ID="8" SYNCAT="np-obj" GIVENNESS="old" SENTENCE-GIVENNESS="new">Anne</REFERENCE>

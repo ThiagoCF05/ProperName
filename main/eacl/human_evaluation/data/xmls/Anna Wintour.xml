@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<TEXT ID="1022" ENTITY="http://en.wikipedia.org/wiki/Anna_Wintour">
+<TEXT ID="" ENTITY="http://en.wikipedia.org/wiki/Anna_Wintour">
 	<TITLE>Anna Wintour</TITLE>
 	<PARAGRAPH ID="1">
-		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
 			Anna Wintour
 		</REFERENCE>
 		<STRING>, OBE (/ˈwɪntər/; born 3 November 1949) is the English editor-in-chief of American Vogue, a position she has held since 1988. In 2013, she became artistic director for Condé Nast, Vogue's publisher. With her trademark pageboy bob haircut and dark sunglasses, </STRING>

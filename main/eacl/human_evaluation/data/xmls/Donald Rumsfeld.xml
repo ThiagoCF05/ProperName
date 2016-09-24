@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<TEXT ID="" ENTITY="http://en.wikipedia.org/wiki/Donald_Rumsfeld">
+	<TITLE>Donald Rumsfeld</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE ID="1" SYNCAT="np-subj" GIVENNESS="new" SENTENCE-GIVENNESS="new">
+			Donald Henry Rumsfeld
+		</REFERENCE>
+		<STRING> (born July 9, 1932) is an American politician and businessman. </STRING>
+		<REFERENCE ID="2" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> served as the 13th Secretary of Defense from 1975 to 1977 under President Gerald Ford, and as the 21st Secretary of Defense from 2001 to 2006 under President George W. Bush. He is the youngest and the second oldest (after Leon Panetta) person to have served as Secretary of Defense. Additionally, </STRING>
+		<REFERENCE ID="3" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> was a four-term U.S. Congressman from Illinois (1962–1969), Director of the Office of Economic Opportunity (1969–1970), Counsellor to the President (1969–1973), the United States Permanent Representative to NATO (1973–1974), and White House Chief of Staff (1974–1975).</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Born in Illinois, </STRING>
+		<REFERENCE ID="4" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> attended Princeton University, graduating in 1954 with a degree in political science. After serving in the Navy for three years, he mounted a campaign for Congress in Illinois' 13th Congressional District, winning in 1962 at the age of 30. He was a leading co-sponsor of the Freedom of Information Act. </STRING>
+		<REFERENCE ID="5" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> reluctantly accepted an appointment by President Richard Nixon to head the Office of Economic Opportunity in 1969; appointed Counsellor by Nixon and entitled to Cabinet-level status, he would also head up the Economic Stabilization Program before being appointed Ambassador to NATO. Called back to Washington in August 1974, </STRING>
+		<REFERENCE ID="6" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> was appointed Chief of Staff by President Ford, and soon successfully urged Ford to veto an expansion of the Freedom of Information Act, though the veto was easily overridden. </STRING>
+		<REFERENCE ID="7" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> recruited a young one-time staffer of his, Dick Cheney, to succeed him when Ford nominated him Secretary of Defense in 1975.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>When Ford lost the 1976 election, </STRING>
+		<REFERENCE ID="8" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> returned to private business life, and was named president and CEO of the pharmaceutical corporation G. D. Searle and Company, during which time he led the legalization of Aspartame. He was later named CEO of General Instrument from 1990 to 1993, and chairman of Gilead Sciences from 1997 to 2001.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<REFERENCE ID="9" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> was recommended for the position of Defense Secretary by incoming Vice President Dick Cheney in late 2000, and was appointed in January 2001 by President George W. Bush. During his tenure, he was a leading neoconservative voice and one of the key individuals responsible for the restructuring of the military in the new 21st century. </STRING>
+		<REFERENCE ID="10" SYNCAT="np-subj" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld
+		</REFERENCE>
+		<STRING> was crucial in planning the United States' response to the September 11 attacks, which included two wars, one in Afghanistan and one in Iraq. In addition to war strategy, </STRING>
+		<REFERENCE ID="11" SYNCAT="subj-det" GIVENNESS="old" SENTENCE-GIVENNESS="new">
+			Rumsfeld's
+		</REFERENCE>
+		<STRING> tenure became highly controversial for the Abu Ghraib torture and prisoner abuse scandal, as well as the use of enhanced interrogation techniques. Known in media circles for his outspokenness and candor, he gradually lost political support as the wars continued and resigned in late 2006. He has since published his autobiography Known and Unknown: A Memoir and Rumsfeld's Rules: Leadership Lessons in Business, Politics, War, and Life.</STRING>
+	</PARAGRAPH>
+</TEXT>
