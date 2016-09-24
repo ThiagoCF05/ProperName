@@ -207,6 +207,7 @@ class Bayes(object):
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
+        print result
         while result[0][1] == 0 or len(form) == 2:
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
