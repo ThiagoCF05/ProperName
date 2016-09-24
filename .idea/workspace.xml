@@ -112,10 +112,10 @@
       <file leaf-file-name="parse_xml.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parse_xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52243125" vertical-offset="2159" max-vertical-offset="3855">
-              <caret line="179" column="38" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.716353" vertical-offset="479" max-vertical-offset="3855">
+              <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
               <folding>
-                <element signature="e#9934#11494#0" expanded="false" />
+                <element signature="e#9940#11500#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1487,10 +1487,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parse_xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52243125" vertical-offset="2159" max-vertical-offset="3855">
-          <caret line="179" column="38" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.716353" vertical-offset="479" max-vertical-offset="3855">
+          <caret line="122" column="101" selection-start-line="122" selection-start-column="101" selection-end-line="122" selection-end-column="101" />
           <folding>
-            <element signature="e#9934#11494#0" expanded="false" />
+            <element signature="e#9940#11500#0" expanded="false" />
           </folding>
         </state>
       </provider>
