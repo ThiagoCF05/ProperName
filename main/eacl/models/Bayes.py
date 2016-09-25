@@ -240,5 +240,4 @@ class Bayes(object):
             if '+a' in original_form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
-        print original_form, form, names
         return names

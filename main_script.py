@@ -200,7 +200,7 @@ def run():
 
     number_mentions = 0
 
-    for entity in ['http://en.wikipedia.org/wiki/Angela_Merkel']:
+    for entity in entities:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
         if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
@@ -218,7 +218,7 @@ def run():
             process_entity(entity, words, np.array(references[entity]), dbpedia, appositive, entity_id)
             number_mentions = number_mentions + len(references[entity])
     print 'Number of entities: ', len(entities)
-    print 'Number of mentions: ', len(number_mentions)
+    print 'Number of mentions: ', number_mentions
 
 if __name__ == '__main__':
     run()
