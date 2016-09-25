@@ -153,10 +153,13 @@ class Bayes(object):
 
         _names = prune(candidates)
 
-        f = set(_names.values())
         print 'Candidates: ', _names
-        # Stop criteria: prediction of END symbol or the beam search still the same from the last recursion or a proper name bigger than 5 is predicted
-        if ('END' in f and len(f) == 1) or (names.keys() == _names.keys()) or len(filter(lambda name: len(name) > 5, _names.keys())) > 0:
+        # Stop criteria: prediction of END symbol
+        # or the beam search still the same from the last recursion
+        # or a proper name bigger than 5 is predicted or 0 probabilities
+        if (names.keys() == _names.keys()) \
+                or len(filter(lambda name: len(name) > 5, _names.keys())) > 0 \
+                or set(_names.values()) == set([0]):
             return _names
         else:
             return self._beam_search(_names, words, form, entity, word_freq, n)
@@ -214,7 +217,7 @@ class Bayes(object):
         while result[result.keys()[0]][1] == 0 and len(form) > 2:
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
-            print form, result
+            print 'NEW', form, result
 
         names = []
         for name in result:
