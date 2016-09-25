@@ -200,15 +200,12 @@ class Bayes(object):
 
         keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
         elems = dict(map(lambda x: (x, self.clf_content['elem_p'][x]), keys))
-        elem = sorted(elems.items(), key=operator.itemgetter(1))[0][0]
-        print form, elem
+        elem = sorted(elems.items(), key=operator.itemgetter(1))[0][0][0]
         form = str(form).replace(elem, '')
         return form
 
     # Realization with only the words present in the proper name knowledge base
     def realizeWithWords(self, form, entity, syntax, words, appositive):
-        for e in self.clf_realization['w_wm1fe']:
-            print e
         word_freq = {}
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
