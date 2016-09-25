@@ -151,6 +151,7 @@ class Bayes(object):
                     else:
                         candidates[_name] = prob * _prob
 
+        print 'Candidates: ', candidates
         _names = prune(candidates)
 
         f = set(_names.values())
@@ -202,7 +203,7 @@ class Bayes(object):
 
     # Realization with only the words present in the proper name knowledge base
     def realizeWithWords(self, form, entity, syntax, words, appositive):
-        print form
+        print self.clf_realization['w_wm1fe']
         word_freq = {}
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
