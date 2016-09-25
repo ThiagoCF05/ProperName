@@ -227,17 +227,17 @@ class Bayes(object):
             result = self._beam_search(names, words, form, entity, word_freq, 1)
         if result[result.keys()[0]] == 0:
             result = self._beam_search(names, words, '-', entity, word_freq, 1)
-        print result
 
         names = []
         for name in result:
             surface = ' '.join(name[1:-1])
 
-            if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
-                if surface[-1] == 's':
-                    surface = surface + '\''
-                else:
-                    surface = surface + '\'s'
+            if len(surface) > 0:
+                if syntax == 'subj-det' and (surface[-2:] != '\'s' or surface[-1] != '\''):
+                    if surface[-1] == 's':
+                        surface = surface + '\''
+                    else:
+                        surface = surface + '\'s'
             if '+a' in original_form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
