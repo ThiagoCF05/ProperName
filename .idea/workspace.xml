@@ -149,8 +149,8 @@
       <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55128205" vertical-offset="1848" max-vertical-offset="2595">
-              <caret line="222" column="47" selection-start-line="222" selection-start-column="47" selection-end-line="222" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.5940171" vertical-offset="1863" max-vertical-offset="2565">
+              <caret line="225" column="41" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
                 <element signature="e#2115#4218#0" expanded="false" />
@@ -1571,8 +1571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55128205" vertical-offset="1848" max-vertical-offset="2595">
-          <caret line="222" column="47" selection-start-line="222" selection-start-column="47" selection-end-line="222" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.5940171" vertical-offset="1863" max-vertical-offset="2565">
+          <caret line="225" column="41" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
             <element signature="e#2115#4218#0" expanded="false" />

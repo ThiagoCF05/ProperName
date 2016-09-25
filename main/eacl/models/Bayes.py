@@ -215,17 +215,15 @@ class Bayes(object):
     # Realization with only the words present in the proper name knowledge base
     def realizeWithWords(self, form, entity, syntax, words, appositive):
         word_freq = {}
+        original_form = copy.copy(form)
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
-        print form, result
         while result[result.keys()[0]] == 0 and form != '':
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
-            print form, result
-        print 10 * '-'
-
+        print original_form, form, result
         names = []
         for name in result:
             surface = ' '.join(name[1:-1])
@@ -235,7 +233,7 @@ class Bayes(object):
                     surface = surface + '\''
                 else:
                     surface = surface + '\'s'
-            if '+a' in form:
+            if '+a' in original_form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
         return names
