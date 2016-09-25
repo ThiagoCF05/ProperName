@@ -116,9 +116,6 @@ class Bayes(object):
         def calc_prob(gram):
             prob = 0
             f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
-            print 'TEST: '
-            for e in f:
-                print e
             dem = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
 
             if dem != 0:
@@ -154,10 +151,10 @@ class Bayes(object):
                     else:
                         candidates[_name] = prob * _prob
 
-        print 'Candidates: ', candidates
         _names = prune(candidates)
 
         f = set(_names.values())
+        print 'Candidates: ', _names
         # Stop criteria: prediction of END symbol or the beam search still the same from the last recursion or a proper name bigger than 5 is predicted
         if ('END' in f and len(f) == 1) or (names.keys() == _names.keys()) or len(filter(lambda name: len(name) > 5, _names.keys())) > 0:
             return _names
