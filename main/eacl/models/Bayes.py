@@ -117,6 +117,8 @@ class Bayes(object):
             prob = 0
             if form == '':
                 f = filter(lambda x: x[1] == gram[1] and x[3] == entity, self.clf_realization['w_wm1fe'])
+            elif form == '-':
+                f = filter(lambda x: x[3] == entity, self.clf_realization['w_wm1fe'])
             else:
                 f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
             dem = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
@@ -223,6 +225,8 @@ class Bayes(object):
         while result[result.keys()[0]] == 0 and form != '':
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
+        if result[result.keys()[0]] == 0:
+            result = self._beam_search(names, words, '-', entity, word_freq, 1)
 
         names = []
         for name in result:

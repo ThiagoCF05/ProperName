@@ -200,7 +200,7 @@ def run():
 
     number_mentions = 0
 
-    for entity in entities:
+    for entity in ['http://en.wikipedia.org/wiki/Angela_Merkel']:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
         if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
