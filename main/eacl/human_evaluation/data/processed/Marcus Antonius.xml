@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Mark_Antony" ID="529">
+	<TITLE>Marcus Antonius</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Antony</REFEX>
+			<REFEX FORM="+f+l" MODEL="siddharthan">Mark Antony</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Mark Antony</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Mark Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Marcus Antonius
+		</REFEX>
+		</REFERENCE>
+		<STRING> (January 14, 83 BC – August 1, 30 BC) was a Roman politician and general who played a critical role in the transformation of the Roman Republic from an oligarchy into the autocratic Roman Empire.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> was a supporter of Julius Caesar, and served as one of his generals during the conquest of Gaul and the Civil War. </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> was appointed administrator of Italy while Caesar eliminated political opponents in Greece, North Africa, and Spain. After Caesar's death in 44 BC, </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> joined forces with Marcus Aemilius Lepidus, another of Caesar's generals, and Octavian, Caesar's nephew and adopted son, forming a three-man dictatorship known to historians as the Second Triumvirate. The Triumvirs defeated Caesar's murderers, the Liberatores, at the Battle of Philippi in 42 BC, and divided the government of the Republic between themselves. </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Mark</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> was assigned Rome's eastern provinces, including the client kingdom of Egypt, then ruled by Cleopatra VII Philopater, and was given the command in Rome's war against Parthia.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>Relations among the Triumvirs were strained as the various members sought greater political power. Civil war between </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> and Octavian was averted in 40 BC, when </STRING>
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> married Octavian's sister, Octavia. Despite this marriage, </STRING>
+		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> carried on a love affair with Cleopatra, who bore him three children, further straining </STRING>
+		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="old" SYNCAT="subj-det">
+			<REFEX FORM="+f" MODEL="random">Mark's</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony's</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony's
+		</REFEX>
+		</REFERENCE>
+		<STRING> relations with Octavian. Lepidus was expelled from the association in 36 BC, and in 33 BC disagreements between </STRING>
+		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Mark</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> and Octavian caused a split between the remaining Triumvirs. Their ongoing hostility erupted into civil war in 31 BC, as the Roman Senate, at Octavian's direction, declared war on Cleopatra and proclaimed </STRING>
+		<REFERENCE GIVENNESS="old" ID="11" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+f" MODEL="random">Mark</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> a traitor. Later that year, </STRING>
+		<REFERENCE GIVENNESS="old" ID="12" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Mark Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> was defeated by Octavian's forces at the Battle of Actium. Defeated, </STRING>
+		<REFERENCE GIVENNESS="old" ID="13" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> and Cleopatra fled to Egypt, where they committed suicide.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>With </STRING>
+		<REFERENCE GIVENNESS="old" ID="14" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Mark Antony</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Antony</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Antony</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Mark Antony</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Antony
+		</REFEX>
+		</REFERENCE>
+		<STRING> dead, Octavian was the undisputed master of the Roman world. In 27 BC, he was granted the title of Augustus, marking the final stage in the transformation of the Roman Republic into an empire, with himself as the first Roman emperor.</STRING>
+	</PARAGRAPH>
+</TEXT>

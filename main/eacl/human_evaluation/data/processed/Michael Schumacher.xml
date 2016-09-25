@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Michael_Schumacher" ID="614">
+	<TITLE>Michael Schumacher</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+f+l" MODEL="siddharthan">Michael Schumacher</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Michael Schumacher</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Michael Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Michael Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> (born 3 January 1969) is a retired German racing driver. He is a seven-time Formula One World Champion and is widely regarded as one of the greatest Formula One drivers of all time. He was named Laureus World Sportsman of the Year twice. He won two titles with Benetton in 1994 and 1995. After his second title he moved to Ferrari for which he drove eleven years. His time with Ferrari yielded five consecutive titles between 2000 and 2004.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>He holds many of Formula One's driver records, including most championships, race victories, fastest laps, pole positions and most races won in a single season – 13 in 2004 (the last of these records was equalled by fellow German Sebastian Vettel nine years later). In 2002, he became the only driver in Formula One history to finish in the top three in every race of a season and then also broke the record for most consecutive podium finishes. According to the official Formula One website, he is &quot;statistically the greatest driver the sport has ever seen&quot;.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>After beginning with karting, </STRING>
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Michael</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> won the German drivers' championships in Formula König and Formula Three before joining Mercedes in the World Sportscar Championship. After one Mercedes-funded race for the Jordan Formula One team, </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> signed as a driver for the Benetton Formula One team in 1991. Establishing himself as a top driver, finishing third in 1992 and fourth in 1993, </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> became the first German World Drivers' Champion in 1994 by one point over Damon Hill. In 1995 he repeated the success, this time with a greater margin. </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Michael Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> moved to Ferrari in 1996. </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> came close to winning the 1997 and 1998 titles, before breaking his leg at the 1999 British Grand Prix, ending another title run. Things then came good for </STRING>
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> who won another five consecutive drivers' titles from 2000 to 2004. </STRING>
+		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> retired from Formula One driving in 2006 staying with Ferrari as an advisor. He came close to an eighth title that year, but due to technical problems in the final two races he fell short to Fernando Alonso. </STRING>
+		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> agreed to return for Ferrari part-way through 2009, as cover for the badly injured Felipe Massa, but was prevented by a neck injury. </STRING>
+		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> returned to Formula One on a permanent basis from 2010 with the Mercedes team before retiring for a second time at the conclusion of the 2012 season.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>His career was not without controversy, including being twice involved in collisions in the final race of a season that determined the outcome of the World Championship, with Damon Hill in 1994 in Adelaide, and with Jacques Villeneuve in 1997 in Jerez. Off the track </STRING>
+		<REFERENCE GIVENNESS="old" ID="11" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> is an ambassador for UNESCO and a spokesman for driver safety. He has been involved in numerous humanitarian efforts throughout his life and donated tens of millions of dollars to charity. </STRING>
+		<REFERENCE GIVENNESS="old" ID="12" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> and his younger brother, Ralf, are the only brothers to win races in Formula One, and they were the first brothers to finish 1st and 2nd in the same race, a feat they repeated in four subsequent races.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="5">
+		<STRING>In December 2013, </STRING>
+		<REFERENCE GIVENNESS="old" ID="13" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Michael</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> suffered a serious head injury while skiing. He was airlifted to a hospital and placed in a medically induced coma, having suffered a traumatic brain injury. He was in the coma for six months from 29 December 2013 until 16 June 2014. He left the hospital in Grenoble for further rehabilitation at the University Hospital (CHUV) in Lausanne. On 9 September 2014, </STRING>
+		<REFERENCE GIVENNESS="old" ID="14" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Michael Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Michael Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> was brought back to his home for further rehabilitation. In November 2014, </STRING>
+		<REFERENCE GIVENNESS="old" ID="15" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Schumacher</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Schumacher</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Schumacher
+		</REFEX>
+		</REFERENCE>
+		<STRING> was reported to be paralysed and wheelchair-bound as a result of the accident.</STRING>
+	</PARAGRAPH>
+</TEXT>

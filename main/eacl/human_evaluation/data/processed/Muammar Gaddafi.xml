@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Muammar_Gaddafi" ID="85">
+	<TITLE>Muammar Gaddafi</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Gaddafi</REFEX>
+			<REFEX FORM="+f+l" MODEL="siddharthan">Muammar Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Muammar Muhammad Abu Minyar al-Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING>  was a Libyan revolutionary and politician who governed Libya as its primary leader from 1969 to 2011. Taking power in a coup d'etat, he ruled as Revolutionary Chairman of the Libyan Arab Republic from 1969 to 1977 and then as the &quot;Brotherly Leader&quot; of the Great Socialist People's Libyan Arab Jamahiriya from 1977 to 2011, when he was ousted in the Libyan Civil War. Initially developing his own variant of Arab nationalism and Arab socialism known as the Third International Theory, he later embraced Pan-Africanism and served as Chairperson of the African Union from 2009 to 2010.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>The son of an impoverished Bedouin goat herder, </STRING>
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Muammar</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING> became involved in politics while at school in Sabha, subsequently enrolling in the Royal Military Academy, Benghazi. Founding a revolutionary cell within the military, in 1969 they seized power from the monarchy of King Idris in a bloodless coup. Becoming Chairman of the governing Revolutionary Command Council (RCC), </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Muammar</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING> abolished the monarchy and proclaimed the Republic. Ruling by decree, he implemented measures to remove what he viewed as foreign imperialist influence from Libya, and strengthened ties to Arab nationalist governments. Intent on pushing Libya towards &quot;Islamic socialism&quot;, he introduced sharia as the basis for the legal system and nationalized the oil industry, using the increased revenues to bolster the military, implement social programs and fund revolutionary militants across the world. In 1973 he initiated a &quot;Popular Revolution&quot; with the formation of General People's Committees (GPCs), purported to be a system of direct democracy, but retained personal control over major decisions. He outlined his Third International Theory that year, publishing these ideas in The Green Book.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>In 1977, with the country under his complete control, he dissolved the Republic and created his new state, the Jamahiriya (&quot;state of the masses&quot;). Officially adopting a symbolic role in governance, he retained power as military commander-in-chief and head of the Revolutionary Committees responsible for policing and suppressing opponents. Overseeing unsuccessful border conflicts with Egypt and Chad, </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
+			<REFEX FORM="+f" MODEL="random">Muammar's</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi's</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi's
+		</REFEX>
+		</REFERENCE>
+		<STRING> support for foreign militants and alleged responsibility for the Lockerbie bombing led to Libya's label of &quot;international pariah&quot;. A particularly hostile relationship developed with the United States and United Kingdom, resulting in the 1986 U.S. bombing of Libya and United Nations-imposed economic sanctions. Rejecting his earlier ideological commitments, from 1999 </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Muammar</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING> encouraged economic privatization and sought rapprochement with Western nations, also embracing Pan-Africanism and helping to establish the African Union. Amid the Arab Spring, in 2011 an anti-Gaddafist uprising led by the National Transitional Council (NTC) broke out, resulting in civil war. NATO intervened militarily on the side of the NTC, bringing about the government's downfall. Retreating to Sirte, </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Muammar Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING> was captured and killed by NTC militants.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Muammar Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Gaddafi</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Gaddafi</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Gaddafi
+		</REFEX>
+		</REFERENCE>
+		<STRING> was a controversial and highly divisive world figure. Supporters lauded his anti-imperialist stance and his support for Pan-Africanism and Pan-Arabism, and he was decorated with various awards. Conversely, he was internationally condemned as a dictator and autocrat whose authoritarian administration violated the human rights of Libyan citizens, and supported irredentist movements, tribal warfare and terrorism in many other nations.</STRING>
+	</PARAGRAPH>
+</TEXT>
