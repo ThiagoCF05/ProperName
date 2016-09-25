@@ -214,10 +214,10 @@ class Bayes(object):
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
         print form, result
-        while result[result.keys()[0]][1] == 0 and len(form) > 2:
+        while result[result.keys()[0]] == 0 and len(form) > 2:
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
-            print 'NEW', form, result
+            print 'NEW:', form, result
 
         names = []
         for name in result:
