@@ -178,8 +178,6 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
                     # Bayes model selection
                     form_distribution = bayes_selection(features, entity, clf, None)
-                    # form_distribution_k0 = bayes_selection(features, entity, clf, 0)
-                    # form_distribution_k2 = bayes_selection(features, entity, clf, 2)
 
                     # Siddharthan model
                     siddharthan_result = baseline1.run(entity, _givenness, _syntax)
@@ -187,12 +185,6 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                     # Bayes model with no variation (Realization with the most likely referential form)
                     bayes_result = clf.realizeWithWords(form_distribution[0][0], entity, _syntax, words, appositive)
                     print 'RESULT', form_distribution[0][0], bayes_result
-
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    # bayes_backoffk0_result = clf.realizeWithWords(form_distribution_k0[0][0], entity, _syntax, words, appositive)
-
-                    # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    # bayes_backoffk2_result = clf.realizeWithWords(form_distribution_k2[0][0], entity, _syntax, words, appositive)
 
                     # Generate proper names for each group of features
                     group_result = []
@@ -222,21 +214,10 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
                         result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result }
 
-                        # result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0], 'reference': bayes_backoffk0_result }
-
-                        # result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result }
-
-                        # Bayes model with random choice of proper name form
-                        # index = randint(0, len(form_distribution)-1)
-                        # realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
-                        # result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
-
                         group_result.append(result)
 
                     # Generate proper names with individual variation in the for choice
                     group_result = bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation')
-                    # group_result = bayes_variation(group_result, form_distribution_k0, test_set_same_features, entity, clf, words, appositive, 'bayes_backoffk0_variation')
-                    # group_result = bayes_variation(group_result, form_distribution_k2, test_set_same_features, entity, clf, words, appositive, 'bayes_backoffk2_variation')
                     results[fold].extend(group_result)
         fold = fold + 1
     print 'Saving results for ', str(entity)
