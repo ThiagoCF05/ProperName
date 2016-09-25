@@ -198,10 +198,15 @@ class Bayes(object):
             elems.append('+a')
 
         keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
-        elems = dict(map(lambda x: (x, self.clf_content['elem_p'][x]), keys))
+        elems = dict(map(lambda x: (x[0], self.clf_content['elem_p'][x]), keys))
+
+        for e in ['+t', '+f', '+m', '+l', '+a']:
+            if e not in elems:
+                elems[e] = 0
+
         elem = sorted(elems.items(), key=operator.itemgetter(1))
         print elem
-        form = str(form).replace(elem[0][0][0], '')
+        form = str(form).replace(elem[0][0], '')
         return form
 
     # Realization with only the words present in the proper name knowledge base
@@ -211,11 +216,10 @@ class Bayes(object):
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
-        print form, result
         while result[result.keys()[0]] == 0 and len(form) > 2:
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
-            print 'NEW:', form, result
+        print 'NEW:', form, result
 
         names = []
         for name in result:
