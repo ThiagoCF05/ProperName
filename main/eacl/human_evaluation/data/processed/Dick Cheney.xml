@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Dick_Cheney" ID="167">
+	<TITLE>Dick Cheney</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="siddharthan">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Richard Bruce &quot;Dick&quot; Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> (born January 30, 1941) is an American politician and businessman who was the 46th Vice President of the United States from 2001 to 2009, under President George W. Bush.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>Born in Lincoln, Nebraska, </STRING>
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was primarily raised in Sumner, Nebraska, and Casper, Wyoming. He attended Yale, then the University of Wyoming, where he earned a BA and an MA in Political Science. He began his political career as an intern for Congressman William A. Steiger, eventually working his way into the White House during the Nixon and Ford administrations, where he later served as the White House Chief of Staff, from 1975 to 1977. In 1978, </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was elected to the U.S. House of Representatives representing Wyoming's At-large congressional district from 1979 to 1989; he was reelected five times, briefly serving as House Minority Whip in 1989. </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was selected to be the Secretary of Defense during the Presidency of George H. W. Bush, holding the position for the majority of Bush's term from 1989 to 1993. During his time in the Department of Defense, </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> oversaw the 1991 Operation Desert Storm, among other actions. Out of office during the Clinton administration, </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+t+l" MODEL="bayes_variation">Mrs. Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was the Chairman and CEO of Halliburton Company from 1995 to 2000.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>In July 2000, </STRING>
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was chosen by presumptive Republican Presidential nominee George W. Bush as his running mate in the 2000 Presidential election. They defeated their Democratic opponents, incumbent Vice President Al Gore and Senator Joe Lieberman. In 2004 </STRING>
+		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Richard</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+t+l" MODEL="bayes_variation">Mrs. Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was reelected to his second term as Vice President, defeating Senator  John Kerry's running mate, Senator John Edwards. During </STRING>
+		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
+			<REFEX FORM="+l" MODEL="random">Cheney's</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney's</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney's
+		</REFEX>
+		</REFERENCE>
+		<STRING> tenure as Vice President, he played a lead behind-the-scenes role in Bush Administration's response to the September 11 attacks and coordination of the Global War on Terrorism. He was an early proponent of the Iraq War and defender of the Administration's record on terrorism. He became at odds with the views of President Bush for his support of gay marriage in 2004. </STRING>
+		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+m+l" MODEL="random">Richard Bruce Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> was often criticized for the Bush Administration's policies regarding the War on Terror, NSA Wiretapping and so-called &quot;enhanced interrogation techniques.&quot;</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="4">
+		<STRING>In 2011, </STRING>
+		<REFERENCE GIVENNESS="old" ID="11" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+l" MODEL="random">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Cheney</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_no_variation">Cheney</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Cheney</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Cheney
+		</REFEX>
+		</REFERENCE>
+		<STRING> published his memoir In My Time: A Personal and Political Memoir, written with daughter Liz Cheney, and in 2015, published another book, Exceptional: Why the World Needs a Powerful America, again co-authored with his daughter. He has been cited as the most powerful Vice President in American history.</STRING>
+	</PARAGRAPH>
+</TEXT>

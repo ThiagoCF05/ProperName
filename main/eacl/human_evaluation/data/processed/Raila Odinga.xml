@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<TEXT ENTITY="http://en.wikipedia.org/wiki/Raila_Odinga" ID="258">
+	<TITLE>Raila Odinga</TITLE>
+	<PARAGRAPH ID="1">
+		<REFERENCE GIVENNESS="old" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Odinga</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila Amolo Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> (born 7 January 1945), also popularly known to his supporters as Agwambo (meaning the &quot;Mysterious One&quot;), Tinga, Baba, RAO, and Jakom (&quot;Chairman&quot;) is a Kenyan politician regarded as the father of democracy in Kenya owing to his pro-democracy political engagements. He was first elected as the Member of Parliament for Langata in 1992, served as Minister of Energy from 2001 to 2002 and as Minister of Roads, Public Works, and Housing from 2003 to 2005. He was the main opposition candidate in the 2007 presidential election. Following a violent post-electoral crisis, </STRING>
+		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> took office as Prime Minister in April 2008, serving as supervisor and coordinator of a national unity coalition government. He came in second in Kenya's 2013 presidential elections after garnering 5,340,546 votes which represented 43.28% of the total votes cast. Son of first Vice President of Kenya, Jaramogi Oginga Odinga. The family's origin in Kenya's Luo tribe has been a key to their political activity. </STRING>
+		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila
+		</REFEX>
+		</REFERENCE>
+		<STRING> is commonly known by his first name due to coincidence: he was an MP at the same time as his father between 1992 and 1994. In </STRING>
+		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Raila Odinga</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> was a presidential contender in the 1997 elections, coming third after President Daniel arap Moi of KANU and Mwai Kibaki, the former president of Kenya and then a member of the Democratic Party. </STRING>
+		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+t+l" MODEL="bayes_variation">Mr Odinga</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> campaigned to run for president in the December 2007 elections on an Orange Democratic Movement (ODM) ticket.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="2">
+		<STRING>On 1 September 2007, </STRING>
+		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f+l" MODEL="random">Raila Odinga</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> was elected as the presidential candidate of the ODM. He garnered significant support in the 2007 General Election. According to the electoral body at the time (the ECK), he garnered the majority of the votes in Rift Valley, Western, his native Nyanza and Coast. Kibaki on the other hand won majority votes in Nairobi (Capital), North Eastern province, Central province and Eastern province. This is available from the ECK records. Out of the 2007 elections, his party, ODM, got 99 out of 210 seats in the parliament, making the ODM the single largest party in parliament.</STRING>
+	</PARAGRAPH>
+	<PARAGRAPH ID="3">
+		<STRING>On 30 December 2007, the chairman of the Kenyan election commission declared </STRING>
+		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
+			<REFEX FORM="+f" MODEL="random">Raila's</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga's</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila's</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila's</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila's
+		</REFEX>
+		</REFERENCE>
+		<STRING> opponent, incumbent president Kibaki, the winner of the presidential election by a margin of about 230,000 votes. </STRING>
+		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
+			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Raila
+		</REFEX>
+		</REFERENCE>
+		<STRING> disputed the results, alleging fraud by the election commission but refused to adhere to the constitutional procedure and present an election petition before the courts. Most opinion polls had speculated that </STRING>
+		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
+			<REFEX FORM="+f+l" MODEL="random">Raila Odinga</REFEX>
+			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="" MODEL="original">
+			Odinga
+		</REFEX>
+		</REFERENCE>
+		<STRING> would defeat president Kibaki. Independent international observers have since stated that the poll was marred by irregularities favouring both PNU and ODM, especially at the final vote tallying stages. Many ODM supporters across the country rioted against the announced election results.</STRING>
+	</PARAGRAPH>
+</TEXT>
