@@ -16,24 +16,20 @@
 </head>
 
 <body class="container">
-<br />
 <header>
-	<h1 id="title" class="text-center"></h1>
+	<h1></h1>
 </header>
 <div class="text-justify" id="article">
 	<div class="row">
-		<div id="original" class="col-md-4"></div>
-		<div id="variation" class="col-md-4"></div>
-		<div id="no-variation" class="col-md-4"></div>
 	</div>
 </div>
 <footer class="jumbotron text-center">
 	<form>
 		<div class="form-group">
-			<label>What is the best text?</label>
+			<label>Which is your favorite text?</label>
 			<div class="radio">
 				<label class="radio-inline">
-					<input type="radio" name="preference" id="inlineRadio1" value="1"> First
+					<input type="radio" name="preference" id="inlineRadio1" value="1" required> First
 				</label>
 				<label class="radio-inline">
 					<input type="radio" name="preference" id="inlineRadio2" value="2"> Second
@@ -45,7 +41,7 @@
 		</div>
 		<div class="form-group">
 			<button id="button" class="btn btn-primary" disabled="disabled">Submit</button>
-			<span id="timer" class="help-block">03:00</span>
+			<span id="timer" class="help-block">02:00</span>
 		</div>
 	</form>
 </footer>

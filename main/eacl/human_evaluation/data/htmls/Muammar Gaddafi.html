@@ -10,14 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
   </script>
   <title>
-   Muammar Gaddafi
   </title>
  </head>
  <body class="container">
-  <br/>
   <header>
-   <h1 class="text-center" id="title">
-    Muammar Gaddafi
+   <h1>
    </h1>
   </header>
   <div class="text-justify" id="article">
@@ -102,7 +99,7 @@
       was a controversial and highly divisive world figure. Supporters lauded his anti-imperialist stance and his support for Pan-Africanism and Pan-Arabism, and he was decorated with various awards. Conversely, he was internationally condemned as a dictator and autocrat whose authoritarian administration violated the human rights of Libyan citizens, and supported irredentist movements, tribal warfare and terrorism in many other nations.
      </p>
     </div>
-    <div class="col-md-4" id="no-variation">
+    <div class="col-md-4" id="novariation">
      <p class="lead">
       <span style="background-color: #FFFF00">
        Gaddafi
@@ -148,19 +145,19 @@
    <form>
     <div class="form-group">
      <label>
-      What is the best text?
+      Which is your favorite text?
      </label>
      <div class="radio">
       <label class="radio-inline">
-       <input id="inlineRadio1" name="preference" type="radio" value="1"/>
+       <input id="inlineRadio1" name="preference" type="radio" value="original"/>
        First
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio2" name="preference" type="radio" value="2"/>
+       <input id="inlineRadio2" name="preference" type="radio" value="variation"/>
        Second
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio3" name="preference" type="radio" value="3"/>
+       <input id="inlineRadio3" name="preference" type="radio" value="novariation"/>
        Third
       </label>
      </div>
@@ -170,7 +167,7 @@
       Submit
      </button>
      <span class="help-block" id="timer">
-      03:00
+      02:00
      </span>
     </div>
    </form>
@@ -196,7 +193,7 @@
 	}
 
 	window.onload = function () {
-	    var fiveMinutes = 60 * 0.1,
+	    var fiveMinutes = 60 * 2,
 	        display = document.querySelector('#timer');
 	    startTimer(fiveMinutes, display);
 	};

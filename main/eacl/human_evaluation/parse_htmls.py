@@ -4,24 +4,41 @@ import os
 
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
+from random import randint
 
-def run(fname):
+def run(fname, combinations):
     root = ET.parse(fname)
     root = root.getroot()
     title = root.find('TITLE').text
 
     soup = BeautifulSoup(open('data/htmls/layout.html'))
 
-    soup.title.append(title)
-
-    soup.body.header.h1.append(title)
-
     paragraphs = root.findall('PARAGRAPH')
-    reference_id = 1
 
-    original_div = soup.find('div', {'id':'original'})
-    variation_div = soup.find('div', {'id':'variation'})
-    novariation_div = soup.find('div', {'id':'no-variation'})
+    article_div = soup.find('div', {'id':'article'}).div
+    index = randint(0, len(combinations)-1)
+    for i, idx in enumerate(combinations[index]):
+        if idx == 1:
+            original_div = BeautifulSoup("<div id=\"original\" class=\"col-md-4\"></div>").div
+            article_div.append(original_div)
+
+            _id = 'inlineRadio'+str(i+1)
+            label = soup.find('input', {'id':_id})
+            label['value'] = 'original'
+        elif idx == 2:
+            variation_div = BeautifulSoup("<div id=\"variation\" class=\"col-md-4\"></div>").div
+            article_div.append(variation_div)
+
+            _id = 'inlineRadio'+str(i+1)
+            label = soup.find('input', {'id':_id})
+            label['value'] = 'variation'
+        else:
+            novariation_div = BeautifulSoup("<div id=\"novariation\" class=\"col-md-4\"></div>").div
+            article_div.append(novariation_div)
+
+            _id = 'inlineRadio'+str(i+1)
+            label = soup.find('input', {'id':_id})
+            label['value'] = 'novariation'
 
     for p_i, p in enumerate(paragraphs):
         original_p = BeautifulSoup("<p class=\"lead\"></p>").p
@@ -68,6 +85,7 @@ if __name__ == '__main__':
     xmls = os.listdir('data/processed')
     xmls = filter(lambda x: x != '.DS_Store', xmls)
 
+    combinations = [(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,1,2), (3,2,1)]
     for xml in xmls:
-        run(os.path.join('data/processed', xml))
+        run(os.path.join('data/processed', xml), combinations)
 

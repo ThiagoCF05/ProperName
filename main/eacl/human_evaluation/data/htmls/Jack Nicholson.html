@@ -10,14 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
   </script>
   <title>
-   Jack Nicholson
   </title>
  </head>
  <body class="container">
-  <br/>
   <header>
-   <h1 class="text-center" id="title">
-    Jack Nicholson
+   <h1>
    </h1>
   </header>
   <div class="text-justify" id="article">
@@ -74,7 +71,7 @@
       is one of only two actors to be nominated for an Academy Award for acting in every decade from the 1960s to the 2000s; the other was Michael Caine. He has won six Golden Globe Awards, and received the Kennedy Center Honor in 2001. In 1994, he became one of the youngest actors to be awarded the American Film Institute's Life Achievement Award. Other notable films in which he has starred include the road movie Easy Rider (1969), the drama Five Easy Pieces (1970), the comedy-drama film The Last Detail (1973), the neo-noir mystery film Chinatown (1974), the drama The Passenger (1975), and the epic film Reds (1981). He played Jack Torrance in the Stanley Kubrick's horror film The Shining (1980), the Joker in Batman (1989), and Frank Costello in the Martin Scorsese's crime drama The Departed (2006). Other films include the legal drama A Few Good Men (1992), the Sean Penn-directed mystery film The Pledge (2001), and the comedy-drama About Schmidt (2002).
      </p>
     </div>
-    <div class="col-md-4" id="no-variation">
+    <div class="col-md-4" id="novariation">
      <p class="lead">
       <span style="background-color: #FFFF00">
        Jack Nicholson
@@ -106,19 +103,19 @@
    <form>
     <div class="form-group">
      <label>
-      What is the best text?
+      Which is your favorite text?
      </label>
      <div class="radio">
       <label class="radio-inline">
-       <input id="inlineRadio1" name="preference" type="radio" value="1"/>
+       <input id="inlineRadio1" name="preference" type="radio" value="original"/>
        First
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio2" name="preference" type="radio" value="2"/>
+       <input id="inlineRadio2" name="preference" type="radio" value="variation"/>
        Second
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio3" name="preference" type="radio" value="3"/>
+       <input id="inlineRadio3" name="preference" type="radio" value="novariation"/>
        Third
       </label>
      </div>
@@ -128,7 +125,7 @@
       Submit
      </button>
      <span class="help-block" id="timer">
-      03:00
+      02:00
      </span>
     </div>
    </form>
@@ -154,7 +151,7 @@
 	}
 
 	window.onload = function () {
-	    var fiveMinutes = 60 * 0.1,
+	    var fiveMinutes = 60 * 2,
 	        display = document.querySelector('#timer');
 	    startTimer(fiveMinutes, display);
 	};

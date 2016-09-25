@@ -10,22 +10,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
   </script>
   <title>
-   Mark Zuckerberg
   </title>
  </head>
  <body class="container">
-  <br/>
   <header>
-   <h1 class="text-center" id="title">
-    Mark Zuckerberg
+   <h1>
    </h1>
   </header>
   <div class="text-justify" id="article">
    <div class="row">
-    <div class="col-md-4" id="original">
+    <div class="col-md-4" id="novariation">
      <p class="lead">
       <span style="background-color: #FFFF00">
-       Mark Elliot Zuckerberg
+       Mark Zuckerberg
       </span>
       (born May 14, 1984) is an American computer programmer and Internet entrepreneur. He is best known as one of five co-founders of the social networking website Facebook.
       <span style="background-color: #FFFF00">
@@ -106,10 +103,10 @@
       was played by actor Jesse Eisenberg in the 2010 film The Social Network, in which the rise of Facebook is portrayed.
      </p>
     </div>
-    <div class="col-md-4" id="no-variation">
+    <div class="col-md-4" id="original">
      <p class="lead">
       <span style="background-color: #FFFF00">
-       Mark Zuckerberg
+       Mark Elliot Zuckerberg
       </span>
       (born May 14, 1984) is an American computer programmer and Internet entrepreneur. He is best known as one of five co-founders of the social networking website Facebook.
       <span style="background-color: #FFFF00">
@@ -154,19 +151,19 @@
    <form>
     <div class="form-group">
      <label>
-      What is the best text?
+      Which is your favorite text?
      </label>
      <div class="radio">
       <label class="radio-inline">
-       <input id="inlineRadio1" name="preference" type="radio" value="1"/>
+       <input id="inlineRadio1" name="preference" type="radio" value="novariation"/>
        First
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio2" name="preference" type="radio" value="2"/>
+       <input id="inlineRadio2" name="preference" type="radio" value="variation"/>
        Second
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio3" name="preference" type="radio" value="3"/>
+       <input id="inlineRadio3" name="preference" type="radio" value="original"/>
        Third
       </label>
      </div>
@@ -176,7 +173,7 @@
       Submit
      </button>
      <span class="help-block" id="timer">
-      03:00
+      02:00
      </span>
     </div>
    </form>
@@ -202,7 +199,7 @@
 	}
 
 	window.onload = function () {
-	    var fiveMinutes = 60 * 0.1,
+	    var fiveMinutes = 60 * 2,
 	        display = document.querySelector('#timer');
 	    startTimer(fiveMinutes, display);
 	};

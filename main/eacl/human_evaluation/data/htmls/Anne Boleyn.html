@@ -10,19 +10,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
   </script>
   <title>
-   Anne Boleyn
   </title>
  </head>
  <body class="container">
-  <br/>
   <header>
-   <h1 class="text-center" id="title">
-    Anne Boleyn
+   <h1>
    </h1>
   </header>
   <div class="text-justify" id="article">
    <div class="row">
-    <div class="col-md-4" id="original">
+    <div class="col-md-4" id="novariation">
      <p class="lead">
       <span style="background-color: #FFFF00">
        Anne Boleyn
@@ -48,15 +45,15 @@
       </span>
       was sent back home to Hever Castle, and Percy was married to Lady Mary Talbot, to whom he had been betrothed since adolescence. In February/March 1526, Henry VIII began his pursuit of
       <span style="background-color: #FFFF00">
-       Anne
+       Anne Boleyn
       </span>
       . She resisted his attempts to seduce her, refusing to become his mistress &ndash; which her sister Mary had been. It soon became the one absorbing object of Henry's desires to annul his marriage to Queen Catherine so he would be free to marry
       <span style="background-color: #FFFF00">
-       Anne
+       Anne Boleyn
       </span>
       . When it became clear that Pope Clement VII would not annul the marriage, the breaking of the power of the Catholic Church in England began. In 1532, Henry granted
       <span style="background-color: #FFFF00">
-       Anne
+       Anne Boleyn
       </span>
       the Marquessate of Pembroke.
      </p>
@@ -67,7 +64,7 @@
       </span>
       married on 25 January 1533. On 23 May 1533, Thomas Cranmer declared Henry and Catherine's marriage null and void; five days later, he declared Henry and
       <span style="background-color: #FFFF00">
-       Anne's
+       Anne Boleyn's
       </span>
       marriage valid. Shortly afterwards, the Pope decreed sentences of excommunication against Henry and Cranmer. As a result of this marriage and these excommunications, the first break between the Church of England and Rome took place and the Church of England was brought under the King's control.
       <span style="background-color: #FFFF00">
@@ -82,7 +79,7 @@
      <p class="lead">
       Henry had
       <span style="background-color: #FFFF00">
-       Anne
+       Anne Boleyn
       </span>
       investigated for high treason in April 1536. On 2 May she was arrested and sent to the Tower of London, where she was tried before a jury of peers &ndash; which included Henry Percy, her former betrothed, and her own uncle, Thomas Howard &ndash; and found guilty on 15 May. She was beheaded four days later. Modern historians view the charges against her, which included adultery, incest, and witchcraft, as unconvincing. Following the coronation of her daughter Elizabeth as queen,
       <span style="background-color: #FFFF00">
@@ -168,7 +165,7 @@
       has been called "the most influential and important queen consort England has ever had", since she provided the occasion for Henry VIII to annul his marriage to Catherine of Aragon, and declare his independence from Rome.
      </p>
     </div>
-    <div class="col-md-4" id="no-variation">
+    <div class="col-md-4" id="original">
      <p class="lead">
       <span style="background-color: #FFFF00">
        Anne Boleyn
@@ -194,15 +191,15 @@
       </span>
       was sent back home to Hever Castle, and Percy was married to Lady Mary Talbot, to whom he had been betrothed since adolescence. In February/March 1526, Henry VIII began his pursuit of
       <span style="background-color: #FFFF00">
-       Anne Boleyn
+       Anne
       </span>
       . She resisted his attempts to seduce her, refusing to become his mistress &ndash; which her sister Mary had been. It soon became the one absorbing object of Henry's desires to annul his marriage to Queen Catherine so he would be free to marry
       <span style="background-color: #FFFF00">
-       Anne Boleyn
+       Anne
       </span>
       . When it became clear that Pope Clement VII would not annul the marriage, the breaking of the power of the Catholic Church in England began. In 1532, Henry granted
       <span style="background-color: #FFFF00">
-       Anne Boleyn
+       Anne
       </span>
       the Marquessate of Pembroke.
      </p>
@@ -213,7 +210,7 @@
       </span>
       married on 25 January 1533. On 23 May 1533, Thomas Cranmer declared Henry and Catherine's marriage null and void; five days later, he declared Henry and
       <span style="background-color: #FFFF00">
-       Anne Boleyn's
+       Anne's
       </span>
       marriage valid. Shortly afterwards, the Pope decreed sentences of excommunication against Henry and Cranmer. As a result of this marriage and these excommunications, the first break between the Church of England and Rome took place and the Church of England was brought under the King's control.
       <span style="background-color: #FFFF00">
@@ -228,7 +225,7 @@
      <p class="lead">
       Henry had
       <span style="background-color: #FFFF00">
-       Anne Boleyn
+       Anne
       </span>
       investigated for high treason in April 1536. On 2 May she was arrested and sent to the Tower of London, where she was tried before a jury of peers &ndash; which included Henry Percy, her former betrothed, and her own uncle, Thomas Howard &ndash; and found guilty on 15 May. She was beheaded four days later. Modern historians view the charges against her, which included adultery, incest, and witchcraft, as unconvincing. Following the coronation of her daughter Elizabeth as queen,
       <span style="background-color: #FFFF00">
@@ -247,19 +244,19 @@
    <form>
     <div class="form-group">
      <label>
-      What is the best text?
+      Which is your favorite text?
      </label>
      <div class="radio">
       <label class="radio-inline">
-       <input id="inlineRadio1" name="preference" type="radio" value="1"/>
+       <input id="inlineRadio1" name="preference" type="radio" value="novariation"/>
        First
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio2" name="preference" type="radio" value="2"/>
+       <input id="inlineRadio2" name="preference" type="radio" value="variation"/>
        Second
       </label>
       <label class="radio-inline">
-       <input id="inlineRadio3" name="preference" type="radio" value="3"/>
+       <input id="inlineRadio3" name="preference" type="radio" value="original"/>
        Third
       </label>
      </div>
@@ -269,7 +266,7 @@
       Submit
      </button>
      <span class="help-block" id="timer">
-      03:00
+      02:00
      </span>
     </div>
    </form>
@@ -295,7 +292,7 @@
 	}
 
 	window.onload = function () {
-	    var fiveMinutes = 60 * 0.1,
+	    var fiveMinutes = 60 * 2,
 	        display = document.querySelector('#timer');
 	    startTimer(fiveMinutes, display);
 	};
