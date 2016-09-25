@@ -116,6 +116,9 @@ class Bayes(object):
         def calc_prob(gram):
             prob = 0
             f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
+            print 'TEST: '
+            for e in f:
+                print e
             dem = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
 
             if dem != 0:
