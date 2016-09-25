@@ -13,20 +13,20 @@
 		</REFERENCE>
 		<STRING> CBE (25 March 1947) is an English composer and singer, who accompanies himself on the piano. He has worked with lyricist Bernie Taupin as his songwriter partner since 1967; they have collaborated on more than 30 albums to date. In his five-decade career </STRING>
 		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Elton</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Elton John
 		</REFEX>
 		</REFERENCE>
 		<STRING> has sold more than 300 million records, making him one of the best-selling music artists in the world. He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 Billboard Top 40 singles, 27 Top 10, four No. 2 and nine No. 1. For 31 consecutive years (1970–2000) he had at least one song in the Billboard Hot 100. His single &quot;Candle in the Wind 1997&quot; sold over 33 million copies worldwide and is the best-selling single in the history of the UK and US singles charts. He has also composed music, produced records, and has occasionally acted in films. </STRING>
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">John</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
 			<REFEX FORM="" MODEL="original">
 			John
 		</REFEX>
@@ -35,10 +35,10 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="2">
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">John</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Elton John
 		</REFEX>
@@ -48,14 +48,14 @@
 			<REFEX FORM="+l" MODEL="random">John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Elton John</REFEX>
 			<REFEX FORM="" MODEL="original">
 			John
 		</REFEX>
 		</REFERENCE>
 		<STRING> met his songwriter partner, Bernie Taupin, in 1967, after they had both answered an advert for songwriters. For two years they wrote songs for other artists, including Roger Cook and Lulu, and </STRING>
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
+			<REFEX FORM="+l" MODEL="random">John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
@@ -68,7 +68,7 @@
 			<REFEX FORM="+f" MODEL="random">Elton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Elton John
 		</REFEX>
@@ -78,17 +78,17 @@
 	<PARAGRAPH ID="3">
 		<STRING>He has received six Grammy Awards, five Brit Awards – winning two awards for Outstanding Contribution to Music and the first Brits Icon in 2013 for his &quot;lasting impact on British culture&quot;, an Academy Award, a Golden Globe Award, a Tony Award, a Disney Legend award, and the Kennedy Center Honors in 2004. In 2004, Rolling Stone ranked him Number 49 on its list of 100 influential musicians of the rock and roll era. In 2013, Billboard ranked him the most successful male solo artist on &quot;The Billboard Hot 100 Top All-Time Artists&quot; (third overall behind the Beatles and Madonna). He was inducted into the Rock and Roll Hall of Fame in 1994, is an inductee into the Songwriter's Hall of Fame, and is a fellow of the British Academy of Songwriters, Composers and Authors. Having been named a Commander of the Order of the British Empire in 1996, </STRING>
 		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
+			<REFEX FORM="+f" MODEL="random">Elton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Elton John</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Elton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			John
 		</REFEX>
 		</REFERENCE>
 		<STRING> received a knighthood from Elizabeth II for &quot;services to music and charitable services&quot; in 1998. </STRING>
 		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
+			<REFEX FORM="+f" MODEL="random">Elton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>
@@ -101,7 +101,7 @@
 	<PARAGRAPH ID="4">
 		<STRING>He has been heavily involved in the fight against AIDS since the late 1980s. In 1992, he established the Elton John AIDS Foundation and a year later began hosting the annual Academy Award Party, which has since become one of the highest-profile Oscar parties in the Hollywood film industry. Since its inception, the foundation has raised over $200 million. </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">John</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Elton John</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">John</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">John</REFEX>

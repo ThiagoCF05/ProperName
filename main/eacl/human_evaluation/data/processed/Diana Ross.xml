@@ -3,7 +3,7 @@
 	<TITLE>Diana Ross</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Diana Ross</REFEX>
+			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
 			<REFEX FORM="+f+l" MODEL="siddharthan">Diana Ross</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Diana Ross</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Diana Ross</REFEX>
@@ -16,7 +16,7 @@
 	<PARAGRAPH ID="2">
 		<STRING>As part of the Supremes, </STRING>
 		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Diana Ross</REFEX>
+			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Ross</REFEX>
@@ -39,7 +39,7 @@
 		</REFERENCE>
 		<STRING> released her debut solo album, Diana Ross, which contained the hits &quot;Reach Out and Touch (Somebody's Hand)&quot; and the number-one hit &quot;Ain't No Mountain High Enough&quot;. She released the album Touch Me in the Morning in 1973. Its title track reached #1 becoming her second solo hit. By 1975, the Mahogany soundtrack included her 3rd number-one hit &quot;Theme from Mahogany (Do You Know Where You're Going To)&quot;. Her 1976 album Diana Ross included her fourth number-one hit &quot;Love Hangover&quot;. In 1979, </STRING>
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Diana Ross</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Ross</REFEX>
@@ -52,7 +52,7 @@
 			<REFEX FORM="+l" MODEL="random">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Ross</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Diana</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Ross
 		</REFEX>
@@ -61,7 +61,7 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="4">
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Ross</REFEX>
+			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Ross</REFEX>
@@ -74,7 +74,7 @@
 	<PARAGRAPH ID="5">
 		<STRING>Beside ventures in Broadway, </STRING>
 		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Diana Ross</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Diana Ross</REFEX>
@@ -107,10 +107,10 @@
 	<PARAGRAPH ID="6">
 		<STRING>In 1988, </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Diana</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Diana Ross</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Ross</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Ross</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Diana</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Ross</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Ross
 		</REFEX>

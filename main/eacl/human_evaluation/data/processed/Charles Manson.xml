@@ -13,7 +13,7 @@
 		</REFERENCE>
 		<STRING> (November 12, 1934) is an American criminal who led what became known as the Manson Family, a quasi-commune that arose in the California desert in the late 1960s. In 1971 he was found guilty of conspiracy to commit the murders of seven people: actress Sharon Tate and four other people at Tate's home; and the next day, a married couple, Leno and Rosemary LaBianca; all carried out by members of the group at his instruction. He was convicted of the murders through the joint-responsibility rule, which makes each member of a conspiracy guilty of crimes committed by fellow conspirators in furtherance of the conspiracy's objective. His followers also murdered several other people at other times and locations, and </STRING>
 		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Charles Milles</REFEX>
+			<REFEX FORM="+l" MODEL="random">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Manson</REFEX>
@@ -25,17 +25,17 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="2">
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Charles Milles</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Manson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Manson
 		</REFEX>
 		</REFERENCE>
 		<STRING> believed in what he called &quot;Helter Skelter&quot;, a term he took from the song of the same name by the Beatles. </STRING>
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Manson</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Manson</REFEX>
@@ -48,14 +48,14 @@
 			<REFEX FORM="+l" MODEL="random">Manson's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson's</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson's</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Manson's</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson's</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Manson
 		</REFEX>
 		</REFERENCE>
 		<STRING> prosecutor Vincent Bugliosi as the title of a book that he wrote about the </STRING>
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="old" SYNCAT="subj-det">
-			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson's</REFEX>
+			<REFEX FORM="+f+m" MODEL="random">Charles Milles'</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Charles Manson's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson's</REFEX>
@@ -71,14 +71,14 @@
 			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Manson</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Manson
 		</REFEX>
 		</REFERENCE>
 		<STRING> was an unemployed former convict, who had spent half of his life in correctional institutions for a variety of offenses. Before the murders, he was a singer-songwriter on the fringe of the Los Angeles music industry, chiefly through a chance association with Dennis Wilson, drummer and co-founder of the Beach Boys. After </STRING>
 		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Manson</REFEX>
+			<REFEX FORM="+f+m" MODEL="random">Charles Milles</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Manson</REFEX>
@@ -93,14 +93,14 @@
 			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson's</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Manson's</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson's</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Manson's</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Manson's
 		</REFEX>
 		</REFERENCE>
 		<STRING> death sentence was automatically commuted to life imprisonment when a 1972 decision by the Supreme Court of California temporarily eliminated the state's death penalty. California's eventual reinstatement of capital punishment did not affect </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
-			<REFEX FORM="+f+m+l" MODEL="random">Charles Milles Manson</REFEX>
+			<REFEX FORM="+l" MODEL="random">Manson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Manson</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Charles Manson</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Charles Manson</REFEX>

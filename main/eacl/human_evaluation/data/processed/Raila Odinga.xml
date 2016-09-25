@@ -3,27 +3,27 @@
 	<TITLE>Raila Odinga</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="old" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="random">Odinga</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Odinga</REFEX>
+			<REFEX FORM="+t+l" MODEL="bayes_variation">Mr Odinga</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Raila Amolo Odinga
 		</REFEX>
 		</REFERENCE>
 		<STRING> (born 7 January 1945), also popularly known to his supporters as Agwambo (meaning the &quot;Mysterious One&quot;), Tinga, Baba, RAO, and Jakom (&quot;Chairman&quot;) is a Kenyan politician regarded as the father of democracy in Kenya owing to his pro-democracy political engagements. He was first elected as the Member of Parliament for Langata in 1992, served as Minister of Energy from 2001 to 2002 and as Minister of Roads, Public Works, and Housing from 2003 to 2005. He was the main opposition candidate in the 2007 presidential election. Following a violent post-electoral crisis, </STRING>
 		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="random">Odinga</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Odinga</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Odinga
 		</REFEX>
 		</REFERENCE>
 		<STRING> took office as Prime Minister in April 2008, serving as supervisor and coordinator of a national unity coalition government. He came in second in Kenya's 2013 presidential elections after garnering 5,340,546 votes which represented 43.28% of the total votes cast. Son of first Vice President of Kenya, Jaramogi Oginga Odinga. The family's origin in Kenya's Luo tribe has been a key to their political activity. </STRING>
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+l" MODEL="random">Odinga</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
@@ -43,10 +43,10 @@
 		</REFERENCE>
 		<STRING> was a presidential contender in the 1997 elections, coming third after President Daniel arap Moi of KANU and Mwai Kibaki, the former president of Kenya and then a member of the Democratic Party. </STRING>
 		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Raila</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Raila Odinga</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
-			<REFEX FORM="+t+l" MODEL="bayes_variation">Mr Odinga</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Odinga
 		</REFEX>
@@ -56,7 +56,7 @@
 	<PARAGRAPH ID="2">
 		<STRING>On 1 September 2007, </STRING>
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Raila Odinga</REFEX>
+			<REFEX FORM="+l" MODEL="random">Odinga</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_variation">Raila</REFEX>
@@ -69,7 +69,7 @@
 	<PARAGRAPH ID="3">
 		<STRING>On 30 December 2007, the chairman of the Kenyan election commission declared </STRING>
 		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
-			<REFEX FORM="+f" MODEL="random">Raila's</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Raila Odinga's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Odinga's</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Raila's</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_variation">Raila's</REFEX>

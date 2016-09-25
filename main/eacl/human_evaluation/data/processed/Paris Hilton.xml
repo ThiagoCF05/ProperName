@@ -3,7 +3,7 @@
 	<TITLE>Paris Hilton</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
+			<REFEX FORM="+l" MODEL="random">Hilton</REFEX>
 			<REFEX FORM="+f+m+l" MODEL="siddharthan">Paris Whitney Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Paris Hilton</REFEX>
@@ -23,7 +23,7 @@
 		</REFERENCE>
 		<STRING> began her modeling career as a teenager when she signed with Donald Trump's agency, Trump Model Management. Her lifestyle and rumored short-lived relationships made her a feature of entertainment news, and </STRING>
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Hilton</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Paris Whitney Hilton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Paris Hilton</REFEX>
@@ -33,10 +33,10 @@
 		</REFERENCE>
 		<STRING> was proclaimed &quot;New York's leading It Girl&quot; in 2001. In 2003, a sex tape with </STRING>
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
+			<REFEX FORM="+l" MODEL="random">Hilton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Paris Hilton</REFEX>
+			<REFEX FORM="+f+m+l+a" MODEL="bayes_variation">Paris Hilton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Hilton
 		</REFEX>
@@ -46,30 +46,30 @@
 	<PARAGRAPH ID="2">
 		<STRING>In 2004, </STRING>
 		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Paris Whitney Hilton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
-			<REFEX FORM="+m" MODEL="bayes_variation"/>
+			<REFEX FORM="+l" MODEL="bayes_variation">Paris Hilton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Hilton
 		</REFEX>
 		</REFERENCE>
 		<STRING> released her book Confessions of an Heiress, which became The New York Times Best Seller. She later played a supporting role in the horror film House of Wax (2005) and released her debut album, Paris (2006). The album received generally mixed reviews, but the lead single, &quot;Stars Are Blind&quot;, managed to be successful in charts, peaking at number eighteen on the Billboard Hot 100. </STRING>
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
+			<REFEX FORM="+l" MODEL="random">Hilton</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
-			<REFEX FORM="+f+m+l" MODEL="bayes_variation">Paris Hilton</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Paris Hilton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Hilton
 		</REFEX>
 		</REFERENCE>
 		<STRING> returned to reality television in 2008 with Paris Hilton's My New BFF (2008) and its two spin-offs: Paris Hilton's British Best Friend (2009) and Paris Hilton's Dubai BFF (2009), and again in 2011 with The World According to Paris. Her other acting credits include Bottoms Up, National Lampoon's Pledge This! (2006), The Hottie and the Nottie, Repo! The Genetic Opera (2008) and Sofia Coppola's film The Bling Ring (2013). In 2012, </STRING>
 		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m+l" MODEL="random">Paris Whitney Hilton</REFEX>
+			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation"/>
+			<REFEX FORM="+f+m+l" MODEL="bayes_variation">Paris Hilton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Hilton
 		</REFEX>
@@ -92,7 +92,7 @@
 			<REFEX FORM="+f" MODEL="random">Paris</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Hilton</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Paris Hilton</REFEX>
-			<REFEX FORM="+f+m+l+a" MODEL="bayes_variation">Paris Hilton</REFEX>
+			<REFEX FORM="+m" MODEL="bayes_variation">Paris Hilton</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Hilton
 		</REFEX>

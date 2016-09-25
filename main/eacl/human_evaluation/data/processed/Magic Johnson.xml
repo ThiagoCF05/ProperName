@@ -3,7 +3,7 @@
 	<TITLE>Magic Johnson</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
+			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
 			<REFEX FORM="+f+l" MODEL="siddharthan">Magic Johnson</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Magic Johnson</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson</REFEX>
@@ -16,7 +16,7 @@
 			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Johnson
 		</REFEX>
@@ -26,7 +26,7 @@
 			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Johnson
 		</REFEX>
@@ -35,7 +35,7 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="2">
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
-			<REFEX FORM="+f" MODEL="random">Magic's</REFEX>
+			<REFEX FORM="+l" MODEL="random">Johnson's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Magic Johnson's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson's</REFEX>
@@ -45,10 +45,10 @@
 		</REFERENCE>
 		<STRING> career achievements include three NBA MVP Awards, nine NBA Finals appearances, twelve All-Star games, and ten All-NBA First and Second Team nominations. He led the league in regular-season assists four times, and is the NBA's all-time leader in average assists per game, at 11.2. </STRING>
 		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
+			<REFEX FORM="+f" MODEL="random">Magic</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Johnson
 		</REFEX>
@@ -68,7 +68,7 @@
 			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Magic Johnson</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Johnson
 		</REFEX>
@@ -77,7 +77,7 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="3">
 		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
+			<REFEX FORM="+f" MODEL="random">Magic</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
@@ -90,7 +90,7 @@
 	<PARAGRAPH ID="4">
 		<STRING>Since his retirement, </STRING>
 		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="old" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
+			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
@@ -100,7 +100,7 @@
 		</REFERENCE>
 		<STRING> has been an advocate for HIV/AIDS prevention and safe sex, as well as an entrepreneur, philanthropist, broadcaster and motivational speaker. His public announcement of his HIV-positive status in 1991 helped dispel the stereotype, still widely held at the time, that HIV was a &quot;gay disease&quot; that heterosexuals need not worry about; his bravery in making this announcement was widely commended. Named by Ebony Magazine as one of America's most influential black businessmen in 2009, </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>
@@ -110,7 +110,7 @@
 		</REFERENCE>
 		<STRING> has numerous business interests, and was a part-owner of the Lakers for several years. </STRING>
 		<REFERENCE GIVENNESS="old" ID="11" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Johnson</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Magic Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Johnson</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Johnson</REFEX>

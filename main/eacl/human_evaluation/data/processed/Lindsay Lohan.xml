@@ -3,7 +3,7 @@
 	<TITLE>Lindsay Lohan</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Lindsay</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan</REFEX>
 			<REFEX FORM="+f+m+l" MODEL="siddharthan">Lindsay Dee Lohan</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Lindsay Lohan</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
@@ -19,7 +19,7 @@
 			<REFEX FORM="+f" MODEL="random">Lindsay</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Lindsay</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>
@@ -29,14 +29,14 @@
 			<REFEX FORM="+f" MODEL="random">Lindsay</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Lindsay</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>
 		</REFERENCE>
 		<STRING> became a teen idol sensation, a household name and a frequent focus of paparazzi and tabloids. </STRING>
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
-			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan's</REFEX>
+			<REFEX FORM="+l" MODEL="random">Lohan's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Lindsay Lohan's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan's</REFEX>
@@ -49,7 +49,7 @@
 			<REFEX FORM="+l" MODEL="random">Lohan</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Lindsay</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Lohan</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>
@@ -69,7 +69,7 @@
 		</REFERENCE>
 		<STRING> signed with Casablanca Records. </STRING>
 		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="subj-det">
-			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan's</REFEX>
+			<REFEX FORM="+f" MODEL="random">Lindsay's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Lindsay Lohan's</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Lohan's</REFEX>
@@ -79,7 +79,7 @@
 		</REFERENCE>
 		<STRING> debut studio album, Speak was released in December 2004 and became the first high-seller from Casablanca in several years, selling 1 million copies in the United States and peaking at number four on the Billboard 200. The album received mostly mixed reviews and was certified platinum. Her second album, A Little More Personal (Raw) was released in December 2005 and features darker material than </STRING>
 		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="old" SYNCAT="subj-det">
-			<REFEX FORM="+l" MODEL="random">Lohan's</REFEX>
+			<REFEX FORM="+f" MODEL="random">Lindsay's</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Lindsay Lohan's</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan's</REFEX>
@@ -92,7 +92,7 @@
 	<PARAGRAPH ID="4">
 		<STRING>In 2007, two driving under the influence incidents led to </STRING>
 		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
-			<REFEX FORM="+l" MODEL="random">Lohan</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Lindsay Lohan</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
@@ -102,10 +102,10 @@
 		</REFERENCE>
 		<STRING> being put on probation, and together with three visits to rehabilitation facilities caused the loss of several movie deals. In 2008 and 2009, </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Lindsay</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Lohan</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>
@@ -115,7 +115,7 @@
 			<REFEX FORM="+f+m+l" MODEL="random">Lindsay Dee Lohan</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Lohan</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Lindsay Lohan</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>
@@ -125,7 +125,7 @@
 			<REFEX FORM="+f" MODEL="random">Lindsay</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Lohan</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Lindsay</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Lohan</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Lindsay</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Lohan
 		</REFEX>

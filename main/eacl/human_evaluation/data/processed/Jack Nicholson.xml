@@ -25,7 +25,7 @@
 		</REFERENCE>
 		<STRING> 12 Academy Award nominations make him the most nominated male actor in the Academy's history. </STRING>
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Jack</REFEX>
+			<REFEX FORM="+l" MODEL="random">Nicholson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Nicholson</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Jack</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Jack Nicholson</REFEX>
@@ -35,17 +35,17 @@
 		</REFERENCE>
 		<STRING> has won the Academy Award for Best Actor twice, one for the drama One Flew Over the Cuckoo's Nest (1975) and the other for the romantic comedy As Good as It Gets (1997). He also won the Academy Award for Best Supporting Actor for the comedy-drama Terms of Endearment (1983). </STRING>
 		<REFERENCE GIVENNESS="old" ID="4" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+l" MODEL="random">Jack Nicholson</REFEX>
+			<REFEX FORM="+f" MODEL="random">Jack</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Nicholson</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Jack</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation"/>
+			<REFEX FORM="+l" MODEL="bayes_variation">Jack Nicholson</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Nicholson
 		</REFEX>
 		</REFERENCE>
 		<STRING> is one of three male actors to win three Academy Awards. </STRING>
 		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f" MODEL="random">Jack</REFEX>
+			<REFEX FORM="+f+l" MODEL="random">Jack Nicholson</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Nicholson</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_no_variation">Jack</REFEX>
 			<REFEX FORM="+f" MODEL="bayes_variation">Jack</REFEX>

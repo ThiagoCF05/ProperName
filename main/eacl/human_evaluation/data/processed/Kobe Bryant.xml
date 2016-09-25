@@ -3,7 +3,7 @@
 	<TITLE>Kobe Bryant</TITLE>
 	<PARAGRAPH ID="1">
 		<REFERENCE GIVENNESS="new" ID="1" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+f+m+l" MODEL="siddharthan">Kobe Bean Bryant</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_no_variation">Kobe Bryant</REFEX>
 			<REFEX FORM="+f+l" MODEL="bayes_variation">Kobe Bryant</REFEX>
@@ -13,7 +13,7 @@
 		</REFERENCE>
 		<STRING> (born August 23, 1978) is an American professional basketball player who currently plays for the Los Angeles Lakers of the National Basketball Association (NBA). He entered the NBA directly from high school, and has played for the Lakers his entire career, winning five NBA championships. </STRING>
 		<REFERENCE GIVENNESS="old" ID="2" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m+l" MODEL="random">Kobe Bean Bryant</REFEX>
+			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -26,10 +26,10 @@
 	<PARAGRAPH ID="2">
 		<STRING>The son of former NBA player Joe Bryant, </STRING>
 		<REFERENCE GIVENNESS="old" ID="3" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
+			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
-			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
+			<REFEX FORM="+f+l" MODEL="bayes_variation">Kobe Bryant</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Kobe Bryant
 		</REFEX>
@@ -39,7 +39,7 @@
 			<REFEX FORM="+f+m+l" MODEL="random">Kobe Bean Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
-			<REFEX FORM="+f" MODEL="bayes_variation">Kobe</REFEX>
+			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Bryant
 		</REFEX>
@@ -49,7 +49,7 @@
 	<PARAGRAPH ID="3">
 		<STRING>In 2003, </STRING>
 		<REFERENCE GIVENNESS="old" ID="5" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -61,7 +61,7 @@
 	</PARAGRAPH>
 	<PARAGRAPH ID="4">
 		<REFERENCE GIVENNESS="old" ID="6" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -71,7 +71,7 @@
 		</REFERENCE>
 		<STRING> and Shaquille O'Neal led the Lakers to three consecutive championships from 2000 to 2002. A feud between the duo and a loss in the 2004 NBA Finals resulted in O'Neal's trade from the Lakers to the Miami Heat. Following O'Neal's departure, </STRING>
 		<REFERENCE GIVENNESS="old" ID="7" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -81,7 +81,7 @@
 		</REFERENCE>
 		<STRING> became the cornerstone of the franchise. He led the NBA in scoring during the 2005–06 and 2006–07 seasons, setting numerous scoring records in the process. In 2006, </STRING>
 		<REFERENCE GIVENNESS="old" ID="8" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+f+m+l" MODEL="random">Kobe Bean Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -91,7 +91,7 @@
 		</REFERENCE>
 		<STRING> scored a career-high 81 points against the Toronto Raptors, the second most points scored in a single game in NBA history, second only to Wilt Chamberlain's 100-point game in 1962. He was awarded the regular season's Most Valuable Player Award (MVP) in 2008. After losing in the 2008 NBA Finals, </STRING>
 		<REFERENCE GIVENNESS="old" ID="9" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
+			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
@@ -104,10 +104,10 @@
 	<PARAGRAPH ID="5">
 		<STRING>At 34 years and 104 days of age, </STRING>
 		<REFERENCE GIVENNESS="old" ID="10" SENTENCE-GIVENNESS="new" SYNCAT="np-subj">
-			<REFEX FORM="+f+m" MODEL="random">Kobe Bean</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
-			<REFEX FORM="+f+l" MODEL="bayes_variation">Kobe Bryant</REFEX>
+			<REFEX FORM="+f" MODEL="bayes_variation">Kobe</REFEX>
 			<REFEX FORM="" MODEL="original">
 			Bryant
 		</REFEX>
@@ -124,7 +124,7 @@
 		</REFERENCE>
 		<STRING> has been selected to start every All-Star Game. He has won the All-Star MVP Award four times (2002, 2007, 2009, and 2011), tying him for the most All Star MVP Awards in NBA history. At the 2008 and 2012 Summer Olympics, he won gold medals as a member of the U.S. national team. Sporting News and TNT named </STRING>
 		<REFERENCE GIVENNESS="old" ID="12" SENTENCE-GIVENNESS="new" SYNCAT="np-obj">
-			<REFEX FORM="+f+m+l" MODEL="random">Kobe Bean Bryant</REFEX>
+			<REFEX FORM="+l" MODEL="random">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="siddharthan">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_no_variation">Bryant</REFEX>
 			<REFEX FORM="+l" MODEL="bayes_variation">Bryant</REFEX>
