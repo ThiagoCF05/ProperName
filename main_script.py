@@ -8,7 +8,6 @@ Description:
     Appliying Individual Variation
 """
 
-import copy
 import cPickle as p
 import json
 import numpy as np
@@ -30,7 +29,7 @@ appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-evaluation_dir = '/roaming/tcastrof/names/eacl/evaluationV2'
+evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
@@ -42,8 +41,6 @@ def init():
     print 'Initializing titles...'
     titles = json.load(open(titles_dir))
     dbpedia = json.load(open(fdbpedia))
-    print 'Initializing vocabulary...'
-    vocabulary = json.load(open(vocabulary_dir))
 
     print 'Initializing dbpedia...'
     base = {}
@@ -60,38 +57,14 @@ def init():
             base[entity].extend(titles[entity])
         base[entity] = list(set(base[entity]))
 
-    return entities_info, base, appositives, dbpedia, vocabulary
+    return entities_info, base, appositives, dbpedia
 
-def bayes_selection(mention, entity, model, k):
-    features = {
-        # 's_e': mention['label'],
-        'discourse_se': mention['givenness'],
-        'sentence_se': mention['sentence-givenness'],
-        'syntax_se': mention['syntax']
-    }
-
+def bayes_selection(features, entity, model, k):
     if k != None:
         prob = model.select_content_backoff(features, entity, k)
     else:
         prob = model.select_content(features, entity)
     return prob
-
-def bayes_realization(form, mention, entity, model, words, appositive):
-    return model.realizeWithWords(form, entity, mention['syntax'], words, appositive)
-
-# check the feature values already processed
-def get_features_visited(mention, features):
-    result = copy.copy(features)
-
-    if ('givenness', mention['givenness']) not in result:
-        result.append(('givenness', mention['givenness']))
-
-    if ('sentence-givenness', mention['sentence-givenness']) not in result:
-        result.append(('sentence-givenness', mention['sentence-givenness']))
-
-    if ('syntax', mention['syntax']) not in result:
-        result.append(('syntax', mention['syntax']))
-    return result
 
 def bayes_variation(references, form_distribution, test_set_same_features, entity, model, words, appositive, name):
     distribution = {}
@@ -103,34 +76,135 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
         form = filter(lambda x: distribution[x] == max(distribution.values()), distribution.keys())[0]
 
         label = filter(lambda x: x[0] == form, form_distribution)[0]
-        realizer = bayes_realization(form, test_set_same_features[i], entity, model, words, appositive)
+        realizer = model.realizeWithWords(form, entity, test_set_same_features[i]['syntax'], words, appositive)
         references[i][name] = { 'label': label, 'reference': realizer }
 
         distribution[form] -= 1
     return references
+
+def process_entity(entity, words, mentions, dbpedia, appositive, fname):
+    results = {}
+
+    # compute cross validation
+    fold = 1
+    kf = KFold(mentions.shape[0], n_folds=10)
+    for train, test in kf:
+        print 'Fold', str(fold)
+        results[fold] = []
+
+        # train and test sets
+        train_set, test_set = mentions[train], mentions[test]
+
+        # compute the set of features (vocabulary) for the bayes model
+        content_vocabulary, realization_vocabulary = [], []
+        for mention in train_set:
+            parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
+
+            content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
+            content_vocabulary.append(content_data)
+            realization_vocabulary.extend(realization_data)
+
+        # Consider data from other entities in the training set
+        # content_vocabulary.extend(general_voc)
+
+        # initialize our official model
+        clf = Bayes(content_vocabulary, realization_vocabulary, True)
+        # initialize random baseline
+        baseline_random = Random(dbpedia=dbpedia)
+        # initialize Siddharthan baseline
+        baseline1 = Siddharthan(dbpedia=dbpedia)
+        # initialize Deemter baseline
+        baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=parsed_dir)
+
+
+        for _givenness in ['new', 'old']:
+            for _sgivenness in ['new', 'old']:
+                for _syntax in ['np-subj', 'np-obj', 'subj-det']:
+                    # Group proper name references from the test fold by feature values
+                    test_set_same_features = filter(lambda x: x['givenness'] == _givenness \
+                                                              and x['sentence-givenness'] == _sgivenness \
+                                                              and x['syntax'] == _syntax, test_set)
+
+                    features = {
+                        # 's_e': mention['label'],
+                        'discourse_se': _givenness,
+                        'sentence_se': _sgivenness,
+                        'syntax_se': _syntax
+                    }
+
+                    # Bayes model selection
+                    form_distribution = bayes_selection(features, entity, clf, None)
+
+                    # Siddharthan model
+                    siddharthan_result = baseline1.run(entity, _givenness, _syntax)
+
+                    # Bayes model with no variation (Realization with the most likely referential form)
+                    bayes_result = clf.realizeWithWords(form_distribution[0][0], entity, _syntax, words, appositive)
+
+                    # Generate proper names for each group of features
+                    group_result = []
+                    for filtered_mention in test_set_same_features:
+                        result = {
+                            'real': {
+                                'label': filtered_mention['label'],
+                                'reference': filtered_mention['text']
+                            },
+                            'features': {
+                                'giveness': filtered_mention['givenness'],
+                                'sentence-givenness': filtered_mention['sentence-givenness'],
+                                'syntax': filtered_mention['syntax']
+                            }
+                        }
+
+                        # Random model
+                        r = baseline_random.run(entity, filtered_mention['syntax'])
+                        result['random'] = { 'label': r[0], 'reference': r[1] }
+
+                        result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
+
+                        # Deemter model
+                        ms = json.load(open(os.path.join(mention_dir, filtered_mention['fname'])))[entity]
+                        r = baseline2.run(entity, filtered_mention, ms, 3, filtered_mention['syntax'])
+                        result['deemter'] = { 'label': r[0], 'reference': r[1] }
+
+                        result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': bayes_result }
+
+                        # Bayes model with random choice of proper name form
+                        index = randint(0, len(form_distribution)-1)
+                        realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
+                        result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
+
+                        group_result.append(result)
+
+                    # Generate proper names with individual variation in the for choice
+                    group_result = bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation')
+                    results[fold].extend(group_result)
+        fold = fold + 1
+    print 'Saving results for ', str(entity)
+    p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
+    print 10 * '-'
 
 def run():
     if not os.path.exists(evaluation_dir):
         os.makedirs(evaluation_dir)
 
     # filter entities and their references (more than X references and less than Y)
-    results = {}
+    print 'Filter entities and their references (more than X references and less than Y)'
     references = prep.filter_entities(50, 0, mention_dir)
 
     # voc contains only the proper names / titles from DBpedia for each entity
-    entities_info, tested_words, appositives, dbpedia, vocabulary = init()
+    entities_info, tested_words, appositives, dbpedia = init()
 
     # Sort entities and start the process
-    entities = vocabulary.keys()
+    entities = references.keys()
     entities.sort()
+
     print 'Number of entities: ', len(entities)
     for entity in entities:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
         if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
             print entity
-            results[entity] = {}
-
             # Get appositive
             if entity in appositives:
                 appositive = appositives[entity]
@@ -140,113 +214,8 @@ def run():
             # Get proper nouns to be tested whether should be included in the reference
             words = tested_words[entity]
 
-            # Retrieve all the mentions to the entity
-            mentions = np.array(references[entity])
-
-            # compute the set of features (vocabulary) from other entities
-            general_voc = []
-            for e in vocabulary:
-                if e != entity:
-                    general_voc.extend(vocabulary[e])
-
-            # compute cross validation
-            fold = 1
-            kf = KFold(mentions.shape[0], n_folds=10)
-            for train, test in kf:
-                results[entity][fold] = []
-
-                # train and test sets
-                train_set, test_set = mentions[train], mentions[test]
-
-                # compute the set of features (vocabulary) for the bayes model
-                vocabulary_content, vocabulary_realization = [], []
-                for mention in train_set:
-                    parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
-
-                    tokens = prep.process_tokens(mention, parsed, entity, False)
-                    vocabulary_content.extend(tokens)
-                    vocabulary_realization.extend(tokens)
-
-                # Consider data from other entities in the training set
-                vocabulary_content.extend(general_voc)
-
-                # initialize our official model
-                clf = Bayes(vocabulary_content, vocabulary_realization, True)
-                # initialize random baseline
-                baseline_random = Random(dbpedia=dbpedia)
-                # initialize Siddharthan baseline
-                baseline1 = Siddharthan(dbpedia=dbpedia)
-                # initialize Deemter baseline
-                baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=parsed_dir)
-
-
-                features = []
-                for mention in test_set:
-                    # Check if the set of features was processed already
-                    aux = get_features_visited(mention, features)
-                    if aux != features:
-                        features = copy.copy(aux)
-
-                        # Group proper name references from the test fold by feature values
-                        test_set_same_features = filter(lambda x: x['givenness'] == mention['givenness'] \
-                                                                  and x['sentence-givenness'] == mention['sentence-givenness'] \
-                                                                  and x['syntax'] == mention['syntax'], test_set)
-
-                        # Bayes model selection
-                        form_distribution = bayes_selection(mention, entity, clf, None)
-                        form_distribution_k0 = bayes_selection(mention, entity, clf, 0)
-                        # form_distribution_k2 = bayes_selection(mention, entity, clf, 2)
-
-                        # Generate proper names for each group of features
-                        group_result = []
-                        for filtered_mention in test_set_same_features:
-                            result = {
-                                'real': {
-                                    'label': filtered_mention['label'],
-                                    'reference': filtered_mention['text']
-                                },
-                                'features': {
-                                    'giveness': filtered_mention['givenness'],
-                                    'sentence-givenness': filtered_mention['sentence-givenness'],
-                                    'syntax': filtered_mention['syntax']
-                                }
-                            }
-
-                            # Random model
-                            r = baseline_random.run(entity, filtered_mention['syntax'])
-                            result['random'] = { 'label': r[0], 'reference': r[1] }
-
-                            # Siddharthan model
-                            r = baseline1.run(entity, filtered_mention['givenness'], filtered_mention['syntax'])
-                            result['siddharthan'] = { 'label': r[0], 'reference': r[1] }
-
-                            # Deemter model
-                            ms = json.load(open(os.path.join(mention_dir, filtered_mention['fname'])))[entity]
-                            r = baseline2.run(entity, filtered_mention, ms, 3, filtered_mention['syntax'])
-                            result['deemter'] = { 'label': r[0], 'reference': r[1] }
-
-                            # Bayes model with no variation (Realization with the most likely referential form)
-                            realizer = bayes_realization(form_distribution[0][0], filtered_mention, entity, clf, words, appositive)
-                            result['bayes_no_variation'] = { 'label': form_distribution[0], 'reference': realizer }
-
-                            # Bayes backoff model with no variation (Realization with the most likely referential form)
-                            realizer = bayes_realization(form_distribution[0][0], filtered_mention, entity, clf, words, appositive)
-                            result['bayes_backoff_no_variation'] = { 'label': form_distribution_k0[0], 'reference': realizer }
-
-                            # Bayes model with random choice of proper name form
-                            index = randint(0, len(form_distribution)-1)
-                            realizer = bayes_realization(form_distribution[index][0], filtered_mention, entity, clf, words, appositive)
-                            result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
-
-                            group_result.append(result)
-
-                        # Generate proper names with individual variation in the for choice
-                        group_result = bayes_variation(group_result, form_distribution, test_set_same_features, entity, clf, words, appositive, 'bayes_variation')
-                        group_result = bayes_variation(group_result, form_distribution_k0, test_set_same_features, entity, clf, words, appositive, 'bayes_backoff_variation')
-                        results[entity][fold].extend(group_result)
-                fold = fold + 1
-            p.dump(results[entity], open(os.path.join(evaluation_dir, entity_id), 'w'))
-            # p.dump(results, open('EVALUATION.pickle', 'w'))
+            # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
+            process_entity(entity, words, np.array(references[entity]), dbpedia, appositive, entity_id)
 
 if __name__ == '__main__':
     run()

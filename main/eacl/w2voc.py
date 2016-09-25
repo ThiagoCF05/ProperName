@@ -79,7 +79,7 @@ def run(N, out='wtd'):
 
     data = prep.filter_entities(N, 0, mention_dir)
 
-    voc = {}
+    content_voc, realization_voc = {}, {}
     for i, entity in enumerate(data):
         print i+1, entity
         voc[entity] = []
@@ -91,11 +91,13 @@ def run(N, out='wtd'):
             mentions = filter(lambda x: x['fname'] == fname, data[entity])
 
             for mention in mentions:
-                tokens = prep.process_tokens(mention, parsed, entity, False)
-                voc[entity].extend(tokens)
+                content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
+                content_voc[entity].append(content_data)
+                realization_voc[entity].extend(realization_data)
 
     if out == 'wtd':
-        json.dump(voc, open('/roaming/tcastrof/names/eacl/stats/voc.json', 'w'), separators=(',',':'))
+        json.dump(content_voc, open('/roaming/tcastrof/names/eacl/stats/content_voc.json', 'w'), separators=(',',':'))
+        json.dump(realization_voc, open('/roaming/tcastrof/names/eacl/stats/realization_voc.json', 'w'), separators=(',',':'))
     return data
 
 if __name__ == '__main__':
