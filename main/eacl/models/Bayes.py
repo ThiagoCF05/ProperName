@@ -201,6 +201,7 @@ class Bayes(object):
         keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
         elems = dict(map(lambda x: (x, self.clf_content['elem_p'][x]), keys))
         elem = sorted(elems.items(), key=operator.itemgetter(1))[0][0]
+        print form, elem
         form = str(form).replace(elem, '')
         return form
 
