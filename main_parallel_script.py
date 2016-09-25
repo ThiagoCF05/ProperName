@@ -24,7 +24,7 @@ from sklearn.cross_validation import KFold
 
 fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
-titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
+titles_dir = '/roaming/tcastrof/names/eacl/all_titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
@@ -56,8 +56,7 @@ def init():
         # insert END token
         base[entity].append('END')
 
-        if entity in titles:
-            base[entity].extend(titles[entity])
+        base[entity].extend(titles)
         base[entity] = list(set(base[entity]))
 
     return entities_info, base, appositives, dbpedia, vocabulary

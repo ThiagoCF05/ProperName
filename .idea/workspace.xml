@@ -121,26 +121,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_parallel_script.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_parallel_script.py">
+      <file leaf-file-name="main_script.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2310" max-vertical-offset="3540">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3225">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <element signature="e#2211#3771#0" expanded="false" />
-                <element signature="e#4106#4700#0" expanded="false" />
+                <element signature="e#200#219#0" expanded="true" />
+                <element signature="e#2254#2848#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_script.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_script.py">
+      <file leaf-file-name="parse_xml.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parse_xml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1171" max-vertical-offset="3240">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1951" max-vertical-offset="3405">
+              <caret line="225" column="34" selection-start-line="225" selection-start-column="34" selection-end-line="225" selection-end-column="34" />
               <folding>
-                <element signature="e#2291#2885#0" expanded="false" />
+                <element signature="e#1640#1852#0" expanded="false" />
+                <element signature="e#1942#2645#0" expanded="false" />
+                <element signature="e#6518#7513#0" expanded="false" />
+                <element signature="e#10200#11760#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,8 +152,8 @@
       <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5940171" vertical-offset="1863" max-vertical-offset="2565">
-              <caret line="225" column="41" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.9145299" vertical-offset="1833" max-vertical-offset="2580">
+              <caret line="238" column="40" selection-start-line="238" selection-start-column="40" selection-end-line="238" selection-end-column="40" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
                 <element signature="e#2115#4218#0" expanded="false" />
@@ -331,11 +334,11 @@
         <option value="$PROJECT_DIR$/main/eacl/preprocessing.py" />
         <option value="$PROJECT_DIR$/main/eacl/training.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/parse_xml.py" />
         <option value="$PROJECT_DIR$/main/eacl/w2voc.py" />
+        <option value="$PROJECT_DIR$/main/eacl/human_evaluation/parse_htmls.py" />
+        <option value="$PROJECT_DIR$/parse_xml.py" />
         <option value="$PROJECT_DIR$/main_parallel_script.py" />
         <option value="$PROJECT_DIR$/main_script.py" />
-        <option value="$PROJECT_DIR$/main/eacl/human_evaluation/parse_htmls.py" />
         <option value="$PROJECT_DIR$/main/eacl/models/Bayes.py" />
       </list>
     </option>
@@ -400,6 +403,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1337,14 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/utils/get_titles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="30" column="77" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2369" max-vertical-offset="3060">
@@ -1377,20 +1390,6 @@
         <state vertical-scroll-proportion="-1.7351664" vertical-offset="1199" max-vertical-offset="1890">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parse_xml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="732" max-vertical-offset="3600">
-          <caret line="85" column="62" selection-start-line="85" selection-start-column="62" selection-end-line="85" selection-end-column="62" />
-          <folding>
-            <element signature="e#37#48#0" expanded="false" />
-            <element signature="e#1640#1852#0" expanded="false" />
-            <element signature="e#1942#2645#0" expanded="false" />
-            <element signature="e#6518#7513#0" expanded="false" />
-            <element signature="e#10237#11797#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1522,17 +1521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_parallel_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2310" max-vertical-offset="3540">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="e#2211#3771#0" expanded="false" />
-            <element signature="e#4106#4700#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/human_evaluation/data/htmls/Britney Spears.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.25" vertical-offset="270" max-vertical-offset="3645">
@@ -1559,20 +1547,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/utils/get_titles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6196581" vertical-offset="0" max-vertical-offset="702">
+          <caret line="30" column="77" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_parallel_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="3525">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <folding>
+            <element signature="e#200#219#0" expanded="true" />
+            <element signature="e#2174#3734#0" expanded="false" />
+            <element signature="e#4069#4663#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1171" max-vertical-offset="3240">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3225">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#2291#2885#0" expanded="false" />
+            <element signature="e#200#219#0" expanded="true" />
+            <element signature="e#2254#2848#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parse_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1951" max-vertical-offset="3405">
+          <caret line="225" column="34" selection-start-line="225" selection-start-column="34" selection-end-line="225" selection-end-column="34" />
+          <folding>
+            <element signature="e#1640#1852#0" expanded="false" />
+            <element signature="e#1942#2645#0" expanded="false" />
+            <element signature="e#6518#7513#0" expanded="false" />
+            <element signature="e#10200#11760#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5940171" vertical-offset="1863" max-vertical-offset="2565">
-          <caret line="225" column="41" selection-start-line="225" selection-start-column="41" selection-end-line="225" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.9145299" vertical-offset="1833" max-vertical-offset="2580">
+          <caret line="238" column="40" selection-start-line="238" selection-start-column="40" selection-end-line="238" selection-end-column="40" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
             <element signature="e#2115#4218#0" expanded="false" />

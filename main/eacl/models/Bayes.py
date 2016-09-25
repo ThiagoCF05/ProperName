@@ -223,7 +223,7 @@ class Bayes(object):
         while result[result.keys()[0]] == 0 and form != '':
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
-        print original_form, form, result
+
         names = []
         for name in result:
             surface = ' '.join(name[1:-1])
@@ -236,4 +236,5 @@ class Bayes(object):
             if '+a' in original_form:
                 surface = surface + ', ' + appositive
             names.append((surface, result[name]))
+        print original_form, form, names
         return names

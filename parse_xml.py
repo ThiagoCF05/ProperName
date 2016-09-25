@@ -192,7 +192,7 @@ class HumanEvaluation(object):
 
 fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
-titles_dir = '/roaming/tcastrof/names/eacl/titles.json'
+titles_dir = '/roaming/tcastrof/names/eacl/all_titles.json'
 appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
@@ -223,8 +223,7 @@ def init():
         # insert END token
         base[entity].append('END')
 
-        if entity in titles:
-            base[entity].extend(titles[entity])
+        base[entity].extend(titles)
         base[entity] = list(set(base[entity]))
 
     return entities_info, base, appositives, dbpedia, []
