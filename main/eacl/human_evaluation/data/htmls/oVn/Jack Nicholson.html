@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Optional theme -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"/>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+  </script>
+  <title>
+  </title>
+ </head>
+ <body class="container">
+  <header>
+   <h1>
+   </h1>
+  </header>
+  <div class="text-justify" id="article">
+   <div class="row">
+    <div class="col-md-6" id="original">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       John Joseph "Jack" Nicholson
+      </span>
+      (born April 22, 1937) is an American actor and filmmaker, having performed for nearly 60 years. He is known for playing a wide range of starring or supporting roles, including satirical comedy, romance and dark portrayals of excitable and psychopathic characters. In many of his films he played the "eternal outsider, the sardonic drifter", and someone who rebels against the social structure.
+     </p>
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Nicholson's
+      </span>
+      12 Academy Award nominations make him the most nominated male actor in the Academy's history.
+      <span style="background-color: #FFFF00">
+       Nicholson
+      </span>
+      has won the Academy Award for Best Actor twice, one for the drama One Flew Over the Cuckoo's Nest (1975) and the other for the romantic comedy As Good as It Gets (1997). He also won the Academy Award for Best Supporting Actor for the comedy-drama Terms of Endearment (1983).
+      <span style="background-color: #FFFF00">
+       Nicholson
+      </span>
+      is one of three male actors to win three Academy Awards.
+      <span style="background-color: #FFFF00">
+       Nicholson
+      </span>
+      is one of only two actors to be nominated for an Academy Award for acting in every decade from the 1960s to the 2000s; the other was Michael Caine. He has won six Golden Globe Awards, and received the Kennedy Center Honor in 2001. In 1994, he became one of the youngest actors to be awarded the American Film Institute's Life Achievement Award. Other notable films in which he has starred include the road movie Easy Rider (1969), the drama Five Easy Pieces (1970), the comedy-drama film The Last Detail (1973), the neo-noir mystery film Chinatown (1974), the drama The Passenger (1975), and the epic film Reds (1981). He played Jack Torrance in the Stanley Kubrick's horror film The Shining (1980), the Joker in Batman (1989), and Frank Costello in the Martin Scorsese's crime drama The Departed (2006). Other films include the legal drama A Few Good Men (1992), the Sean Penn-directed mystery film The Pledge (2001), and the comedy-drama About Schmidt (2002).
+     </p>
+    </div>
+    <div class="col-md-6" id="novariation">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Jack Nicholson
+      </span>
+      (born April 22, 1937) is an American actor and filmmaker, having performed for nearly 60 years. He is known for playing a wide range of starring or supporting roles, including satirical comedy, romance and dark portrayals of excitable and psychopathic characters. In many of his films he played the "eternal outsider, the sardonic drifter", and someone who rebels against the social structure.
+     </p>
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Jack Nicholson's
+      </span>
+      12 Academy Award nominations make him the most nominated male actor in the Academy's history.
+      <span style="background-color: #FFFF00">
+       Jack
+      </span>
+      has won the Academy Award for Best Actor twice, one for the drama One Flew Over the Cuckoo's Nest (1975) and the other for the romantic comedy As Good as It Gets (1997). He also won the Academy Award for Best Supporting Actor for the comedy-drama Terms of Endearment (1983).
+      <span style="background-color: #FFFF00">
+       Jack
+      </span>
+      is one of three male actors to win three Academy Awards.
+      <span style="background-color: #FFFF00">
+       Jack
+      </span>
+      is one of only two actors to be nominated for an Academy Award for acting in every decade from the 1960s to the 2000s; the other was Michael Caine. He has won six Golden Globe Awards, and received the Kennedy Center Honor in 2001. In 1994, he became one of the youngest actors to be awarded the American Film Institute's Life Achievement Award. Other notable films in which he has starred include the road movie Easy Rider (1969), the drama Five Easy Pieces (1970), the comedy-drama film The Last Detail (1973), the neo-noir mystery film Chinatown (1974), the drama The Passenger (1975), and the epic film Reds (1981). He played Jack Torrance in the Stanley Kubrick's horror film The Shining (1980), the Joker in Batman (1989), and Frank Costello in the Martin Scorsese's crime drama The Departed (2006). Other films include the legal drama A Few Good Men (1992), the Sean Penn-directed mystery film The Pledge (2001), and the comedy-drama About Schmidt (2002).
+     </p>
+    </div>
+   </div>
+  </div>
+  <footer class="jumbotron text-center">
+   <form>
+    <div class="form-group">
+     <label>
+      Which is your favorite text?
+     </label>
+     <div class="radio">
+      <label class="radio-inline">
+       <input id="inlineRadio1" name="preference" required="" type="radio" value="original"/>
+       First
+      </label>
+      <label class="radio-inline">
+       <input id="inlineRadio2" name="preference" type="radio" value="novariation"/>
+       Second
+      </label>
+     </div>
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary" disabled="disabled" id="button">
+      Submit
+     </button>
+     <span class="help-block" id="timer">
+      02:00
+     </span>
+    </div>
+   </form>
+  </footer>
+  <script type="text/javascript">
+   function startTimer(duration, display) {
+	    var timer = duration, minutes, seconds;
+	    var interval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            timer = duration;
+	            document.getElementById('button').removeAttribute('disabled');
+	            document.getElementById('timer').style.display = 'none';
+	        }
+	    }, 1000);
+	}
+
+	window.onload = function () {
+	    var fiveMinutes = 60 * 2,
+	        display = document.querySelector('#timer');
+	    startTimer(fiveMinutes, display);
+	};
+  </script>
+ </body>
+</html>

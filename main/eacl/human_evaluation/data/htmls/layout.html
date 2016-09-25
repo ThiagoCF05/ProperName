@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<title></title>
+</head>
+
+<body class="container">
+<header>
+	<h1></h1>
+</header>
+<div class="text-justify" id="article">
+	<div class="row">
+	</div>
+</div>
+<footer class="jumbotron text-center">
+	<form>
+		<div class="form-group">
+			<label>Which is your favorite text?</label>
+			<div class="radio">
+				<label class="radio-inline">
+					<input type="radio" name="preference" id="inlineRadio1" value="1" required> First
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="preference" id="inlineRadio2" value="2"> Second
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<button id="button" class="btn btn-primary" disabled="disabled">Submit</button>
+			<span id="timer" class="help-block">02:00</span>
+		</div>
+	</form>
+</footer>
+<script type="text/javascript">
+	function startTimer(duration, display) {
+	    var timer = duration, minutes, seconds;
+	    var interval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            timer = duration;
+	            document.getElementById('button').removeAttribute('disabled');
+	            document.getElementById('timer').style.display = 'none';
+	        }
+	    }, 1000);
+	}
+
+	window.onload = function () {
+	    var fiveMinutes = 60 * 2,
+	        display = document.querySelector('#timer');
+	    startTimer(fiveMinutes, display);
+	};
+</script>
+</body>
+</html>

@@ -227,6 +227,7 @@ class Bayes(object):
             result = self._beam_search(names, words, form, entity, word_freq, 1)
         if result[result.keys()[0]] == 0:
             result = self._beam_search(names, words, '-', entity, word_freq, 1)
+        print result
 
         names = []
         for name in result:

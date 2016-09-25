@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Optional theme -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"/>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+  </script>
+  <title>
+  </title>
+ </head>
+ <body class="container">
+  <header>
+   <h1>
+   </h1>
+  </header>
+  <div class="text-justify" id="article">
+   <div class="row">
+    <div class="col-md-6" id="original">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Anna Wintour
+      </span>
+      , OBE (/ˈwɪntər/; born 3 November 1949) is the English editor-in-chief of American Vogue, a position she has held since 1988. In 2013, she became artistic director for Cond&eacute; Nast, Vogue's publisher. With her trademark pageboy bob haircut and dark sunglasses,
+      <span style="background-color: #FFFF00">
+       Wintour
+      </span>
+      has become an important figure in much of the fashion world, widely praised for her eye for fashion trends and her support for younger designers. Her reportedly aloof and demanding personality has earned her the nickname "Nuclear Wintour".
+     </p>
+     <p class="lead">
+      She is the eldest daughter of Charles Wintour, editor of the London Evening Standard. Her father consulted her on how to make the newspaper relevant to the youth of the era.
+      <span style="background-color: #FFFF00">
+       Anna
+      </span>
+      became interested in fashion as a teenager. Her career in fashion journalism began at two British magazines. Later, she moved to the United States, with stints at New York and House and Garden. She returned home for a year to turn around British Vogue, and later assumed control of the franchise's magazine in New York, reviving what many saw as a stagnating publication. Her use of the magazine to shape the fashion industry has been the subject of debate within it. Animal rights activists have attacked her for promoting fur, while other critics have charged her with using the magazine to promote elitist views of femininity and beauty.
+     </p>
+     <p class="lead">
+      A former personal assistant, Lauren Weisberger, wrote the 2003 best selling roman &agrave; clef The Devil Wears Prada, later made into a successful film starring Meryl Streep as Miranda Priestly, a fashion editor, believed to be based on
+      <span style="background-color: #FFFF00">
+       Wintour
+      </span>
+      . In 2009, she was the focus of another film, R.J. Cutler's documentary The September Issue.
+     </p>
+    </div>
+    <div class="col-md-6" id="variation">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Anna Wintour
+      </span>
+      , OBE (/ˈwɪntər/; born 3 November 1949) is the English editor-in-chief of American Vogue, a position she has held since 1988. In 2013, she became artistic director for Cond&eacute; Nast, Vogue's publisher. With her trademark pageboy bob haircut and dark sunglasses,
+      <span style="background-color: #FFFF00">
+       Anna Wintour
+      </span>
+      has become an important figure in much of the fashion world, widely praised for her eye for fashion trends and her support for younger designers. Her reportedly aloof and demanding personality has earned her the nickname "Nuclear Wintour".
+     </p>
+     <p class="lead">
+      She is the eldest daughter of Charles Wintour, editor of the London Evening Standard. Her father consulted her on how to make the newspaper relevant to the youth of the era.
+      <span style="background-color: #FFFF00">
+       Anna Wintour
+      </span>
+      became interested in fashion as a teenager. Her career in fashion journalism began at two British magazines. Later, she moved to the United States, with stints at New York and House and Garden. She returned home for a year to turn around British Vogue, and later assumed control of the franchise's magazine in New York, reviving what many saw as a stagnating publication. Her use of the magazine to shape the fashion industry has been the subject of debate within it. Animal rights activists have attacked her for promoting fur, while other critics have charged her with using the magazine to promote elitist views of femininity and beauty.
+     </p>
+     <p class="lead">
+      A former personal assistant, Lauren Weisberger, wrote the 2003 best selling roman &agrave; clef The Devil Wears Prada, later made into a successful film starring Meryl Streep as Miranda Priestly, a fashion editor, believed to be based on
+      <span style="background-color: #FFFF00">
+       Anna Wintour
+      </span>
+      . In 2009, she was the focus of another film, R.J. Cutler's documentary The September Issue.
+     </p>
+    </div>
+   </div>
+  </div>
+  <footer class="jumbotron text-center">
+   <form>
+    <div class="form-group">
+     <label>
+      Which is your favorite text?
+     </label>
+     <div class="radio">
+      <label class="radio-inline">
+       <input id="inlineRadio1" name="preference" required="" type="radio" value="original"/>
+       First
+      </label>
+      <label class="radio-inline">
+       <input id="inlineRadio2" name="preference" type="radio" value="variation"/>
+       Second
+      </label>
+     </div>
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary" disabled="disabled" id="button">
+      Submit
+     </button>
+     <span class="help-block" id="timer">
+      02:00
+     </span>
+    </div>
+   </form>
+  </footer>
+  <script type="text/javascript">
+   function startTimer(duration, display) {
+	    var timer = duration, minutes, seconds;
+	    var interval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            timer = duration;
+	            document.getElementById('button').removeAttribute('disabled');
+	            document.getElementById('timer').style.display = 'none';
+	        }
+	    }, 1000);
+	}
+
+	window.onload = function () {
+	    var fiveMinutes = 60 * 2,
+	        display = document.querySelector('#timer');
+	    startTimer(fiveMinutes, display);
+	};
+  </script>
+ </body>
+</html>

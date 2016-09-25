@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Optional theme -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"/>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+  </script>
+  <title>
+  </title>
+ </head>
+ <body class="container">
+  <header>
+   <h1>
+   </h1>
+  </header>
+  <div class="text-justify" id="article">
+   <div class="row">
+    <div class="col-md-6" id="novariation">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Mark Zuckerberg
+      </span>
+      (born May 14, 1984) is an American computer programmer and Internet entrepreneur. He is best known as one of five co-founders of the social networking website Facebook.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      is the chairman and chief executive of Facebook, Inc. His personal wealth, as of July 2015, is estimated to be $38.6 billion.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      receives a one-dollar salary as CEO of Facebook.
+     </p>
+     <p class="lead">
+      Together with his college roommates and fellow Harvard University students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, he launched Facebook from Harvard University's dormitory rooms. The group then introduced Facebook onto other campuses nationwide and moved to Palo Alto, California shortly afterwards. In 2007, at the age of 23,
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      became a billionaire as a result of Facebook's success. The number of Facebook users worldwide reached a total of one billion in 2012.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      was involved in various legal disputes that were initiated by others in the group, who claimed a share of the company based upon their involvement during the development phase of Facebook.
+     </p>
+     <p class="lead">
+      Since 2010, Time magazine has named
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      among the 100 wealthiest and most influential people in the world as a part of its Person of the Year distinction. In 2011,
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      ranked first on the list of the "Most Influential Jews in the World" by The Jerusalem Post.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      was played by actor Jesse Eisenberg in the 2010 film The Social Network, in which the rise of Facebook is portrayed.
+     </p>
+    </div>
+    <div class="col-md-6" id="original">
+     <p class="lead">
+      <span style="background-color: #FFFF00">
+       Mark Elliot Zuckerberg
+      </span>
+      (born May 14, 1984) is an American computer programmer and Internet entrepreneur. He is best known as one of five co-founders of the social networking website Facebook.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      is the chairman and chief executive of Facebook, Inc. His personal wealth, as of July 2015, is estimated to be $38.6 billion.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      receives a one-dollar salary as CEO of Facebook.
+     </p>
+     <p class="lead">
+      Together with his college roommates and fellow Harvard University students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes, he launched Facebook from Harvard University's dormitory rooms. The group then introduced Facebook onto other campuses nationwide and moved to Palo Alto, California shortly afterwards. In 2007, at the age of 23,
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      became a billionaire as a result of Facebook's success. The number of Facebook users worldwide reached a total of one billion in 2012.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      was involved in various legal disputes that were initiated by others in the group, who claimed a share of the company based upon their involvement during the development phase of Facebook.
+     </p>
+     <p class="lead">
+      Since 2010, Time magazine has named
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      among the 100 wealthiest and most influential people in the world as a part of its Person of the Year distinction. In 2011,
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      ranked first on the list of the "Most Influential Jews in the World" by The Jerusalem Post.
+      <span style="background-color: #FFFF00">
+       Zuckerberg
+      </span>
+      was played by actor Jesse Eisenberg in the 2010 film The Social Network, in which the rise of Facebook is portrayed.
+     </p>
+    </div>
+   </div>
+  </div>
+  <footer class="jumbotron text-center">
+   <form>
+    <div class="form-group">
+     <label>
+      Which is your favorite text?
+     </label>
+     <div class="radio">
+      <label class="radio-inline">
+       <input id="inlineRadio1" name="preference" required="" type="radio" value="novariation"/>
+       First
+      </label>
+      <label class="radio-inline">
+       <input id="inlineRadio2" name="preference" type="radio" value="original"/>
+       Second
+      </label>
+     </div>
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary" disabled="disabled" id="button">
+      Submit
+     </button>
+     <span class="help-block" id="timer">
+      02:00
+     </span>
+    </div>
+   </form>
+  </footer>
+  <script type="text/javascript">
+   function startTimer(duration, display) {
+	    var timer = duration, minutes, seconds;
+	    var interval = setInterval(function () {
+	        minutes = parseInt(timer / 60, 10);
+	        seconds = parseInt(timer % 60, 10);
+
+	        minutes = minutes < 10 ? "0" + minutes : minutes;
+	        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	        display.textContent = minutes + ":" + seconds;
+
+	        if (--timer < 0) {
+	            timer = duration;
+	            document.getElementById('button').removeAttribute('disabled');
+	            document.getElementById('timer').style.display = 'none';
+	        }
+	    }, 1000);
+	}
+
+	window.onload = function () {
+	    var fiveMinutes = 60 * 2,
+	        display = document.querySelector('#timer');
+	    startTimer(fiveMinutes, display);
+	};
+  </script>
+ </body>
+</html>
