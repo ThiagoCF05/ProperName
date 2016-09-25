@@ -186,7 +186,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
                     # Bayes model with no variation (Realization with the most likely referential form)
                     bayes_result = clf.realizeWithWords(form_distribution[0][0], entity, _syntax, words, appositive)
-                    print form_distribution[0][0], bayes_result
+                    print 'RESULT', form_distribution[0][0], bayes_result
 
                     # Bayes backoff model with no variation (Realization with the most likely referential form)
                     # bayes_backoffk0_result = clf.realizeWithWords(form_distribution_k0[0][0], entity, _syntax, words, appositive)
@@ -227,9 +227,9 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                         # result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result }
 
                         # Bayes model with random choice of proper name form
-                        index = randint(0, len(form_distribution)-1)
-                        realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
-                        result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
+                        # index = randint(0, len(form_distribution)-1)
+                        # realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
+                        # result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
                         group_result.append(result)
 
@@ -272,7 +272,6 @@ def run():
 
         # Get proper nouns to be tested whether should be included in the reference
         words = tested_words[entity]
-        print words
 
         # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
         process_entity(entity, words, np.array(references[entity]), vocabulary, dbpedia, appositive, entity_id)

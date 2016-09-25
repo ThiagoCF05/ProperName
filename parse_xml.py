@@ -120,16 +120,16 @@ class HumanEvaluation(object):
 
                         result['bayes_no_variation'] = { 'label': form_distribution[0][0], 'prob': form_distribution[0][1], 'reference': bayes_result[0][0] }
 
-                        result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0][0], 'prob': form_distribution_k0[0][1], 'reference': bayes_backoffk0_result[0][0] }
+                        # result['bayes_backoffk0_no_variation'] = { 'label': form_distribution_k0[0][0], 'prob': form_distribution_k0[0][1], 'reference': bayes_backoffk0_result[0][0] }
 
-                        result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0][0], 'prob': form_distribution_k2[0][1], 'reference': bayes_backoffk2_result[0][0] }
+                        # result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0][0], 'prob': form_distribution_k2[0][1], 'reference': bayes_backoffk2_result[0][0] }
 
                         group_result.append(result)
 
                     # Generate proper names with individual variation in the for choice
                     group_result = bayes_variation(group_result, form_distribution, same_features, 'bayes_variation')
-                    group_result = bayes_variation(group_result, form_distribution_k0, same_features, 'bayes_backoffk0_variation')
-                    group_result = bayes_variation(group_result, form_distribution_k2, same_features, 'bayes_backoffk2_variation')
+                    # group_result = bayes_variation(group_result, form_distribution_k0, same_features, 'bayes_backoffk0_variation')
+                    # group_result = bayes_variation(group_result, form_distribution_k2, same_features, 'bayes_backoffk2_variation')
 
                     for result in group_result:
                         self.results[int(result['ID'])]= result
@@ -168,9 +168,9 @@ class HumanEvaluation(object):
         new_reference_tag.attrib = copy.copy(reference.attrib)
 
         models = ['random', 'siddharthan', \
-                  'bayes_no_variation', 'bayes_variation', \
-                  'bayes_backoffk0_no_variation', 'bayes_backoffk0_variation', \
-                  'bayes_backoffk2_no_variation', 'bayes_backoffk2_variation']
+                  'bayes_no_variation', 'bayes_variation']
+                  # 'bayes_backoffk0_no_variation', 'bayes_backoffk0_variation', \
+                  # 'bayes_backoffk2_no_variation', 'bayes_backoffk2_variation']
 
         reference_id = int(new_reference_tag.attrib['ID'])
 

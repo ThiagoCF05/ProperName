@@ -231,9 +231,9 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
                         # result['bayes_backoffk2_no_variation'] = { 'label': form_distribution_k2[0], 'reference': bayes_backoffk2_result }
 
                         # Bayes model with random choice of proper name form
-                        index = randint(0, len(form_distribution)-1)
-                        realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
-                        result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
+                        # index = randint(0, len(form_distribution)-1)
+                        # realizer = clf.realizeWithWords(form_distribution[index][0], entity, filtered_mention['syntax'], words, appositive)
+                        # result['bayes_random'] = { 'label': form_distribution[index], 'reference': realizer }
 
                         group_result.append(result)
 
