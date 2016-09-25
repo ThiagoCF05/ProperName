@@ -82,6 +82,8 @@ class HumanEvaluation(object):
                     same_features = filter(lambda x: x['GIVENNESS'] == _givenness \
                                                               and x['SENTENCE-GIVENNESS'] == _sgivenness \
                                                               and x['SYNCAT'] == _syntax, self.references)
+                    if len(same_features) > 0:
+                        print _givenness, _sgivenness, _syntax
 
                     _features = {
                         # 's_e': mention['label'],

@@ -115,7 +115,10 @@ class Bayes(object):
     def _beam_search(self, names, words, form, entity, word_freq, n=5):
         def calc_prob(gram):
             prob = 0
-            f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
+            if form == '':
+                f = filter(lambda x: x[1] == gram[1] and x[3] == entity, self.clf_realization['w_wm1fe'])
+            else:
+                f = filter(lambda x: x[1] == gram[1] and x[2] == form and x[3] == entity, self.clf_realization['w_wm1fe'])
             dem = sum(map(lambda x: self.clf_realization['w_wm1fe'][x], f))
 
             if dem != 0:
@@ -197,13 +200,14 @@ class Bayes(object):
         if '+a' in form:
             elems.append('+a')
 
+        # Select frequency of the attributes in the form
         keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
         aux = dict(map(lambda x: (x[0], self.clf_content['elem_p'][x]), keys))
-
         for e in elems:
             if e not in aux:
                 aux[e] = 0
 
+        # drop the less frequent attribute in the form
         elem = sorted(aux.items(), key=operator.itemgetter(1))
         form = str(form).replace(elem[0][0], '')
         return form
@@ -215,7 +219,7 @@ class Bayes(object):
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
         result = self._beam_search(names, words, form, entity, word_freq, 1)
-        while result[result.keys()[0]] == 0 and len(form) > 2:
+        while result[result.keys()[0]] == 0:
             form = self._backoff(form, entity)
             result = self._beam_search(names, words, form, entity, word_freq, 1)
 

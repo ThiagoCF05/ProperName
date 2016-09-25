@@ -127,9 +127,6 @@ def bayes_variation(references, form_distribution, test_set_same_features, entit
 def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fname):
     results = {}
 
-    # Retrieve all the mentions to the entity
-    # mentions = np.array(references[entity])
-
     # compute the set of features (vocabulary) from other entities
     # print 'Filter general training set'
     # general_voc = filter_voc(entity, vocabulary)
