@@ -92,8 +92,8 @@ class HumanEvaluation(object):
 
                     # Bayes model selection
                     form_distribution = bayes_selection(_features, None)
-                    form_distribution_k0 = bayes_selection(_features, 0)
-                    form_distribution_k2 = bayes_selection(_features, 2)
+                    # form_distribution_k0 = bayes_selection(_features, 0)
+                    # form_distribution_k2 = bayes_selection(_features, 2)
 
                     # Siddharthan model
                     siddharthan_result = self.siddharthan.run(self.entity, _givenness, _syntax)
@@ -102,10 +102,10 @@ class HumanEvaluation(object):
                     bayes_result = self.bayes.realizeWithWords(form_distribution[0][0], self.entity, _syntax, self.words, self.appositive)
 
                     # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    bayes_backoffk0_result = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, _syntax, self.words, self.appositive)
+                    # bayes_backoffk0_result = self.bayes.realizeWithWords(form_distribution_k0[0][0], self.entity, _syntax, self.words, self.appositive)
 
                     # Bayes backoff model with no variation (Realization with the most likely referential form)
-                    bayes_backoffk2_result = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, _syntax, self.words, self.appositive)
+                    # bayes_backoffk2_result = self.bayes.realizeWithWords(form_distribution_k2[0][0], self.entity, _syntax, self.words, self.appositive)
 
                     # Generate proper names for each group of features
                     group_result = []
@@ -296,7 +296,7 @@ if __name__ == '__main__':
         # Get proper nouns to be tested whether should be included in the reference
         words = tested_words[entity]
 
-        # print 'Get training and test vocs...'
+        print 'Get training and test vocs...'
         # general_voc = filter_voc(entity, vocabulary)
         # # compute the set of features (vocabulary) for the bayes model
         # content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
