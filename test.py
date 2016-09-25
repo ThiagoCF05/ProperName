@@ -129,6 +129,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
     # compute cross validation
     fold = 1
+    print mentions.shape
     kf = KFold(mentions.shape[0], n_folds=10)
     for train, test in kf:
         print 'Fold', str(fold)
@@ -136,6 +137,7 @@ def process_entity(entity, words, mentions, vocabulary, dbpedia, appositive, fna
 
         # train and test sets
         train_set, test_set = mentions[train], mentions[test]
+        print mentions[train].shape, mentions[test].shape
 
         # compute the set of features (vocabulary) for the bayes model
         content_vocabulary, realization_vocabulary = [], []
