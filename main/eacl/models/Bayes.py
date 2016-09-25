@@ -153,7 +153,6 @@ class Bayes(object):
 
         _names = prune(candidates)
 
-        print 'Candidates: ', _names
         # Stop criteria: prediction of END symbol
         # or the beam search still the same from the last recursion
         # or a proper name bigger than 5 is predicted or 0 probabilities
@@ -200,8 +199,9 @@ class Bayes(object):
 
         keys = filter(lambda x: x[0] in elems and x[1] == entity, self.clf_content['elem_p'])
         elems = dict(map(lambda x: (x, self.clf_content['elem_p'][x]), keys))
-        elem = sorted(elems.items(), key=operator.itemgetter(1))[0][0][0]
-        form = str(form).replace(elem, '')
+        elem = sorted(elems.items(), key=operator.itemgetter(1))
+        print elem
+        form = str(form).replace(elem[0][0][0], '')
         return form
 
     # Realization with only the words present in the proper name knowledge base
