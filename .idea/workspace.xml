@@ -112,8 +112,8 @@
       <file leaf-file-name="Bayes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5658466" vertical-offset="1649" max-vertical-offset="2385">
-              <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.52243125" vertical-offset="1724" max-vertical-offset="2415">
+              <caret line="212" column="46" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
               <folding>
                 <element signature="e#37#48#0" expanded="true" />
                 <element signature="e#2115#4218#0" expanded="false" />
@@ -139,7 +139,7 @@
       <file leaf-file-name="training.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1366" max-vertical-offset="2085">
+            <state vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="2085">
               <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
               <folding />
             </state>
@@ -149,7 +149,7 @@
       <file leaf-file-name="preprocessing.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1126" max-vertical-offset="2280">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1141" max-vertical-offset="2280">
               <caret line="92" column="20" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="20" />
               <folding />
             </state>
@@ -1492,22 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1126" max-vertical-offset="2280">
-          <caret line="92" column="20" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/eacl/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1366" max-vertical-offset="2085">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parse_xml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3284" max-vertical-offset="3975">
@@ -1532,10 +1516,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="691" max-vertical-offset="2085">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/eacl/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1141" max-vertical-offset="2280">
+          <caret line="92" column="20" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/eacl/models/Bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5658466" vertical-offset="1649" max-vertical-offset="2385">
-          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.52243125" vertical-offset="1724" max-vertical-offset="2415">
+          <caret line="212" column="46" selection-start-line="212" selection-start-column="46" selection-end-line="212" selection-end-column="46" />
           <folding>
             <element signature="e#37#48#0" expanded="true" />
             <element signature="e#2115#4218#0" expanded="false" />
