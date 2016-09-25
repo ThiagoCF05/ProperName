@@ -199,7 +199,8 @@ def run():
     entities = references.keys()
     entities.sort()
 
-    print 'Number of entities: ', len(entities)
+    number_mentions = 0
+
     for entity in entities:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
@@ -216,6 +217,9 @@ def run():
 
             # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
             process_entity(entity, words, np.array(references[entity]), dbpedia, appositive, entity_id)
+            number_mentions = number_mentions + len(references[entity])
+    print 'Number of entities: ', len(entities)
+    print 'Number of mentions: ', len(number_mentions)
 
 if __name__ == '__main__':
     run()
