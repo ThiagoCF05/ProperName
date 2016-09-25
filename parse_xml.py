@@ -270,6 +270,10 @@ if __name__ == '__main__':
     # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, tested_words, appositives, dbpedia, vocabulary = init()
 
+    # filter entities and their references (more than X references and less than Y)
+    print 'Filter entities and their references (more than X references and less than Y)'
+    references = prep.filter_entities(50, 0, mention_dir)
+
     xmls = os.listdir(xmls_dir)
     xmls = filter(lambda x: x != '.DS_Store', xmls)
 
@@ -297,10 +301,6 @@ if __name__ == '__main__':
         # # compute the set of features (vocabulary) for the bayes model
         # content_vocabulary, realization_vocabulary = vocabulary[entity], vocabulary[entity]
         # content_vocabulary.extend(general_voc)
-
-        # filter entities and their references (more than X references and less than Y)
-        print 'Filter entities and their references (more than X references and less than Y)'
-        references = prep.filter_entities(50, 0, mention_dir)
 
         # compute the set of features (vocabulary) for the bayes model
         content_vocabulary, realization_vocabulary = [], []
