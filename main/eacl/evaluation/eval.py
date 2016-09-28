@@ -14,7 +14,7 @@ import scipy.stats
 
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
 # entities_dir = '/roaming/tcastrof/names/eacl/evaluationV3'
-entities_dir = '/roaming/tcastrof/names/eacl/evaluation/instrinsic'
+entities_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic'
 
 def mean_confidence_interval(data, confidence=0.95):
     a = 1.0*np.array(data)
