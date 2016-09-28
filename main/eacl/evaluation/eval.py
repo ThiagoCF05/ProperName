@@ -104,7 +104,7 @@ def get_values(entities):
                 deemter[fold]['y_pred'].append(item['deemter']['label'])
                 deemter[fold]['string'].append(dist_deemter)
                 deemter[fold]['jaccard'].append(jaccard_deemter)
-    return _random, bayes_random, bayes_no_variation, bayes_variation, bayes_backoffk0_no_variation, bayes_backoffk0_variation, bayes_backoffk2_no_variation, bayes_backoffk2_variation, siddharthan, deemter
+    return _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter
 
 def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir):
     if not os.path.exists(write_dir):
