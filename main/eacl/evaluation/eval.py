@@ -376,17 +376,46 @@ def run(std=True):
         print 20 * '-'
         print '\n'
 
+        print 'String -> T-test: Random X PN-Variation'
+        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+        print 'String -> T-test: Random X PN+Variation'
+        t, p = stats.ttest_rel(general_random['string'], general_bayes_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+
+        print 'String -> T-test: Siddarthan X PN-Variation'
+        t, p = stats.ttest_rel(general_siddharthan['string'], general_bayes_no_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+        print 'String -> T-test: Siddarthan X PN+Variation'
+        t, p = stats.ttest_rel(general_siddharthan['string'], general_bayes_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+
+        print 'String -> T-test: Deemter X PN-Variation'
+        t, p = stats.ttest_rel(general_deemter['string'], general_bayes_no_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+        print 'String -> T-test: Deemter X PN+Variation'
+        t, p = stats.ttest_rel(general_deemter['string'], general_bayes_variation['string'])
+        print round(t, 6), p
+        print 10 * '-'
+
         print 'String -> T-test: PN-Variation X PN+Variation'
         t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
 
-        print 'Jaccard -> T-test: PN-Variation X PN+Variation'
-        t, p = stats.ttest_rel(general_bayes_no_variation['jaccard'], general_bayes_variation['jaccard'])
+        print 'String -> One way ANOVA'
+        t, p = stats.f_oneway(general_random['string'], general_siddharthan['string'], general_deemter['string'], general_bayes_no_variation['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
-    write_dir = '/roaming/tcastrof/names/eacl/evaluation'
-    write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
+
+
+    # write_dir = '/roaming/tcastrof/names/eacl/evaluation'
+    # write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
     run(True)
