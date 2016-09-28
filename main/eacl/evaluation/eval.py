@@ -26,7 +26,7 @@ def mean_confidence_interval(data, confidence=0.95):
 def get_domain(fname):
     pass
 
-def get_values(entities, domain):
+def get_values(entities):
     _random, bayes_random = {}, {}
     bayes_no_variation, bayes_variation = {}, {}
     siddharthan, deemter  = {}, {}
