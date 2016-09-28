@@ -1,0 +1,18 @@
+Blog domain
+(u'blogspot', 2609)
+(u'wordpress', 2099)
+(u'blog', 813)
+(u'blogs', 307)
+(u'tumblr', 223)
+
+Wiki
+(u'wiki', 566)
+(u'wikia', 200)
+(u'wikipedia', 174)
+
+News
+(u'article', 281)
+(u'new', 198)
+(u'news', 194)
+(u'wikinews', 45)
+(u'articles', 114)

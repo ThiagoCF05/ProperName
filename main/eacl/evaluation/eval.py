@@ -386,7 +386,7 @@ def run(std=True):
         print round(t, 6), p
         print 10 * '-'
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
-    # write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
+    write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
     run(True)

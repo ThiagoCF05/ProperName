@@ -29,7 +29,7 @@ appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
 mention_dir = '/roaming/tcastrof/names/eacl/mentions'
 parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
 vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic'
+evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
@@ -151,7 +151,8 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
                             'features': {
                                 'giveness': filtered_mention['givenness'],
                                 'sentence-givenness': filtered_mention['sentence-givenness'],
-                                'syntax': filtered_mention['syntax']
+                                'syntax': filtered_mention['syntax'],
+                                'fname': filtered_mention['fname']
                             }
                         }
 
