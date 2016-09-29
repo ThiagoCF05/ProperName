@@ -60,7 +60,7 @@ def get_values(entities, domain):
             for item in evaluation[fold]:
                 item_domain = get_domain(item['features']['fname'])
 
-                if domain == item_domain or domain != '':
+                if domain == item_domain or domain == '':
                     string_real = item['real']['reference']
                     string_random = item['random']['reference']
                     string_bayes_random = item['bayes_random']['reference'][0][0]
