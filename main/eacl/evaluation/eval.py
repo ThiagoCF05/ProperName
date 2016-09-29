@@ -14,7 +14,8 @@ import scipy.stats
 
 fentities = '/roaming/tcastrof/names/eacl/entities.json'
 # entities_dir = '/roaming/tcastrof/names/eacl/evaluationV3'
-entities_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic'
+entities_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
+webpages_dir = '/roaming/tcastrof/names/webpages'
 
 def mean_confidence_interval(data, confidence=0.95):
     a = 1.0*np.array(data)
@@ -24,9 +25,22 @@ def mean_confidence_interval(data, confidence=0.95):
     return round(m, 6), round(h, 6), round(m-h, 6), round(m+h, 6)
 
 def get_domain(fname):
-    pass
+    f = open(os.path.join(webpages_dir, fname))
+    webpage = f.read()
+    f.close()
 
-def get_values(entities):
+    url = webpage.split('\n')[0].split('\t')[1]
+
+    if 'blog' in url or 'wordpress' in url or 'tumblr' in url:
+        return 'blog'
+    elif 'new' in url or 'article' in url:
+        return 'news'
+    elif 'wiki' in url:
+        return 'wiki'
+    else:
+        return 'others'
+
+def get_values(entities, domain):
     _random, bayes_random = {}, {}
     bayes_no_variation, bayes_variation = {}, {}
     siddharthan, deemter  = {}, {}
@@ -44,66 +58,68 @@ def get_values(entities):
                 deemter[fold] = {'y_real':[], 'y_pred':[], 'string':[], 'jaccard':[]}
 
             for item in evaluation[fold]:
-                # item_domain = get_domain(item['features']['fname'])
-                string_real = item['real']['reference']
-                string_random = item['random']['reference']
-                string_bayes_random = item['bayes_random']['reference'][0][0]
-                string_bayes_no_variation = item['bayes_no_variation']['reference'][0][0]
-                string_bayes_variation = item['bayes_variation']['reference'][0][0]
-                string_siddharthan = item['siddharthan']['reference']
-                string_deemter = item['deemter']['reference']
+                item_domain = get_domain(item['features']['fname'])
 
-                dist_random = edit_distance(string_random, string_real)
-                dist_bayes_random = edit_distance(string_bayes_random, string_real)
-                dist_bayes_no_variation = edit_distance(string_bayes_no_variation, string_real)
-                dist_bayes_variation = edit_distance(string_bayes_variation, string_real)
-                dist_siddharthan = edit_distance(string_siddharthan, string_real)
-                dist_deemter = edit_distance(string_deemter, string_real)
+                if domain == item_domain or domain != '':
+                    string_real = item['real']['reference']
+                    string_random = item['random']['reference']
+                    string_bayes_random = item['bayes_random']['reference'][0][0]
+                    string_bayes_no_variation = item['bayes_no_variation']['reference'][0][0]
+                    string_bayes_variation = item['bayes_variation']['reference'][0][0]
+                    string_siddharthan = item['siddharthan']['reference']
+                    string_deemter = item['deemter']['reference']
 
-                tokens_real = set(nltk.word_tokenize(string_real))
-                tokens_random = set(nltk.word_tokenize(string_random))
-                tokens_bayes_random = set(nltk.word_tokenize(string_bayes_random))
-                tokens_bayes_no_variation = set(nltk.word_tokenize(string_bayes_no_variation))
-                tokens_bayes_variation = set(nltk.word_tokenize(string_bayes_variation))
-                tokens_siddharthan = set(nltk.word_tokenize(string_siddharthan))
-                tokens_deemter = set(nltk.word_tokenize(string_deemter))
+                    dist_random = edit_distance(string_random, string_real)
+                    dist_bayes_random = edit_distance(string_bayes_random, string_real)
+                    dist_bayes_no_variation = edit_distance(string_bayes_no_variation, string_real)
+                    dist_bayes_variation = edit_distance(string_bayes_variation, string_real)
+                    dist_siddharthan = edit_distance(string_siddharthan, string_real)
+                    dist_deemter = edit_distance(string_deemter, string_real)
 
-                jaccard_random = jaccard_distance(tokens_random, tokens_real)
-                jaccard_bayes_random = jaccard_distance(tokens_bayes_random, tokens_real)
-                jaccard_bayes_no_variation = jaccard_distance(tokens_bayes_no_variation, tokens_real)
-                jaccard_bayes_variation = jaccard_distance(tokens_bayes_variation, tokens_real)
-                jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
-                jaccard_deemter = jaccard_distance(tokens_deemter, tokens_real)
+                    tokens_real = set(nltk.word_tokenize(string_real))
+                    tokens_random = set(nltk.word_tokenize(string_random))
+                    tokens_bayes_random = set(nltk.word_tokenize(string_bayes_random))
+                    tokens_bayes_no_variation = set(nltk.word_tokenize(string_bayes_no_variation))
+                    tokens_bayes_variation = set(nltk.word_tokenize(string_bayes_variation))
+                    tokens_siddharthan = set(nltk.word_tokenize(string_siddharthan))
+                    tokens_deemter = set(nltk.word_tokenize(string_deemter))
 
-                bayes_random[fold]['y_real'].append(item['real']['label'])
-                bayes_random[fold]['y_pred'].append(item['bayes_random']['label'][0])
-                bayes_random[fold]['string'].append(dist_bayes_random)
-                bayes_random[fold]['jaccard'].append(jaccard_bayes_random)
+                    jaccard_random = jaccard_distance(tokens_random, tokens_real)
+                    jaccard_bayes_random = jaccard_distance(tokens_bayes_random, tokens_real)
+                    jaccard_bayes_no_variation = jaccard_distance(tokens_bayes_no_variation, tokens_real)
+                    jaccard_bayes_variation = jaccard_distance(tokens_bayes_variation, tokens_real)
+                    jaccard_siddharthan = jaccard_distance(tokens_siddharthan, tokens_real)
+                    jaccard_deemter = jaccard_distance(tokens_deemter, tokens_real)
 
-                bayes_no_variation[fold]['y_real'].append(item['real']['label'])
-                bayes_no_variation[fold]['y_pred'].append(item['bayes_no_variation']['label'][0])
-                bayes_no_variation[fold]['string'].append(dist_bayes_no_variation)
-                bayes_no_variation[fold]['jaccard'].append(jaccard_bayes_no_variation)
+                    bayes_random[fold]['y_real'].append(item['real']['label'])
+                    bayes_random[fold]['y_pred'].append(item['bayes_random']['label'][0])
+                    bayes_random[fold]['string'].append(dist_bayes_random)
+                    bayes_random[fold]['jaccard'].append(jaccard_bayes_random)
 
-                bayes_variation[fold]['y_real'].append(item['real']['label'])
-                bayes_variation[fold]['y_pred'].append(item['bayes_variation']['label'][0])
-                bayes_variation[fold]['string'].append(dist_bayes_variation)
-                bayes_variation[fold]['jaccard'].append(jaccard_bayes_variation)
+                    bayes_no_variation[fold]['y_real'].append(item['real']['label'])
+                    bayes_no_variation[fold]['y_pred'].append(item['bayes_no_variation']['label'][0])
+                    bayes_no_variation[fold]['string'].append(dist_bayes_no_variation)
+                    bayes_no_variation[fold]['jaccard'].append(jaccard_bayes_no_variation)
 
-                _random[fold]['y_real'].append(item['real']['label'])
-                _random[fold]['y_pred'].append(item['random']['label'])
-                _random[fold]['string'].append(dist_random)
-                _random[fold]['jaccard'].append(jaccard_random)
+                    bayes_variation[fold]['y_real'].append(item['real']['label'])
+                    bayes_variation[fold]['y_pred'].append(item['bayes_variation']['label'][0])
+                    bayes_variation[fold]['string'].append(dist_bayes_variation)
+                    bayes_variation[fold]['jaccard'].append(jaccard_bayes_variation)
 
-                siddharthan[fold]['y_real'].append(item['real']['label'])
-                siddharthan[fold]['y_pred'].append(item['siddharthan']['label'])
-                siddharthan[fold]['string'].append(dist_siddharthan)
-                siddharthan[fold]['jaccard'].append(jaccard_siddharthan)
+                    _random[fold]['y_real'].append(item['real']['label'])
+                    _random[fold]['y_pred'].append(item['random']['label'])
+                    _random[fold]['string'].append(dist_random)
+                    _random[fold]['jaccard'].append(jaccard_random)
 
-                deemter[fold]['y_real'].append(item['real']['label'])
-                deemter[fold]['y_pred'].append(item['deemter']['label'])
-                deemter[fold]['string'].append(dist_deemter)
-                deemter[fold]['jaccard'].append(jaccard_deemter)
+                    siddharthan[fold]['y_real'].append(item['real']['label'])
+                    siddharthan[fold]['y_pred'].append(item['siddharthan']['label'])
+                    siddharthan[fold]['string'].append(dist_siddharthan)
+                    siddharthan[fold]['jaccard'].append(jaccard_siddharthan)
+
+                    deemter[fold]['y_real'].append(item['real']['label'])
+                    deemter[fold]['y_pred'].append(item['deemter']['label'])
+                    deemter[fold]['string'].append(dist_deemter)
+                    deemter[fold]['jaccard'].append(jaccard_deemter)
     return _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter
 
 def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir):
@@ -126,11 +142,10 @@ def write_csv(general_random, general_siddharthan, general_deemter, general_baye
     f_string.close()
     f_jaccard.close()
 
-def run(std=True):
+def run(std=True, domain=''):
     entities = os.listdir(entities_dir)
 
-    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = get_values(entities)
-
+    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = get_values(entities, domain)
 
     general_random = {'accuracy':[], 'string':[], 'jaccard':[]}
     general_bayes_random = {'accuracy':[], 'string':[], 'jaccard':[]}
@@ -164,7 +179,7 @@ def run(std=True):
         general_bayes_variation['string'].append(np.mean(bayes_variation[fold]['string']))
         general_bayes_variation['jaccard'].append(np.mean(bayes_variation[fold]['jaccard']))
 
-        if std:
+        if std and domain == '':
             print 'Fold', fold
             print 'Labels: '
             print 'Random: ', accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred'])
@@ -193,7 +208,7 @@ def run(std=True):
             print '\n'
 
     if std:
-        print 'GENERAL'
+        print 'GENERAL', domain
         print 'Labels: '
         print 'Random: ', np.mean(general_random['accuracy'])
         print 'Siddharthan: ', np.mean(general_siddharthan['accuracy'])
@@ -257,9 +272,21 @@ def run(std=True):
         print round(t, 6), p
         print 10 * '-'
 
-
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
 if __name__ == '__main__':
-    run(True)
+    print 'BLOGS: '
+    run(True, 'blog')
+    print '\n\n'
+    print 'NEWS:'
+    run(True, 'news')
+    print '\n\n'
+    print 'WIKI:'
+    run(True, 'wiki')
+    print '\n\n'
+    print 'OTHERS:'
+    run(True, 'others')
+    print '\n\n'
+    print 'GENERAL:'
+    run(True, '')
