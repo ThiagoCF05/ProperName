@@ -118,10 +118,10 @@ def run_content(voc):
     }
 
     laplace = {
-        's_e': 28,
-        'discourse_se': 2,
-        'sentence_se': 2,
-        'syntax_se': 3,
+        's_e': len(settings.labels),
+        'discourse_se': len(settings.features['givenness']),
+        'sentence_se': len(settings.features['sentence-givenness']),
+        'syntax_se': len(settings.features['syntax']),
     }
     return train_set, laplace
 

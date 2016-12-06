@@ -2,21 +2,173 @@ __author__ = 'thiagocastroferreira'
 
 import copy
 import operator
-from main.eacl import training, settings
+import nltk
+
+settings_labels = [
+    '+f',
+    '+m',
+    '+l',
+    '+t+f',
+    '+t+m',
+    '+t+l',
+    '+f+m',
+    '+f+l',
+    '+f+a',
+    '+m+l',
+    '+m+a',
+    '+l+a',
+    '+t+f+m',
+    '+t+f+l',
+    '+t+f+a',
+    '+t+m+l',
+    '+t+m+a',
+    '+t+l+a',
+    '+f+m+l',
+    '+f+m+a',
+    '+f+l+a',
+    '+m+l+a',
+    '+t+f+m+l',
+    '+t+f+m+a',
+    '+t+f+l+a',
+    '+t+m+l+a',
+    '+f+m+l+a',
+    '+t+f+m+l+a',
+    ]
+
+settings_features = {
+    'syntax':['np-subj', 'np-obj', 'subj-det'],
+    'givenness':['new', 'old'],
+    'sentence-givenness':['new', 'old']
+}
+
+class BayesTraining(object):
+    # calculate count(f)
+    def f(self, voc):
+        grams = map(lambda x: x['label'], voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate count(f | p)
+    def f_given_p(self, voc):
+        grams = map(lambda x: (x['label'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate givenness count(dg | f)
+    def discourse_given_f(self, voc):
+        grams = map(lambda x: (x['givenness'], x['label']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate givenness count(dg | f, p)
+    def discourse_given_fp(self, voc):
+        grams = map(lambda x: (x['givenness'], x['label'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate sentence givenness count(sg | f)
+    def sentence_given_f(self, voc):
+        grams = map(lambda x: (x['sentence-givenness'], x['label']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate sentence givenness count(sg | f, p)
+    def sentence_given_fp(self, voc):
+        grams = map(lambda x: (x['sentence-givenness'], x['label'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate count(syntax | f)
+    def syntax_given_f(self, voc):
+        grams = map(lambda x: (x['syntax'], x['label']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate count(syntax | f, p)
+    def syntax_given_fp(self, voc):
+        grams = map(lambda x: (x['syntax'], x['label'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # REALIZATION
+    # calculate count(w | w_m1, f, p)
+    def w_given_wm1fp(self, voc, bigram=True):
+        if bigram:
+            grams = map(lambda x: (x['bigram'][0], x['bigram'][1], x['label'], x['entity']), voc)
+        else:
+            grams = map(lambda x: (x['word'], x['label'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # form attribute by person
+    def elem_given_p(self, voc):
+        elem_p = []
+        for v in voc:
+            for elem in v['label_elems']:
+                elem_p.append((elem, v['entity']))
+        return dict(nltk.FreqDist(elem_p))
+
+    # calculate entity given w count(p | w)
+    def entity_given_w(self, voc):
+        grams = map(lambda x: (x['entity'], x['word']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate count(s | w, p)
+    def s_given_wp(self, voc, bigram=True):
+        if bigram:
+            grams = map(lambda x: (x['label'], x['bigram'][0], x['bigram'][1], x['entity']), voc)
+        else:
+            grams = map(lambda x: (x['label'], x['word'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    # calculate entity given w count(w | p)
+    def w_given_p(self, voc, bigram=True):
+        if bigram:
+            grams = map(lambda x: (x['bigram'][0], x['bigram'][1], x['entity']), voc)
+        else:
+            grams = map(lambda x: (x['word'], x['entity']), voc)
+        return dict(nltk.FreqDist(grams))
+
+    def run_content(self, voc):
+        # CONTENT SELECTION
+        s = self.f(voc)
+        s_e = self.f_given_p(voc)
+        discourse_se = self.discourse_given_fp(voc)
+        sentence_se = self.sentence_given_fp(voc)
+        syntax_se = self.syntax_given_fp(voc)
+        elem_p = self.elem_given_p(voc)
+
+        discourse_s = self.discourse_given_f(voc)
+        sentence_s = self.sentence_given_f(voc)
+        syntax_s = self.syntax_given_f(voc)
+
+        train_set = {
+            's_e': s_e,
+            'discourse_se': discourse_se,
+            'sentence_se': sentence_se,
+            'syntax_se': syntax_se,
+            's': s,
+            'discourse_s': discourse_s,
+            'sentence_s': sentence_s,
+            'syntax_s': syntax_s,
+            'elem_p': elem_p
+        }
+
+        laplace = {
+            's_e': len(settings_labels),
+            'discourse_se': len(settings_features['givenness']),
+            'sentence_se': len(settings_features['sentence-givenness']),
+            'syntax_se': len(settings_features['syntax']),
+            }
+        return train_set, laplace
+
+    def run_realization(self, voc, bigram=True):
+        # REALIZATION
+        e_w = self.entity_given_w(voc)
+        w_wm1fe = self.w_given_wm1fp(voc, bigram)
+
+        train_set = {
+            'e_w': e_w,
+            'w_wm1fe': w_wm1fe
+        }
+        return train_set
 
 class Bayes(object):
     def __init__(self, train_set_content, train_set_realization, bigram):
-        self.train_set_content = train_set_content
-        self.train_set_realization = train_set_realization
-        self.bigram = bigram
-        self.train_content()
-        self.train_realization()
-
-    def train_content(self):
-        self.clf_content, self.laplace_content = training.run_content(self.train_set_content)
-
-    def train_realization(self):
-        self.clf_realization = training.run_realization(self.train_set_realization, self.bigram)
+        training = BayesTraining()
+        self.clf_content, self.laplace_content = training.run_content(train_set_content)
+        self.clf_realization = training.run_realization(train_set_realization, bigram)
 
     def select_content(self, features, entity):
         def calc_prob(s):
@@ -40,7 +192,7 @@ class Bayes(object):
                 prob = prob * (float(num+1) / (dem+self.laplace_content[feature]))
             return prob
 
-        probabilities = dict(map(lambda s: (s, 0), settings.labels))
+        probabilities = dict(map(lambda s: (s, 0), settings_labels))
 
         for form in probabilities:
             probabilities[form] = calc_prob(form)
@@ -112,7 +264,7 @@ class Bayes(object):
 
         return probabilities
 
-    def _beam_search(self, names, words, form, entity, word_freq, n=5):
+    def _beam_search(self, names, words, form, entity, n=5):
         def calc_prob(gram):
             prob = 0
             if form == '':
@@ -166,13 +318,19 @@ class Bayes(object):
                 or set(_names.values()) == set([0]):
             return _names
         else:
-            return self._beam_search(_names, words, form, entity, word_freq, n)
+            return self._beam_search(_names, words, form, entity, n)
 
-    def realize(self, form, entity, syntax, word_freq, appositive):
+    def realize(self, form, entity, syntax, appositive):
         words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf_realization['e_w']))
 
+        # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
-        result = self._beam_search(names, words, form, entity, word_freq, 1)
+        result = self._beam_search(names, words, form, entity, 1)
+        while result[result.keys()[0]] == 0 and form != '':
+            form = self._backoff(form, entity)
+            result = self._beam_search(names, words, form, entity, 1)
+        if result[result.keys()[0]] == 0:
+            result = self._beam_search(names, words, '-', entity, 1)
 
         names = []
         for name in result:
@@ -216,17 +374,16 @@ class Bayes(object):
 
     # Realization with only the words present in the proper name knowledge base
     def realizeWithWords(self, form, entity, syntax, words, appositive):
-        word_freq = {}
         original_form = copy.copy(form)
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
-        result = self._beam_search(names, words, form, entity, word_freq, 1)
+        result = self._beam_search(names, words, form, entity, 1)
         while result[result.keys()[0]] == 0 and form != '':
             form = self._backoff(form, entity)
-            result = self._beam_search(names, words, form, entity, word_freq, 1)
+            result = self._beam_search(names, words, form, entity, 1)
         if result[result.keys()[0]] == 0:
-            result = self._beam_search(names, words, '-', entity, word_freq, 1)
+            result = self._beam_search(names, words, '-', entity, 1)
 
         names = []
         for name in result:
