@@ -191,7 +191,7 @@ def run():
 
     # filter entities and their references (more than X references and less than Y)
     print 'Filter entities and their references (more than X references and less than Y)'
-    references = prep.filter_entities(50, 0, properties.mention_dir)
+    references = prep.filter_entities(50, 0, properties.mentions_dir)
 
     # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, tested_words, appositives, dbpedia = init()
