@@ -164,7 +164,7 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
                         result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
                         # Deemter model
-                        ms = json.load(open(os.path.join(properties.mention_dir, filtered_mention['fname'])))[entity]
+                        ms = json.load(open(os.path.join(properties.mentions_dir, filtered_mention['fname'])))[entity]
                         r = baseline2.run(entity, filtered_mention, ms, 3, filtered_mention['syntax'])
                         result['deemter'] = { 'label': r[0], 'reference': r[1] }
 
