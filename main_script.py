@@ -12,6 +12,7 @@ import cPickle as p
 import json
 import numpy as np
 import os
+import properties
 
 import main.eacl.preprocessing as prep
 
@@ -22,25 +23,25 @@ from main.eacl.models.deemter import Deemter
 from random import randint, shuffle
 from sklearn.cross_validation import KFold
 
-fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
-fentities = '/roaming/tcastrof/names/eacl/entities.json'
-titles_dir = '/roaming/tcastrof/names/eacl/all_titles.json'
-appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
-mention_dir = '/roaming/tcastrof/names/eacl/mentions'
-parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
-vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
+# fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
+# fentities = '/roaming/tcastrof/names/eacl/entities.json'
+# titles_dir = '/roaming/tcastrof/names/eacl/all_titles.json'
+# appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
+# mention_dir = '/roaming/tcastrof/names/eacl/mentions'
+# parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
+# vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
+# evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
     print 'Initializing appositives...'
-    appositives = json.load(open(appositives_dir))
+    appositives = json.load(open(properties.file_appositives))
     print 'Initializing entities_info...'
-    entities_info = json.load(open(fentities))
+    entities_info = json.load(open(properties.file_entities))
 
     print 'Initializing titles...'
-    titles = json.load(open(titles_dir))
-    dbpedia = json.load(open(fdbpedia))
+    titles = json.load(open(properties.file_titles))
+    dbpedia = json.load(open(properties.file_dbpedia))
 
     print 'Initializing dbpedia...'
     base = {}
@@ -97,7 +98,7 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
         # compute the set of features (vocabulary) for the bayes model
         content_vocabulary, realization_vocabulary = [], []
         for mention in train_set:
-            parsed = json.load(open(os.path.join(parsed_dir, mention['fname'])))
+            parsed = json.load(open(os.path.join(properties.parsed_dir, mention['fname'])))
 
             content_data, realization_data = prep.process_tokens(mention, parsed, entity, False)
             content_vocabulary.append(content_data)
@@ -113,7 +114,7 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
         # initialize Siddharthan baseline
         baseline1 = Siddharthan(dbpedia=dbpedia)
         # initialize Deemter baseline
-        baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=parsed_dir)
+        baseline2 = Deemter(dbpedia=dbpedia, parsed_dir=properties.parsed_dir)
 
 
         for _givenness in ['new', 'old']:
@@ -163,7 +164,7 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
                         result['siddharthan'] = { 'label': siddharthan_result[0], 'reference': siddharthan_result[1] }
 
                         # Deemter model
-                        ms = json.load(open(os.path.join(mention_dir, filtered_mention['fname'])))[entity]
+                        ms = json.load(open(os.path.join(properties.mention_dir, filtered_mention['fname'])))[entity]
                         r = baseline2.run(entity, filtered_mention, ms, 3, filtered_mention['syntax'])
                         result['deemter'] = { 'label': r[0], 'reference': r[1] }
 
@@ -181,16 +182,16 @@ def process_entity(entity, words, mentions, dbpedia, appositive, fname):
                     results[fold].extend(group_result)
         fold = fold + 1
     print 'Saving results for ', str(entity)
-    p.dump(results, open(os.path.join(evaluation_dir, fname), 'w'))
+    p.dump(results, open(os.path.join(properties.evaluation_dir, fname), 'w'))
     print 10 * '-'
 
 def run():
-    if not os.path.exists(evaluation_dir):
-        os.makedirs(evaluation_dir)
+    if not os.path.exists(properties.evaluation_dir):
+        os.makedirs(properties.evaluation_dir)
 
     # filter entities and their references (more than X references and less than Y)
     print 'Filter entities and their references (more than X references and less than Y)'
-    references = prep.filter_entities(50, 0, mention_dir)
+    references = prep.filter_entities(50, 0, properties.mention_dir)
 
     # voc contains only the proper names / titles from DBpedia for each entity
     entities_info, tested_words, appositives, dbpedia = init()
@@ -204,7 +205,7 @@ def run():
     for entity in entities:
         # get entity id in our corpus
         entity_id = filter(lambda x: x['url'] == entity, entities_info)[0]['id']
-        if not os.path.exists(os.path.join(evaluation_dir, entity_id)):
+        if not os.path.exists(os.path.join(properties.evaluation_dir, entity_id)):
             print entity
             # Get appositive
             if entity in appositives:

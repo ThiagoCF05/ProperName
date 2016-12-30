@@ -48,6 +48,6 @@ features = {
 }
 entity = 'Barack_Obama'
 
-print clf.select_content(features=features, entity=entity)
+print clf.select_content(D=features, p=entity)
 
-print clf.realize(form='+f+l+a', entity=entity, syntax='np-subj', appositive='the 44th president of USA')
+print clf.realize(form='+f+l+a', p=entity, syntax='np-subj', appositive='the 44th president of USA')
