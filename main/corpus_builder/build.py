@@ -14,7 +14,7 @@ import properties
 import traceback
 import json
 
-from corpus_builder import get_mentions
+import get_mentions
 
 if __name__ == '__main__':
     # root_dir = '/roaming/tcastrof/names/eacl'

@@ -35,5 +35,3 @@ def names_variation(classes):
         l = list(itertools.combinations(classes, size))
         combinations.extend(l)
     return combinations
-
-# print names_variation(['title', 'first', 'middle', 'last', 'appositive'])
