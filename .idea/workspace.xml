@@ -151,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="build.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/corpus_builder/build.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="900">
-              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.24229075" vertical-offset="0" max-vertical-offset="900">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding>
                 <element signature="e#188#197#0" expanded="true" />
               </folding>
@@ -175,10 +175,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="name_variation.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="name_variation.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/corpus_builder/name_variation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8083832" vertical-offset="0" max-vertical-offset="668">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
               <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
               <folding />
             </state>
@@ -311,7 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/dev/eacl/models/siddharthan.py" />
         <option value="$PROJECT_DIR$/dev/eacl/models/deemter.py" />
         <option value="$PROJECT_DIR$/init.py" />
         <option value="$PROJECT_DIR$/main/main_script.py" />
@@ -362,6 +361,7 @@
         <option value="$PROJECT_DIR$/main/wikilinks_main.py" />
         <option value="$PROJECT_DIR$/main/corpus_builder/main.py" />
         <option value="$PROJECT_DIR$/main/corpus_builder/name_variation.py" />
+        <option value="$PROJECT_DIR$/main/corpus_builder/build.py" />
       </list>
     </option>
   </component>
@@ -1508,16 +1508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/corpus_builder/build.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="900">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="e#188#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/corpus_builder/loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
@@ -1556,9 +1546,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/corpus_builder/name_variation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8083832" vertical-offset="0" max-vertical-offset="668">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/corpus_builder/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24229075" vertical-offset="0" max-vertical-offset="900">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#188#197#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

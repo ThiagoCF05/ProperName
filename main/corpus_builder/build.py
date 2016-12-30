@@ -9,7 +9,7 @@ Description:
 
 import os
 import sys
-sys.path.append('../')
+sys.path.append('../../')
 import properties
 import traceback
 import json
