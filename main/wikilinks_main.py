@@ -1,5 +1,3 @@
-from main import utils as kb
-
 __author__ = 'thiagocastroferreira'
 
 """
