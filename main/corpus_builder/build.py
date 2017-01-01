@@ -17,11 +17,6 @@ import json
 import get_mentions
 
 if __name__ == '__main__':
-    # root_dir = '/roaming/tcastrof/names/eacl'
-    # parsed_dir = "/roaming/tcastrof/names/parsed"
-    # mentions_dir = "/roaming/tcastrof/names/eacl/mentions"
-
-    # urls, entities = loader.run(os.path.join(root_dir, 'furls.json'), os.path.join(root_dir, 'fdbpedia.json'))
     urls = json.load(open(properties.file_urls))
     entities = json.load(open(properties.file_dbpedia))
 

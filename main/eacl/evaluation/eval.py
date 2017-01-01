@@ -1,5 +1,10 @@
 __author__ = 'thiagocastroferreira'
 
+import sys
+sys.path.append('../../')
+
+import properties
+
 import bootstrap
 import cPickle as p
 import nltk
@@ -12,10 +17,10 @@ from scipy import stats
 import scipy as sp
 import scipy.stats
 
-fentities = '/roaming/tcastrof/names/eacl/entities.json'
-# entities_dir = '/roaming/tcastrof/names/eacl/evaluationV3'
-entities_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
-webpages_dir = '/roaming/tcastrof/names/webpages'
+# fentities = '/roaming/tcastrof/names/eacl/entities.json'
+# # entities_dir = '/roaming/tcastrof/names/eacl/evaluationV3'
+# entities_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
+# webpages_dir = '/roaming/tcastrof/names/webpages'
 
 def mean_confidence_interval(data, confidence=0.95):
     a = 1.0*np.array(data)
@@ -25,7 +30,7 @@ def mean_confidence_interval(data, confidence=0.95):
     return round(m, 6), round(h, 6), round(m-h, 6), round(m+h, 6)
 
 def get_domain(fname):
-    f = open(os.path.join(webpages_dir, fname))
+    f = open(os.path.join(properties.webpages_dir, fname))
     webpage = f.read()
     f.close()
 
@@ -46,7 +51,7 @@ def get_values(entities, domain):
     siddharthan, deemter  = {}, {}
 
     for _id in entities:
-        evaluation = p.load(open(os.path.join(entities_dir, _id)))
+        evaluation = p.load(open(os.path.join(properties.evaluation_dir, _id)))
 
         for fold in evaluation:
             if fold not in bayes_random:
@@ -143,9 +148,9 @@ def write_csv(general_random, general_siddharthan, general_deemter, general_baye
     f_jaccard.close()
 
 def run(std=True, domain=''):
-    entities = os.listdir(entities_dir)
+    entities = os.listdir(properties.evaluation_dir)
 
-    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter  = get_values(entities, domain)
+    _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter = get_values(entities, domain)
 
     general_random = {'accuracy':[], 'string':[], 'jaccard':[]}
     general_bayes_random = {'accuracy':[], 'string':[], 'jaccard':[]}

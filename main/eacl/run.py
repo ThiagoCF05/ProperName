@@ -4,9 +4,12 @@ __author__ = 'thiagocastroferreira'
 Author: Thiago Castro Ferreira
 Date: 14/09/2016
 Description:
-    Main method EACL 2017 model and baselines (Version 2)
+    Main method EACL 2017 model and baselines
     Appliying Individual Variation
 """
+import sys
+sys.path.append('../')
+sys.path.append('../../')
 
 import cPickle as p
 import json
@@ -22,15 +25,6 @@ from main.eacl.models.siddharthan import Siddharthan
 from main.eacl.models.deemter import Deemter
 from random import randint, shuffle
 from sklearn.cross_validation import KFold
-
-# fdbpedia = '/roaming/tcastrof/names/eacl/name_base.json'
-# fentities = '/roaming/tcastrof/names/eacl/entities.json'
-# titles_dir = '/roaming/tcastrof/names/eacl/all_titles.json'
-# appositives_dir = '/roaming/tcastrof/names/eacl/appositives.json'
-# mention_dir = '/roaming/tcastrof/names/eacl/mentions'
-# parsed_dir = '/roaming/tcastrof/names/regnames/parsed'
-# vocabulary_dir = '/roaming/tcastrof/names/eacl/stats/voc.json'
-# evaluation_dir = '/roaming/tcastrof/names/eacl/evaluation/intrinsic_domain'
 
 # initialize vocabulary, dbpedia, entities, appositives and vocabulary
 def init():
@@ -216,7 +210,6 @@ def run():
             # Get proper nouns to be tested whether should be included in the reference
             words = tested_words[entity]
 
-            # pool.apply_async(func=process_entity, args=(entity, words, references[entity], vocabulary, dbpedia, appositive, entity_id))
             process_entity(entity, words, np.array(references[entity]), dbpedia, appositive, entity_id)
             number_mentions = number_mentions + len(references[entity])
     print 'Number of entities: ', len(entities)
