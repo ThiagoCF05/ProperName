@@ -170,10 +170,10 @@ class Bayes(object):
         self.clf_content, self.laplace_content = training.run_content(train_set_content)
         self.clf_realization = training.run_realization(train_set_realization, bigram)
 
-    def select_content(self, features, entity):
+    def select_content(self, D, p):
         def calc_prob(s):
             # PRIORI
-            f = filter(lambda x: x[1] == entity, self.clf_content['s_e'])
+            f = filter(lambda x: x[1] == p, self.clf_content['s_e'])
             dem = sum(map(lambda x: self.clf_content['s_e'][x], f))
 
             f = filter(lambda x: x[0] == s, f)
@@ -182,35 +182,35 @@ class Bayes(object):
             prob = (float(num+1) / (dem+self.laplace_content['s_e']))
 
             # POSTERIORI
-            for feature in features:
-                f = filter(lambda x: x[1] == s and x[2] == entity, self.clf_content[feature])
-                dem = sum(map(lambda x: self.clf_content[feature][x], f))
+            for d in D:
+                f = filter(lambda x: x[1] == s and x[2] == p, self.clf_content[d])
+                dem = sum(map(lambda x: self.clf_content[d][x], f))
 
-                f = filter(lambda x: x[0] == features[feature], f)
-                num = sum(map(lambda x: self.clf_content[feature][x], f))
+                f = filter(lambda x: x[0] == D[d], f)
+                num = sum(map(lambda x: self.clf_content[d][x], f))
 
-                prob = prob * (float(num+1) / (dem+self.laplace_content[feature]))
+                prob = prob * (float(num+1) / (dem+self.laplace_content[d]))
             return prob
 
-        probabilities = dict(map(lambda s: (s, 0), settings_labels))
+        P = dict(map(lambda s: (s, 0), settings_labels))
 
-        for form in probabilities:
-            probabilities[form] = calc_prob(form)
+        for form in P:
+            P[form] = calc_prob(form)
 
         # Frequency distribution
-        total = sum(probabilities.values())
-        for form in probabilities:
-            probabilities[form] = float(probabilities[form]) / total
+        total = sum(P.values())
+        for form in P:
+            P[form] = float(P[form]) / total
 
-        probabilities = sorted(probabilities.items(), key=operator.itemgetter(1))
-        probabilities.reverse()
+        P = sorted(P.items(), key=operator.itemgetter(1))
+        P.reverse()
 
-        return probabilities
+        return P
 
-    def select_content_backoff(self, features, entity, K):
+    def select_content_backoff(self, D, p, K):
         def calc_prob(s):
             # PRIORI
-            f = filter(lambda x: x[1] == entity, self.clf_content['s_e'])
+            f = filter(lambda x: x[1] == p, self.clf_content['s_e'])
             dem = sum(map(lambda x: self.clf_content['s_e'][x], f))
 
             f = filter(lambda x: x[0] == s, f)
@@ -228,41 +228,41 @@ class Bayes(object):
                 prob = float(num) / dem
 
             # POSTERIORI
-            for feature in features:
-                f = filter(lambda x: x[1] == s and x[2] == entity, self.clf_content[feature])
-                dem = sum(map(lambda x: self.clf_content[feature][x], f))
+            for d in D:
+                f = filter(lambda x: x[1] == s and x[2] == p, self.clf_content[d])
+                dem = sum(map(lambda x: self.clf_content[d][x], f))
 
-                f = filter(lambda x: x[0] == features[feature], f)
-                num = sum(map(lambda x: self.clf_content[feature][x], f))
+                f = filter(lambda x: x[0] == D[d], f)
+                num = sum(map(lambda x: self.clf_content[d][x], f))
 
                 if num <= K:
-                    feat = feature[:-1]
+                    feat = d[:-1]
 
                     f = filter(lambda x: x[1] == s, self.clf_content[feat])
                     dem = sum(map(lambda x: self.clf_content[feat][x], f))
 
-                    f = filter(lambda x: x[0] == features[feature], f)
+                    f = filter(lambda x: x[0] == D[d], f)
                     num = sum(map(lambda x: self.clf_content[feat][x], f))
 
-                    prob = prob * (float(num+1) / (dem+self.laplace_content[feature]))
+                    prob = prob * (float(num+1) / (dem+self.laplace_content[d]))
                 else:
                     prob = prob * (float(num)/dem)
             return prob
 
-        probabilities = dict(map(lambda s: (s, 0), settings.labels))
+        P = dict(map(lambda s: (s, 0), settings_labels))
 
-        for form in probabilities:
-            probabilities[form] = calc_prob(form)
+        for form in P:
+            P[form] = calc_prob(form)
 
         # Frequency distribution
-        total = sum(probabilities.values())
-        for form in probabilities:
-            probabilities[form] = float(probabilities[form]) / total
+        total = sum(P.values())
+        for form in P:
+            P[form] = float(P[form]) / total
 
-        probabilities = sorted(probabilities.items(), key=operator.itemgetter(1))
-        probabilities.reverse()
+        P = sorted(P.items(), key=operator.itemgetter(1))
+        P.reverse()
 
-        return probabilities
+        return P
 
     def _beam_search(self, names, words, form, entity, n=5):
         def calc_prob(gram):
@@ -320,17 +320,17 @@ class Bayes(object):
         else:
             return self._beam_search(_names, words, form, entity, n)
 
-    def realize(self, form, entity, syntax, appositive):
-        words = map(lambda x: x[1], filter(lambda x: x[0] == entity, self.clf_realization['e_w']))
+    def realize(self, form, p, syntax, appositive):
+        words = map(lambda x: x[1], filter(lambda x: x[0] == p, self.clf_realization['e_w']))
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
-        result = self._beam_search(names, words, form, entity, 1)
+        result = self._beam_search(names, words, form, p, 1)
         while result[result.keys()[0]] == 0 and form != '':
-            form = self._backoff(form, entity)
-            result = self._beam_search(names, words, form, entity, 1)
+            form = self._backoff(form, p)
+            result = self._beam_search(names, words, form, p, 1)
         if result[result.keys()[0]] == 0:
-            result = self._beam_search(names, words, '-', entity, 1)
+            result = self._beam_search(names, words, '-', p, 1)
 
         names = []
         for name in result:
@@ -373,17 +373,17 @@ class Bayes(object):
         return form
 
     # Realization with only the words present in the proper name knowledge base
-    def realizeWithWords(self, form, entity, syntax, words, appositive):
+    def realizeWithWords(self, form, p, syntax, words, appositive):
         original_form = copy.copy(form)
 
         # Backoff the less frequent attribute until find a realization or the realization has only one form
         names = {('*', ):0}
-        result = self._beam_search(names, words, form, entity, 1)
+        result = self._beam_search(names, words, form, p, 1)
         while result[result.keys()[0]] == 0 and form != '':
-            form = self._backoff(form, entity)
-            result = self._beam_search(names, words, form, entity, 1)
+            form = self._backoff(form, p)
+            result = self._beam_search(names, words, form, p, 1)
         if result[result.keys()[0]] == 0:
-            result = self._beam_search(names, words, '-', entity, 1)
+            result = self._beam_search(names, words, '-', p, 1)
 
         names = []
         for name in result:
