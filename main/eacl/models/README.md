@@ -24,7 +24,8 @@ Initialize the class **Bayes** with the training sets (*train_set_content* and *
 
 ### *train_set_content* 
 This is the training set for the content selection step of the model. Techinically, this is a list of instances in the following format:
-		```
+
+```
 		{
 	        'entity': 'Barack_Obama',
 	        'givenness': 'old',
@@ -33,7 +34,7 @@ This is the training set for the content selection step of the model. Techinical
 	        'label': '+f+l',
 	        'label_elems': ['+f', '+l']
     	}
-    	```
+```
 
 1. **entity** id of the mentioned person;
 2. **givenness** shows if the entity is text-new ('new') or text-old ('old'); 
@@ -109,6 +110,7 @@ This is the *id* of the person to be referred to. For **Barack Obama** the value
 ## Step 6
 
 To perform the textual realization step, the function *realize* can be called. It receives 4 parameters:
+
 1. **form** the form of the proper name (according to the values set at settings_labels)
 2. **entity** id of the entity
 3. **syntax** syntactic position of the reference (*np-subj*, *np-obj*, *subj-det*)
