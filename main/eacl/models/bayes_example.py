@@ -1,6 +1,6 @@
 __author__ = 'thiagocastroferreira'
 
-from models.Bayes import Bayes
+from Bayes import Bayes
 
 training_set = ['Barack Obama', 'Barack Obama', 'President Barack Obama', 'President Obama', 'Obama', 'Obama', 'Barack Obama, the 44th president of United States'] # just for illustration
 

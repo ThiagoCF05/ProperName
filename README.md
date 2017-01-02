@@ -34,4 +34,5 @@ The models described at the paper are available [here](https://github.com/Thiago
 ```
 
 **Creators:** Thiago Castro Ferreira, Emiel Krahmer and Sander Wubben
+
 Tilburg center for Cognition and Communication Department - Tilburg University
