@@ -6,21 +6,32 @@ This project introduces a statistical model able to generate variations of a pro
 
 ## REGnames
 
-The code to build the REGnames corpus is available [here](https://github.com/ThiagoCF05/ProperName/tree/master/main/corpus_builder)
+The code to build the REGnames corpus is available [here](https://github.com/ThiagoCF05/ProperName/tree/master/main/corpus_builder).
 
 ### Citation
 ```Tex
-@inproceedings{ferreira2016c,
-  title={Towards proper name generation: a corpus analysis},
-  author={Ferreira, Thiago Castro and Wubben, Sander and Krahmer, Emiel},
-  booktitle={Proceedings of the 9th International Natural Language Generation conference (INLG)},
-  year={2016},
-  address={Edinburgh, Scotland}
+@InProceedings{castroferreira-wubben-krahmer:2016:INLG,
+  author    = {Castro Ferreira, Thiago  and  Wubben, Sander  and  Krahmer, Emiel},
+  title     = {Towards proper name generation: a corpus analysis},
+  booktitle = {Proceedings of the 9th International Natural Language Generation conference},
+  month     = {September 5-8},
+  year      = {2016},
+  address   = {Edinburgh, UK},
+  publisher = {Association for Computational Linguistics},
+  pages     = {222--226},
+  url       = {http://anthology.aclweb.org/W16-6636}
 }
 ```
 
 ## EACL 2017
 
-The script performed to obtain the results described at the EACL 2017 paper ["Generating flexible proper name references in text: Data, models and evaluation"]() can be found [here](https://github.com/ThiagoCF05/ProperName/tree/master/main/eacl)
+The script performed to obtain the results described at the EACL 2017 paper can be found [here](https://github.com/ThiagoCF05/ProperName/tree/master/main/eacl)
 
 The models described at the paper are available [here](https://github.com/ThiagoCF05/ProperName/tree/master/main/eacl/models)
+
+### Citation
+```Tex
+```
+
+**Creators:** Thiago Castro Ferreira, Emiel Krahmer and Sander Wubben
+Tilburg center for Cognition and Communication Department - Tilburg University
