@@ -277,6 +277,8 @@ def run(std=True, domain=''):
         print round(t, 6), p
         print 10 * '-'
 
+        print 'Number of samples: ', len(general_random['string']), len(general_siddharthan['string'])
+
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
 
