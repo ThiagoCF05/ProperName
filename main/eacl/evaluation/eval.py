@@ -158,6 +158,7 @@ def run(std=True, domain=''):
     general_bayes_variation = {'accuracy':[], 'string':[], 'jaccard':[]}
     general_siddharthan = {'accuracy':[], 'string':[], 'jaccard':[]}
     general_deemter = {'accuracy':[], 'string':[], 'jaccard':[]}
+    number_samples, number_samples1 = 0, 0
 
     for fold in bayes_random:
         general_random['accuracy'].append(accuracy_score(_random[fold]['y_real'], _random[fold]['y_pred']))
@@ -183,6 +184,8 @@ def run(std=True, domain=''):
         general_bayes_variation['accuracy'].append(accuracy_score(bayes_variation[fold]['y_real'], bayes_variation[fold]['y_pred']))
         general_bayes_variation['string'].append(np.mean(bayes_variation[fold]['string']))
         general_bayes_variation['jaccard'].append(np.mean(bayes_variation[fold]['jaccard']))
+        number_samples += len(bayes_no_variation[fold]['string'])
+        number_samples1 += len(siddharthan[fold]['string'])
 
         if std and domain == '':
             print 'Fold', fold
@@ -277,7 +280,7 @@ def run(std=True, domain=''):
         print round(t, 6), p
         print 10 * '-'
 
-        print 'Number of samples: ', len(general_random['string']), len(general_bayes_no_variation['string'])
+        print 'Number of samples: ', number_samples, number_samples1
 
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
     write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
