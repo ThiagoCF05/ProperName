@@ -252,41 +252,40 @@ def run(std=True, domain=''):
         print 'String -> T-test: Random X PN+Variation'
         t, p = stats.ttest_ind(general_random['string'], general_bayes_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_random['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
-
 
         print 'String -> T-test: Siddarthan X PN-Variation'
         t, p = stats.ttest_ind(general_siddharthan['string'], general_bayes_no_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_siddharthan['string'], general_bayes_no_variation['string'])
         print round(t, 6), p
         print 10 * '-'
         print 'String -> T-test: Siddarthan X PN+Variation'
         t, p = stats.ttest_ind(general_siddharthan['string'], general_bayes_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_siddharthan['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
 
         print 'String -> T-test: Deemter X PN-Variation'
         t, p = stats.ttest_ind(general_deemter['string'], general_bayes_no_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_deemter['string'], general_bayes_no_variation['string'])
         print round(t, 6), p
         print 10 * '-'
         print 'String -> T-test: Deemter X PN+Variation'
         t, p = stats.ttest_ind(general_deemter['string'], general_bayes_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_deemter['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
 
         print 'String -> T-test: PN-Variation X PN+Variation'
         t, p = stats.ttest_ind(general_bayes_no_variation['string'], general_bayes_variation['string'])
         print round(t, 6), p
-        t, p = stats.ttest_rel(general_random['string'], general_bayes_no_variation['string'])
+        t, p = stats.ttest_rel(general_bayes_no_variation['string'], general_bayes_variation['string'])
         print round(t, 6), p
         print 10 * '-'
 
