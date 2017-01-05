@@ -127,12 +127,12 @@ def get_values(entities, domain):
                     deemter[fold]['jaccard'].append(jaccard_deemter)
     return _random, bayes_random, bayes_no_variation, bayes_variation, siddharthan, deemter
 
-def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir):
+def write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir, domain):
     if not os.path.exists(write_dir):
         os.mkdir(write_dir)
 
-    f_string = open(os.path.join(write_dir, 'string.csv'), 'w')
-    f_jaccard = open(os.path.join(write_dir, 'jaccard.csv'), 'w')
+    f_string = open(os.path.join(write_dir, 'string_' + domain + '.csv'), 'w')
+    f_jaccard = open(os.path.join(write_dir, 'jaccard_' + domain + '.csv'), 'w')
 
     f_string.write('Subject,Random,Deemter,Siddharthan,PNmVariation,PNpVariation\n')
     f_jaccard.write('Subject,Random,Deemter,Siddharthan,PNmVariation,PNpVariation\n')
@@ -297,7 +297,7 @@ def run(std=True, domain=''):
         print 'Number of samples: ', number_samples, number_samples1
 
     write_dir = '/roaming/tcastrof/names/eacl/evaluation'
-    write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir)
+    write_csv(general_random, general_siddharthan, general_deemter, general_bayes_no_variation, general_bayes_variation, write_dir, domain)
 
 if __name__ == '__main__':
     print 'BLOGS: '
